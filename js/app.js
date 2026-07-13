@@ -6,7 +6,7 @@ const itineraryData = [
   {
     dayNum: 1,
     date: "Aug 10",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/22_boeing_772_app_cmb.jpg/800px-22_boeing_772_app_cmb.jpg",
+    img: "resources/day1.jpg",
     en: {
       title: "Day 1: Arrival",
       timeline: [
@@ -27,7 +27,7 @@ const itineraryData = [
   {
     dayNum: 2,
     date: "Aug 11",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Colombo_city_skyline_at_night.png/800px-Colombo_city_skyline_at_night.png",
+    img: "resources/day2.png",
     en: {
       title: "Day 2: Colombo & Family Visit",
       timeline: [
@@ -54,7 +54,7 @@ const itineraryData = [
   {
     dayNum: 3,
     date: "Aug 12",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Dambulla-buddhastupa.jpg/800px-Dambulla-buddhastupa.jpg",
+    img: "resources/day3.jpg",
     en: {
       title: "Day 3: Dambulla Cave Temple",
       timeline: [
@@ -83,7 +83,7 @@ const itineraryData = [
   {
     dayNum: 4,
     date: "Aug 13",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Pidurangala_Buddha_%281%29.jpg/800px-Pidurangala_Buddha_%281%29.jpg",
+    img: "resources/day4.jpg",
     en: {
       title: "Day 4: Pidurangala Sunset",
       timeline: [
@@ -108,7 +108,7 @@ const itineraryData = [
   {
     dayNum: 5,
     date: "Aug 14",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Sigiriya_%28141688197%29.jpeg/800px-Sigiriya_%28141688197%29.jpeg",
+    img: "resources/day5.jpeg",
     en: {
       title: "Day 5: Sigiriya Rock & Ayurveda",
       timeline: [
@@ -135,7 +135,7 @@ const itineraryData = [
   {
     dayNum: 6,
     date: "Aug 15",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/SL_Kandy_asv2020-01_img33_Sacred_Tooth_Temple.jpg/800px-SL_Kandy_asv2020-01_img33_Sacred_Tooth_Temple.jpg",
+    img: "resources/day6.jpg",
     en: {
       title: "Day 6: Temple of the Tooth & Cultural Show",
       timeline: [
@@ -162,7 +162,7 @@ const itineraryData = [
   {
     dayNum: 7,
     date: "Aug 16",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/NuwaraEliya_from_top.jpg/800px-NuwaraEliya_from_top.jpg",
+    img: "resources/day7.jpg",
     en: {
       title: "Day 7: High Tea in Nuwara Eliya",
       timeline: [
@@ -191,7 +191,7 @@ const itineraryData = [
   {
     dayNum: 8,
     date: "Aug 17",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/NineArchesBridge.JPG/800px-NineArchesBridge.JPG",
+    img: "resources/day8.jpg",
     en: {
       title: "Day 8: Scenic Train & Nine Arch Bridge",
       timeline: [
@@ -218,7 +218,7 @@ const itineraryData = [
   {
     dayNum: 9,
     date: "Aug 18",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Yala_Beach.jpg/800px-Yala_Beach.jpg",
+    img: "resources/day9.jpg",
     en: {
       title: "Day 9: Early Safari & Return to Colombo",
       timeline: [
@@ -245,7 +245,7 @@ const itineraryData = [
   {
     dayNum: 10,
     date: "Aug 19",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/SL_Colombo_asv2020-01_img22_Jami_Ul-Alfar_Mosque.jpg/800px-SL_Colombo_asv2020-01_img22_Jami_Ul-Alfar_Mosque.jpg",
+    img: "resources/day10.jpg",
     en: {
       title: "Day 10: Red Mosque & Shopping",
       timeline: [
@@ -272,7 +272,7 @@ const itineraryData = [
   {
     dayNum: 11,
     date: "Aug 20",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/22_boeing_772_app_cmb.jpg/800px-22_boeing_772_app_cmb.jpg",
+    img: "resources/day11.jpg",
     en: {
       title: "Day 11: Farewell & Departure",
       timeline: [
