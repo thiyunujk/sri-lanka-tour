@@ -1,0 +1,36 @@
+body {
+  font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+  background-color: #f8fafc;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Accordion Smooth Transitions */
+.accordion-content {
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease-in-out;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+.accordion-content.open {
+  max-height: 2500px; /* Arbitrary large value to allow content to expand fully */
+  opacity: 1;
+}
+
+.chevron {
+  transition: transform 0.3s ease;
+}
+.chevron.open {
+  transform: rotate(180deg);
+}
+
+/* Custom Scrollbar for better Webkit aesthetics */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+/* Env safe area for floating bottom bar on modern mobile devices */
+.pb-safe { padding-bottom: env(safe-area-inset-bottom); }
