@@ -295,7 +295,11 @@ const staticTextUI = {
     heroTitle: "Your Detailed Itinerary",
     heroSubtitle: "Scroll to view your daily schedule, transit routes, and accommodations.",
     btnTop: "Scroll to Top",
-    btnStart: "Start of Tour",
+    btnStart: "Start Tour",
+    btnChecklist: "Checklist",
+    btnDocs: "Documents",
+    modalTitleChecklist: "Packing Checklist",
+    modalTitleDocs: "Important Documents",
     lblRoute: "Transit Route",
     lblHotel: "Accommodation",
     lblMap: "Open Map",
@@ -306,12 +310,39 @@ const staticTextUI = {
     headerDates: "2026年8月10日 - 20日",
     heroTitle: "詳細な旅程表",
     heroSubtitle: "スクロールして毎日のスケジュール、移動ルート、宿泊先を確認してください。",
-    btnTop: "トップへ戻る",
-    btnStart: "ツアー開始へ",
+    btnTop: "トップへ",
+    btnStart: "ツアー開始",
+    btnChecklist: "持ち物",
+    btnDocs: "書類",
+    modalTitleChecklist: "持ち物リスト",
+    modalTitleDocs: "重要書類",
     lblRoute: "移動ルート",
     lblHotel: "宿泊先",
     lblMap: "地図を開く",
     lblBooking: "予約を確認"
+  }
+};
+
+const packingListData = [
+  { id: 'item1', en: 'Passport & E-Visa', ja: 'パスポート＆電子ビザ' },
+  { id: 'item2', en: 'Light Jacket (Nuwara Eliya)', ja: '薄手のジャケット（ヌワラエリヤ用）' },
+  { id: 'item3', en: 'Temple Clothes (Cover knees/shoulders)', ja: '寺院用衣服（膝・肩を隠す）' },
+  { id: 'item4', en: 'Universal Power Adapter', ja: '万能電源アダプター' },
+  { id: 'item5', en: 'Sunscreen & Sunglasses', ja: '日焼け止め＆サングラス' },
+  { id: 'item6', en: 'Power Bank', ja: 'モバイルバッテリー' },
+  { id: 'item7', en: 'Mosquito Repellent', ja: '虫除けスプレー' },
+];
+
+const documentsData = {
+  en: {
+    driver: { title: 'Driver Contact', name: '[Placeholder Name]', phone: '[Placeholder Phone]' },
+    emergency: { title: 'Emergency Number', name: 'Tourist Police', phone: '1912' },
+    links: [ { title: 'Sri Lanka E-Visa Portal', url: 'https://eta.gov.lk' } ]
+  },
+  ja: {
+    driver: { title: 'ドライバー連絡先', name: '[名前]', phone: '[電話番号]' },
+    emergency: { title: '緊急連絡先', name: '観光警察', phone: '1912' },
+    links: [ { title: 'スリランカ電子ビザ（ETA）', url: 'https://eta.gov.lk' } ]
   }
 };
 
@@ -328,7 +359,14 @@ const domEls = {
   heroTitle: document.getElementById('hero-title'),
   heroSubtitle: document.getElementById('hero-subtitle'),
   btnTop: document.getElementById('btn-top'),
-  btnStart: document.getElementById('btn-start')
+  btnStart: document.getElementById('btn-start'),
+  btnChecklist: document.getElementById('btn-checklist'),
+  btnDocs: document.getElementById('btn-docs'),
+  modalTitleChecklist: document.getElementById('modal-title-checklist'),
+  modalTitleDocs: document.getElementById('modal-title-docs'),
+  checklistContainer: document.getElementById('checklist-container'),
+  docsContainer: document.getElementById('docs-container'),
+  modalOverlay: document.getElementById('modal-overlay')
 };
 
 /**
@@ -388,21 +426,27 @@ function renderItinerary() {
     // 2. Van Route Section
     let vanHTML = '';
     if (data.vanRoute) {
+      let mapIframe = `
+        <div class="mt-3 rounded-[12px] overflow-hidden border border-sky-100 shadow-sm h-32 relative">
+          <iframe width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" 
+            src="https://maps.google.com/maps?q=${encodeURIComponent(data.vanRoute)}&t=&z=9&ie=UTF8&iwloc=&output=embed">
+          </iframe>
+        </div>
+      `;
       vanHTML = `
-        <div class="mb-4 bg-sky-50/50 border border-sky-100 rounded-[14px] p-3.5 flex items-start gap-3.5">
-          <div class="bg-sky-100 text-sky-600 p-2 rounded-xl shrink-0 mt-0.5 shadow-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-            </svg>
+        <div class="mb-4 bg-sky-50/50 border border-sky-100 rounded-[14px] p-3.5 flex flex-col gap-1">
+          <div class="flex items-start gap-3.5 w-full">
+            <div class="bg-sky-100 text-sky-600 p-2 rounded-xl shrink-0 mt-0.5 shadow-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+              </svg>
+            </div>
+            <div class="flex-1">
+              <p class="text-[10px] font-bold text-sky-800 uppercase tracking-widest mb-1">${uiText.lblRoute}</p>
+              <p class="text-[13px] text-slate-800 leading-relaxed font-semibold">${data.vanRoute}</p>
+            </div>
           </div>
-          <div>
-            <p class="text-[10px] font-bold text-sky-800 uppercase tracking-widest mb-1">${uiText.lblRoute}</p>
-            <p class="text-[13px] text-slate-800 leading-relaxed font-semibold">${data.vanRoute}</p>
-            <a href="https://maps.google.com" target="_blank" class="inline-flex items-center gap-1 mt-2.5 text-[11px] font-bold text-sky-600 hover:text-sky-800 transition-colors">
-              ${uiText.lblMap} 
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
-            </a>
-          </div>
+          <div class="w-full">${mapIframe}</div>
         </div>
       `;
     }
@@ -448,6 +492,10 @@ function updateStaticGlobalText() {
   domEls.heroSubtitle.textContent = texts.heroSubtitle;
   domEls.btnTop.textContent = texts.btnTop;
   domEls.btnStart.textContent = texts.btnStart;
+  domEls.btnChecklist.textContent = texts.btnChecklist;
+  domEls.btnDocs.textContent = texts.btnDocs;
+  domEls.modalTitleChecklist.textContent = texts.modalTitleChecklist;
+  domEls.modalTitleDocs.textContent = texts.modalTitleDocs;
   
   document.documentElement.lang = currentLang;
   domEls.langText.textContent = currentLang === 'ja' ? 'EN' : 'JA';
@@ -487,6 +535,8 @@ domEls.langToggleBtn.addEventListener('click', () => {
   
   // Re-render
   renderItinerary();
+  renderPackingList();
+  renderDocsHub();
   
   // The renderItinerary function automatically opens ALL cards by default now.
   // So if any cards were manually CLOSED by the user before toggling, we should close them again.
@@ -508,3 +558,113 @@ domEls.langToggleBtn.addEventListener('click', () => {
 
 // Initialize Web App
 renderItinerary();
+renderPackingList();
+renderDocsHub();
+highlightCurrentDay();
+
+// ==== New Feature Functions ====
+
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (!modal) return;
+  domEls.modalOverlay.classList.remove('opacity-0', 'pointer-events-none');
+  domEls.modalOverlay.classList.add('opacity-100', 'pointer-events-auto');
+  modal.classList.remove('translate-y-full');
+  modal.classList.add('translate-y-0');
+  document.body.classList.add('modal-open');
+}
+
+function closeAllModals() {
+  domEls.modalOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+  domEls.modalOverlay.classList.add('opacity-0', 'pointer-events-none');
+  ['modal-checklist', 'modal-docs'].forEach(id => {
+    const modal = document.getElementById(id);
+    if (modal) {
+      modal.classList.remove('translate-y-0');
+      modal.classList.add('translate-y-full');
+    }
+  });
+  document.body.classList.remove('modal-open');
+}
+
+function toggleCheckItem(id) {
+  let saved = JSON.parse(localStorage.getItem('sl-packing')) || {};
+  saved[id] = !saved[id];
+  localStorage.setItem('sl-packing', JSON.stringify(saved));
+  renderPackingList();
+}
+
+function renderPackingList() {
+  domEls.checklistContainer.innerHTML = '';
+  let saved = JSON.parse(localStorage.getItem('sl-packing')) || {};
+  
+  packingListData.forEach(item => {
+    const isChecked = saved[item.id] ? 'checked' : '';
+    const textClass = saved[item.id] ? 'line-through text-slate-400' : 'text-slate-700 font-medium';
+    // Using standard Tailwind styling for checkboxes since we don't have standard forms plugin
+    domEls.checklistContainer.innerHTML += `
+      <label class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-100 rounded-xl cursor-pointer active:scale-[0.98] transition-transform">
+        <input type="checkbox" onchange="toggleCheckItem('${item.id}')" class="w-5 h-5 rounded border-slate-300 text-emerald-500 focus:ring-emerald-500 bg-white" ${isChecked}>
+        <span class="text-[14px] ${textClass} transition-colors">${item[currentLang]}</span>
+      </label>
+    `;
+  });
+}
+
+function renderDocsHub() {
+  const data = documentsData[currentLang];
+  domEls.docsContainer.innerHTML = `
+    <!-- Driver -->
+    <div class="bg-blue-50/50 border border-blue-100 rounded-xl p-4 flex items-start gap-3">
+      <div class="bg-blue-100 text-blue-600 p-2.5 rounded-lg shrink-0">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+      </div>
+      <div>
+        <p class="text-[10px] font-bold text-blue-800 uppercase tracking-wider mb-0.5">${data.driver.title}</p>
+        <p class="font-bold text-slate-800 text-[15px]">${data.driver.name}</p>
+        <a href="tel:${data.driver.phone}" class="text-blue-600 font-semibold text-sm mt-1 inline-block">${data.driver.phone}</a>
+      </div>
+    </div>
+    
+    <!-- Emergency -->
+    <div class="bg-red-50/50 border border-red-100 rounded-xl p-4 flex items-start gap-3 mt-3">
+      <div class="bg-red-100 text-red-600 p-2.5 rounded-lg shrink-0">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+      </div>
+      <div>
+        <p class="text-[10px] font-bold text-red-800 uppercase tracking-wider mb-0.5">${data.emergency.title}</p>
+        <p class="font-bold text-slate-800 text-[15px]">${data.emergency.name}</p>
+        <a href="tel:${data.emergency.phone}" class="text-red-600 font-semibold text-sm mt-1 inline-block">${data.emergency.phone}</a>
+      </div>
+    </div>
+    
+    <!-- Links -->
+    <div class="mt-4 pt-4 border-t border-slate-100">
+      ${data.links.map(l => `
+        <a href="${l.url}" target="_blank" class="flex items-center justify-between p-3 bg-slate-50 hover:bg-slate-100 rounded-lg transition-colors group">
+          <span class="text-sm font-semibold text-slate-700">${l.title}</span>
+          <svg class="w-4 h-4 text-slate-400 group-hover:text-emerald-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+        </a>
+      `).join('')}
+    </div>
+  `;
+}
+
+function highlightCurrentDay() {
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = today.getMonth(); // 7 = August
+  const date = today.getDate();
+
+  if (year === 2026 && month === 7 && date >= 10 && date <= 20) {
+    const dayNum = date - 9;
+    const card = document.getElementById(`day-${dayNum}`);
+    if (card) {
+      card.classList.add('highlight-today');
+      setTimeout(() => {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 500);
+    }
+  }
+}
+
