@@ -6,6 +6,7 @@ const itineraryData = [
   {
     dayNum: 1,
     date: "Aug 10",
+    img: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80",
     en: {
       title: "Day 1: Arrival",
       timeline: [
@@ -26,6 +27,7 @@ const itineraryData = [
   {
     dayNum: 2,
     date: "Aug 11",
+    img: "https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&w=800&q=80",
     en: {
       title: "Day 2: Colombo & Family Visit",
       timeline: [
@@ -52,6 +54,7 @@ const itineraryData = [
   {
     dayNum: 3,
     date: "Aug 12",
+    img: "https://images.unsplash.com/photo-1625076041662-d9f2e32f782c?auto=format&fit=crop&w=800&q=80",
     en: {
       title: "Day 3: Dambulla Cave Temple",
       timeline: [
@@ -80,6 +83,7 @@ const itineraryData = [
   {
     dayNum: 4,
     date: "Aug 13",
+    img: "https://images.unsplash.com/photo-1528659614763-74d15697ea3c?auto=format&fit=crop&w=800&q=80",
     en: {
       title: "Day 4: Pidurangala Sunset",
       timeline: [
@@ -104,6 +108,7 @@ const itineraryData = [
   {
     dayNum: 5,
     date: "Aug 14",
+    img: "https://images.unsplash.com/photo-1585675100414-22b8ff830b53?auto=format&fit=crop&w=800&q=80",
     en: {
       title: "Day 5: Sigiriya Rock & Ayurveda",
       timeline: [
@@ -130,6 +135,7 @@ const itineraryData = [
   {
     dayNum: 6,
     date: "Aug 15",
+    img: "https://images.unsplash.com/photo-1620023647318-6882a98fbaeb?auto=format&fit=crop&w=800&q=80",
     en: {
       title: "Day 6: Temple of the Tooth & Cultural Show",
       timeline: [
@@ -156,6 +162,7 @@ const itineraryData = [
   {
     dayNum: 7,
     date: "Aug 16",
+    img: "https://images.unsplash.com/photo-1578339843653-f726cbff7174?auto=format&fit=crop&w=800&q=80",
     en: {
       title: "Day 7: High Tea in Nuwara Eliya",
       timeline: [
@@ -184,6 +191,7 @@ const itineraryData = [
   {
     dayNum: 8,
     date: "Aug 17",
+    img: "https://images.unsplash.com/photo-1579685670732-f1559902dd67?auto=format&fit=crop&w=800&q=80",
     en: {
       title: "Day 8: Scenic Train & Nine Arch Bridge",
       timeline: [
@@ -210,6 +218,7 @@ const itineraryData = [
   {
     dayNum: 9,
     date: "Aug 18",
+    img: "https://images.unsplash.com/photo-1547721868-b7c126ecfcd3?auto=format&fit=crop&w=800&q=80",
     en: {
       title: "Day 9: Early Safari & Return to Colombo",
       timeline: [
@@ -236,6 +245,7 @@ const itineraryData = [
   {
     dayNum: 10,
     date: "Aug 19",
+    img: "https://images.unsplash.com/photo-1634812678684-184cf4e7bd01?auto=format&fit=crop&w=800&q=80",
     en: {
       title: "Day 10: Red Mosque & Shopping",
       timeline: [
@@ -262,6 +272,7 @@ const itineraryData = [
   {
     dayNum: 11,
     date: "Aug 20",
+    img: "https://images.unsplash.com/photo-1541819584-ce4eb832da20?auto=format&fit=crop&w=800&q=80",
     en: {
       title: "Day 11: Farewell & Departure",
       timeline: [
@@ -411,6 +422,17 @@ function renderItinerary() {
     content.id = `content-${day.dayNum}`;
     content.className = 'accordion-content open px-4 pb-0';
 
+    // 0. Image Section
+    let imageHTML = '';
+    if (day.img) {
+      imageHTML = `
+        <div class="mt-2 mb-4 rounded-xl overflow-hidden shadow-sm aspect-video border border-slate-100 bg-slate-50 relative group">
+          <img src="${day.img}" alt="Sightseeing ${day.dayNum}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/30 to-transparent"></div>
+        </div>
+      `;
+    }
+
     // 1. Timeline Section
     let timelineHTML = `<div class="relative pl-[22px] py-1 mt-2 mb-5 border-l-2 border-slate-100 ml-1">`;
     data.timeline.forEach(item => {
@@ -473,7 +495,7 @@ function renderItinerary() {
       `;
     }
 
-    content.innerHTML = `<div class="pb-5 pt-1">${timelineHTML}${vanHTML}${hotelHTML}</div>`;
+    content.innerHTML = `<div class="pb-5 pt-1">${imageHTML}${timelineHTML}${vanHTML}${hotelHTML}</div>`;
     
     // Assemble Card
     card.appendChild(header);
