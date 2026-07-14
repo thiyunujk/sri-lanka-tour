@@ -2,6 +2,8 @@
  * Itinerary Data Payload
  * Contains detailed steps in English (EN) and Japanese (JA)
  */
+
+
 const itineraryData = [
   {
     dayNum: 1,
