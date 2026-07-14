@@ -1,0 +1,74 @@
+<div class="page destination-page">
+    <div class="dest-header">
+        <div class="dest-meta">
+            <div class="dest-title-group">
+                <h2>{{ destination.name }}</h2>
+                <div class="lang-ja">{{ destination.japanese_name }}</div>
+            </div>
+            <div class="dest-badge">
+                {{ destination.date }} ({{ destination.nights }} Night{{ 's' if destination.nights > 1 else '' }})
+            </div>
+        </div>
+        <div class="dest-info-row">
+            <div class="dest-info-col">
+                <h4>Route / ルート</h4>
+                <p class="lang-en">{{ destination.route }}</p>
+                <p class="lang-ja" style="font-size: 0.85rem; color: #cbd5e1; margin-top: 2px;">{{ destination.route_japanese }}</p>
+            </div>
+            <div class="dest-info-col">
+                <h4>Key Attractions / 主な見どころ</h4>
+                <p class="lang-en">{{ destination.attractions }}</p>
+                <p class="lang-ja" style="font-size: 0.85rem; color: #cbd5e1; margin-top: 2px;">{{ destination.attractions_japanese }}</p>
+            </div>
+        </div>
+        <div style="margin-top: 12px; font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px; line-height: 1.5;">
+            <p class="lang-en" style="color: #e2e8f0; font-style: italic;">{{ destination.description }}</p>
+            <p class="lang-ja" style="margin-top: 4px; color: #cbd5e1;">{{ destination.description_japanese }}</p>
+        </div>
+    </div>
+
+    <!-- Premium Tier -->
+    <div class="tier-section">
+        <div class="tier-header Premium">
+            <span class="tier-badge Premium">Premium プレミアム</span>
+        </div>
+        <div class="cards-grid">
+            {% for hotel in destination.hotels %}
+                {% if hotel.tier == 'Premium' %}
+                    {% set h = hotel %}
+                    {% include 'hotel_card.html' %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Standard Tier -->
+    <div class="tier-section">
+        <div class="tier-header Standard">
+            <span class="tier-badge Standard">Standard スタンダード</span>
+        </div>
+        <div class="cards-grid">
+            {% for hotel in destination.hotels %}
+                {% if hotel.tier == 'Standard' %}
+                    {% set h = hotel %}
+                    {% include 'hotel_card.html' %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Economy Tier -->
+    <div class="tier-section">
+        <div class="tier-header Economy">
+            <span class="tier-badge Economy">Economy エコノミー</span>
+        </div>
+        <div class="cards-grid">
+            {% for hotel in destination.hotels %}
+                {% if hotel.tier == 'Economy' %}
+                    {% set h = hotel %}
+                    {% include 'hotel_card.html' %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

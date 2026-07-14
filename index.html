@@ -81,6 +81,13 @@
         <span class="text-[9px] font-bold uppercase tracking-widest text-center" id="btn-docs">Documents</span>
       </button>
 
+      <button onclick="openModal('modal-hotels')" class="flex flex-1 flex-col items-center p-2 text-slate-400 hover:text-emerald-600 transition-colors active:scale-95 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1v1H9V7zm5 0h1v1h-1V7zm-5 4h1v1H9v-1zm5 0h1v1h-1v-1zm-5 4h1v1H9v-1zm5 0h1v1h-1v-1z" />
+        </svg>
+        <span class="text-[9px] font-bold uppercase tracking-widest text-center" id="btn-hotels">Hotels</span>
+      </button>
+
       <button onclick="document.getElementById('itinerary-container').scrollIntoView({behavior: 'smooth'})" class="flex flex-1 flex-col items-center p-2 text-slate-400 hover:text-emerald-600 transition-colors active:scale-95 focus:outline-none">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
@@ -111,6 +118,17 @@
       </div>
       <div class="p-5 overflow-y-auto pb-safe space-y-4" id="docs-container">
         <!-- Document items injected here -->
+      </div>
+    </div>
+
+    <!-- Hotels Modal -->
+    <div id="modal-hotels" class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-white rounded-t-[24px] z-[70] transform translate-y-full transition-transform duration-300 shadow-[0_-10px_40px_rgba(0,0,0,0.1)] flex flex-col h-[90vh]">
+      <div class="flex justify-between items-center p-5 border-b border-slate-100">
+        <h3 class="text-lg font-bold text-slate-800" id="modal-title-hotels">Hotel Selection Guide</h3>
+        <button onclick="closeAllModals()" class="p-2 bg-slate-100 text-slate-500 rounded-full hover:bg-slate-200 transition-colors focus:outline-none"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+      </div>
+      <div class="flex-1 w-full relative">
+        <iframe src="hotels.html" class="absolute inset-0 w-full h-full border-0 rounded-b-none pb-safe"></iframe>
       </div>
     </div>
 

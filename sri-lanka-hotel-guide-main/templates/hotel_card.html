@@ -1,0 +1,173 @@
+<div class="hotel-card {{ h.tier }}">
+    <div class="hotel-image-container">
+        <div class="hotel-images-grid">
+            {% if h.images.real_photos and h.images.real_photos|length >= 4 %}
+                <div class="main-image-wrapper">
+                    <img class="hotel-image main clickable-photo" src="{{ h.images.real_photos[0] }}" alt="{{ h.name }} Photo 1">
+                </div>
+                <div class="thumbnails-row">
+                    <div class="thumb-wrapper">
+                        <img class="hotel-image thumb clickable-photo" src="{{ h.images.real_photos[1] }}" alt="Photo 2">
+                        <span class="thumb-label">View</span>
+                    </div>
+                    <div class="thumb-wrapper">
+                        <img class="hotel-image thumb clickable-photo" src="{{ h.images.real_photos[2] }}" alt="Photo 3">
+                        <span class="thumb-label">Room</span>
+                    </div>
+                    <div class="thumb-wrapper">
+                        <img class="hotel-image thumb clickable-photo" src="{{ h.images.real_photos[3] }}" alt="Photo 4">
+                        <span class="thumb-label">More</span>
+                    </div>
+                </div>
+            {% else %}
+                <div class="main-image-wrapper">
+                    <img class="hotel-image main clickable-photo" src="{{ h.images.exterior_image }}" alt="{{ h.name }} Exterior" onerror="this.src='https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80'">
+                </div>
+                <div class="thumbnails-row">
+                    <div class="thumb-wrapper">
+                        <img class="hotel-image thumb clickable-photo" src="{{ h.images.room_image }}" alt="Room" onerror="this.src='https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=300&q=80'">
+                        <span class="thumb-label">Room</span>
+                    </div>
+                    <div class="thumb-wrapper">
+                        <img class="hotel-image thumb clickable-photo" src="{{ h.images.bathroom_image }}" alt="Bathroom" onerror="this.src='https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=300&q=80'">
+                        <span class="thumb-label">Bath</span>
+                    </div>
+                    <div class="thumb-wrapper">
+                        <img class="hotel-image thumb clickable-photo" src="{{ h.images.facility_image }}" alt="Facility" onerror="this.src='https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=300&q=80'">
+                        <span class="thumb-label">Pool/Fac</span>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+        <div class="hotel-rating-overlay">
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <span>B: {{ h.booking_rating }} | G: {{ h.google_rating }}</span>
+        </div>
+    </div>
+    
+    <div class="hotel-body">
+        <div class="hotel-header">
+            <div class="hotel-stars">
+                {% for i in range(h.star_rating) %}★{% endfor %}
+            </div>
+            <h3 class="hotel-name-en">{{ h.name }}</h3>
+            <p class="hotel-name-ja">{{ h.japanese_name }}</p>
+            <p class="hotel-address">{{ h.address }}</p>
+        </div>
+        
+        <div class="price-container">
+            <div class="price-row">
+                <div class="price-label">
+                    <span class="en">Twin Room</span>
+                    <span class="ja">ツインルーム (1室)</span>
+                </div>
+                <div class="price-value">
+                    <span class="price-value-jpy">¥{{ "{:,}".format(h.twin_room_price) }}</span>
+                    <span class="price-value-usd">${{ "{:,}".format((h.twin_room_price / usd_rate) | round | int) }}</span>
+                </div>
+            </div>
+            <div class="price-row">
+                <div class="price-label">
+                    <span class="en">Single Room</span>
+                    <span class="ja">シングルルーム (1室)</span>
+                </div>
+                <div class="price-value">
+                    <span class="price-value-jpy">¥{{ "{:,}".format(h.single_room_price) }}</span>
+                    <span class="price-value-usd">${{ "{:,}".format((h.single_room_price / usd_rate) | round | int) }}</span>
+                </div>
+            </div>
+            <div class="price-row total-row">
+                <div class="price-label">
+                    <span class="en">Group Total</span>
+                    <span class="ja">グループ合計 (1泊)</span>
+                </div>
+                <div class="price-value">
+                    <span class="price-value-jpy">¥{{ "{:,}".format(h.group_total_price) }}</span>
+                    <span class="price-value-usd">${{ "{:,}".format((h.group_total_price / usd_rate) | round | int) }}</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="facilities-grid">
+            <div class="facility-item {% if h.facilities.breakfast %}yes{% else %}no{% endif %}">
+                <span class="facility-icon">🍳</span>
+                <span>Breakfast / 朝食</span>
+            </div>
+            <div class="facility-item {% if h.facilities.swimming_pool %}yes{% else %}no{% endif %}">
+                <span class="facility-icon">🏊</span>
+                <span>Pool / プール</span>
+            </div>
+            <div class="facility-item {% if h.facilities.wifi %}yes{% else %}no{% endif %}">
+                <span class="facility-icon">📶</span>
+                <span>Wi-Fi</span>
+            </div>
+            <div class="facility-item {% if h.facilities.air_conditioning %}yes{% else %}no{% endif %}">
+                <span class="facility-icon">❄️</span>
+                <span>A/C / 空調</span>
+            </div>
+            <div class="facility-item {% if h.facilities.restaurant %}yes{% else %}no{% endif %}">
+                <span class="facility-icon">🍴</span>
+                <span>Rest. / 食堂</span>
+            </div>
+            <div class="facility-item {% if h.facilities.parking %}yes{% else %}no{% endif %}">
+                <span class="facility-icon">🚗</span>
+                <span>Parking / 駐</span>
+            </div>
+            <div class="facility-item {% if h.facilities.gym %}yes{% else %}no{% endif %}">
+                <span class="facility-icon">💪</span>
+                <span>Gym / ジム</span>
+            </div>
+            <div class="facility-item {% if h.facilities.front_desk_24h %}yes{% else %}no{% endif %}">
+                <span class="facility-icon">🛎️</span>
+                <span>24h Front</span>
+            </div>
+        </div>
+        
+        <div class="hotel-details">
+            <div class="hotel-desc">
+                <p class="lang-en" style="line-height: 1.3; margin-bottom: 3px;">{{ h.short_description_en }}</p>
+                <p class="lang-ja" style="font-size: 0.7rem; color: var(--text-muted); line-height: 1.3;">{{ h.short_description_ja }}</p>
+            </div>
+            <div class="hotel-pros-cons">
+                {% for pro in h.highlights_en %}
+                    {% set loop_idx = loop.index0 %}
+                    <div class="detail-list-item pro">
+                        <div>
+                            <span class="lang-en" style="line-height: 1.2;">{{ pro }}</span>
+                            <span class="lang-ja" style="display: block; font-size: 0.65rem; color: #0d9488; line-height: 1.2;">{{ h.highlights_ja[loop_idx] }}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+                {% for con in h.disadvantages_en %}
+                    {% set loop_idx = loop.index0 %}
+                    <div class="detail-list-item con" style="margin-top: 2px;">
+                        <div>
+                            <span class="lang-en" style="line-height: 1.2;">{{ con }}</span>
+                            <span class="lang-ja" style="display: block; font-size: 0.65rem; color: #b91c1c; line-height: 1.2;">{{ h.disadvantages_ja[loop_idx] }}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <div class="hotel-check-info">
+            <span>Check-in: {{ h.check_in_time }}</span>
+            <span>Check-out: {{ h.check_out_time }}</span>
+        </div>
+        
+        <div class="hotel-links">
+            <a class="hotel-link-btn official" href="https://www.google.com/search?q={{ h.name|urlencode }}+{{ destination.name|urlencode }}+official+website" target="_blank">
+                <span>🌐 Official Website / 公式サイト</span>
+            </a>
+            <a class="hotel-link-btn" href="{{ h.verified_booking_url | default('https://www.booking.com/searchresults.html?ss=' ~ h.name|urlencode ~ ' Sri Lanka') }}" target="_blank">
+                <span>Booking.com</span>
+            </a>
+            <a class="hotel-link-btn" href="https://www.agoda.com/search?textToSearch={{ h.name|urlencode }}" target="_blank">
+                <span>Agoda</span>
+            </a>
+            <a class="hotel-link-btn" style="grid-column: span 2;" href="https://www.google.com/maps/search/?api=1&query={{ h.name|urlencode }}+{{ destination.name|urlencode }}+Sri+Lanka" target="_blank">
+                <span>📍 Google Maps / 地図</span>
+            </a>
+        </div>
+    </div>
+</div>

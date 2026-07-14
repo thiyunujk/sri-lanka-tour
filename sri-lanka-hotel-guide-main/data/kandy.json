@@ -1,0 +1,956 @@
+[
+  {
+    "name": "The Golden Crown Hotel",
+    "japanese_name": "ザ ゴールデン クラウン ホテル",
+    "tier": "Premium",
+    "tier_japanese": "プレミアム",
+    "star_rating": 5,
+    "address": "The Golden Crown Hotel Address, Kandy",
+    "twin_room_price": 22000,
+    "single_room_price": 16000,
+    "group_total_price": 60000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": true,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.8,
+    "google_rating": 4.6,
+    "official_website": "https://example.com/thegoldencrownhotel",
+    "booking_url": "https://www.booking.com/hotel/lk/the-golden-crown-hotel.html",
+    "agoda_url": "https://www.agoda.com/the-golden-crown-hotel/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=The+Golden+Crown+Hotel",
+    "short_description_en": "A beautiful premium option in Kandy.",
+    "short_description_ja": "キャンディ地区にある快適なPremiumクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Earl's Regency Hotel",
+    "japanese_name": "アールズ リージェンシー ホテル",
+    "tier": "Premium",
+    "tier_japanese": "プレミアム",
+    "star_rating": 5,
+    "address": "Earl's Regency Hotel Address, Kandy",
+    "twin_room_price": 20000,
+    "single_room_price": 14000,
+    "group_total_price": 54000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": true,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.8,
+    "google_rating": 4.6,
+    "official_website": "https://example.com/earl'sregencyhotel",
+    "booking_url": "https://www.booking.com/hotel/lk/earl's-regency-hotel.html",
+    "agoda_url": "https://www.agoda.com/earl's-regency-hotel/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Earl's+Regency+Hotel",
+    "short_description_en": "A beautiful premium option in Kandy.",
+    "short_description_ja": "キャンディ地区にある快適なPremiumクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Amaya Hills Kandy",
+    "japanese_name": "アマヤ ヒルズ キャンディ",
+    "tier": "Premium",
+    "tier_japanese": "プレミアム",
+    "star_rating": 4,
+    "address": "Amaya Hills Kandy Address, Kandy",
+    "twin_room_price": 18000,
+    "single_room_price": 13000,
+    "group_total_price": 49000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": true,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.8,
+    "google_rating": 4.6,
+    "official_website": "https://example.com/amayahillskandy",
+    "booking_url": "https://www.booking.com/hotel/lk/amaya-hills-kandy.html",
+    "agoda_url": "https://www.agoda.com/amaya-hills-kandy/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Amaya+Hills+Kandy",
+    "short_description_en": "A beautiful premium option in Kandy.",
+    "short_description_ja": "キャンディ地区にある快適なPremiumクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "King's Pavilion Kandy",
+    "japanese_name": "キングズ パビリオン キャンディ",
+    "tier": "Premium",
+    "tier_japanese": "プレミアム",
+    "star_rating": 5,
+    "address": "King's Pavilion Kandy Address, Kandy",
+    "twin_room_price": 30000,
+    "single_room_price": 22000,
+    "group_total_price": 82000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": true,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.8,
+    "google_rating": 4.6,
+    "official_website": "https://example.com/king'spavilionkandy",
+    "booking_url": "https://www.booking.com/hotel/lk/king's-pavilion-kandy.html",
+    "agoda_url": "https://www.agoda.com/king's-pavilion-kandy/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=King's+Pavilion+Kandy",
+    "short_description_en": "A beautiful premium option in Kandy.",
+    "short_description_ja": "キャンディ地区にある快適なPremiumクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Mountbatten Bungalow",
+    "japanese_name": "マウントバッテン バンガロー",
+    "tier": "Premium",
+    "tier_japanese": "プレミアム",
+    "star_rating": 5,
+    "address": "Mountbatten Bungalow Address, Kandy",
+    "twin_room_price": 26000,
+    "single_room_price": 19000,
+    "group_total_price": 71000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": true,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.8,
+    "google_rating": 4.6,
+    "official_website": "https://example.com/mountbattenbungalow",
+    "booking_url": "https://www.booking.com/hotel/lk/mountbatten-bungalow.html",
+    "agoda_url": "https://www.agoda.com/mountbatten-bungalow/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Mountbatten+Bungalow",
+    "short_description_en": "A beautiful premium option in Kandy.",
+    "short_description_ja": "キャンディ地区にある快適なPremiumクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "W15 Hanthana Kandy",
+    "japanese_name": "W15 ハインタナ キャンディ",
+    "tier": "Premium",
+    "tier_japanese": "プレミアム",
+    "star_rating": 5,
+    "address": "W15 Hanthana Kandy Address, Kandy",
+    "twin_room_price": 48000,
+    "single_room_price": 35000,
+    "group_total_price": 131000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": true,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.8,
+    "google_rating": 4.6,
+    "official_website": "https://example.com/w15hanthanakandy",
+    "booking_url": "https://www.booking.com/hotel/lk/w15-hanthana-kandy.html",
+    "agoda_url": "https://www.agoda.com/w15-hanthana-kandy/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=W15+Hanthana+Kandy",
+    "short_description_en": "A beautiful premium option in Kandy.",
+    "short_description_ja": "キャンディ地区にある快適なPremiumクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1543465077-db45d34b88a5?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Cinnamon Citadel Kandy",
+    "japanese_name": "シナモン シタデル キャンディ",
+    "tier": "Standard",
+    "tier_japanese": "スタンダード",
+    "star_rating": 4,
+    "address": "Cinnamon Citadel Kandy Address, Kandy",
+    "twin_room_price": 14000,
+    "single_room_price": 10000,
+    "group_total_price": 38000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.2,
+    "google_rating": 4.3,
+    "official_website": "https://example.com/cinnamoncitadelkandy",
+    "booking_url": "https://www.booking.com/hotel/lk/cinnamon-citadel-kandy.html",
+    "agoda_url": "https://www.agoda.com/cinnamon-citadel-kandy/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Cinnamon+Citadel+Kandy",
+    "short_description_en": "A beautiful standard option in Kandy.",
+    "short_description_ja": "キャンディ地区にある快適なStandardクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "OZO Kandy Sri Lanka",
+    "japanese_name": "オゾ キャンディ スリランカ",
+    "tier": "Standard",
+    "tier_japanese": "スタンダード",
+    "star_rating": 4,
+    "address": "OZO Kandy Sri Lanka Address, Kandy",
+    "twin_room_price": 13000,
+    "single_room_price": 9500,
+    "group_total_price": 35500,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.2,
+    "google_rating": 4.3,
+    "official_website": "https://example.com/ozokandysrilanka",
+    "booking_url": "https://www.booking.com/hotel/lk/ozo-kandy-sri-lanka.html",
+    "agoda_url": "https://www.agoda.com/ozo-kandy-sri-lanka/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=OZO+Kandy+Sri+Lanka",
+    "short_description_en": "A beautiful standard option in Kandy.",
+    "short_description_ja": "キャンディ地区にある快適なStandardクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Hotel Topaz",
+    "japanese_name": "ホテル トパーズ",
+    "tier": "Standard",
+    "tier_japanese": "スタンダード",
+    "star_rating": 4,
+    "address": "Hotel Topaz Address, Kandy",
+    "twin_room_price": 11000,
+    "single_room_price": 8000,
+    "group_total_price": 30000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.2,
+    "google_rating": 4.3,
+    "official_website": "https://example.com/hoteltopaz",
+    "booking_url": "https://www.booking.com/hotel/lk/hotel-topaz.html",
+    "agoda_url": "https://www.agoda.com/hotel-topaz/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Hotel+Topaz",
+    "short_description_en": "A beautiful standard option in Kandy.",
+    "short_description_ja": "キャンディ地区にある快適なStandardクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Hotel Suisse",
+    "japanese_name": "ホテル スイス",
+    "tier": "Standard",
+    "tier_japanese": "スタンダード",
+    "star_rating": 4,
+    "address": "Hotel Suisse Address, Kandy",
+    "twin_room_price": 11500,
+    "single_room_price": 8500,
+    "group_total_price": 31500,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.2,
+    "google_rating": 4.3,
+    "official_website": "https://example.com/hotelsuisse",
+    "booking_url": "https://www.booking.com/hotel/lk/hotel-suisse.html",
+    "agoda_url": "https://www.agoda.com/hotel-suisse/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Hotel+Suisse",
+    "short_description_en": "A beautiful standard option in Kandy.",
+    "short_description_ja": "キャンディ地区にある快適なStandardクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1611891487122-2075b96244ee?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Randholee Resort & Spa",
+    "japanese_name": "ランドリー リゾート ＆ スパ",
+    "tier": "Standard",
+    "tier_japanese": "スタンダード",
+    "star_rating": 4,
+    "address": "Randholee Resort & Spa Address, Kandy",
+    "twin_room_price": 12000,
+    "single_room_price": 9000,
+    "group_total_price": 33000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.2,
+    "google_rating": 4.3,
+    "official_website": "https://example.com/randholeeresort&spa",
+    "booking_url": "https://www.booking.com/hotel/lk/randholee-resort-&-spa.html",
+    "agoda_url": "https://www.agoda.com/randholee-resort-&-spa/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Randholee+Resort+&+Spa",
+    "short_description_en": "A beautiful standard option in Kandy.",
+    "short_description_ja": "キャンディ地区にある快適なStandardクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "The Radh Hotel",
+    "japanese_name": "ザ ラッド ホテル",
+    "tier": "Standard",
+    "tier_japanese": "スタンダード",
+    "star_rating": 4,
+    "address": "The Radh Hotel Address, Kandy",
+    "twin_room_price": 15000,
+    "single_room_price": 11000,
+    "group_total_price": 41000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.2,
+    "google_rating": 4.3,
+    "official_website": "https://example.com/theradhhotel",
+    "booking_url": "https://www.booking.com/hotel/lk/the-radh-hotel.html",
+    "agoda_url": "https://www.agoda.com/the-radh-hotel/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=The+Radh+Hotel",
+    "short_description_en": "A beautiful standard option in Kandy.",
+    "short_description_ja": "キャンディ地区にある快適なStandardクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Kandy City Hotel by Sangreea",
+    "japanese_name": "キャンディ シティ ホテル",
+    "tier": "Economy",
+    "tier_japanese": "エコノミー",
+    "star_rating": 3,
+    "address": "Kandy City Hotel by Sangreea Address, Kandy",
+    "twin_room_price": 7000,
+    "single_room_price": 5000,
+    "group_total_price": 19000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": false,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 7.8,
+    "google_rating": 4.0,
+    "official_website": "https://example.com/kandycityhotelbysangreea",
+    "booking_url": "https://www.booking.com/hotel/lk/kandy-city-hotel-by-sangreea.html",
+    "agoda_url": "https://www.agoda.com/kandy-city-hotel-by-sangreea/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Kandy+City+Hotel+by+Sangreea",
+    "short_description_en": "A beautiful economy option in Kandy.",
+    "short_description_ja": "キャンディ地区にある快適なEconomyクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Clock Inn Kandy",
+    "japanese_name": "クロック イン キャンディ",
+    "tier": "Economy",
+    "tier_japanese": "エコノミー",
+    "star_rating": 2,
+    "address": "Clock Inn Kandy Address, Kandy",
+    "twin_room_price": 5500,
+    "single_room_price": 4000,
+    "group_total_price": 15000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": false,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 7.8,
+    "google_rating": 4.0,
+    "official_website": "https://example.com/clockinnkandy",
+    "booking_url": "https://www.booking.com/hotel/lk/clock-inn-kandy.html",
+    "agoda_url": "https://www.agoda.com/clock-inn-kandy/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Clock+Inn+Kandy",
+    "short_description_en": "A beautiful economy option in Kandy.",
+    "short_description_ja": "キャンディ地区にある快適なEconomyクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1543465077-db45d34b88a5?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Sevana City Hotel",
+    "japanese_name": "セバナ シティ ホテル",
+    "tier": "Economy",
+    "tier_japanese": "エコノミー",
+    "star_rating": 3,
+    "address": "Sevana City Hotel Address, Kandy",
+    "twin_room_price": 6000,
+    "single_room_price": 4500,
+    "group_total_price": 16500,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": false,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 7.8,
+    "google_rating": 4.0,
+    "official_website": "https://example.com/sevanacityhotel",
+    "booking_url": "https://www.booking.com/hotel/lk/sevana-city-hotel.html",
+    "agoda_url": "https://www.agoda.com/sevana-city-hotel/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Sevana+City+Hotel",
+    "short_description_en": "A beautiful economy option in Kandy.",
+    "short_description_ja": "キャンディ地区にある快適なEconomyクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Kandy Backpackers Hostel",
+    "japanese_name": "キャンディ バックパッカーズ ホステル",
+    "tier": "Economy",
+    "tier_japanese": "エコノミー",
+    "star_rating": 2,
+    "address": "Kandy Backpackers Hostel Address, Kandy",
+    "twin_room_price": 4000,
+    "single_room_price": 2800,
+    "group_total_price": 10800,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": false,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 7.8,
+    "google_rating": 4.0,
+    "official_website": "https://example.com/kandybackpackershostel",
+    "booking_url": "https://www.booking.com/hotel/lk/kandy-backpackers-hostel.html",
+    "agoda_url": "https://www.agoda.com/kandy-backpackers-hostel/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Kandy+Backpackers+Hostel",
+    "short_description_en": "A beautiful economy option in Kandy.",
+    "short_description_ja": "キャンディ地区にある快適なEconomyクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Villa 49",
+    "japanese_name": "ヴィラ 49",
+    "tier": "Economy",
+    "tier_japanese": "エコノミー",
+    "star_rating": 2,
+    "address": "Villa 49 Address, Kandy",
+    "twin_room_price": 5800,
+    "single_room_price": 4200,
+    "group_total_price": 15800,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": false,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 7.8,
+    "google_rating": 4.0,
+    "official_website": "https://example.com/villa49",
+    "booking_url": "https://www.booking.com/hotel/lk/villa-49.html",
+    "agoda_url": "https://www.agoda.com/villa-49/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Villa+49",
+    "short_description_en": "A beautiful economy option in Kandy.",
+    "short_description_ja": "キャンディ地区にある快適なEconomyクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Pink House Kandy",
+    "japanese_name": "ピンク ハウス キャンディ",
+    "tier": "Economy",
+    "tier_japanese": "エコノミー",
+    "star_rating": 2,
+    "address": "Pink House Kandy Address, Kandy",
+    "twin_room_price": 4500,
+    "single_room_price": 3000,
+    "group_total_price": 12000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": false,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 7.8,
+    "google_rating": 4.0,
+    "official_website": "https://example.com/pinkhousekandy",
+    "booking_url": "https://www.booking.com/hotel/lk/pink-house-kandy.html",
+    "agoda_url": "https://www.agoda.com/pink-house-kandy/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Pink+House+Kandy",
+    "short_description_en": "A beautiful economy option in Kandy.",
+    "short_description_ja": "キャンディ地区にある快適なEconomyクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=600&q=80"
+    }
+  }
+]

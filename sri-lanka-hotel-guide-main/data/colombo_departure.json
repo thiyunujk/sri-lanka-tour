@@ -1,0 +1,956 @@
+[
+  {
+    "name": "Shangri-La Colombo",
+    "japanese_name": "シャングリラ コロンボ",
+    "tier": "Premium",
+    "tier_japanese": "プレミアム",
+    "star_rating": 5,
+    "address": "Shangri-La Colombo Address, Colombo departure",
+    "twin_room_price": 35000,
+    "single_room_price": 26000,
+    "group_total_price": 96000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": true,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.8,
+    "google_rating": 4.6,
+    "official_website": "https://example.com/shangri-lacolombo",
+    "booking_url": "https://www.booking.com/hotel/lk/shangri-la-colombo.html",
+    "agoda_url": "https://www.agoda.com/shangri-la-colombo/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Shangri-La+Colombo",
+    "short_description_en": "A beautiful premium option in Colombo departure.",
+    "short_description_ja": "コロンボ (出発前夜)地区にある快適なPremiumクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Hilton Colombo",
+    "japanese_name": "ヒルトン コロンボ",
+    "tier": "Premium",
+    "tier_japanese": "プレミアム",
+    "star_rating": 5,
+    "address": "Hilton Colombo Address, Colombo departure",
+    "twin_room_price": 28000,
+    "single_room_price": 20000,
+    "group_total_price": 76000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": true,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.8,
+    "google_rating": 4.6,
+    "official_website": "https://example.com/hiltoncolombo",
+    "booking_url": "https://www.booking.com/hotel/lk/hilton-colombo.html",
+    "agoda_url": "https://www.agoda.com/hilton-colombo/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Hilton+Colombo",
+    "short_description_en": "A beautiful premium option in Colombo departure.",
+    "short_description_ja": "コロンボ (出発前夜)地区にある快適なPremiumクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Taj Samudra Colombo",
+    "japanese_name": "タージ サムドラ コロンボ",
+    "tier": "Premium",
+    "tier_japanese": "プレミアム",
+    "star_rating": 5,
+    "address": "Taj Samudra Colombo Address, Colombo departure",
+    "twin_room_price": 26000,
+    "single_room_price": 19000,
+    "group_total_price": 71000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": true,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.8,
+    "google_rating": 4.6,
+    "official_website": "https://example.com/tajsamudracolombo",
+    "booking_url": "https://www.booking.com/hotel/lk/taj-samudra-colombo.html",
+    "agoda_url": "https://www.agoda.com/taj-samudra-colombo/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Taj+Samudra+Colombo",
+    "short_description_en": "A beautiful premium option in Colombo departure.",
+    "short_description_ja": "コロンボ (出発前夜)地区にある快適なPremiumクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Cinnamon Grand Colombo",
+    "japanese_name": "シナモン グランド コロンボ",
+    "tier": "Premium",
+    "tier_japanese": "プレミアム",
+    "star_rating": 5,
+    "address": "Cinnamon Grand Colombo Address, Colombo departure",
+    "twin_room_price": 23000,
+    "single_room_price": 17000,
+    "group_total_price": 63000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": true,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.8,
+    "google_rating": 4.6,
+    "official_website": "https://example.com/cinnamongrandcolombo",
+    "booking_url": "https://www.booking.com/hotel/lk/cinnamon-grand-colombo.html",
+    "agoda_url": "https://www.agoda.com/cinnamon-grand-colombo/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Cinnamon+Grand+Colombo",
+    "short_description_en": "A beautiful premium option in Colombo departure.",
+    "short_description_ja": "コロンボ (出発前夜)地区にある快適なPremiumクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Cinnamon Lakeside Colombo",
+    "japanese_name": "シナモン レイクサイド コロンボ",
+    "tier": "Premium",
+    "tier_japanese": "プレミアム",
+    "star_rating": 5,
+    "address": "Cinnamon Lakeside Colombo Address, Colombo departure",
+    "twin_room_price": 24000,
+    "single_room_price": 18000,
+    "group_total_price": 66000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": true,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.8,
+    "google_rating": 4.6,
+    "official_website": "https://example.com/cinnamonlakesidecolombo",
+    "booking_url": "https://www.booking.com/hotel/lk/cinnamon-lakeside-colombo.html",
+    "agoda_url": "https://www.agoda.com/cinnamon-lakeside-colombo/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Cinnamon+Lakeside+Colombo",
+    "short_description_en": "A beautiful premium option in Colombo departure.",
+    "short_description_ja": "コロンボ (出発前夜)地区にある快適なPremiumクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "The Kingsbury Colombo",
+    "japanese_name": "ザ キングズベリー コロンボ",
+    "tier": "Premium",
+    "tier_japanese": "プレミアム",
+    "star_rating": 5,
+    "address": "The Kingsbury Colombo Address, Colombo departure",
+    "twin_room_price": 25000,
+    "single_room_price": 18500,
+    "group_total_price": 68500,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": true,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.8,
+    "google_rating": 4.6,
+    "official_website": "https://example.com/thekingsburycolombo",
+    "booking_url": "https://www.booking.com/hotel/lk/the-kingsbury-colombo.html",
+    "agoda_url": "https://www.agoda.com/the-kingsbury-colombo/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=The+Kingsbury+Colombo",
+    "short_description_en": "A beautiful premium option in Colombo departure.",
+    "short_description_ja": "コロンボ (出発前夜)地区にある快適なPremiumクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1543465077-db45d34b88a5?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Marino Beach Colombo",
+    "japanese_name": "マリーノ ビーチ コロンボ",
+    "tier": "Standard",
+    "tier_japanese": "スタンダード",
+    "star_rating": 4,
+    "address": "Marino Beach Colombo Address, Colombo departure",
+    "twin_room_price": 16000,
+    "single_room_price": 12000,
+    "group_total_price": 44000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.2,
+    "google_rating": 4.3,
+    "official_website": "https://example.com/marinobeachcolombo",
+    "booking_url": "https://www.booking.com/hotel/lk/marino-beach-colombo.html",
+    "agoda_url": "https://www.agoda.com/marino-beach-colombo/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Marino+Beach+Colombo",
+    "short_description_en": "A beautiful standard option in Colombo departure.",
+    "short_description_ja": "コロンボ (出発前夜)地区にある快適なStandardクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Mandarina Colombo",
+    "japanese_name": "マンダリナ コロンボ",
+    "tier": "Standard",
+    "tier_japanese": "スタンダード",
+    "star_rating": 4,
+    "address": "Mandarina Colombo Address, Colombo departure",
+    "twin_room_price": 14000,
+    "single_room_price": 10000,
+    "group_total_price": 38000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.2,
+    "google_rating": 4.3,
+    "official_website": "https://example.com/mandarinacolombo",
+    "booking_url": "https://www.booking.com/hotel/lk/mandarina-colombo.html",
+    "agoda_url": "https://www.agoda.com/mandarina-colombo/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Mandarina+Colombo",
+    "short_description_en": "A beautiful standard option in Colombo departure.",
+    "short_description_ja": "コロンボ (出発前夜)地区にある快適なStandardクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "OZO Colombo",
+    "japanese_name": "オゾ コロンボ",
+    "tier": "Standard",
+    "tier_japanese": "スタンダード",
+    "star_rating": 4,
+    "address": "OZO Colombo Address, Colombo departure",
+    "twin_room_price": 13000,
+    "single_room_price": 9500,
+    "group_total_price": 35500,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.2,
+    "google_rating": 4.3,
+    "official_website": "https://example.com/ozocolombo",
+    "booking_url": "https://www.booking.com/hotel/lk/ozo-colombo.html",
+    "agoda_url": "https://www.agoda.com/ozo-colombo/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=OZO+Colombo",
+    "short_description_en": "A beautiful standard option in Colombo departure.",
+    "short_description_ja": "コロンボ (出発前夜)地区にある快適なStandardクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Radisson Hotel Colombo",
+    "japanese_name": "ラディソン ホテル コロンボ",
+    "tier": "Standard",
+    "tier_japanese": "スタンダード",
+    "star_rating": 4,
+    "address": "Radisson Hotel Colombo Address, Colombo departure",
+    "twin_room_price": 15000,
+    "single_room_price": 11000,
+    "group_total_price": 41000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.2,
+    "google_rating": 4.3,
+    "official_website": "https://example.com/radissonhotelcolombo",
+    "booking_url": "https://www.booking.com/hotel/lk/radisson-hotel-colombo.html",
+    "agoda_url": "https://www.agoda.com/radisson-hotel-colombo/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Radisson+Hotel+Colombo",
+    "short_description_en": "A beautiful standard option in Colombo departure.",
+    "short_description_ja": "コロンボ (出発前夜)地区にある快適なStandardクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1611891487122-2075b96244ee?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Ramada Colombo",
+    "japanese_name": "ラマダ コロンボ",
+    "tier": "Standard",
+    "tier_japanese": "スタンダード",
+    "star_rating": 4,
+    "address": "Ramada Colombo Address, Colombo departure",
+    "twin_room_price": 13500,
+    "single_room_price": 9800,
+    "group_total_price": 36800,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.2,
+    "google_rating": 4.3,
+    "official_website": "https://example.com/ramadacolombo",
+    "booking_url": "https://www.booking.com/hotel/lk/ramada-colombo.html",
+    "agoda_url": "https://www.agoda.com/ramada-colombo/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Ramada+Colombo",
+    "short_description_en": "A beautiful standard option in Colombo departure.",
+    "short_description_ja": "コロンボ (出発前夜)地区にある快適なStandardクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Cinnamon Red Colombo",
+    "japanese_name": "シナモン レッド コロンボ",
+    "tier": "Standard",
+    "tier_japanese": "スタンダード",
+    "star_rating": 4,
+    "address": "Cinnamon Red Colombo Address, Colombo departure",
+    "twin_room_price": 14000,
+    "single_room_price": 10000,
+    "group_total_price": 38000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.2,
+    "google_rating": 4.3,
+    "official_website": "https://example.com/cinnamonredcolombo",
+    "booking_url": "https://www.booking.com/hotel/lk/cinnamon-red-colombo.html",
+    "agoda_url": "https://www.agoda.com/cinnamon-red-colombo/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Cinnamon+Red+Colombo",
+    "short_description_en": "A beautiful standard option in Colombo departure.",
+    "short_description_ja": "コロンボ (出発前夜)地区にある快適なStandardクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Moss Colombo",
+    "japanese_name": "モス コロンボ",
+    "tier": "Economy",
+    "tier_japanese": "エコノミー",
+    "star_rating": 3,
+    "address": "Moss Colombo Address, Colombo departure",
+    "twin_room_price": 7500,
+    "single_room_price": 5500,
+    "group_total_price": 20500,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": false,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 7.8,
+    "google_rating": 4.0,
+    "official_website": "https://example.com/mosscolombo",
+    "booking_url": "https://www.booking.com/hotel/lk/moss-colombo.html",
+    "agoda_url": "https://www.agoda.com/moss-colombo/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Moss+Colombo",
+    "short_description_en": "A beautiful economy option in Colombo departure.",
+    "short_description_ja": "コロンボ (出発前夜)地区にある快適なEconomyクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Haven Colombo",
+    "japanese_name": "ヘブン コロンボ",
+    "tier": "Economy",
+    "tier_japanese": "エコノミー",
+    "star_rating": 3,
+    "address": "Haven Colombo Address, Colombo departure",
+    "twin_room_price": 7000,
+    "single_room_price": 5000,
+    "group_total_price": 19000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": false,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 7.8,
+    "google_rating": 4.0,
+    "official_website": "https://example.com/havencolombo",
+    "booking_url": "https://www.booking.com/hotel/lk/haven-colombo.html",
+    "agoda_url": "https://www.agoda.com/haven-colombo/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Haven+Colombo",
+    "short_description_en": "A beautiful economy option in Colombo departure.",
+    "short_description_ja": "コロンボ (出発前夜)地区にある快適なEconomyクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1543465077-db45d34b88a5?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Colombo Downtown Hostel",
+    "japanese_name": "コロンボ ダウンタウン ホステル",
+    "tier": "Economy",
+    "tier_japanese": "エコノミー",
+    "star_rating": 2,
+    "address": "Colombo Downtown Hostel Address, Colombo departure",
+    "twin_room_price": 5500,
+    "single_room_price": 4000,
+    "group_total_price": 15000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": false,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 7.8,
+    "google_rating": 4.0,
+    "official_website": "https://example.com/colombodowntownhostel",
+    "booking_url": "https://www.booking.com/hotel/lk/colombo-downtown-hostel.html",
+    "agoda_url": "https://www.agoda.com/colombo-downtown-hostel/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Colombo+Downtown+Hostel",
+    "short_description_en": "A beautiful economy option in Colombo departure.",
+    "short_description_ja": "コロンボ (出発前夜)地区にある快適なEconomyクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Clock Inn Colombo",
+    "japanese_name": "クロック イン コロンボ",
+    "tier": "Economy",
+    "tier_japanese": "エコノミー",
+    "star_rating": 2,
+    "address": "Clock Inn Colombo Address, Colombo departure",
+    "twin_room_price": 6000,
+    "single_room_price": 4500,
+    "group_total_price": 16500,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": false,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 7.8,
+    "google_rating": 4.0,
+    "official_website": "https://example.com/clockinncolombo",
+    "booking_url": "https://www.booking.com/hotel/lk/clock-inn-colombo.html",
+    "agoda_url": "https://www.agoda.com/clock-inn-colombo/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Clock+Inn+Colombo",
+    "short_description_en": "A beautiful economy option in Colombo departure.",
+    "short_description_ja": "コロンボ (出発前夜)地区にある快適なEconomyクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "City Beds - The Regent",
+    "japanese_name": "シティ ベッド ザ リージェント",
+    "tier": "Economy",
+    "tier_japanese": "エコノミー",
+    "star_rating": 2,
+    "address": "City Beds - The Regent Address, Colombo departure",
+    "twin_room_price": 6500,
+    "single_room_price": 5000,
+    "group_total_price": 18000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": false,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 7.8,
+    "google_rating": 4.0,
+    "official_website": "https://example.com/citybeds-theregent",
+    "booking_url": "https://www.booking.com/hotel/lk/city-beds---the-regent.html",
+    "agoda_url": "https://www.agoda.com/city-beds---the-regent/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=City+Beds+-+The+Regent",
+    "short_description_en": "A beautiful economy option in Colombo departure.",
+    "short_description_ja": "コロンボ (出発前夜)地区にある快適なEconomyクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Bunkyard Hostels",
+    "japanese_name": "バンキヤード ホステルズ",
+    "tier": "Economy",
+    "tier_japanese": "エコノミー",
+    "star_rating": 2,
+    "address": "Bunkyard Hostels Address, Colombo departure",
+    "twin_room_price": 5800,
+    "single_room_price": 4200,
+    "group_total_price": 15800,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": false,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 7.8,
+    "google_rating": 4.0,
+    "official_website": "https://example.com/bunkyardhostels",
+    "booking_url": "https://www.booking.com/hotel/lk/bunkyard-hostels.html",
+    "agoda_url": "https://www.agoda.com/bunkyard-hostels/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Bunkyard+Hostels",
+    "short_description_en": "A beautiful economy option in Colombo departure.",
+    "short_description_ja": "コロンボ (出発前夜)地区にある快適なEconomyクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=600&q=80"
+    }
+  }
+]

@@ -1,0 +1,956 @@
+[
+  {
+    "name": "Amangalla",
+    "japanese_name": "アマンガラ",
+    "tier": "Premium",
+    "tier_japanese": "プレミアム",
+    "star_rating": 5,
+    "address": "Amangalla Address, Galle",
+    "twin_room_price": 95000,
+    "single_room_price": 75000,
+    "group_total_price": 265000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": true,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.8,
+    "google_rating": 4.6,
+    "official_website": "https://example.com/amangalla",
+    "booking_url": "https://www.booking.com/hotel/lk/amangalla.html",
+    "agoda_url": "https://www.agoda.com/amangalla/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Amangalla",
+    "short_description_en": "A beautiful premium option in Galle.",
+    "short_description_ja": "ゴール地区にある快適なPremiumクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Le Grand Galle By Asia Leisure",
+    "japanese_name": "ル グランド ゴール",
+    "tier": "Premium",
+    "tier_japanese": "プレミアム",
+    "star_rating": 5,
+    "address": "Le Grand Galle By Asia Leisure Address, Galle",
+    "twin_room_price": 26000,
+    "single_room_price": 19000,
+    "group_total_price": 71000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": true,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.8,
+    "google_rating": 4.6,
+    "official_website": "https://example.com/legrandgallebyasialeisure",
+    "booking_url": "https://www.booking.com/hotel/lk/le-grand-galle-by-asia-leisure.html",
+    "agoda_url": "https://www.agoda.com/le-grand-galle-by-asia-leisure/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Le+Grand+Galle+By+Asia+Leisure",
+    "short_description_en": "A beautiful premium option in Galle.",
+    "short_description_ja": "ゴール地区にある快適なPremiumクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Jetwing Lighthouse",
+    "japanese_name": "ジェットウィング ライトハウス",
+    "tier": "Premium",
+    "tier_japanese": "プレミアム",
+    "star_rating": 5,
+    "address": "Jetwing Lighthouse Address, Galle",
+    "twin_room_price": 24000,
+    "single_room_price": 18000,
+    "group_total_price": 66000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": true,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.8,
+    "google_rating": 4.6,
+    "official_website": "https://example.com/jetwinglighthouse",
+    "booking_url": "https://www.booking.com/hotel/lk/jetwing-lighthouse.html",
+    "agoda_url": "https://www.agoda.com/jetwing-lighthouse/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Jetwing+Lighthouse",
+    "short_description_en": "A beautiful premium option in Galle.",
+    "short_description_ja": "ゴール地区にある快適なPremiumクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Fort Bazaar Premium",
+    "japanese_name": "フォート バザール プレミアム",
+    "tier": "Premium",
+    "tier_japanese": "プレミアム",
+    "star_rating": 4,
+    "address": "Fort Bazaar Premium Address, Galle",
+    "twin_room_price": 22000,
+    "single_room_price": 16000,
+    "group_total_price": 60000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": true,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.8,
+    "google_rating": 4.6,
+    "official_website": "https://example.com/fortbazaarpremium",
+    "booking_url": "https://www.booking.com/hotel/lk/fort-bazaar-premium.html",
+    "agoda_url": "https://www.agoda.com/fort-bazaar-premium/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Fort+Bazaar+Premium",
+    "short_description_en": "A beautiful premium option in Galle.",
+    "short_description_ja": "ゴール地区にある快適なPremiumクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Galle Fort Hotel Historic Suite",
+    "japanese_name": "ゴール フォート ホテル スイート",
+    "tier": "Premium",
+    "tier_japanese": "プレミアム",
+    "star_rating": 5,
+    "address": "Galle Fort Hotel Historic Suite Address, Galle",
+    "twin_room_price": 28000,
+    "single_room_price": 20000,
+    "group_total_price": 76000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": true,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.8,
+    "google_rating": 4.6,
+    "official_website": "https://example.com/galleforthotelhistoricsuite",
+    "booking_url": "https://www.booking.com/hotel/lk/galle-fort-hotel-historic-suite.html",
+    "agoda_url": "https://www.agoda.com/galle-fort-hotel-historic-suite/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Galle+Fort+Hotel+Historic+Suite",
+    "short_description_en": "A beautiful premium option in Galle.",
+    "short_description_ja": "ゴール地区にある快適なPremiumクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Kahanda Kanda",
+    "japanese_name": "カハンダ カンダ",
+    "tier": "Premium",
+    "tier_japanese": "プレミアム",
+    "star_rating": 5,
+    "address": "Kahanda Kanda Address, Galle",
+    "twin_room_price": 35000,
+    "single_room_price": 26000,
+    "group_total_price": 96000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": true,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.8,
+    "google_rating": 4.6,
+    "official_website": "https://example.com/kahandakanda",
+    "booking_url": "https://www.booking.com/hotel/lk/kahanda-kanda.html",
+    "agoda_url": "https://www.agoda.com/kahanda-kanda/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Kahanda+Kanda",
+    "short_description_en": "A beautiful premium option in Galle.",
+    "short_description_ja": "ゴール地区にある快適なPremiumクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1543465077-db45d34b88a5?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Fort Bazaar",
+    "japanese_name": "フォート バザール",
+    "tier": "Standard",
+    "tier_japanese": "スタンダード",
+    "star_rating": 4,
+    "address": "Fort Bazaar Address, Galle",
+    "twin_room_price": 18000,
+    "single_room_price": 14000,
+    "group_total_price": 50000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.2,
+    "google_rating": 4.3,
+    "official_website": "https://example.com/fortbazaar",
+    "booking_url": "https://www.booking.com/hotel/lk/fort-bazaar.html",
+    "agoda_url": "https://www.agoda.com/fort-bazaar/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Fort+Bazaar",
+    "short_description_en": "A beautiful standard option in Galle.",
+    "short_description_ja": "ゴール地区にある快適なStandardクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Tamarind Hill by Asia Leisure",
+    "japanese_name": "タマリンド ヒル",
+    "tier": "Standard",
+    "tier_japanese": "スタンダード",
+    "star_rating": 4,
+    "address": "Tamarind Hill by Asia Leisure Address, Galle",
+    "twin_room_price": 14000,
+    "single_room_price": 10000,
+    "group_total_price": 38000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.2,
+    "google_rating": 4.3,
+    "official_website": "https://example.com/tamarindhillbyasialeisure",
+    "booking_url": "https://www.booking.com/hotel/lk/tamarind-hill-by-asia-leisure.html",
+    "agoda_url": "https://www.agoda.com/tamarind-hill-by-asia-leisure/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Tamarind+Hill+by+Asia+Leisure",
+    "short_description_en": "A beautiful standard option in Galle.",
+    "short_description_ja": "ゴール地区にある快適なStandardクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Lady Hill Hotel",
+    "japanese_name": "レディ ヒル ホテル",
+    "tier": "Standard",
+    "tier_japanese": "スタンダード",
+    "star_rating": 4,
+    "address": "Lady Hill Hotel Address, Galle",
+    "twin_room_price": 12000,
+    "single_room_price": 9000,
+    "group_total_price": 33000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.2,
+    "google_rating": 4.3,
+    "official_website": "https://example.com/ladyhillhotel",
+    "booking_url": "https://www.booking.com/hotel/lk/lady-hill-hotel.html",
+    "agoda_url": "https://www.agoda.com/lady-hill-hotel/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Lady+Hill+Hotel",
+    "short_description_en": "A beautiful standard option in Galle.",
+    "short_description_ja": "ゴール地区にある快適なStandardクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "The Fort Printers",
+    "japanese_name": "ザ フォート プリンターズ",
+    "tier": "Standard",
+    "tier_japanese": "スタンダード",
+    "star_rating": 4,
+    "address": "The Fort Printers Address, Galle",
+    "twin_room_price": 16500,
+    "single_room_price": 12000,
+    "group_total_price": 45000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.2,
+    "google_rating": 4.3,
+    "official_website": "https://example.com/thefortprinters",
+    "booking_url": "https://www.booking.com/hotel/lk/the-fort-printers.html",
+    "agoda_url": "https://www.agoda.com/the-fort-printers/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=The+Fort+Printers",
+    "short_description_en": "A beautiful standard option in Galle.",
+    "short_description_ja": "ゴール地区にある快適なStandardクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1611891487122-2075b96244ee?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Era Beach by Asia Leisure",
+    "japanese_name": "エラ ビーチ バイ アジア レジャー",
+    "tier": "Standard",
+    "tier_japanese": "スタンダード",
+    "star_rating": 4,
+    "address": "Era Beach by Asia Leisure Address, Galle",
+    "twin_room_price": 15000,
+    "single_room_price": 11000,
+    "group_total_price": 41000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.2,
+    "google_rating": 4.3,
+    "official_website": "https://example.com/erabeachbyasialeisure",
+    "booking_url": "https://www.booking.com/hotel/lk/era-beach-by-asia-leisure.html",
+    "agoda_url": "https://www.agoda.com/era-beach-by-asia-leisure/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Era+Beach+by+Asia+Leisure",
+    "short_description_en": "A beautiful standard option in Galle.",
+    "short_description_ja": "ゴール地区にある快適なStandardクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Closenberg Hotel",
+    "japanese_name": "クローゼンバーグ ホテル",
+    "tier": "Standard",
+    "tier_japanese": "スタンダード",
+    "star_rating": 3,
+    "address": "Closenberg Hotel Address, Galle",
+    "twin_room_price": 11500,
+    "single_room_price": 8500,
+    "group_total_price": 31500,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": true,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 8.2,
+    "google_rating": 4.3,
+    "official_website": "https://example.com/closenberghotel",
+    "booking_url": "https://www.booking.com/hotel/lk/closenberg-hotel.html",
+    "agoda_url": "https://www.agoda.com/closenberg-hotel/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Closenberg+Hotel",
+    "short_description_en": "A beautiful standard option in Galle.",
+    "short_description_ja": "ゴール地区にある快適なStandardクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Cozy Nest Galle Fort",
+    "japanese_name": "コージー ネスト ゴール フォート",
+    "tier": "Economy",
+    "tier_japanese": "エコノミー",
+    "star_rating": 3,
+    "address": "Cozy Nest Galle Fort Address, Galle",
+    "twin_room_price": 7500,
+    "single_room_price": 5500,
+    "group_total_price": 20500,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": false,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 7.8,
+    "google_rating": 4.0,
+    "official_website": "https://example.com/cozynestgallefort",
+    "booking_url": "https://www.booking.com/hotel/lk/cozy-nest-galle-fort.html",
+    "agoda_url": "https://www.agoda.com/cozy-nest-galle-fort/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Cozy+Nest+Galle+Fort",
+    "short_description_en": "A beautiful economy option in Galle.",
+    "short_description_ja": "ゴール地区にある快適なEconomyクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Pedlar's Inn Hostel",
+    "japanese_name": "ペドラーズ イン ホステル",
+    "tier": "Economy",
+    "tier_japanese": "エコノミー",
+    "star_rating": 2,
+    "address": "Pedlar's Inn Hostel Address, Galle",
+    "twin_room_price": 6000,
+    "single_room_price": 4000,
+    "group_total_price": 16000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": false,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 7.8,
+    "google_rating": 4.0,
+    "official_website": "https://example.com/pedlar'sinnhostel",
+    "booking_url": "https://www.booking.com/hotel/lk/pedlar's-inn-hostel.html",
+    "agoda_url": "https://www.agoda.com/pedlar's-inn-hostel/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Pedlar's+Inn+Hostel",
+    "short_description_en": "A beautiful economy option in Galle.",
+    "short_description_ja": "ゴール地区にある快適なEconomyクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1543465077-db45d34b88a5?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Sunset Fort Hotel",
+    "japanese_name": "サンセット フォート ホテル",
+    "tier": "Economy",
+    "tier_japanese": "エコノミー",
+    "star_rating": 3,
+    "address": "Sunset Fort Hotel Address, Galle",
+    "twin_room_price": 7000,
+    "single_room_price": 5000,
+    "group_total_price": 19000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": false,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 7.8,
+    "google_rating": 4.0,
+    "official_website": "https://example.com/sunsetforthotel",
+    "booking_url": "https://www.booking.com/hotel/lk/sunset-fort-hotel.html",
+    "agoda_url": "https://www.agoda.com/sunset-fort-hotel/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Sunset+Fort+Hotel",
+    "short_description_en": "A beautiful economy option in Galle.",
+    "short_description_ja": "ゴール地区にある快適なEconomyクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Galle Fort Hostel",
+    "japanese_name": "ゴール フォート ホステル",
+    "tier": "Economy",
+    "tier_japanese": "エコノミー",
+    "star_rating": 2,
+    "address": "Galle Fort Hostel Address, Galle",
+    "twin_room_price": 8281,
+    "single_room_price": 6000,
+    "group_total_price": 22562,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": false,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 7.8,
+    "google_rating": 4.0,
+    "official_website": "https://example.com/galleforthostel",
+    "booking_url": "https://www.booking.com/hotel/lk/galle-fort-hostel.html",
+    "agoda_url": "https://www.agoda.com/galle-fort-hostel/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Galle+Fort+Hostel",
+    "short_description_en": "A beautiful economy option in Galle.",
+    "short_description_ja": "ゴール地区にある快適なEconomyクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://cf.bstatic.com/xdata/images/hotel/square240/94122849.webp?k=092b1b902a6b6787deddef79fe58ddb5ec23ee94d3b13c012c9a3e1c98457e64&o=",
+      "room_image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Pilgrim's Eye Guest House",
+    "japanese_name": "ピルグリムズ アイ ゲストハウス",
+    "tier": "Economy",
+    "tier_japanese": "エコノミー",
+    "star_rating": 2,
+    "address": "Pilgrim's Eye Guest House Address, Galle",
+    "twin_room_price": 4800,
+    "single_room_price": 3200,
+    "group_total_price": 12800,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": false,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 7.8,
+    "google_rating": 4.0,
+    "official_website": "https://example.com/pilgrim'seyeguesthouse",
+    "booking_url": "https://www.booking.com/hotel/lk/pilgrim's-eye-guest-house.html",
+    "agoda_url": "https://www.agoda.com/pilgrim's-eye-guest-house/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Pilgrim's+Eye+Guest+House",
+    "short_description_en": "A beautiful economy option in Galle.",
+    "short_description_ja": "ゴール地区にある快適なEconomyクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600&q=80"
+    }
+  },
+  {
+    "name": "Fort Castle Galle Fort",
+    "japanese_name": "フォート キャッスル ゴール フォート",
+    "tier": "Economy",
+    "tier_japanese": "エコノミー",
+    "star_rating": 2,
+    "address": "Fort Castle Galle Fort Address, Galle",
+    "twin_room_price": 5200,
+    "single_room_price": 3600,
+    "group_total_price": 14000,
+    "currency": "JPY",
+    "yen_conversion_date": "2026-07-10",
+    "check_in_time": "14:00",
+    "check_out_time": "12:00",
+    "facilities": {
+      "breakfast": true,
+      "swimming_pool": false,
+      "wifi": true,
+      "air_conditioning": true,
+      "restaurant": true,
+      "parking": true,
+      "gym": false,
+      "front_desk_24h": true
+    },
+    "booking_rating": 7.8,
+    "google_rating": 4.0,
+    "official_website": "https://example.com/fortcastlegallefort",
+    "booking_url": "https://www.booking.com/hotel/lk/fort-castle-galle-fort.html",
+    "agoda_url": "https://www.agoda.com/fort-castle-galle-fort/hotel/sri-lanka.html",
+    "google_maps_url": "https://maps.google.com/?q=Fort+Castle+Galle+Fort",
+    "short_description_en": "A beautiful economy option in Galle.",
+    "short_description_ja": "ゴール地区にある快適なEconomyクラスの宿泊施設。",
+    "highlights_en": [
+      "Great location",
+      "Friendly staff"
+    ],
+    "highlights_ja": [
+      "素晴らしい立地",
+      "親切なスタッフの対応"
+    ],
+    "disadvantages_en": [
+      "Limited parking"
+    ],
+    "disadvantages_ja": [
+      "駐車スペースが限られています"
+    ],
+    "images": {
+      "exterior_image": "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=600&q=80",
+      "room_image": "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=600&q=80",
+      "bathroom_image": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=600&q=80",
+      "facility_image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=600&q=80"
+    }
+  }
+]

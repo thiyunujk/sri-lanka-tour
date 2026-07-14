@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Lanka Travel & Hotel Selection Guide / スリランカ旅行・ホテル選択ガイド</title>
+    <style>
+        {{ css_content }}
+    </style>
+</head>
+<body>
+    <div class="guide-container">
+        {% include 'cover.html' %}
+        {% include 'how_to_use.html' %}
+        {% for dest in destinations %}
+            {% set destination = dest %}
+            {% include 'destination.html' %}
+        {% endfor %}
+    </div>
+
+    <!-- Lightbox Overlay -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script>
+        // Lightbox logic
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.lightbox-close');
+
+        // Add click listener to all clickable photos
+        document.querySelectorAll('.clickable-photo').forEach(img => {
+            img.addEventListener('click', function() {
+                lightbox.style.display = 'flex';
+                // If it's a background image (thumbnail), extract URL, otherwise use src
+                let src = this.getAttribute('src');
+                if (!src) {
+                    const bg = this.style.backgroundImage;
+                    src = bg.replace(/(url\(|\)|"|')/g, '');
+                }
+                lightboxImg.src = src;
+            });
+        });
+
+        // Close logic
+        closeBtn.onclick = () => lightbox.style.display = 'none';
+        lightbox.onclick = (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
