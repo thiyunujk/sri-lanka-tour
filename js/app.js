@@ -6,7 +6,7 @@ const itineraryData = [
   {
     dayNum: 1,
     date: "Aug 10",
-    img: "resources/day1.jpg",
+    img: "resources/welcome%20srilanka.webp",
     en: {
       title: "Day 1: Arrival",
       timeline: [
@@ -135,7 +135,7 @@ const itineraryData = [
   {
     dayNum: 6,
     date: "Aug 15",
-    img: "resources/day6.jpg",
+    img: "resources/SriDaladaMaligawa1.webp",
     en: {
       title: "Day 6: Temple of the Tooth & Cultural Show",
       timeline: [
@@ -162,7 +162,7 @@ const itineraryData = [
   {
     dayNum: 7,
     date: "Aug 16",
-    img: "resources/day7.jpg",
+    img: "resources/nuwaraeliya.webp",
     en: {
       title: "Day 7: High Tea in Nuwara Eliya",
       timeline: [
@@ -272,7 +272,7 @@ const itineraryData = [
   {
     dayNum: 11,
     date: "Aug 20",
-    img: "resources/day11.jpg",
+    img: "resources/srilankan%20depart.jpg",
     en: {
       title: "Day 11: Farewell & Departure",
       timeline: [
