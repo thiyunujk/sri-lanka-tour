@@ -311,6 +311,7 @@ const staticTextUI = {
     btnStart: "Start Tour",
     btnChecklist: "Checklist",
     btnDocs: "Documents",
+    btnGroupVotes: "Group Votes",
     modalTitleChecklist: "Packing Checklist",
     modalTitleDocs: "Important Documents",
     lblRoute: "Transit Route",
@@ -327,6 +328,7 @@ const staticTextUI = {
     btnStart: "ツアー開始",
     btnChecklist: "持ち物",
     btnDocs: "書類",
+    btnGroupVotes: "グループ投票",
     modalTitleChecklist: "持ち物リスト",
     modalTitleDocs: "重要書類",
     lblRoute: "移動ルート",
@@ -379,6 +381,7 @@ const domEls = {
   btnTop: document.getElementById('btn-top'),
   btnChecklist: document.getElementById('btn-checklist'),
   btnDocs: document.getElementById('btn-docs'),
+  btnGroupVotes: document.getElementById('btn-group-votes'),
   modalTitleChecklist: document.getElementById('modal-title-checklist'),
   modalTitleDocs: document.getElementById('modal-title-docs'),
   checklistContainer: document.getElementById('checklist-container'),
@@ -521,6 +524,7 @@ function updateStaticGlobalText() {
   domEls.btnTop.textContent = texts.btnTop;
   domEls.btnChecklist.textContent = texts.btnChecklist;
   domEls.btnDocs.textContent = texts.btnDocs;
+  if (domEls.btnGroupVotes) domEls.btnGroupVotes.textContent = texts.btnGroupVotes;
   domEls.modalTitleChecklist.textContent = texts.modalTitleChecklist;
   domEls.modalTitleDocs.textContent = texts.modalTitleDocs;
   
@@ -549,6 +553,9 @@ function toggleAccordion(dayNum) {
  * Listener for Bilingual Toggle.
  */
 domEls.langToggleBtn.addEventListener('click', () => {
+  // Close any open modal so stale-language content is never left visible
+  closeAllModals();
+
   // Find all currently open cards to preserve their state
   const openCards = [];
   document.querySelectorAll('.accordion-content.open').forEach(el => {
