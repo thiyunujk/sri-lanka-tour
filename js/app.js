@@ -483,13 +483,13 @@ function renderItinerary() {
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
             </svg>
           </div>
-          <div>
+          <div class="w-full">
             <p class="text-[10px] font-bold text-orange-800 uppercase tracking-widest mb-1">${uiText.lblHotel}</p>
-            <p class="text-[13px] text-slate-800 leading-relaxed font-semibold">${data.hotel}</p>
-            <a href="#" class="inline-flex items-center gap-1 mt-2.5 text-[11px] font-bold text-orange-600 hover:text-orange-800 transition-colors">
-              ${uiText.lblBooking}
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
-            </a>
+            <p class="text-[13px] text-slate-800 leading-relaxed font-semibold mb-3">${data.hotel}</p>
+            <button onclick="openHotelVoting(${day.dayNum})" class="w-full py-2.5 bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white text-xs font-bold rounded-xl transition-colors shadow-sm flex items-center justify-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              Choose Hotels
+            </button>
           </div>
         </div>
       `;
