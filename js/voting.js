@@ -30,7 +30,7 @@ if (firebaseConfig.apiKey) {
   db = firebase.database();
 }
 
-const VOTER_NAMES = ["Thiyunu", "Alice", "Bob", "Charlie", "Dave"];
+const VOTER_NAMES = ["チユヌ", "イガラシ", "チコ", "ナカマ", "ルミコ"];
 let currentVoter = localStorage.getItem('voterName');
 let currentDestKey = null;
 let currentTier = 'Premium';
@@ -51,14 +51,14 @@ function setVoter(name) {
   closeAllModals();
   // Small delay for UI smoothness
   setTimeout(() => {
-    alert(`Welcome, ${name}! You can now vote for hotels.`);
+    alert(`ようこそ、${name}さん！ホテルの投票ができます。`);
   }, 300);
 }
 
 function openHotelVoting(dayNum) {
   currentDestKey = dayToDest[dayNum];
   if (!currentDestKey || !hotelData[currentDestKey]) {
-    alert("No hotel data available for this destination yet.");
+    alert("この目的地のホテルデータはまだありません。");
     return;
   }
   openModal('modal-hotel-selection');
@@ -87,7 +87,7 @@ function renderHotelList() {
   const hotels = hotelData[currentDestKey].tiers[currentTier];
   
   if (!hotels || hotels.length === 0) {
-    container.innerHTML = `<p class="text-center text-slate-500 py-10">No hotels found for this tier.</p>`;
+    container.innerHTML = `<p class="text-center text-slate-500 py-10">このクラスのホテルは見つかりませんでした。</p>`;
     return;
   }
 
@@ -97,12 +97,12 @@ function renderHotelList() {
         <h4 class="font-bold text-slate-800 text-[15px] leading-tight pr-2">${h.name}</h4>
         <div class="flex text-amber-400 shrink-0 text-xs">${'★'.repeat(h.stars || 4)}</div>
       </div>
-      <p class="text-xs text-slate-500 line-clamp-2">${h.description || 'A beautiful stay in ' + hotelData[currentDestKey].name}</p>
+      <p class="text-xs text-slate-500 line-clamp-2">${h.description || hotelData[currentDestKey].name + 'での素敵な滞在'}</p>
       
       <div class="mt-2 pt-3 border-t border-slate-100 flex gap-2">
-        <button onclick="voteHotel('${h.name.replace(/'/g, "\\'")}', 1)" class="flex-1 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider bg-emerald-50 text-emerald-600 hover:bg-emerald-500 hover:text-white transition-colors border border-emerald-100">Choice 1</button>
-        <button onclick="voteHotel('${h.name.replace(/'/g, "\\'")}', 2)" class="flex-1 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider bg-sky-50 text-sky-600 hover:bg-sky-500 hover:text-white transition-colors border border-sky-100">Choice 2</button>
-        <button onclick="voteHotel('${h.name.replace(/'/g, "\\'")}', 3)" class="flex-1 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider bg-amber-50 text-amber-600 hover:bg-amber-500 hover:text-white transition-colors border border-amber-100">Choice 3</button>
+        <button onclick="voteHotel('${h.name.replace(/'/g, "\\'")}', 1)" class="flex-1 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider bg-emerald-50 text-emerald-600 hover:bg-emerald-500 hover:text-white transition-colors border border-emerald-100">第1希望</button>
+        <button onclick="voteHotel('${h.name.replace(/'/g, "\\'")}', 2)" class="flex-1 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider bg-sky-50 text-sky-600 hover:bg-sky-500 hover:text-white transition-colors border border-sky-100">第2希望</button>
+        <button onclick="voteHotel('${h.name.replace(/'/g, "\\'")}', 3)" class="flex-1 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider bg-amber-50 text-amber-600 hover:bg-amber-500 hover:text-white transition-colors border border-amber-100">第3希望</button>
       </div>
     </div>
   `).join('');
@@ -114,7 +114,7 @@ function voteHotel(hotelName, choiceLevel) {
     return;
   }
   if (!db) {
-    alert(`Could not connect to Firebase!`);
+    alert(`データベースに接続できませんでした！`);
     return;
   }
   
@@ -123,8 +123,8 @@ function voteHotel(hotelName, choiceLevel) {
   updates[`choice${choiceLevel}`] = hotelName;
   
   voteRef.update(updates)
-    .then(() => alert(`Saved ${hotelName} as Choice ${choiceLevel}!`))
-    .catch(e => alert("Error saving vote: " + e.message));
+    .then(() => alert(`${hotelName} を第${choiceLevel}希望として保存しました！`))
+    .catch(e => alert("保存エラー: " + e.message));
 }
 
 // Add event listener to open Group Votes
@@ -147,16 +147,16 @@ document.addEventListener('DOMContentLoaded', () => {
 function renderGroupVotes() {
   const container = document.getElementById('group-votes-container');
   if (!db) {
-    container.innerHTML = `<p class="text-red-500 text-center py-10">Database not initialized!</p>`;
+    container.innerHTML = `<p class="text-red-500 text-center py-10">データベースが初期化されていません！</p>`;
     return;
   }
   
-  container.innerHTML = `<p class="text-center text-slate-500 py-10">Loading votes...</p>`;
+  container.innerHTML = `<p class="text-center text-slate-500 py-10">投票を読み込んでいます...</p>`;
   
   db.ref('votes').once('value').then(snapshot => {
     const data = snapshot.val();
     if (!data) {
-      container.innerHTML = `<p class="text-center text-slate-500 py-10">No votes have been cast yet.</p>`;
+      container.innerHTML = `<p class="text-center text-slate-500 py-10">まだ投票されていません。</p>`;
       return;
     }
     
@@ -170,9 +170,9 @@ function renderGroupVotes() {
           <div class="bg-white rounded-xl p-3 mb-2 shadow-sm border border-slate-100">
             <p class="font-bold text-emerald-700 text-sm mb-1">${voter}</p>
             <ul class="text-xs text-slate-600 space-y-1 pl-2 border-l-2 border-emerald-100">
-              <li><span class="font-semibold text-emerald-600">1st:</span> ${choices.choice1 || '...'}</li>
-              <li><span class="font-semibold text-sky-600">2nd:</span> ${choices.choice2 || '...'}</li>
-              <li><span class="font-semibold text-amber-600">3rd:</span> ${choices.choice3 || '...'}</li>
+              <li><span class="font-semibold text-emerald-600">第1希望:</span> ${choices.choice1 || '...'}</li>
+              <li><span class="font-semibold text-sky-600">第2希望:</span> ${choices.choice2 || '...'}</li>
+              <li><span class="font-semibold text-amber-600">第3希望:</span> ${choices.choice3 || '...'}</li>
             </ul>
           </div>
         `;
@@ -180,6 +180,6 @@ function renderGroupVotes() {
     }
     container.innerHTML = html;
   }).catch(e => {
-    container.innerHTML = `<p class="text-red-500 text-center py-10">Error loading votes: ${e.message}</p>`;
+    container.innerHTML = `<p class="text-red-500 text-center py-10">読み込みエラー: ${e.message}</p>`;
   });
 }

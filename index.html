@@ -85,7 +85,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
         </svg>
-        <span class="text-[9px] font-bold uppercase tracking-widest text-center" id="btn-group-votes">Group Votes</span>
+        <span class="text-[9px] font-bold uppercase tracking-widest text-center" id="btn-group-votes">グループ投票</span>
       </button>
     </div>
 
@@ -117,8 +117,8 @@
     <!-- Identity Modal -->
     <div id="modal-identity" class="fixed inset-0 flex items-center justify-center z-[80] opacity-0 pointer-events-none transition-opacity duration-300">
       <div class="bg-white rounded-2xl w-[90%] max-w-sm p-6 shadow-2xl transform scale-95 transition-transform duration-300" id="identity-box">
-        <h3 class="text-xl font-bold text-slate-800 mb-2">Who is voting?</h3>
-        <p class="text-sm text-slate-500 mb-5">Please select your name to continue.</p>
+        <h3 class="text-xl font-bold text-slate-800 mb-2">誰が投票しますか？</h3>
+        <p class="text-sm text-slate-500 mb-5">名前を選択してください。</p>
         <div class="space-y-3" id="voter-buttons">
           <!-- Populated by JS -->
         </div>
@@ -129,17 +129,17 @@
     <div id="modal-hotel-selection" class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-white rounded-t-[24px] z-[70] transform translate-y-full transition-transform duration-300 shadow-[0_-10px_40px_rgba(0,0,0,0.1)] flex flex-col max-h-[90vh]">
       <div class="flex justify-between items-center p-5 border-b border-slate-100">
         <div>
-          <h3 class="text-lg font-bold text-slate-800" id="modal-title-hotel-dest">Hotels</h3>
-          <p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mt-0.5">Select 1st, 2nd & 3rd Choices</p>
+          <h3 class="text-lg font-bold text-slate-800" id="modal-title-hotel-dest">ホテル</h3>
+          <p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mt-0.5">第1、第2、第3希望を選択</p>
         </div>
         <button onclick="closeAllModals()" class="p-2 bg-slate-100 text-slate-500 rounded-full hover:bg-slate-200 transition-colors focus:outline-none"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg></button>
       </div>
       
       <!-- Tier Tabs -->
       <div class="flex px-4 pt-2 border-b border-slate-200">
-        <button onclick="switchHotelTier('Premium')" id="tab-Premium" class="flex-1 py-3 text-sm font-semibold border-b-2 border-transparent text-slate-500 transition-colors">Premium</button>
-        <button onclick="switchHotelTier('Standard')" id="tab-Standard" class="flex-1 py-3 text-sm font-semibold border-b-2 border-transparent text-slate-500 transition-colors">Standard</button>
-        <button onclick="switchHotelTier('Economy')" id="tab-Economy" class="flex-1 py-3 text-sm font-semibold border-b-2 border-transparent text-slate-500 transition-colors">Economy</button>
+        <button onclick="switchHotelTier('Premium')" id="tab-Premium" class="flex-1 py-3 text-sm font-semibold border-b-2 border-transparent text-slate-500 transition-colors">プレミアム</button>
+        <button onclick="switchHotelTier('Standard')" id="tab-Standard" class="flex-1 py-3 text-sm font-semibold border-b-2 border-transparent text-slate-500 transition-colors">スタンダード</button>
+        <button onclick="switchHotelTier('Economy')" id="tab-Economy" class="flex-1 py-3 text-sm font-semibold border-b-2 border-transparent text-slate-500 transition-colors">エコノミー</button>
       </div>
 
       <div class="p-4 overflow-y-auto pb-safe flex-1 bg-slate-50" id="hotel-list-container">
@@ -150,7 +150,7 @@
     <!-- Group Votes Dashboard Modal -->
     <div id="modal-group-votes" class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-white rounded-t-[24px] z-[70] transform translate-y-full transition-transform duration-300 shadow-[0_-10px_40px_rgba(0,0,0,0.1)] flex flex-col max-h-[90vh]">
       <div class="flex justify-between items-center p-5 border-b border-slate-100">
-        <h3 class="text-lg font-bold text-slate-800">Group Votes Dashboard</h3>
+        <h3 class="text-lg font-bold text-slate-800">グループ投票結果</h3>
         <button onclick="closeAllModals()" class="p-2 bg-slate-100 text-slate-500 rounded-full hover:bg-slate-200 transition-colors focus:outline-none"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg></button>
       </div>
       <div class="p-5 overflow-y-auto pb-safe flex-1 bg-slate-50" id="group-votes-container">

@@ -490,7 +490,7 @@ function renderItinerary() {
             <p class="text-[13px] text-slate-800 leading-relaxed font-semibold mb-3">${data.hotel}</p>
             <button onclick="openHotelVoting(${day.dayNum})" class="w-full py-2.5 bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white text-xs font-bold rounded-xl transition-colors shadow-sm flex items-center justify-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              Choose Hotels
+              ホテルを選択
             </button>
           </div>
         </div>
@@ -593,19 +593,43 @@ function openModal(modalId) {
   if (!modal) return;
   domEls.modalOverlay.classList.remove('opacity-0', 'pointer-events-none');
   domEls.modalOverlay.classList.add('opacity-100', 'pointer-events-auto');
-  modal.classList.remove('translate-y-full');
-  modal.classList.add('translate-y-0');
+  
+  if (modal.classList.contains('translate-y-full')) {
+    modal.classList.remove('translate-y-full');
+    modal.classList.add('translate-y-0');
+  } else if (modal.classList.contains('opacity-0')) {
+    modal.classList.remove('opacity-0', 'pointer-events-none');
+    modal.classList.add('opacity-100', 'pointer-events-auto');
+    const box = modal.querySelector('div');
+    if (box && box.classList.contains('scale-95')) {
+      box.classList.remove('scale-95');
+      box.classList.add('scale-100');
+    }
+  }
   document.body.classList.add('modal-open');
 }
 
 function closeAllModals() {
   domEls.modalOverlay.classList.remove('opacity-100', 'pointer-events-auto');
   domEls.modalOverlay.classList.add('opacity-0', 'pointer-events-none');
-  ['modal-checklist', 'modal-docs'].forEach(id => {
+  
+  const allModals = ['modal-checklist', 'modal-docs', 'modal-hotel-selection', 'modal-group-votes', 'modal-identity'];
+  
+  allModals.forEach(id => {
     const modal = document.getElementById(id);
     if (modal) {
-      modal.classList.remove('translate-y-0');
-      modal.classList.add('translate-y-full');
+      if (modal.classList.contains('translate-y-0')) {
+        modal.classList.remove('translate-y-0');
+        modal.classList.add('translate-y-full');
+      } else if (modal.classList.contains('opacity-100')) {
+        modal.classList.remove('opacity-100', 'pointer-events-auto');
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        const box = modal.querySelector('div');
+        if (box && box.classList.contains('scale-100')) {
+          box.classList.remove('scale-100');
+          box.classList.add('scale-95');
+        }
+      }
     }
   });
   document.body.classList.remove('modal-open');
