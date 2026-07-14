@@ -362,6 +362,11 @@ const documentsData = {
 // State Variables
 let currentLang = 'ja'; // Default state on load is JA
 
+// Global accessor so other scripts (voting.js) can read the live language state
+function getCurrentLang() {
+  return currentLang;
+}
+
 // DOM Elements for global text
 const domEls = {
   container: document.getElementById('itinerary-container'),
@@ -372,7 +377,6 @@ const domEls = {
   heroTitle: document.getElementById('hero-title'),
   heroSubtitle: document.getElementById('hero-subtitle'),
   btnTop: document.getElementById('btn-top'),
-  btnStart: document.getElementById('btn-start'),
   btnChecklist: document.getElementById('btn-checklist'),
   btnDocs: document.getElementById('btn-docs'),
   modalTitleChecklist: document.getElementById('modal-title-checklist'),
@@ -515,7 +519,6 @@ function updateStaticGlobalText() {
   domEls.heroTitle.textContent = texts.heroTitle;
   domEls.heroSubtitle.textContent = texts.heroSubtitle;
   domEls.btnTop.textContent = texts.btnTop;
-  domEls.btnStart.textContent = texts.btnStart;
   domEls.btnChecklist.textContent = texts.btnChecklist;
   domEls.btnDocs.textContent = texts.btnDocs;
   domEls.modalTitleChecklist.textContent = texts.modalTitleChecklist;
