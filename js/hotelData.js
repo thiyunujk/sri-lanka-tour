@@ -4601,922 +4601,169 @@ const hotelData = {
   ],
   "sigiriya": [
     {
-      "name": "Heritance Kandalama",
-      "japanese_name": "ヘリタンス カンダラマ",
+      "name": "Tepraas Sigiriya",
+      "japanese_name": "テプラアス シーギリヤ",
+      "tier": "Standard",
+      "tier_japanese": "スタンダード",
+      "is_new": false,
+      "room_config": "2 delux double room (¥48,104) & one double room(¥37,900)",
+      "price_base": 134107,
+      "price_taxes": 14752,
+      "price_total": 148859,
+      "currency": "JPY",
+      "review_score": 8.5,
+      "cancellation": {
+        "free": true,
+        "deadline": "2026-08-05",
+        "raw": "Free cancellation before 5 August 2026"
+      },
+      "booking_url": "https://www.booking.com/hotel/lk/tepraas-sigiriya.en-gb.html?checkin=2026-08-12&checkout=2026-08-15&group_adults=5&no_rooms=3&group_children=0",
+      "short_description_en": "Comfortable Accommodations: Tepraas Sigiriya in Sigiriya offers spacious rooms with garden or pool views. Each room includes air-conditioning, a private bathroom, and modern amenities.",
+      "long_note_en": "Comfortable Accommodations: Tepraas Sigiriya in Sigiriya offers spacious rooms with garden or pool views. Each room includes air-conditioning, a private bathroom, and modern amenities.\n\nExceptional Facilities: Guests enjoy a sun terrace, lush garden, and a year-round outdoor swimming pool. Free WiFi is available throughout the property.\n\nDining Experience: The family-friendly restaurant serves French, Indian, Italian, and local cuisines. Breakfast options include continental, buffet, and full English.\n\nConvenient Location: Located 3 km from Sigiriya Airport, the hotel is near attractions such as Pidurangala Rock (11 km) and Sigiriya Rock (12 km). Free on-site parking is provided.",
+      "images": {
+        "exterior_image": ""
+      },
+      "image_source": "none",
+      "verified": true,
+      "availability_checked": "2026-07-15"
+    },
+    {
+      "name": "Cinnamon Lodge Habarana",
+      "japanese_name": "シナモン ロッジ ハバラナ",
       "tier": "Premium",
       "tier_japanese": "プレミアム",
       "star_rating": 5,
-      "address": "Heritance Kandalama Address, Sigiriya",
-      "twin_room_price": 28000,
-      "single_room_price": 22000,
-      "group_total_price": 78000,
+      "is_new": false,
+      "room_config": "room type-Superior Twin - Discounts (15% on F&B, 10% on Spa, 10% on Jeep Safari) 2 single beds (2 rooms. one couple and me single can stay), room type- Deluxe King with Partial Lake View - Discounts (15% on F&B, 10% on Spa, 10% on Jeep Safari) 1 double bed for a couple, incl. taxes",
+      "price_base": 180499,
+      "price_taxes": 53789,
+      "price_total": 234288,
       "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
+      "review_score": 8.9,
+      "cancellation": {
+        "free": true,
+        "deadline": "2026-08-05",
+        "raw": "Free cancellation before 5 August 2026"
       },
-      "booking_rating": 8.8,
-      "google_rating": 4.6,
-      "official_website": "https://example.com/heritancekandalama",
-      "booking_url": "https://www.booking.com/hotel/lk/heritance-kandalama.html",
-      "agoda_url": "https://www.agoda.com/heritance-kandalama/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Heritance+Kandalama",
-      "short_description_en": "A beautiful premium option in Sigiriya.",
-      "short_description_ja": "シーギリヤ地区にある快適なPremiumクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
+      "booking_url": "https://www.booking.com/hotel/lk/cinnamon-lodge-habarana.en-gb.html?checkin=2026-08-12&checkout=2026-08-15&group_adults=5&no_rooms=3&group_children=0",
+      "short_description_en": "Located amidst green forests, the Cinnamon Lodge Habarana offers air-conditioned rooms with a private balcony. The hotel boasts a large outdoor pool, a butterfly garden and 3 dining options.",
+      "long_note_en": "Located amidst green forests, the Cinnamon Lodge Habarana offers air-conditioned rooms with a private balcony. The hotel boasts a large outdoor pool, a butterfly garden and 3 dining options.\n\nRooms at Cinnamon Lodge Habarana feature a comfortable seating area with a sofa. They are furnished with cable TV, a minibar and a personal safe. A tea/coffee maker is provided.\n\nGuests at the Cinnamon Lodge Habarana can unwind at Svastha Serene Spa, work a sweat on the tennis court, or enjoy a game of billiards. The hotel offers baby sitting and butler service for deluxe suites.\n\nRestaurant Ehala offers buffets with international and themed dishes, while The Lotus caters Western culinary delights and local contemporary cuisine. Beverages can be enjoyed at cafe Veranda or bar Tuskers.\n\nCinnamon Lodge Habarana is a 25-minute drive away from Minneriya National Park.",
       "images": {
         "exterior_image": ""
       },
-      "image_source": "none"
+      "image_source": "none",
+      "verified": true,
+      "availability_checked": "2026-07-15"
     },
     {
-      "name": "Jetwing Vil Uyana",
-      "japanese_name": "ジェットウィング ヴィル ウヤナ",
+      "name": "Pinthaliya Resort",
+      "japanese_name": "ピンサイヤ リゾート",
+      "tier": "Standard",
+      "tier_japanese": "スタンダード",
+      "star_rating": 5,
+      "is_new": false,
+      "room_config": "room type - Family Suite 1 room, room type - Superior Double 1 room, room type - Deluxe Double 1 room",
+      "price_base": 169092,
+      "price_taxes": 16909,
+      "price_total": 186001,
+      "currency": "JPY",
+      "review_score": 8.2,
+      "cancellation": {
+        "free": true,
+        "deadline": "2026-08-05",
+        "raw": "Free cancellation before 5 August 2026"
+      },
+      "booking_url": "https://www.booking.com/hotel/lk/pinthaliya-resort-amp-spa.en-gb.html?checkin=2026-08-12&checkout=2026-08-15&group_adults=5&no_rooms=3&group_children=0",
+      "short_description_en": "Elegant Accommodations: Pinthaliya Resort in Sigiriya offers family rooms with garden views, private bathrooms, and modern amenities. Each room includes air-conditioning, a minibar, and free WiFi.",
+      "long_note_en": "Elegant Accommodations: Pinthaliya Resort in Sigiriya offers family rooms with garden views, private bathrooms, and modern amenities. Each room includes air-conditioning, a minibar, and free WiFi.\n\nExceptional Facilities: Guests can relax in the outdoor swimming pool, enjoy the terrace, and dine at the on-site restaurant serving international cuisine. Additional facilities include a garden, balcony, and free private parking.\n\nComfortable Amenities: The resort provides free WiFi, a 24-hour front desk, and private check-in and check-out services. Breakfast options include continental, American, and Asian styles with local specialities and warm dishes.\n\nPrime Location: Located 5 km from Sigiriya Airport, the resort is near attractions such as Pidurangala Rock and Sigiriya Rock, each 14 km away. Free on-site parking and a convenient location enhance the stay.",
+      "images": {
+        "exterior_image": ""
+      },
+      "image_source": "none",
+      "verified": true,
+      "availability_checked": "2026-07-15"
+    },
+    {
+      "name": "Sigiriya Jungles Resort & Spa",
+      "japanese_name": "シーギリヤ ジャングルズ リゾート ＆ スパ",
       "tier": "Premium",
       "tier_japanese": "プレミアム",
       "star_rating": 5,
-      "address": "Jetwing Vil Uyana Address, Sigiriya",
-      "twin_room_price": 32000,
-      "single_room_price": 25000,
-      "group_total_price": 89000,
+      "is_new": false,
+      "room_config": "Deluxe Room with 15% Discount on Spa - 3rooms",
+      "price_base": 238283,
+      "price_taxes": 71008,
+      "price_total": 309291,
       "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
+      "review_score": 8.6,
+      "cancellation": {
+        "free": true,
+        "deadline": "2026-08-05",
+        "raw": "Free cancellation before 5 August 2026"
       },
-      "booking_rating": 8.8,
-      "google_rating": 4.6,
-      "official_website": "https://example.com/jetwingviluyana",
-      "booking_url": "https://www.booking.com/hotel/lk/jetwing-vil-uyana.html",
-      "agoda_url": "https://www.agoda.com/jetwing-vil-uyana/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Jetwing+Vil+Uyana",
-      "short_description_en": "A beautiful premium option in Sigiriya.",
-      "short_description_ja": "シーギリヤ地区にある快適なPremiumクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
+      "booking_url": "https://www.booking.com/hotel/lk/sigiriya-jungles.en-gb.html?checkin=2026-08-12&checkout=2026-08-15&group_adults=5&no_rooms=3&group_children=0",
+      "short_description_en": "Situated 5 km from Sigiriya Rock in Sigiriya, Sigiriya Jungles Resort & Spa features 3 restaurants, 2 bars and free WiFi throughout the property. The resort has an outdoor pool, a spa and wellness centre and a fitness centre.",
+      "long_note_en": "Situated 5 km from Sigiriya Rock in Sigiriya, Sigiriya Jungles Resort & Spa features 3 restaurants, 2 bars and free WiFi throughout the property. The resort has an outdoor pool, a spa and wellness centre and a fitness centre.\n\nAll rooms have a seating area for your convenience. A terrace or balcony are featured in certain rooms. A TV with cable channels and a well-stocked minibar are featured. The private bathroom comes with a rainshower and hairdryer.\n\nYou will find a 24-hour front desk at the property. Free private parking is available on site. The property has a uniquely designed 100 feet wooden bridge that offers views of the Sigiriya Rock and the Pidurangala Monastery.\n\nLakshmi, an all-day dining restaurant serves a fusion of Western and Eastern cuisine. Garden Breeze Restaurant overlooks the lush green garden and the paddy field and serves multi-cuisine.",
       "images": {
         "exterior_image": ""
       },
-      "image_source": "none"
+      "image_source": "none",
+      "verified": true,
+      "availability_checked": "2026-07-15"
     },
     {
-      "name": "Aliya Resort & Spa",
-      "japanese_name": "アリヤ リゾート ＆ スパ",
-      "tier": "Premium",
-      "tier_japanese": "プレミアム",
-      "star_rating": 4,
-      "address": "Aliya Resort & Spa Address, Sigiriya",
-      "twin_room_price": 20000,
-      "single_room_price": 15000,
-      "group_total_price": 55000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.8,
-      "google_rating": 4.6,
-      "official_website": "https://example.com/aliyaresort&spa",
-      "booking_url": "https://www.booking.com/hotel/lk/aliya-resort-&-spa.html",
-      "agoda_url": "https://www.agoda.com/aliya-resort-&-spa/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Aliya+Resort+&+Spa",
-      "short_description_en": "A beautiful premium option in Sigiriya.",
-      "short_description_ja": "シーギリヤ地区にある快適なPremiumクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Water Garden Sigiriya",
-      "japanese_name": "ウォーター ガーデン シーギリヤ",
-      "tier": "Premium",
-      "tier_japanese": "プレミアム",
-      "star_rating": 5,
-      "address": "Water Garden Sigiriya Address, Sigiriya",
-      "twin_room_price": 42000,
-      "single_room_price": 32000,
-      "group_total_price": 116000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.8,
-      "google_rating": 4.6,
-      "official_website": "https://example.com/watergardensigiriya",
-      "booking_url": "https://www.booking.com/hotel/lk/water-garden-sigiriya.html",
-      "agoda_url": "https://www.agoda.com/water-garden-sigiriya/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Water+Garden+Sigiriya",
-      "short_description_en": "A beautiful premium option in Sigiriya.",
-      "short_description_ja": "シーギリヤ地区にある快適なPremiumクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Sigiriya King's Resort",
-      "japanese_name": "シーギリヤ キングス リゾート",
-      "tier": "Premium",
-      "tier_japanese": "プレミアム",
-      "star_rating": 4,
-      "address": "Sigiriya King's Resort Address, Sigiriya",
-      "twin_room_price": 22000,
-      "single_room_price": 16000,
-      "group_total_price": 60000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.8,
-      "google_rating": 4.6,
-      "official_website": "https://example.com/sigiriyaking'sresort",
-      "booking_url": "https://www.booking.com/hotel/lk/sigiriya-king's-resort.html",
-      "agoda_url": "https://www.agoda.com/sigiriya-king's-resort/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Sigiriya+King's+Resort",
-      "short_description_en": "A beautiful premium option in Sigiriya.",
-      "short_description_ja": "シーギリヤ地区にある快適なPremiumクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Seerock King's Domain",
-      "japanese_name": "シーロック キングス ドメイン",
-      "tier": "Premium",
-      "tier_japanese": "プレミアム",
-      "star_rating": 5,
-      "address": "Seerock King's Domain Address, Sigiriya",
-      "twin_room_price": 25000,
-      "single_room_price": 18000,
-      "group_total_price": 68000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.8,
-      "google_rating": 4.6,
-      "official_website": "https://example.com/seerockking'sdomain",
-      "booking_url": "https://www.booking.com/hotel/lk/seerock-king's-domain.html",
-      "agoda_url": "https://www.agoda.com/seerock-king's-domain/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Seerock+King's+Domain",
-      "short_description_en": "A beautiful premium option in Sigiriya.",
-      "short_description_ja": "シーギリヤ地区にある快適なPremiumクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Hotel Sigiriya",
-      "japanese_name": "ホテル シーギリヤ",
-      "tier": "Standard",
-      "tier_japanese": "スタンダード",
-      "star_rating": 4,
-      "address": "Hotel Sigiriya Address, Sigiriya",
-      "twin_room_price": 7469,
-      "single_room_price": 5500,
-      "group_total_price": 20438,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.2,
-      "google_rating": 4.3,
-      "official_website": "https://example.com/hotelsigiriya",
-      "booking_url": "https://www.booking.com/hotel/lk/hotel-sigiriya.html",
-      "agoda_url": "https://www.agoda.com/hotel-sigiriya/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Hotel+Sigiriya",
-      "short_description_en": "A beautiful standard option in Sigiriya.",
-      "short_description_ja": "シーギリヤ地区にある快適なStandardクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Sigiriya Jungles",
-      "japanese_name": "シーギリヤ ジャングルズ",
-      "tier": "Standard",
-      "tier_japanese": "スタンダード",
-      "star_rating": 4,
-      "address": "Sigiriya Jungles Address, Sigiriya",
-      "twin_room_price": 13000,
-      "single_room_price": 9500,
-      "group_total_price": 35500,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.2,
-      "google_rating": 4.3,
-      "official_website": "https://example.com/sigiriyajungles",
-      "booking_url": "https://www.booking.com/hotel/lk/sigiriya-jungles.html",
-      "agoda_url": "https://www.agoda.com/sigiriya-jungles/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Sigiriya+Jungles",
-      "short_description_en": "A beautiful standard option in Sigiriya.",
-      "short_description_ja": "シーギリヤ地区にある快適なStandardクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Amaara Forest Hotel",
-      "japanese_name": "アマアラ フォレスト ホテル",
-      "tier": "Standard",
-      "tier_japanese": "スタンダード",
-      "star_rating": 4,
-      "address": "Amaara Forest Hotel Address, Sigiriya",
-      "twin_room_price": 12000,
-      "single_room_price": 8500,
-      "group_total_price": 32500,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.2,
-      "google_rating": 4.3,
-      "official_website": "https://example.com/amaaraforesthotel",
-      "booking_url": "https://www.booking.com/hotel/lk/amaara-forest-hotel.html",
-      "agoda_url": "https://www.agoda.com/amaara-forest-hotel/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Amaara+Forest+Hotel",
-      "short_description_en": "A beautiful standard option in Sigiriya.",
-      "short_description_ja": "シーギリヤ地区にある快適なStandardクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Kassapa Lions Rock",
-      "japanese_name": "カッサパ ライオンズ ロック",
-      "tier": "Standard",
-      "tier_japanese": "スタンダード",
-      "star_rating": 3,
-      "address": "Kassapa Lions Rock Address, Sigiriya",
-      "twin_room_price": 11000,
-      "single_room_price": 8000,
-      "group_total_price": 30000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.2,
-      "google_rating": 4.3,
-      "official_website": "https://example.com/kassapalionsrock",
-      "booking_url": "https://www.booking.com/hotel/lk/kassapa-lions-rock.html",
-      "agoda_url": "https://www.agoda.com/kassapa-lions-rock/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Kassapa+Lions+Rock",
-      "short_description_en": "A beautiful standard option in Sigiriya.",
-      "short_description_ja": "シーギリヤ地区にある快適なStandardクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Sigiriya Village",
-      "japanese_name": "シーギリヤ ヴィレッジ",
-      "tier": "Standard",
-      "tier_japanese": "スタンダード",
-      "star_rating": 4,
-      "address": "Sigiriya Village Address, Sigiriya",
-      "twin_room_price": 6138,
-      "single_room_price": 4500,
-      "group_total_price": 16776,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.2,
-      "google_rating": 4.3,
-      "official_website": "https://example.com/sigiriyavillage",
-      "booking_url": "https://www.booking.com/hotel/lk/sigiriya-village.html",
-      "agoda_url": "https://www.agoda.com/sigiriya-village/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Sigiriya+Village",
-      "short_description_en": "A beautiful standard option in Sigiriya.",
-      "short_description_ja": "シーギリヤ地区にある快適なStandardクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Kaveri Resort Sigiriya",
-      "japanese_name": "カヴェリ リゾート シーギリヤ",
-      "tier": "Standard",
-      "tier_japanese": "スタンダード",
-      "star_rating": 4,
-      "address": "Kaveri Resort Sigiriya Address, Sigiriya",
-      "twin_room_price": 13500,
-      "single_room_price": 9500,
-      "group_total_price": 36500,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.2,
-      "google_rating": 4.3,
-      "official_website": "https://example.com/kaveriresortsigiriya",
-      "booking_url": "https://www.booking.com/hotel/lk/kaveri-resort-sigiriya.html",
-      "agoda_url": "https://www.agoda.com/kaveri-resort-sigiriya/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Kaveri+Resort+Sigiriya",
-      "short_description_en": "A beautiful standard option in Sigiriya.",
-      "short_description_ja": "シーギリヤ地区にある快適なStandardクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Sigiriya Rock Side Homestay",
-      "japanese_name": "シーギリヤ ロック サイド ホームステイ",
+      "name": "Sandila Nivasa",
+      "japanese_name": "サンディア ニヴァサ",
       "tier": "Economy",
       "tier_japanese": "エコノミー",
-      "star_rating": 2,
-      "address": "Sigiriya Rock Side Homestay Address, Sigiriya",
-      "twin_room_price": 5000,
-      "single_room_price": 3500,
-      "group_total_price": 13500,
+      "is_new": true,
+      "room_config": "Triple Room with Private Bathroom 3 rooms",
+      "price_base": 34363,
+      "price_taxes": 7216,
+      "price_total": 41579,
       "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": false,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
+      "review_score": 10.0,
+      "cancellation": {
+        "free": true,
+        "deadline": "2026-08-11",
+        "raw": "Free cancellation before 11 August 2026"
       },
-      "booking_rating": 7.8,
-      "google_rating": 4.0,
-      "official_website": "https://example.com/sigiriyarocksidehomestay",
-      "booking_url": "https://www.booking.com/hotel/lk/sigiriya-rock-side-homestay.html",
-      "agoda_url": "https://www.agoda.com/sigiriya-rock-side-homestay/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Sigiriya+Rock+Side+Homestay",
-      "short_description_en": "A beautiful economy option in Sigiriya.",
-      "short_description_ja": "シーギリヤ地区にある快適なEconomyクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
+      "booking_url": "https://www.booking.com/hotel/lk/sandila-nivasa-kimbissa-sigirya.en-gb.html?checkin=2026-08-12&checkout=2026-08-15&group_adults=5&no_rooms=3&group_children=0",
+      "short_description_en": "Spacious Accommodation: Sandila Nivasa in Sigiriya offers spacious, recently renovated rooms with garden views. The property is pet-friendly and includes family rooms.",
+      "long_note_en": "Spacious Accommodation: Sandila Nivasa in Sigiriya offers spacious, recently renovated rooms with garden views. The property is pet-friendly and includes family rooms.\n\nExceptional Facilities: Guests enjoy a swimming pool with a view, sun terrace, and lush garden. Free WiFi is available throughout the property. Additional amenities include a restaurant, lounge, and outdoor play area.\n\nDining Experience: The family-friendly restaurant serves Chinese, local, and Asian cuisines for lunch and dinner, accommodating vegetarian, vegan, and halal diets.\n\nLocal Attractions: Sigiriya Rock is 8 km away, Pidurangala Rock 10 km, and Sigiriya Museum 8 km. Other points of interest include Dambulla Cave Temple and Sigiriya Airport, both 5 km from the property.",
       "images": {
         "exterior_image": ""
       },
-      "image_source": "none"
+      "image_source": "none",
+      "verified": true,
+      "availability_checked": "2026-07-15"
     },
     {
-      "name": "Wewa Addara Hotel",
-      "japanese_name": "ウェワ アッダラ ホテル",
+      "name": "Tropicara Resort",
+      "japanese_name": "トロピカラ リゾート",
       "tier": "Economy",
       "tier_japanese": "エコノミー",
-      "star_rating": 3,
-      "address": "Wewa Addara Hotel Address, Sigiriya",
-      "twin_room_price": 6000,
-      "single_room_price": 4500,
-      "group_total_price": 16500,
+      "is_new": false,
+      "room_config": "Deluxe Double Room 2 rooms ,Deluxe Double Room with Balcony 1 room",
+      "price_base": 102232,
+      "price_taxes": 11246,
+      "price_total": 113478,
       "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": false,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
+      "review_score": 9.1,
+      "cancellation": {
+        "free": false,
+        "deadline": null,
+        "raw": "Total cost to cancel"
       },
-      "booking_rating": 7.8,
-      "google_rating": 4.0,
-      "official_website": "https://example.com/wewaaddarahotel",
-      "booking_url": "https://www.booking.com/hotel/lk/wewa-addara-hotel.html",
-      "agoda_url": "https://www.agoda.com/wewa-addara-hotel/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Wewa+Addara+Hotel",
-      "short_description_en": "A beautiful economy option in Sigiriya.",
-      "short_description_ja": "シーギリヤ地区にある快適なEconomyクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
+      "booking_url": "https://www.booking.com/hotel/lk/tropicara-resort.en-gb.html?checkin=2026-08-12&checkout=2026-08-15&group_adults=5&no_rooms=3&group_children=0",
+      "short_description_en": "Comfortable Accommodations: Tropicara Resort in Sigiriya offers family rooms with air-conditioning, private bathrooms, and garden or pool views. Each room includes a work desk, soundproofing, and free WiFi.",
+      "long_note_en": "Comfortable Accommodations: Tropicara Resort in Sigiriya offers family rooms with air-conditioning, private bathrooms, and garden or pool views. Each room includes a work desk, soundproofing, and free WiFi.\n\nWellness and Leisure: Guests can relax at the spa and wellness centre, sun terrace, or year-round outdoor swimming pool. Additional facilities include a fitness centre, sauna, and outdoor seating area.\n\nDining Experience: The family-friendly restaurant serves continental, à la carte, and Asian breakfasts with fresh pastries and cheese. Lunch and dinner are available in a welcoming ambience.\n\nConvenient Location: Located 5 km from Sigiriya Airport, the hotel is near attractions such as Pidurangala Rock (9 km) and Sigiriya Rock (10 km). Free on-site private parking is provided.",
       "images": {
         "exterior_image": ""
       },
-      "image_source": "none"
-    },
-    {
-      "name": "Flower Garden Eco Village",
-      "japanese_name": "フラワー ガーデン エコ ヴィレッジ",
-      "tier": "Economy",
-      "tier_japanese": "エコノミー",
-      "star_rating": 3,
-      "address": "Flower Garden Eco Village Address, Sigiriya",
-      "twin_room_price": 5500,
-      "single_room_price": 4000,
-      "group_total_price": 15000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": false,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 7.8,
-      "google_rating": 4.0,
-      "official_website": "https://example.com/flowergardenecovillage",
-      "booking_url": "https://www.booking.com/hotel/lk/flower-garden-eco-village.html",
-      "agoda_url": "https://www.agoda.com/flower-garden-eco-village/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Flower+Garden+Eco+Village",
-      "short_description_en": "A beautiful economy option in Sigiriya.",
-      "short_description_ja": "シーギリヤ地区にある快適なEconomyクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Sigiri Lodge",
-      "japanese_name": "シーギリ ロッジ",
-      "tier": "Economy",
-      "tier_japanese": "エコノミー",
-      "star_rating": 2,
-      "address": "Sigiri Lodge Address, Sigiriya",
-      "twin_room_price": 4500,
-      "single_room_price": 3000,
-      "group_total_price": 12000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": false,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 7.8,
-      "google_rating": 4.0,
-      "official_website": "https://example.com/sigirilodge",
-      "booking_url": "https://www.booking.com/hotel/lk/sigiri-lodge.html",
-      "agoda_url": "https://www.agoda.com/sigiri-lodge/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Sigiri+Lodge",
-      "short_description_en": "A beautiful economy option in Sigiriya.",
-      "short_description_ja": "シーギリヤ地区にある快適なEconomyクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Lion Lodge Sigiriya",
-      "japanese_name": "ライオン ロッジ シーギリヤ",
-      "tier": "Economy",
-      "tier_japanese": "エコノミー",
-      "star_rating": 2,
-      "address": "Lion Lodge Sigiriya Address, Sigiriya",
-      "twin_room_price": 8601,
-      "single_room_price": 6500,
-      "group_total_price": 23702,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": false,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 7.8,
-      "google_rating": 4.0,
-      "official_website": "https://example.com/lionlodgesigiriya",
-      "booking_url": "https://www.booking.com/hotel/lk/lion-lodge-sigiriya.html",
-      "agoda_url": "https://www.agoda.com/lion-lodge-sigiriya/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Lion+Lodge+Sigiriya",
-      "short_description_en": "A beautiful economy option in Sigiriya.",
-      "short_description_ja": "シーギリヤ地区にある快適なEconomyクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Roy's Villa Hostel",
-      "japanese_name": "ロイズ ヴィラ ホステル",
-      "tier": "Economy",
-      "tier_japanese": "エコノミー",
-      "star_rating": 2,
-      "address": "Roy's Villa Hostel Address, Sigiriya",
-      "twin_room_price": 4000,
-      "single_room_price": 2800,
-      "group_total_price": 10800,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": false,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 7.8,
-      "google_rating": 4.0,
-      "official_website": "https://example.com/roy'svillahostel",
-      "booking_url": "https://www.booking.com/hotel/lk/roy's-villa-hostel.html",
-      "agoda_url": "https://www.agoda.com/roy's-villa-hostel/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Roy's+Villa+Hostel",
-      "short_description_en": "A beautiful economy option in Sigiriya.",
-      "short_description_ja": "シーギリヤ地区にある快適なEconomyクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
+      "image_source": "none",
+      "verified": true,
+      "availability_checked": "2026-07-15"
     }
   ],
   "weligama": [

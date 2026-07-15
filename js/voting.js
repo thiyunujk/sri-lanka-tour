@@ -46,7 +46,15 @@ const votingUI = {
     },
     verifiedBadge: (monthDay) => `✓ 空室確認済み (${monthDay}時点)`,
     freeCancellation: 'キャンセル無料',
-    morePhotos: 'もっと写真を見る'
+    morePhotos: 'もっと写真を見る',
+    totalInclTax: '総額（税込）',
+    roomRate: '宿泊料金',
+    taxesFees: '税・サービス料',
+    roomSetup: '部屋構成',
+    freeCancelUntil: (monthDay) => `${monthDay}まで無料キャンセル`,
+    nonRefundable: '返金不可',
+    newProperty: '新規オープン',
+    fewReviewsNote: '※レビュー数少'
   },
   en: {
     choices: ['1st Choice', '2nd Choice', '3rd Choice'],
@@ -81,7 +89,15 @@ const votingUI = {
     },
     verifiedBadge: (monthDay) => `✓ Availability checked (as of ${monthDay})`,
     freeCancellation: 'Free cancellation',
-    morePhotos: 'More photos'
+    morePhotos: 'More photos',
+    totalInclTax: 'Total (incl. taxes)',
+    roomRate: 'Room rate',
+    taxesFees: 'Taxes & fees',
+    roomSetup: 'Room setup',
+    freeCancelUntil: (monthDay) => `Free cancel until ${monthDay}`,
+    nonRefundable: 'Non-refundable',
+    newProperty: 'New property',
+    fewReviewsNote: '※ few reviews'
   }
 };
 
@@ -193,8 +209,12 @@ const destDates = buildDestDates();
 // Appends checkin/checkout/group size to a Booking.com URL for verified
 // hotels only (old, unverified booking_urls are known WAF-blocked anyway
 // -- see scripts/url_audit_report.json -- so there's no point dating them).
+// Curated hotels from ingest_curated.py already have these baked in at
+// ingest time (see canonicalize_booking_url there) -- this is a no-op for
+// those, it only fills in dates for anything that isn't pre-canonicalized.
 function withBookingDates(url, destKey) {
   if (!url) return url;
+  if (url.includes('checkin=')) return url;
   const dates = destDates[destKey];
   if (!dates) return url;
   const params = new URLSearchParams({
@@ -212,6 +232,17 @@ function formatMonthDay(isoDate) {
   const m = /^\d{4}-(\d{2})-(\d{2})/.exec(isoDate || '');
   if (!m) return isoDate || '';
   return `${Number(m[1])}/${Number(m[2])}`;
+}
+
+const EN_MONTH_ABBR = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+// 'YYYY-MM-DD' -> 'M/D' (ja) or 'Mon D' (en), used in the free-cancellation-deadline chip.
+function formatDeadline(isoDate, lang) {
+  const m = /^\d{4}-(\d{2})-(\d{2})/.exec(isoDate || '');
+  if (!m) return isoDate || '';
+  const month = Number(m[1]);
+  const day = Number(m[2]);
+  return lang === 'ja' ? `${month}/${day}` : `${EN_MONTH_ABBR[month - 1]} ${day}`;
 }
 
 const firebaseConfig = {
@@ -297,7 +328,14 @@ function hotelCardHTML(h, lang, T, destKey) {
   const secondaryName = lang === 'ja' ? enName : jaName;
   const stars = Number(h.star_rating) > 0 ? '★'.repeat(Number(h.star_rating)) : '';
   const tierLabel = (T.tierTabs && T.tierTabs[h.tier]) || h.tier || '';
-  const groupPrice = formatPrice(h.group_total_price, h.currency);
+  // price_total (curated hotels, tax-inclusive) takes priority over the
+  // older group_total_price (fabricated-data hotels, no tax breakdown).
+  const hasCuratedPrice = h.price_total != null;
+  const displayTotal = hasCuratedPrice ? h.price_total : h.group_total_price;
+  const totalLabel = hasCuratedPrice ? T.totalInclTax : T.groupTotal;
+  const groupPrice = formatPrice(displayTotal, h.currency);
+  const basePrice = formatPrice(h.price_base, h.currency);
+  const taxesPrice = formatPrice(h.price_taxes, h.currency);
   const twinPrice = formatPrice(h.twin_room_price, h.currency);
   const singlePrice = formatPrice(h.single_room_price, h.currency);
   const desc = lang === 'ja' ? (h.short_description_ja || '') : (h.short_description_en || '');
@@ -318,24 +356,51 @@ function hotelCardHTML(h, lang, T, destKey) {
   const verifiedBadge = h.verified === true && h.availability_checked
     ? `<span class="inline-flex items-center gap-1 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-full px-2 py-0.5 text-[10px] font-bold">${T.verifiedBadge(formatMonthDay(h.availability_checked))}</span>`
     : '';
-  const freeCancelChip = h.price_note === 'free_cancellation'
-    ? `<span class="inline-flex items-center gap-1 bg-sky-50 text-sky-700 border border-sky-200 rounded-full px-2 py-0.5 text-[10px] font-bold">${T.freeCancellation}</span>`
+  // Deadline-aware cancellation chip (curated hotels). Green + deadline
+  // when free, red/non-refundable otherwise -- never silently omitted,
+  // since "can I get my money back" is exactly what this chip is for.
+  let cancelChip = '';
+  if (h.cancellation) {
+    if (h.cancellation.free) {
+      const label = h.cancellation.deadline
+        ? T.freeCancelUntil(formatDeadline(h.cancellation.deadline, lang))
+        : T.freeCancellation;
+      cancelChip = `<span class="inline-flex items-center gap-1 bg-sky-50 text-sky-700 border border-sky-200 rounded-full px-2 py-0.5 text-[10px] font-bold">${label}</span>`;
+    } else {
+      cancelChip = `<span class="inline-flex items-center gap-1 bg-red-50 text-red-700 border border-red-200 rounded-full px-2 py-0.5 text-[10px] font-bold">${T.nonRefundable}</span>`;
+    }
+  }
+  const badgeChips = [verifiedBadge, cancelChip].filter(Boolean).join('');
+
+  // New-listing hotels (Booking.com "new" star rating) get a badge in
+  // place of stars, since there is no star rating to show.
+  const newBadge = h.is_new === true
+    ? `<span class="bg-violet-50 text-violet-700 border border-violet-200 rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider">${T.newProperty}</span>`
     : '';
-  const badgeChips = [verifiedBadge, freeCancelChip].filter(Boolean).join('');
 
   const ratings = [];
-  if (isFinite(Number(h.booking_rating)) && h.booking_rating != null && h.booking_rating !== '') {
-    ratings.push(`<span class="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-600"><span class="bg-blue-600 text-white rounded px-1 py-0.5 text-[10px] font-bold">B</span>Booking.com ${Number(h.booking_rating)}</span>`);
+  // review_score (curated hotels) takes priority over the older booking_rating.
+  const reviewScoreValue = (h.review_score != null && h.review_score !== '') ? h.review_score : h.booking_rating;
+  if (isFinite(Number(reviewScoreValue)) && reviewScoreValue != null && reviewScoreValue !== '') {
+    const fewReviewsSup = h.is_new === true ? `<sup class="text-amber-600">${T.fewReviewsNote}</sup>` : '';
+    ratings.push(`<span class="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-600"><span class="bg-blue-600 text-white rounded px-1 py-0.5 text-[10px] font-bold">B</span>Booking.com ${Number(reviewScoreValue)}${fewReviewsSup}</span>`);
   }
   if (isFinite(Number(h.google_rating)) && h.google_rating != null && h.google_rating !== '') {
     ratings.push(`<span class="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-600"><span class="bg-slate-200 text-slate-700 rounded px-1 py-0.5 text-[10px] font-bold">G</span>Google ${Number(h.google_rating)}</span>`);
   }
 
   // --- detail section ---
-  const priceRows = [
+  const priceRows = hasCuratedPrice ? [
+    basePrice ? `<div class="flex justify-between"><span class="text-slate-500">${T.roomRate}</span><span class="font-bold text-slate-800">${basePrice}</span></div>` : '',
+    taxesPrice ? `<div class="flex justify-between"><span class="text-slate-500">${T.taxesFees}</span><span class="font-bold text-slate-800">${taxesPrice}</span></div>` : ''
+  ].join('') : [
     twinPrice ? `<div class="flex justify-between"><span class="text-slate-500">${T.twinRoom}</span><span class="font-bold text-slate-800">${twinPrice}</span></div>` : '',
     singlePrice ? `<div class="flex justify-between"><span class="text-slate-500">${T.singleRoom}</span><span class="font-bold text-slate-800">${singlePrice}</span></div>` : ''
   ].join('');
+
+  const roomConfigHTML = typeof h.room_config === 'string' && h.room_config.trim() !== ''
+    ? `<div><p class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">${T.roomSetup}</p><p class="text-xs text-slate-600 leading-relaxed">${escapeHtml(h.room_config)}</p></div>`
+    : '';
 
   const timeRows = [
     h.check_in_time ? `<div class="flex justify-between"><span class="text-slate-500">${T.checkIn}</span><span class="font-semibold text-slate-800">${escapeHtml(h.check_in_time)}</span></div>` : '',
@@ -380,6 +445,7 @@ function hotelCardHTML(h, lang, T, destKey) {
 
   const detailSections = [
     (priceRows || timeRows) ? `<div class="space-y-1.5 text-xs">${priceRows}${timeRows}</div>` : '',
+    roomConfigHTML,
     facChips ? `<div class="flex flex-wrap gap-1.5">${facChips}</div>` : '',
     highlightsHTML,
     disadvantagesHTML,
@@ -398,7 +464,7 @@ function hotelCardHTML(h, lang, T, destKey) {
             ${secondaryName && secondaryName !== primaryName ? `<p class="text-[11px] text-slate-400 mt-0.5">${escapeHtml(secondaryName)}</p>` : ''}
           </div>
           <div class="flex flex-col items-end gap-1 shrink-0">
-            ${stars ? `<div class="text-amber-400 text-xs leading-none">${stars}</div>` : ''}
+            ${newBadge || (stars ? `<div class="text-amber-400 text-xs leading-none">${stars}</div>` : '')}
             ${tierLabel ? `<span class="bg-slate-100 text-slate-600 rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider">${escapeHtml(tierLabel)}</span>` : ''}
           </div>
         </div>
@@ -407,7 +473,7 @@ function hotelCardHTML(h, lang, T, destKey) {
 
         ${groupPrice ? `
         <div class="flex justify-between items-center bg-orange-50/60 border border-orange-100 rounded-lg px-3 py-2">
-          <span class="text-[10px] font-bold text-orange-700 uppercase tracking-wider">${T.groupTotal}</span>
+          <span class="text-[10px] font-bold text-orange-700 uppercase tracking-wider">${totalLabel}</span>
           <span class="text-[15px] font-bold text-slate-800">${groupPrice}</span>
         </div>` : ''}
 
