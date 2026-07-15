@@ -1,0 +1,2678 @@
+{
+  "url_audit": [
+    {
+      "destination": "colombo_arrival",
+      "name": "The Kingsbury Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/the-kingsbury.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/the-kingsbury.ja.html?label=gen173nr-10CAsohQFCDXRoZS1raW5nc2J1cnlIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AozE3NIGwAIB0gIkYTA4YWViYjEtYjA0MS00NzU0LWFiZDYtODIxNGZiZGRiODdm2AIB4AIB&sid=d9962ffee92076ee77f216c4ed9b69ea&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "The Kingsbury Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/the-kingsbury/hotel/colombo-lk.html",
+      "status": "ok",
+      "final_url": "https://www.agoda.com/the-kingsbury-colombo/hotel/colombo-lk.html",
+      "note": ""
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Cinnamon Grand Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/cinnamon-grand-colombo.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/cinnamon-grand-colombo.ja.html?label=gen173nr-10CAsohQFCFmNpbm5hbW9uLWdyYW5kLWNvbG9tYm9IM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Ao7E3NIGwAIB0gIkN2YxOWNkYWUtYWI5My00ZWI4LTlhODItZGJiNGZlMTIwZmNi2AIB4AIB&sid=6057f7f5e5955813e4285f04775e8e44&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Cinnamon Grand Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/cinnamon-grand-colombo/hotel/colombo-lk.html",
+      "status": "ok",
+      "final_url": "https://www.agoda.com/cinnamon-grand-colombo/hotel/colombo-lk.html",
+      "note": ""
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Galle Face Hotel",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/the-galle-face.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/the-galle-face.ja.html?label=gen173nr-10CAsohQFCDnRoZS1nYWxsZS1mYWNlSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKQxNzSBsACAdICJDVhMGZlOGVlLTM4MzEtNDE2YS1hMmM3LWJkNGYyN2Y0YjM1N9gCAeACAQ&sid=bd8bdf32bbf66d80afe9f8158c9ade29&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Galle Face Hotel",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/the-galle-face-hotel/hotel/colombo-lk.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Cinnamon Lakeside Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/cinnamon-lakeside.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/cinnamon-lakeside.ja.html?label=gen173nr-10CAsohQFCEWNpbm5hbW9uLWxha2VzaWRlSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKSxNzSBsACAdICJGI0ZjVkOGQzLWUyYWItNGMxYi1iMGQ5LWU0OGE0YTAxZGNjZNgCAeACAQ&sid=06fdc4844fed93b37df6a5d77cf2e910&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Cinnamon Lakeside Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/cinnamon-lakeside-colombo/hotel/colombo-lk.html",
+      "status": "redirect_generic",
+      "final_url": "https://www.agoda.com/city/colombo-lk.html",
+      "note": "final URL/page looks like a homepage or search page"
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Taj Samudra Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/taj-samudra.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/taj-samudra.ja.html?label=gen173nr-10CAsohQFCC3Rhai1zYW11ZHJhSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKUxNzSBsACAdICJDE1ZjI2MjNlLTJhMzItNDQxOS1hNzE5LTBhYjIzMzUzY2I5NNgCAeACAQ&sid=1919a8b1f4801773388cba935070e734&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Taj Samudra Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/taj-samudra-hotel/hotel/colombo-lk.html",
+      "status": "ok",
+      "final_url": "https://www.agoda.com/taj-samudra-colombo/hotel/colombo-lk.html",
+      "note": ""
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Hilton Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/hilton-colombo.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/hilton-colombo.ja.html?label=gen173nr-10CAsohQFCDmhpbHRvbi1jb2xvbWJvSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKXxNzSBsACAdICJDI1ZjcyMGY2LTY0OGYtNDIzOC1hMmEzLTgxZTRkNTg3MWFmOdgCAeACAQ&sid=1114a3785a74dfa3b2edf2204b98e7bc&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Hilton Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/hilton-colombo-hotel/hotel/colombo-lk.html",
+      "status": "redirect_generic",
+      "final_url": "https://www.agoda.com/city/colombo-lk.html",
+      "note": "final URL/page looks like a homepage or search page"
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Cinnamon Red Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/cinnamon-red-colombo.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/cinnamon-red-colombo.ja.html?label=gen173nr-10CAsohQFCFGNpbm5hbW9uLXJlZC1jb2xvbWJvSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKZxNzSBsACAdICJDlmMGZjZGJhLTkxYTQtNDdiOC05M2E4LTBlNTJlZmE0NDhlNdgCAeACAQ&sid=165d7d7583b5aa8614e9ae3645ef74c3&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Cinnamon Red Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/cinnamon-red-colombo/hotel/colombo-lk.html",
+      "status": "ok",
+      "final_url": "https://www.agoda.com/cinnamon-red-colombo/hotel/colombo-lk.html",
+      "note": ""
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Fairway Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/fairway-colombo.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/fairway-colombo.ja.html?label=gen173nr-10CAsohQFCD2ZhaXJ3YXktY29sb21ib0gzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCm8Tc0gbAAgHSAiQ0ZjVjMWM5OC03ODE0LTRjN2UtOGQ2MS03OGYzY2M1YmIxZWPYAgHgAgE&sid=3cbd1de42fbe3d238bc3f3ead38b12bc&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Fairway Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/fairway-colombo/hotel/colombo-lk.html",
+      "status": "ok",
+      "final_url": "https://www.agoda.com/fairway-colombo/hotel/colombo-lk.html",
+      "note": ""
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Jetwing Colombo Seven",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/jetwing-colombo-seven.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/jetwing-colombo-seven.ja.html?label=gen173nr-10CAsohQFCFWpldHdpbmctY29sb21iby1zZXZlbkgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCncTc0gbAAgHSAiQzOTNiMWNjZS0wNDg4LTQ4OGEtYTM1ZC03ZGFlYzc3YTY3MDHYAgHgAgE&sid=25c5ac7178ada0521b770bb904502533&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Jetwing Colombo Seven",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/jetwing-colombo-seven/hotel/colombo-lk.html",
+      "status": "ok",
+      "final_url": "https://www.agoda.com/jetwing-colombo-seven/hotel/colombo-lk.html",
+      "note": ""
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Mandarina Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/mandarina-colombo.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/mandarina-colombo.ja.html?label=gen173nr-10CAsohQFCEW1hbmRhcmluYS1jb2xvbWJvSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKgxNzSBsACAdICJGQ4ZGE0ODJkLWFjMDAtNGFmOS1hZWQxLTYyOTNjNzQwODZlOdgCAeACAQ&sid=ab47e599ab3f7b9d0b0f9eba6d7b73f8&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Mandarina Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/mandarina-colombo/hotel/colombo-lk.html",
+      "status": "ok",
+      "final_url": "https://www.agoda.com/mandarina-colombo/hotel/colombo-lk.html",
+      "note": ""
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Marino Beach Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/marino-beach-colombo.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/marino-beach-colombo.ja.html?label=gen173nr-10CAsohQFCFG1hcmluby1iZWFjaC1jb2xvbWJvSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKixNzSBsACAdICJDU2Y2U4MzMxLTc0NTUtNGZiNS04NmZjLWFiMjQ4NDgxZTU0ZdgCAeACAQ&sid=4a4f945d5153d846cd0b0e2be7e89f63&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Marino Beach Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/marino-beach-colombo/hotel/colombo-lk.html",
+      "status": "ok",
+      "final_url": "https://www.agoda.com/marino-beach-colombo/hotel/colombo-lk.html",
+      "note": ""
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Ramada Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/ramada-colombo.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/ramada-colombo.ja.html?label=gen173nr-10CAsohQFCDnJhbWFkYS1jb2xvbWJvSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKkxNzSBsACAdICJDBkODBjYWY2LWI5MGItNDljOC05MjMyLTU0YmVhNTY4YWI5ZtgCAeACAQ&sid=f653453b9651475af00df9fa6eef5662&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Ramada Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/ramada-colombo/hotel/colombo-lk.html",
+      "status": "ok",
+      "final_url": "https://www.agoda.com/ramada-colombo/hotel/colombo-lk.html",
+      "note": ""
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Colombo City Hotels",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/colombo-city-hotels.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/colombo-city-hotels.ja.html?label=gen173nr-10CAsohQFCE2NvbG9tYm8tY2l0eS1ob3RlbHNIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AqbE3NIGwAIB0gIkMmFkNDMxYWItYThkZi00NWE3LWFkMGEtZDFlZTQzMjIwZjFj2AIB4AIB&sid=d5840b066ee234ce7702240b29bd9a97&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Colombo City Hotels",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/colombo-city-hotels/hotel/colombo-lk.html",
+      "status": "ok",
+      "final_url": "https://www.agoda.com/yoho-colombo-city-hotel/hotel/colombo-lk.html",
+      "note": ""
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Clock Inn Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/clock-inn-colombo.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/clock-inn-colombo.ja.html?label=gen173nr-10CAsohQFCEWNsb2NrLWlubi1jb2xvbWJvSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKpxNzSBsACAdICJDMzMmI5YTBlLWZmMGItNGRmZS05ZmIwLTRhMDFmNzYyMTViOdgCAeACAQ&sid=5297cd7a38663e88114e2720c0387bcd&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Clock Inn Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/clock-inn-colombo/hotel/colombo-lk.html",
+      "status": "ok",
+      "final_url": "https://www.agoda.com/clock-inn-colombo/hotel/colombo-lk.html",
+      "note": ""
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "City Beds - The Regent",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/city-beds-the-regent.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/city-beds-the-regent.ja.html?label=gen173nr-10CAsohQFCFGNpdHktYmVkcy10aGUtcmVnZW50SDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKrxNzSBsACAdICJDhiZDI3MjhhLWRjZTQtNDIzMy1iYjI0LWZlZmVjNTlkZjdjMdgCAeACAQ&sid=412e944f74f5f0bf7303dca3d093b45c&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "City Beds - The Regent",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/city-beds-the-regent/hotel/colombo-lk.html",
+      "status": "ok",
+      "final_url": "https://www.agoda.com/city-beds-the-regent/hotel/colombo-lk.html",
+      "note": ""
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Bunkyard Hostels",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/bunkyard-hostels.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/bunkyard-hostels.ja.html?label=gen173nr-10CAsohQFCEGJ1bmt5YXJkLWhvc3RlbHNIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Aq3E3NIGwAIB0gIkOGNmYjM0OWEtYTE4Yi00MTRkLTljZWEtYjViN2M5NWFjMDJk2AIB4AIB&sid=d06a50204ad19a07107e3c5a08fe0eda&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Bunkyard Hostels",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/bunkyard-hostels/hotel/colombo-lk.html",
+      "status": "redirect_generic",
+      "final_url": "https://www.agoda.com/city/colombo-lk.html",
+      "note": "final URL/page looks like a homepage or search page"
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Moss Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/moss-colombo.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/moss-colombo.ja.html?label=gen173nr-10CAsohQFCDG1vc3MtY29sb21ib0gzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCr8Tc0gbAAgHSAiRkMGExZWY2Ny00MTQ2LTRkZWItYWI5Zi0zOWY5ODM0MGFlNGTYAgHgAgE&sid=0b8c2702b343e4acbfd1fff42ef5da90&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Moss Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/moss-colombo/hotel/colombo-lk.html",
+      "status": "ok",
+      "final_url": "https://www.agoda.com/moss-bnb-colombo_3/hotel/colombo-lk.html",
+      "note": ""
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Haven Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/haven-colombo.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/haven-colombo.ja.html?label=gen173nr-10CAsohQFCDWhhdmVuLWNvbG9tYm9IM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4ArLE3NIGwAIB0gIkYzFlYzAxOGEtMGQwZC00NmY0LWIyYWQtZDhhMTMyZGEyZGNm2AIB4AIB&sid=1798e7152d2feeee5a17f9489897a0e7&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Haven Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/haven-colombo/hotel/colombo-lk.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Shangri-La Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/shangri-la-colombo.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/shangri-la-colombo.ja.html?label=gen173nr-10CAsohQFCEnNoYW5ncmktbGEtY29sb21ib0gzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCtMTc0gbAAgHSAiQ5OTA0NmJkYi1lNjEzLTRjNTItYTlmOS04YjU1NjE2MGI0Y2TYAgHgAgE&sid=daa05718fdd87f5a88201058b2d8ac11&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Shangri-La Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/shangri-la-colombo/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Hilton Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/hilton-colombo.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/hilton-colombo.ja.html?label=gen173nr-10CAsohQFCDmhpbHRvbi1jb2xvbWJvSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAK2xNzSBsACAdICJDliNjc0OGJjLTBkOTYtNDA3Zi1hMGI2LTkxZjU5YjE0YTkyONgCAeACAQ&sid=a228643924a77b456388bcc9114a526f&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Hilton Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/hilton-colombo/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Taj Samudra Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/taj-samudra-colombo.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/taj-samudra-colombo.ja.html?label=gen173nr-10CAsohQFCE3Rhai1zYW11ZHJhLWNvbG9tYm9IM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4ArjE3NIGwAIB0gIkYWZhOWJjNWEtNWE0Yi00NjRmLWE1YzMtN2IyYTY0Zjk4YzYw2AIB4AIB&sid=c96fd39d15a3c539b59dc73415f935c6&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Taj Samudra Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/taj-samudra-colombo/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Cinnamon Grand Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/cinnamon-grand-colombo.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/cinnamon-grand-colombo.ja.html?label=gen173nr-10CAsohQFCFmNpbm5hbW9uLWdyYW5kLWNvbG9tYm9IM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4ArrE3NIGwAIB0gIkYTk1NDg3NTQtNDE1Ni00YTUzLTlmNmYtZGZiMTZhYTk3MDZh2AIB4AIB&sid=79b3edff3b2a9cb78106a26b13bdfa0a&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Cinnamon Grand Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/cinnamon-grand-colombo/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Cinnamon Lakeside Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/cinnamon-lakeside-colombo.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/cinnamon-lakeside-colombo.ja.html?label=gen173nr-10CAsohQFCGWNpbm5hbW9uLWxha2VzaWRlLWNvbG9tYm9IM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4ArzE3NIGwAIB0gIkZmVmNDRiZTEtM2VkZC00Yzk0LTljZTctOTE1NGVjZjBjODY02AIB4AIB&sid=dc4ab84014f2cae29fff919ab319936f&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Cinnamon Lakeside Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/cinnamon-lakeside-colombo/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "The Kingsbury Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/the-kingsbury-colombo.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/the-kingsbury-colombo.ja.html?label=gen173nr-10CAsohQFCFXRoZS1raW5nc2J1cnktY29sb21ib0gzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCvsTc0gbAAgHSAiQ4Zjc1Y2M2Ny1mYzhhLTRmMmEtYmRkZC1kN2NlYzBlYzBkYjTYAgHgAgE&sid=44eb3190049c82ba17f7177560387c85&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "The Kingsbury Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/the-kingsbury-colombo/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Marino Beach Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/marino-beach-colombo.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/marino-beach-colombo.ja.html?label=gen173nr-10CAsohQFCFG1hcmluby1iZWFjaC1jb2xvbWJvSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuALAxNzSBsACAdICJDFlN2I5NjNjLThmYmQtNDUzZC04MGZiLTZlNmU4NTg2YzBjN9gCAeACAQ&sid=85dd6c320f71bea5d4a2ef9252935349&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Marino Beach Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/marino-beach-colombo/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Mandarina Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/mandarina-colombo.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/mandarina-colombo.ja.html?label=gen173nr-10CAsohQFCEW1hbmRhcmluYS1jb2xvbWJvSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuALCxNzSBsACAdICJDI1OGQxNzBiLTcwNGQtNDRjMi1hYTY5LTZjNjQwZDE1OWYwY9gCAeACAQ&sid=5cde33b3864b141f2615066b9d6aac09&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Mandarina Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/mandarina-colombo/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "OZO Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/ozo-colombo.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/ozo-colombo.ja.html?label=gen173nr-10CAsohQFCC296by1jb2xvbWJvSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuALExNzSBsACAdICJDI4MTFhNzljLTg3YTEtNDJjOS1iZDNmLWM0ODgxNTJhZDBhMNgCAeACAQ&sid=666e00e958add9a47ce35d93bde273c0&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "OZO Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/ozo-colombo/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Radisson Hotel Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/radisson-hotel-colombo.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/radisson-hotel-colombo.ja.html?label=gen173nr-10CAsohQFCFnJhZGlzc29uLWhvdGVsLWNvbG9tYm9IM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsfE3NIGwAIB0gIkMWFhZTliMmItODk5Zi00MmYxLTkzZDMtODkyYjQwZmEwMDc02AIB4AIB&sid=65f15cc3143677f2bb46bf42973b1fcf&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Radisson Hotel Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/radisson-hotel-colombo/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Ramada Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/ramada-colombo.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/ramada-colombo.ja.html?label=gen173nr-10CAsohQFCDnJhbWFkYS1jb2xvbWJvSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuALJxNzSBsACAdICJDJjMjgxOGE0LTRjNGUtNGYwMi04MjJmLTYwMjI3YjFkODk4NdgCAeACAQ&sid=39eabca2709803b994002bcc8a7ae5d6&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Ramada Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/ramada-colombo/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Cinnamon Red Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/cinnamon-red-colombo.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/cinnamon-red-colombo.ja.html?label=gen173nr-10CAsohQFCFGNpbm5hbW9uLXJlZC1jb2xvbWJvSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuALLxNzSBsACAdICJGVmYzdlMTc3LThkYWItNGUwNy04OGE0LWUxMGYxNTY3MGQ0MNgCAeACAQ&sid=8cd50b7bfdd2f969f14adcbbfa7e7449&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Cinnamon Red Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/cinnamon-red-colombo/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Moss Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/moss-colombo.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/moss-colombo.ja.html?label=gen173nr-10CAsohQFCDG1vc3MtY29sb21ib0gzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCzcTc0gbAAgHSAiQ1MWRmMmRmMi00YzE0LTQwNTktYjdhMC00N2YxNTAyMWE1NzfYAgHgAgE&sid=30c94b46a6011186d08802b78faa4229&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Moss Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/moss-colombo/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Haven Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/haven-colombo.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/haven-colombo.ja.html?label=gen173nr-10CAsohQFCDWhhdmVuLWNvbG9tYm9IM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As_E3NIGwAIB0gIkNDgxZmU2MjctYTRhZi00ZmYxLThlNWYtNzE4ODQ1ZDY4MjE52AIB4AIB&sid=19a80a0896564f3370b2d7ce04b68a80&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Haven Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/haven-colombo/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Colombo Downtown Hostel",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/colombo-downtown-hostel.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/colombo-downtown-hostel.ja.html?label=gen173nr-10CAsohQFCF2NvbG9tYm8tZG93bnRvd24taG9zdGVsSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuALRxNzSBsACAdICJDEyOGRlOGFlLTE5MmEtNGUyYS04YjVkLTAxOTY2ZWQzOWY2MtgCAeACAQ&sid=3fa298a2d573b6780276d98bc94359c5&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Colombo Downtown Hostel",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/colombo-downtown-hostel/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Clock Inn Colombo",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/clock-inn-colombo.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/clock-inn-colombo.ja.html?label=gen173nr-10CAsohQFCEWNsb2NrLWlubi1jb2xvbWJvSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuALUxNzSBsACAdICJDI1MTMxNTFkLTMzZDktNGE1Ny1iY2U3LTUyYzRlNDk2YWI5YdgCAeACAQ&sid=fbb4f7c96c201f693c5b66f888538f12&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Clock Inn Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/clock-inn-colombo/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "City Beds - The Regent",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/city-beds---the-regent.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/city-beds---the-regent.ja.html?label=gen173nr-10CAsohQFCFmNpdHktYmVkcy0tLXRoZS1yZWdlbnRIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AtbE3NIGwAIB0gIkYzY5YmIyNDMtNTliYi00ZmY2LTgzNjMtZGNjMWU4ZGNmNTAz2AIB4AIB&sid=efec76baa5b9451845f66fb23a5a286d&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "City Beds - The Regent",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/city-beds---the-regent/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Bunkyard Hostels",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/bunkyard-hostels.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/bunkyard-hostels.ja.html?label=gen173nr-10CAsohQFCEGJ1bmt5YXJkLWhvc3RlbHNIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AtnE3NIGwAIB0gIkNDUwMmQyZjItMjdjNy00MWU1LTkzMDQtOGEyMjUyMzY1N2Nl2AIB4AIB&sid=c3272815551d5906c3f5a4edfedd9b29&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "colombo_departure",
+      "name": "Bunkyard Hostels",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/bunkyard-hostels/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "galle",
+      "name": "Amangalla",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/amangalla.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/amangalla.ja.html?label=gen173nr-10CAsohQFCCWFtYW5nYWxsYUgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgC28Tc0gbAAgHSAiRmZDQyY2IxMy0xMWI4LTQ0NmMtYWMxZi1jNmYxZDQ3ZWU4ZjHYAgHgAgE&sid=1f091294c095d4a5db7898f11790ee0e&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "galle",
+      "name": "Amangalla",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/amangalla/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "galle",
+      "name": "Le Grand Galle By Asia Leisure",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/le-grand-galle-by-asia-leisure.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/le-grand-galle-by-asia-leisure.ja.html?label=gen173nr-10CAsohQFCHmxlLWdyYW5kLWdhbGxlLWJ5LWFzaWEtbGVpc3VyZUgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgC3cTc0gbAAgHSAiQyMjQ3ZWQ4ZS0yZWI1LTQzM2EtYTIxZC01Y2Y4YWI1NmMzODPYAgHgAgE&sid=00c98773f58a87922423c301cb1520d4&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "galle",
+      "name": "Le Grand Galle By Asia Leisure",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/le-grand-galle-by-asia-leisure/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "galle",
+      "name": "Jetwing Lighthouse",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/jetwing-lighthouse.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/jetwing-lighthouse.ja.html?label=gen173nr-10CAsohQFCEmpldHdpbmctbGlnaHRob3VzZUgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgC38Tc0gbAAgHSAiQ2ZTQxZTNjMC0xYjQ0LTQyMjAtYWZlZS0zYjI3MmRmNjcwZTXYAgHgAgE&sid=2a6ac1a2d52cee4abdcc2a34c1469a8c&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "galle",
+      "name": "Jetwing Lighthouse",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/jetwing-lighthouse/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "galle",
+      "name": "Fort Bazaar Premium",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/fort-bazaar-premium.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/fort-bazaar-premium.ja.html?label=gen173nr-10CAsohQFCE2ZvcnQtYmF6YWFyLXByZW1pdW1IM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AuHE3NIGwAIB0gIkOTAzMTM4NDAtZWI1Ni00MzFjLWFiYWYtNzg0MmIwYTY4NTQ02AIB4AIB&sid=36ab5f983d1cad685c056fc2b7f78582&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "galle",
+      "name": "Fort Bazaar Premium",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/fort-bazaar-premium/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "galle",
+      "name": "Galle Fort Hotel Historic Suite",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/galle-fort-hotel-historic-suite.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/galle-fort-hotel-historic-suite.ja.html?label=gen173nr-10CAsohQFCH2dhbGxlLWZvcnQtaG90ZWwtaGlzdG9yaWMtc3VpdGVIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AuPE3NIGwAIB0gIkZjM5MGFiNzAtYWE0Zi00MTZhLTlkZjQtNWUwODhjOGNjMmUz2AIB4AIB&sid=fdd9a87150e252988115626954945d0f&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "galle",
+      "name": "Galle Fort Hotel Historic Suite",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/galle-fort-hotel-historic-suite/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "galle",
+      "name": "Kahanda Kanda",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/kahanda-kanda.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/kahanda-kanda.ja.html?label=gen173nr-10CAsohQFCDWthaGFuZGEta2FuZGFIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AubE3NIGwAIB0gIkZWEwYTcxZjMtM2RmZi00OTE3LWFmMDUtZDVlMTk1ODcxMTM42AIB4AIB&sid=5daf457fe910e677957c35df3300ec69&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "galle",
+      "name": "Kahanda Kanda",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/kahanda-kanda/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "galle",
+      "name": "Fort Bazaar",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/fort-bazaar.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/fort-bazaar.ja.html?label=gen173nr-10CAsohQFCC2ZvcnQtYmF6YWFySDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuALoxNzSBsACAdICJGJjNDU0YTc2LWQxZWYtNDY3NC1iZjQxLTZkNzJhODNlMDdjMNgCAeACAQ&sid=d3f93794c8ffd013ee53c3f49a16c18d&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "galle",
+      "name": "Fort Bazaar",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/fort-bazaar/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "galle",
+      "name": "Tamarind Hill by Asia Leisure",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/tamarind-hill-by-asia-leisure.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/tamarind-hill-by-asia-leisure.ja.html?label=gen173nr-10CAsohQFCHXRhbWFyaW5kLWhpbGwtYnktYXNpYS1sZWlzdXJlSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuALrxNzSBsACAdICJDkxZmMwNWM5LTg5NDMtNDUwNS04ZDg5LTE5ZTZkYjA3MzhiZdgCAeACAQ&sid=b0b6dca8f1cce95c2f9239cebbbe5129&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "galle",
+      "name": "Tamarind Hill by Asia Leisure",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/tamarind-hill-by-asia-leisure/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "galle",
+      "name": "Lady Hill Hotel",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/lady-hill-hotel.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/lady-hill-hotel.ja.html?label=gen173nr-10CAsohQFCD2xhZHktaGlsbC1ob3RlbEgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgC7cTc0gbAAgHSAiQ3Y2QxNzk5My01OTc3LTQ2NGYtYTdkYi1jZDY2MjJjNzQ3ZjfYAgHgAgE&sid=918e4b131380303a5a9efc07996cd9e0&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "galle",
+      "name": "Lady Hill Hotel",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/lady-hill-hotel/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "galle",
+      "name": "The Fort Printers",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/the-fort-printers.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/the-fort-printers.ja.html?label=gen173nr-10CAsohQFCEXRoZS1mb3J0LXByaW50ZXJzSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuALvxNzSBsACAdICJDBlZDhkYTUwLTJmZTUtNDVkZS05MzVlLTE5YTljNjhlMmRlZdgCAeACAQ&sid=cbd8d1f2ae4ab53fb710884379fd9dd6&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "galle",
+      "name": "The Fort Printers",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/the-fort-printers/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "galle",
+      "name": "Era Beach by Asia Leisure",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/era-beach-by-asia-leisure.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/era-beach-by-asia-leisure.ja.html?label=gen173nr-10CAsohQFCGWVyYS1iZWFjaC1ieS1hc2lhLWxlaXN1cmVIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AvHE3NIGwAIB0gIkOWE2OTQ4OTctMTJiNS00NjA0LTg2ZmQtMGZjZmZjNzAxNjJj2AIB4AIB&sid=6abaa825fd7675d2b28a02b2addc0d47&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "galle",
+      "name": "Era Beach by Asia Leisure",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/era-beach-by-asia-leisure/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "galle",
+      "name": "Closenberg Hotel",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/closenberg-hotel.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/closenberg-hotel.ja.html?label=gen173nr-10CAsohQFCEGNsb3NlbmJlcmctaG90ZWxIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AvPE3NIGwAIB0gIkYWUwNjFkNDctMGU1NC00MjczLThlYTMtY2RkYzEyZjc5ZTE32AIB4AIB&sid=ae403485f0b9e539e7817aeebca63961&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "galle",
+      "name": "Closenberg Hotel",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/closenberg-hotel/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "galle",
+      "name": "Cozy Nest Galle Fort",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/cozy-nest-galle-fort.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/cozy-nest-galle-fort.ja.html?label=gen173nr-10CAsohQFCFGNvenktbmVzdC1nYWxsZS1mb3J0SDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAL1xNzSBsACAdICJDljODRmN2Q4LTNkMzItNGIzNi04ODc3LWI3YjExM2JjN2E2YtgCAeACAQ&sid=0218dda66b47179ebf377ffa6fa92a19&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "galle",
+      "name": "Cozy Nest Galle Fort",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/cozy-nest-galle-fort/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "galle",
+      "name": "Pedlar's Inn Hostel",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/pedlar's-inn-hostel.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/pedlars-inn-hostel.ja.html?label=gen173nr-10CAsoggJCEnBlZGxhcnMtaW5uLWhvc3RlbEgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgC98Tc0gbAAgHSAiRkZWQ2OGFlMi00Zjk5LTQ5NDgtOGJmNy1lOTQ4NzVlMzgxYTTYAgHgAgE&sid=0bc50aea2e30c7d472ffde77f1871695&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "galle",
+      "name": "Pedlar's Inn Hostel",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/pedlar's-inn-hostel/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "galle",
+      "name": "Sunset Fort Hotel",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/sunset-fort-hotel.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/sunset-fort-hotel.ja.html?label=gen173nr-10CAsohQFCEXN1bnNldC1mb3J0LWhvdGVsSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAL5xNzSBsACAdICJDM2ZmQzMDA0LWNiN2EtNGIzZi1hMjg4LTk3OGUxOTNkNzY5ZdgCAeACAQ&sid=17d2e2080ec87aa2e983253cd1067e50&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "galle",
+      "name": "Sunset Fort Hotel",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/sunset-fort-hotel/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "galle",
+      "name": "Galle Fort Hostel",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/galle-fort-hostel.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/galle-fort-hostel.ja.html?label=gen173nr-10CAsohQFCEWdhbGxlLWZvcnQtaG9zdGVsSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAL7xNzSBsACAdICJDZlMmM1ZTIxLTUxOWQtNGUyMC04NDExLTg0YjNkNDQ2YjFkN9gCAeACAQ&sid=c9b8326f5f375a4cf68c1f4c76c31e64&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "galle",
+      "name": "Galle Fort Hostel",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/galle-fort-hostel/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "galle",
+      "name": "Pilgrim's Eye Guest House",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/pilgrim's-eye-guest-house.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/pilgrims-eye-guest-house.ja.html?label=gen173nr-10CAsoggJCGHBpbGdyaW1zLWV5ZS1ndWVzdC1ob3VzZUgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgC_cTc0gbAAgHSAiQ4NmI2MjA1My03ZWM2LTQwODEtOTAwYi0yMTQwYzkyNWRiMzXYAgHgAgE&sid=04bf635d1dbe6ef6ac85681d3c3e9326&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "galle",
+      "name": "Pilgrim's Eye Guest House",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/pilgrim's-eye-guest-house/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "galle",
+      "name": "Fort Castle Galle Fort",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/fort-castle-galle-fort.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/fort-castle-galle-fort.ja.html?label=gen173nr-10CAsohQFCFmZvcnQtY2FzdGxlLWdhbGxlLWZvcnRIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AoDF3NIGwAIB0gIkNDAwNGRkYmQtMzBkYS00ZTMyLWJiMTItMTBlZWY0ZTFlOTIw2AIB4AIB&sid=2a1b744fa6a921c913ab3b4a9afc5f98&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "galle",
+      "name": "Fort Castle Galle Fort",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/fort-castle-galle-fort/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "kandy",
+      "name": "The Golden Crown Hotel",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/the-golden-crown-hotel.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/the-golden-crown-hotel.ja.html?label=gen173nr-10CAsohQFCFnRoZS1nb2xkZW4tY3Jvd24taG90ZWxIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AoLF3NIGwAIB0gIkYTNhOTk4OWQtZDQ5NC00ZDY4LWJhMTYtNmMwNGZhNGE1N2Yx2AIB4AIB&sid=86c37db82fefc8e9ec71f849e25a7900&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "kandy",
+      "name": "The Golden Crown Hotel",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/the-golden-crown-hotel/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "kandy",
+      "name": "Earl's Regency Hotel",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/earl's-regency-hotel.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/earls-regency-hotel.ja.html?label=gen173nr-10CAsoggJCE2VhcmxzLXJlZ2VuY3ktaG90ZWxIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AoTF3NIGwAIB0gIkYjEyN2FiZmItZTBkMy00OTQ1LTk5NWEtZWFhMzMxZmU1YzU52AIB4AIB&sid=afa8b1efbf5af3d6cd7f610182b9ee58&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "kandy",
+      "name": "Earl's Regency Hotel",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/earl's-regency-hotel/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "kandy",
+      "name": "Amaya Hills Kandy",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/amaya-hills-kandy.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/amaya-hills-kandy.ja.html?label=gen173nr-10CAsohQFCEWFtYXlhLWhpbGxzLWthbmR5SDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKGxdzSBsACAdICJDYzNmExNGIyLTdiMDItNGFmZS05YzhmLWFjYTg4OGRkMzRiONgCAeACAQ&sid=280d61640d88e87b10c63dc137693c5f&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "kandy",
+      "name": "Amaya Hills Kandy",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/amaya-hills-kandy/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "kandy",
+      "name": "King's Pavilion Kandy",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/king's-pavilion-kandy.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/kings-pavilion-kandy.ja.html?label=gen173nr-10CAsoggJCFGtpbmdzLXBhdmlsaW9uLWthbmR5SDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKIxdzSBsACAdICJDMwNGRjNWE2LWM1NTYtNGQ0OC1iNjcwLTA4YjNiOGNlMzg5MNgCAeACAQ&sid=137c32a0224d1d125461bf5d7dd0c97e&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "kandy",
+      "name": "King's Pavilion Kandy",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/king's-pavilion-kandy/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "kandy",
+      "name": "Mountbatten Bungalow",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/mountbatten-bungalow.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/mountbatten-bungalow.ja.html?label=gen173nr-10CAsohQFCFG1vdW50YmF0dGVuLWJ1bmdhbG93SDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKKxdzSBsACAdICJDk5OTJhNTc2LTIwOTgtNGJhZC1iZGIwLTgzNDQ2ZDVjYTQ2M9gCAeACAQ&sid=250653f44935ed388b060ed3a3a6fc34&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "kandy",
+      "name": "Mountbatten Bungalow",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/mountbatten-bungalow/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "kandy",
+      "name": "W15 Hanthana Kandy",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/w15-hanthana-kandy.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/w15-hanthana-kandy.ja.html?label=gen173nr-10CAsohQFCEncxNS1oYW50aGFuYS1rYW5keUgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCjMXc0gbAAgHSAiQ2YzU5NjA1MC1kMzg0LTQ0MzctYTY4NS0xOGU2Mzg3YTRiYjjYAgHgAgE&sid=786963a9f9aebbd08982dda6886dc3f5&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "kandy",
+      "name": "W15 Hanthana Kandy",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/w15-hanthana-kandy/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "kandy",
+      "name": "Cinnamon Citadel Kandy",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/cinnamon-citadel-kandy.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/cinnamon-citadel-kandy.ja.html?label=gen173nr-10CAsohQFCFmNpbm5hbW9uLWNpdGFkZWwta2FuZHlIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Ao7F3NIGwAIB0gIkNmYwNjkyZmUtMWEyMy00NTgxLWEzNDktNTUwYTY5YzVhOTVi2AIB4AIB&sid=b26bf1efcf5555951dc10ef0cea29107&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "kandy",
+      "name": "Cinnamon Citadel Kandy",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/cinnamon-citadel-kandy/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "kandy",
+      "name": "OZO Kandy Sri Lanka",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/ozo-kandy-sri-lanka.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/ozo-kandy-sri-lanka.ja.html?label=gen173nr-10CAsohQFCE296by1rYW5keS1zcmktbGFua2FIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4ApDF3NIGwAIB0gIkYmU0YWFhNTItMmI4ZS00ZDMyLTk0MTQtMDE3ZGViOTVmYWI42AIB4AIB&sid=6ae66a5556147b1d2949dbeb36921f8e&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "kandy",
+      "name": "OZO Kandy Sri Lanka",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/ozo-kandy-sri-lanka/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "kandy",
+      "name": "Hotel Topaz",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/hotel-topaz.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/hotel-topaz.ja.html?label=gen173nr-10CAsohQFCC2hvdGVsLXRvcGF6SDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKTxdzSBsACAdICJDRlMGViMmIyLWJkOTMtNDkyMi1hMWZjLWY4ZGQyZDU0YTI5OdgCAeACAQ&sid=c6d3287455e52603fdc99e71d41f7fea&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "kandy",
+      "name": "Hotel Topaz",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/hotel-topaz/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "kandy",
+      "name": "Hotel Suisse",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/hotel-suisse.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/hotel-suisse.ja.html?label=gen173nr-10CAsohQFCDGhvdGVsLXN1aXNzZUgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgClcXc0gbAAgHSAiQwZDhmNDE0ZC01OGI2LTQwMTItODdmZC1kODJmZjdhZTBmODDYAgHgAgE&sid=d7e2d75908f4fd5910871ab784e64386&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "kandy",
+      "name": "Hotel Suisse",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/hotel-suisse/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "kandy",
+      "name": "Randholee Resort & Spa",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/randholee-resort-&-spa.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/randholee-resort-&-spa.ja.html?label=gen173nr-10CAsoggJCFnJhbmRob2xlZS1yZXNvcnQtJi1zcGFIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4ApfF3NIGwAIB0gIkZGYwYjNiMDYtZmE4Ny00Yjc3LThmNzYtZDEzNDg3ZGMwMGZm2AIB4AIB&sid=18dc4149f3532cab62b1f4bc526e2a4e&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "kandy",
+      "name": "Randholee Resort & Spa",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/randholee-resort-&-spa/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "kandy",
+      "name": "The Radh Hotel",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/the-radh-hotel.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/the-radh-hotel.ja.html?label=gen173nr-10CAsohQFCDnRoZS1yYWRoLWhvdGVsSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKZxdzSBsACAdICJGU4ZjdkOTUyLWNhYzctNDdjNC1hY2NiLTRkOTU1ODhhYThiZdgCAeACAQ&sid=b75b7072fd720d22ebbe7b7e78ac01f3&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "kandy",
+      "name": "The Radh Hotel",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/the-radh-hotel/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "kandy",
+      "name": "Kandy City Hotel by Sangreea",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/kandy-city-hotel-by-sangreea.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/kandy-city-hotel-by-sangreea.ja.html?label=gen173nr-10CAsohQFCHGthbmR5LWNpdHktaG90ZWwtYnktc2FuZ3JlZWFIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4ApvF3NIGwAIB0gIkMzczZWEzOGQtOTk5MC00YjUwLWFmMWMtNWMwZGYwNzEwNzA22AIB4AIB&sid=8d6add008622ec988384c935308e16ff&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "kandy",
+      "name": "Kandy City Hotel by Sangreea",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/kandy-city-hotel-by-sangreea/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "kandy",
+      "name": "Clock Inn Kandy",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/clock-inn-kandy.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/clock-inn-kandy.ja.html?label=gen173nr-10CAsohQFCD2Nsb2NrLWlubi1rYW5keUgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCncXc0gbAAgHSAiQyNDkyZDAyYS1lNGEyLTRhNzctOTRhYy0yNjAzMmQ4YWYxMjPYAgHgAgE&sid=507760fdc843933d8bf0767e0233634d&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "kandy",
+      "name": "Clock Inn Kandy",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/clock-inn-kandy/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "kandy",
+      "name": "Sevana City Hotel",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/sevana-city-hotel.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/sevana-city-hotel.ja.html?label=gen173nr-10CAsohQFCEXNldmFuYS1jaXR5LWhvdGVsSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKgxdzSBsACAdICJDhkYjg5YjY3LTc5Y2UtNGVlMi05NzU3LWI2MTE1MzNjMTlmYtgCAeACAQ&sid=936043c44d4110533d660cea4939c2a1&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "kandy",
+      "name": "Sevana City Hotel",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/sevana-city-hotel/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "kandy",
+      "name": "Kandy Backpackers Hostel",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/kandy-backpackers-hostel.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/kandy-backpackers-hostel.ja.html?label=gen173nr-10CAsohQFCGGthbmR5LWJhY2twYWNrZXJzLWhvc3RlbEgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCosXc0gbAAgHSAiQ5ZTI0ZTQ4NC1lZWE3LTQ5OTMtYjNiOS1jOGNjMmRhYmE1NGbYAgHgAgE&sid=d078a3261187b3876a882d2997025fb3&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "kandy",
+      "name": "Kandy Backpackers Hostel",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/kandy-backpackers-hostel/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "kandy",
+      "name": "Villa 49",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/villa-49.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/villa-49.ja.html?label=gen173nr-10CAsohQFCCHZpbGxhLTQ5SDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKkxdzSBsACAdICJDAyZDFkOTIzLTYzYzAtNDVmMS04NWFhLTNjYzc0ZjcxMTY5YtgCAeACAQ&sid=86a7e865e95f95dd3a4729ba93c4eb01&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "kandy",
+      "name": "Villa 49",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/villa-49/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "kandy",
+      "name": "Pink House Kandy",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/pink-house-kandy.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/pink-house-kandy.ja.html?label=gen173nr-10CAsohQFCEHBpbmstaG91c2Uta2FuZHlIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AqbF3NIGwAIB0gIkODNhMmUzMmUtMGIyNS00MjliLThiZmUtNjRiMzE2NmJhYmM32AIB4AIB&sid=80d6ac9189a0af36f59f2ee06cbd651b&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "kandy",
+      "name": "Pink House Kandy",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/pink-house-kandy/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "The Grand Hotel",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/the-grand-hotel.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/the-grand-hotel.ja.html?label=gen173nr-10CAsohQFCD3RoZS1ncmFuZC1ob3RlbEgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCqMXc0gbAAgHSAiRlZjg0NjZlOC04NjAxLTRkMmQtODVkOS03MzIyYjgxZjc2ODHYAgHgAgE&sid=fd2deefc1e7dc8575420b95283764a78&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "The Grand Hotel",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/the-grand-hotel/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Heritance Tea Factory",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/heritance-tea-factory.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/heritance-tea-factory.ja.html?label=gen173nr-10CAsohQFCFWhlcml0YW5jZS10ZWEtZmFjdG9yeUgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCqsXc0gbAAgHSAiRmYjUzNWJlMi1iMGJkLTQ5ZTItOTE3Ny01Mzg4NzRiOGUzMGXYAgHgAgE&sid=5901291b13f1e55af583affebbfa7a2e&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Heritance Tea Factory",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/heritance-tea-factory/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Jetwing St. Andrew's",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/jetwing-st.-andrew's.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/jetwing-st.-andrews.ja.html?label=gen173nr-10CAsohQFCCmpldHdpbmctc3RIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AqzF3NIGwAIB0gIkZmE3NDU0YTUtYzM2Ny00NmQzLTlmODQtZWM4MTY0NTRhMjk22AIB4AIB&sid=560445aea7c679e711d7e8e3604690e4&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Jetwing St. Andrew's",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/jetwing-st.-andrew's/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Araliya Red",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/araliya-red.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/araliya-red.ja.html?label=gen173nr-10CAsohQFCC2FyYWxpeWEtcmVkSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKuxdzSBsACAdICJGMwNTQ3NGFhLTA5NWQtNGQzNi05ZDY3LTk0YmQ1MGU2NDRkNdgCAeACAQ&sid=07988dbf701a832c8472918891dad517&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Araliya Red",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/araliya-red/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Stafford Bungalow",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/stafford-bungalow.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/stafford-bungalow.ja.html?label=gen173nr-10CAsohQFCEXN0YWZmb3JkLWJ1bmdhbG93SDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKwxdzSBsACAdICJGM2YmQ1YjA1LWU4NDQtNDJkNy1hZDc5LTNiYzliNjcwMjZlYtgCAeACAQ&sid=9802c206d57d9ced65818a04364a54db&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Stafford Bungalow",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/stafford-bungalow/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Jetwing Warwick Gardens",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/jetwing-warwick-gardens.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/jetwing-warwick-gardens.ja.html?label=gen173nr-10CAsohQFCF2pldHdpbmctd2Fyd2ljay1nYXJkZW5zSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKyxdzSBsACAdICJDk2MGRjN2I0LTMxZDEtNGIxMS04MDQxLTJkOWIwOGNhMTZjMNgCAeACAQ&sid=ac36d544bb788f2c7156125873319f6d&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Jetwing Warwick Gardens",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/jetwing-warwick-gardens/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Araliya Green City",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/araliya-green-city.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/araliya-green-city.ja.html?label=gen173nr-10CAsohQFCEmFyYWxpeWEtZ3JlZW4tY2l0eUgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCtcXc0gbAAgHSAiQzNmQyYjlhNS0xN2NiLTRlMWMtYmVkMy0zZDcyZjdiZjA3MmHYAgHgAgE&sid=0ffa77703b6638ebb79214a10e25cd7f&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Araliya Green City",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/araliya-green-city/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "The Hill Club",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/the-hill-club.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/the-hill-club.ja.html?label=gen173nr-10CAsohQFCDXRoZS1oaWxsLWNsdWJIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4ArfF3NIGwAIB0gIkMzA0MDcxZDktOThhOC00M2ZiLWE5NWMtOGI3NGQ4ZjhkMzkw2AIB4AIB&sid=62cfc987153a2e93b8262ccaff90ded9&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "The Hill Club",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/the-hill-club/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Oak Ray Summer Hill Breeze",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/oak-ray-summer-hill-breeze.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/oak-ray-summer-hill-breeze.ja.html?label=gen173nr-10CAsohQFCGm9hay1yYXktc3VtbWVyLWhpbGwtYnJlZXplSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAK5xdzSBsACAdICJDg3NTQ0MzE4LWUyOGYtNDg0OS05MzJhLTJmNzBjYmU5ZTQ3MtgCAeACAQ&sid=1d78321db496b0a4437ae3b4d0457e67&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Oak Ray Summer Hill Breeze",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/oak-ray-summer-hill-breeze/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "The Golden Ridge Hotel",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/the-golden-ridge-hotel.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/the-golden-ridge-hotel.ja.html?label=gen173nr-10CAsohQFCFnRoZS1nb2xkZW4tcmlkZ2UtaG90ZWxIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4ArvF3NIGwAIB0gIkMmFlYjU4NjUtNGZiZi00ZTEyLThkNTUtMDU2MTkzZjYxZWEy2AIB4AIB&sid=bf68454cbe3f46dfcac1e2e0fee86bcc&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "The Golden Ridge Hotel",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/the-golden-ridge-hotel/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Glenfall Reach Hotel",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/glenfall-reach-hotel.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/glenfall-reach-hotel.ja.html?label=gen173nr-10CAsohQFCFGdsZW5mYWxsLXJlYWNoLWhvdGVsSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAK-xdzSBsACAdICJDM5ODQ1ZjI5LTE3ZjUtNGUzZi1hMTI5LTM1OTYwNzhjNzhlZtgCAeACAQ&sid=7e5c07cde62125b8d56e6de5a9a77581&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Glenfall Reach Hotel",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/glenfall-reach-hotel/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Heaven Seven Hotel",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/heaven-seven-hotel.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/heaven-seven-hotel.ja.html?label=gen173nr-10CAsohQFCEmhlYXZlbi1zZXZlbi1ob3RlbEgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCwMXc0gbAAgHSAiRiYjA3MWU2Ny00NzQzLTQ2YTEtOGNlNC04MWNhMmUwYjg0ODTYAgHgAgE&sid=ef966293ac28dd9a0bcc814e0b28342c&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Heaven Seven Hotel",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/heaven-seven-hotel/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Unique Cottages",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/unique-cottages.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/unique-cottages.ja.html?label=gen173nr-10CAsohQFCD3VuaXF1ZS1jb3R0YWdlc0gzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCwsXc0gbAAgHSAiRiNDhiNGM0Yi1jYzAwLTRjNjktOGFmMy1lZDViNWQxNzgzYzfYAgHgAgE&sid=b36513112457da6cf47d8b995daa3f69&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Unique Cottages",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/unique-cottages/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Single Tree Hotel",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/single-tree-hotel.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/single-tree-hotel.ja.html?label=gen173nr-10CAsohQFCEXNpbmdsZS10cmVlLWhvdGVsSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuALExdzSBsACAdICJDQ2YjIyMTMwLTQ0OWItNDUwNS1hNTE0LTljZjk0NGVkMzMxNtgCAeACAQ&sid=dc8b73126f2934a4c50b69f6bc03f8fa&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Single Tree Hotel",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/single-tree-hotel/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Alpine Hotel Nuwara Eliya",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/alpine-hotel-nuwara-eliya.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/alpine-hotel-nuwara-eliya.ja.html?label=gen173nr-10CAsohQFCGWFscGluZS1ob3RlbC1udXdhcmEtZWxpeWFIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsbF3NIGwAIB0gIkZGQ3NWM2NDUtNDIxMi00NThmLWJjZmMtOGFhYzhkYmRhZWU32AIB4AIB&sid=6c74287d4e2d107754ada91a5d72bc8c&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Alpine Hotel Nuwara Eliya",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/alpine-hotel-nuwara-eliya/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Kings Park Hotel",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/kings-park-hotel.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/kings-park-hotel.ja.html?label=gen173nr-10CAsohQFCEGtpbmdzLXBhcmstaG90ZWxIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsjF3NIGwAIB0gIkZjAxY2IwODAtYWJlMy00NDFjLTliZTgtMGQ1ZWM1NGIyZTBl2AIB4AIB&sid=1dd0a5333b2d5b838f8fd1c9f59e3b3d&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Kings Park Hotel",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/kings-park-hotel/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Greenstars Guest House",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/greenstars-guest-house.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/greenstars-guest-house.ja.html?label=gen173nr-10CAsohQFCFmdyZWVuc3RhcnMtZ3Vlc3QtaG91c2VIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsrF3NIGwAIB0gIkM2M4Y2IzNDMtZGJlMC00ODhhLWExZWQtZmYwNzM3YjFlNDY42AIB4AIB&sid=b407d689add4cb21cc8e3ffa4b7fb13e&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Greenstars Guest House",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/greenstars-guest-house/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Nuwara Eliya Hills Rest",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/nuwara-eliya-hills-rest.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/nuwara-eliya-hills-rest.ja.html?label=gen173nr-10CAsohQFCF251d2FyYS1lbGl5YS1oaWxscy1yZXN0SDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuALMxdzSBsACAdICJDllYTBlNmViLTQxMmEtNGJiZi05MTJkLTcyMTMyYzkwNzgxZNgCAeACAQ&sid=c3f6562dc214e7a2d5cf1da7b11eb5cd&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "nuwara_eliya",
+      "name": "Nuwara Eliya Hills Rest",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/nuwara-eliya-hills-rest/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Heritance Kandalama",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/heritance-kandalama.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/heritance-kandalama.ja.html?label=gen173nr-10CAsohQFCE2hlcml0YW5jZS1rYW5kYWxhbWFIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4As_F3NIGwAIB0gIkYzZkOTQ4ZWYtNmM0ZS00YzQxLTlmYTAtZjZiM2YzYTgyNWYy2AIB4AIB&sid=96e6e71c3df9bfc47415648d35204535&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Heritance Kandalama",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/heritance-kandalama/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Jetwing Vil Uyana",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/jetwing-vil-uyana.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/jetwing-vil-uyana.ja.html?label=gen173nr-10CAsohQFCEWpldHdpbmctdmlsLXV5YW5hSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuALRxdzSBsACAdICJDg3NmQyNDUwLTllY2QtNDMyMi1hMWUxLTEzMGZhMDE3YWYzYdgCAeACAQ&sid=8a5d38a3b37aecc30f4e1c23b76630f2&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Jetwing Vil Uyana",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/jetwing-vil-uyana/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Aliya Resort & Spa",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/aliya-resort-&-spa.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/aliya-resort-&-spa.ja.html?label=gen173nr-10CAsoggJCEmFsaXlhLXJlc29ydC0mLXNwYUgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgC08Xc0gbAAgHSAiRkNDUxNmJlZS1mZDcwLTRmYjctYWQ0OS1kYWIzM2IzMjYzZDPYAgHgAgE&sid=54cae3612c9f3622a56d136dd18f5d6b&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Aliya Resort & Spa",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/aliya-resort-&-spa/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Water Garden Sigiriya",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/water-garden-sigiriya.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/water-garden-sigiriya.ja.html?label=gen173nr-10CAsohQFCFXdhdGVyLWdhcmRlbi1zaWdpcml5YUgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgC1cXc0gbAAgHSAiQ5ZDE4NThjMC0yZGE0LTRhMjUtYmE5ZS00Yzk0N2MyZTM0YWHYAgHgAgE&sid=bdac57e5705f5547643eb794cc1c32e6&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Water Garden Sigiriya",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/water-garden-sigiriya/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Sigiriya King's Resort",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/sigiriya-king's-resort.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/sigiriya-kings-resort.ja.html?label=gen173nr-10CAsoggJCFXNpZ2lyaXlhLWtpbmdzLXJlc29ydEgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgC2MXc0gbAAgHSAiQ0MmJlNjc4YS0zODM0LTQ4YTgtODVkYy01YjE1N2Q5MWE4Y2XYAgHgAgE&sid=3ea1265d702c169b9669d9e4dc17046f&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Sigiriya King's Resort",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/sigiriya-king's-resort/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Seerock King's Domain",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/seerock-king's-domain.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/seerock-kings-domain.ja.html?label=gen173nr-10CAsoggJCFHNlZXJvY2sta2luZ3MtZG9tYWluSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuALaxdzSBsACAdICJDE4ZDc3ZTAyLTBlNzYtNDcxMS1iNGI0LTQ5Y2UxNGQ5N2EyZNgCAeACAQ&sid=65b3fb951ed189a67dc8bc4f1ca07111&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Seerock King's Domain",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/seerock-king's-domain/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Hotel Sigiriya",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/hotel-sigiriya.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/hotel-sigiriya.ja.html?label=gen173nr-10CAsohQFCDmhvdGVsLXNpZ2lyaXlhSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuALcxdzSBsACAdICJGZiOTk0YzRkLWU1NjEtNGUzYi05NTU2LTRmZTBiZWExNTIzNdgCAeACAQ&sid=5681c60ec9d0a08d80b8e4b8e5de2a9d&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Hotel Sigiriya",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/hotel-sigiriya/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Sigiriya Jungles",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/sigiriya-jungles.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/sigiriya-jungles.ja.html?label=gen173nr-10CAsohQFCEHNpZ2lyaXlhLWp1bmdsZXNIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4At_F3NIGwAIB0gIkZmI4NDE0Y2UtZjhmMS00MWQ0LWJlNDYtNzBhOTg5NGVlYjFi2AIB4AIB&sid=82a82bb4780a290feb4a9b5b448f67d2&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Sigiriya Jungles",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/sigiriya-jungles/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Amaara Forest Hotel",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/amaara-forest-hotel.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/amaara-forest-hotel.ja.html?label=gen173nr-10CAsohQFCE2FtYWFyYS1mb3Jlc3QtaG90ZWxIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AuHF3NIGwAIB0gIkOTZmNGY3YjktNWNmMC00MzU0LWFkYjUtYmQ2N2I4ODU2MzBm2AIB4AIB&sid=49ccde325110e81d923945f0adb1f753&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Amaara Forest Hotel",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/amaara-forest-hotel/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Kassapa Lions Rock",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/kassapa-lions-rock.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/kassapa-lions-rock.ja.html?label=gen173nr-10CAsohQFCEmthc3NhcGEtbGlvbnMtcm9ja0gzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgC48Xc0gbAAgHSAiQwMmJhMGUwNy1jYmU5LTRkZDQtYWZjNi03YTIzZmNjN2YxYjnYAgHgAgE&sid=21eeef2e5601a6d75334bcd2e29a5af1&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Kassapa Lions Rock",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/kassapa-lions-rock/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Sigiriya Village",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/sigiriya-village.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/sigiriya-village.ja.html?label=gen173nr-10CAsohQFCEHNpZ2lyaXlhLXZpbGxhZ2VIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AuXF3NIGwAIB0gIkMTAwNGMxMjgtYTU0OS00NDFmLThjOTYtOWRkNzk3NzhmYmI12AIB4AIB&sid=979a40ed41aae5138f78c84826c3923f&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Sigiriya Village",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/sigiriya-village/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Kaveri Resort Sigiriya",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/kaveri-resort-sigiriya.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/kaveri-resort-sigiriya.ja.html?label=gen173nr-10CAsohQFCFmthdmVyaS1yZXNvcnQtc2lnaXJpeWFIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AufF3NIGwAIB0gIkYTNhMTQ4NzAtYWE5MS00NTFhLThlN2ItZjhlMjczNTAyOTM42AIB4AIB&sid=af58a53aeb7af695b38fa3eea7ac86e4&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Kaveri Resort Sigiriya",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/kaveri-resort-sigiriya/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Sigiriya Rock Side Homestay",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/sigiriya-rock-side-homestay.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/sigiriya-rock-side-homestay.ja.html?label=gen173nr-10CAsohQFCG3NpZ2lyaXlhLXJvY2stc2lkZS1ob21lc3RheUgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgC6sXc0gbAAgHSAiQxOGNiZjM3NS1mMDI5LTQyMDUtYTMyMC0xMTVlNTc4MTI2NmPYAgHgAgE&sid=ec1fcb2fed67b1ef61e96edd98dcf810&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Sigiriya Rock Side Homestay",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/sigiriya-rock-side-homestay/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Wewa Addara Hotel",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/wewa-addara-hotel.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/wewa-addara-hotel.ja.html?label=gen173nr-10CAsohQFCEXdld2EtYWRkYXJhLWhvdGVsSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuALsxdzSBsACAdICJDBhMWExYThmLTA5NGEtNDA5NC1iODQyLTg3YzJkMDdjZDg1ZtgCAeACAQ&sid=79c18c850ff99aa71578d138fa6044cf&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Wewa Addara Hotel",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/wewa-addara-hotel/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Flower Garden Eco Village",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/flower-garden-eco-village.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/flower-garden-eco-village.ja.html?label=gen173nr-10CAsohQFCGWZsb3dlci1nYXJkZW4tZWNvLXZpbGxhZ2VIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Au7F3NIGwAIB0gIkMDAyY2ZlZWYtMWY3NC00YzM4LWIyYjItOWI1NDY3MjM4ZmUy2AIB4AIB&sid=f21639e149e056ceb0433d9d33d31891&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Flower Garden Eco Village",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/flower-garden-eco-village/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Sigiri Lodge",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/sigiri-lodge.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/sigiri-lodge.ja.html?label=gen173nr-10CAsohQFCDHNpZ2lyaS1sb2RnZUgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgC8MXc0gbAAgHSAiQ5ZjI5ZjEzZi0wNmVhLTQxODgtYWQ3My04Nzk2NmNhNzIwODPYAgHgAgE&sid=821f4089e37c1dd7b97877923bbf7d87&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Sigiri Lodge",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/sigiri-lodge/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Lion Lodge Sigiriya",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/lion-lodge-sigiriya.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/lion-lodge-sigiriya.ja.html?label=gen173nr-10CAsohQFCE2xpb24tbG9kZ2Utc2lnaXJpeWFIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AvLF3NIGwAIB0gIkZjU1N2E5N2ItZTk5ZC00MmVlLThiNTYtNmZhNDc5N2JkOTc42AIB4AIB&sid=4707be4b7baf5b41d1cef8f7ac5192f6&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Lion Lodge Sigiriya",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/lion-lodge-sigiriya/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Roy's Villa Hostel",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/roy's-villa-hostel.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/roys-villa-hostel.ja.html?label=gen173nr-10CAsoggJCEXJveXMtdmlsbGEtaG9zdGVsSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAL0xdzSBsACAdICJDJmMGNiN2MxLWU0ZWMtNDM3My1iNjIzLTZlOGQ3MDM3NTgyYdgCAeACAQ&sid=d1d033d6f2441203f2907f5e61a57fd3&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "sigiriya",
+      "name": "Roy's Villa Hostel",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/roy's-villa-hostel/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "weligama",
+      "name": "Weligama Bay Marriott Resort & Spa",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/weligama-bay-marriott-resort-&-spa.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/weligama-bay-marriott-resort-&-spa.ja.html?label=gen173nr-10CAsoggJCIndlbGlnYW1hLWJheS1tYXJyaW90dC1yZXNvcnQtJi1zcGFIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AvbF3NIGwAIB0gIkZjFmM2RhMjYtZTc0Ny00Y2YzLWJkNmItYWE3YThjYWJhYmNk2AIB4AIB&sid=3b2f6c0ff0d0a7e8d8fc6979e3ec8e25&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "weligama",
+      "name": "Weligama Bay Marriott Resort & Spa",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/weligama-bay-marriott-resort-&-spa/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "weligama",
+      "name": "Cape Weligama",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/cape-weligama.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/cape-weligama.ja.html?label=gen173nr-10CAsohQFCDWNhcGUtd2VsaWdhbWFIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AvnF3NIGwAIB0gIkNmViNTFkYWEtODMwNy00YzVjLWI3OWEtZDFlNDVlMDJjZWVm2AIB4AIB&sid=2f5d0c81cb3279a167ec4d8750cc07a0&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "weligama",
+      "name": "Cape Weligama",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/cape-weligama/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "weligama",
+      "name": "Eraeliya Villas & Gardens",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/eraeliya-villas-&-gardens.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/eraeliya-villas-&-gardens.ja.html?label=gen173nr-10CAsoggJCGWVyYWVsaXlhLXZpbGxhcy0mLWdhcmRlbnNIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AvvF3NIGwAIB0gIkY2I3NDc3ZjctOTdmMC00MzY3LTkyY2UtOGE2N2FmMGNjMTQ42AIB4AIB&sid=78861776513fa0d89959fb13b79d0776&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "weligama",
+      "name": "Eraeliya Villas & Gardens",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/eraeliya-villas-&-gardens/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "weligama",
+      "name": "W15 Weligama Luxury Suite",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/w15-weligama-luxury-suite.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/w15-weligama-luxury-suite.ja.html?label=gen173nr-10CAsohQFCGXcxNS13ZWxpZ2FtYS1sdXh1cnktc3VpdGVIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Av3F3NIGwAIB0gIkYjNlNWQxNTYtZjYxZS00NzRhLWI0NzItZjEwNzg2NDNmZjE22AIB4AIB&sid=d611cd26bc52fea484305c7ee6304a2a&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "weligama",
+      "name": "W15 Weligama Luxury Suite",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/w15-weligama-luxury-suite/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "weligama",
+      "name": "Weligama Bay Resort Suite",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/weligama-bay-resort-suite.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/weligama-bay-resort-suite.ja.html?label=gen173nr-10CAsohQFCGXdlbGlnYW1hLWJheS1yZXNvcnQtc3VpdGVIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Av_F3NIGwAIB0gIkY2NmMjgxMWItN2M3Ni00ODg5LWJmODAtZDM2N2JiZTY4MzFh2AIB4AIB&sid=6a1c3408067e2bc79c78413d189d9461&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "weligama",
+      "name": "Weligama Bay Resort Suite",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/weligama-bay-resort-suite/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "weligama",
+      "name": "We Escape Private Villa",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/we-escape-private-villa.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/we-escape-private-villa.ja.html?label=gen173nr-10CAsohQFCF3dlLWVzY2FwZS1wcml2YXRlLXZpbGxhSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKBxtzSBsACAdICJDk2NDdjMDUyLTVkMmQtNDE4YS1hZmIxLTk1OGI1MDlmNjE1OdgCAeACAQ&sid=46fb1ac822cd424434b00aafe619f4af&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "weligama",
+      "name": "We Escape Private Villa",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/we-escape-private-villa/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "weligama",
+      "name": "Weligama Bay Resort",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/weligama-bay-resort.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/weligama-bay-resort.ja.html?label=gen173nr-10CAsohQFCE3dlbGlnYW1hLWJheS1yZXNvcnRIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AoPG3NIGwAIB0gIkMDQ1YTczNmMtY2JkNS00YWNhLWIwOWQtOGY4YzhmNGI5OGIx2AIB4AIB&sid=df1cf87c612d2214c81a09219bb77333&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "weligama",
+      "name": "Weligama Bay Resort",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/weligama-bay-resort/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "weligama",
+      "name": "W15 Weligama",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/w15-weligama.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/w15-weligama.ja.html?label=gen173nr-10CAsohQFCDHcxNS13ZWxpZ2FtYUgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgChsbc0gbAAgHSAiQ2NmFmOTIyYy1mNTIxLTRiNjgtODY4NS03YjU5NDk4ZGI4NDPYAgHgAgE&sid=6903cc99a6396bbe3af960759b7186cb&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "weligama",
+      "name": "W15 Weligama",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/w15-weligama/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "weligama",
+      "name": "Jagabay Resort & Restaurant",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/jagabay-resort-&-restaurant.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/jagabay-resort-&-restaurant.ja.html?label=gen173nr-10CAsoggJCG2phZ2FiYXktcmVzb3J0LSYtcmVzdGF1cmFudEgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCiMbc0gbAAgHSAiQ5NDQ1MjNlOC02NjFmLTQ5ZjItOTAxMy0wM2FlNWRhYjlmYWPYAgHgAgE&sid=c436162dc368502cad806303aa66ec95&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "weligama",
+      "name": "Jagabay Resort & Restaurant",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/jagabay-resort-&-restaurant/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "weligama",
+      "name": "Bay House Weligama",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/bay-house-weligama.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/bay-house-weligama.ja.html?label=gen173nr-10CAsohQFCEmJheS1ob3VzZS13ZWxpZ2FtYUgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCisbc0gbAAgHSAiRjNDZlYWRmZS03ZWJjLTRlMDYtOTUxMi02MjM1MjQ4MjlmMTHYAgHgAgE&sid=da2f57b9c74314bd9494c54389785f8c&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "weligama",
+      "name": "Bay House Weligama",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/bay-house-weligama/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "weligama",
+      "name": "Weligama Heights Villa",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/weligama-heights-villa.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/weligama-heights-villa.ja.html?label=gen173nr-10CAsohQFCFndlbGlnYW1hLWhlaWdodHMtdmlsbGFIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Ao3G3NIGwAIB0gIkY2VkODU0OWEtNmY2Yy00OThiLThiZTgtMTk4NTk4OGI0OGMw2AIB4AIB&sid=0beb03b0ec6b5a8d1a867b4f1265f7e1&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "weligama",
+      "name": "Weligama Heights Villa",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/weligama-heights-villa/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "weligama",
+      "name": "Insight Resort Ahangama",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/insight-resort-ahangama.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/insight-resort-ahangama.ja.html?label=gen173nr-10CAsohQFCF2luc2lnaHQtcmVzb3J0LWFoYW5nYW1hSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKPxtzSBsACAdICJGRkNWJlN2Q3LTI0YzEtNDk0OS1hMzZiLTk0ZjM2MzFlMDM0MdgCAeACAQ&sid=922d4e221d444e4b9aef29a70dae10df&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "weligama",
+      "name": "Insight Resort Ahangama",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/insight-resort-ahangama/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "weligama",
+      "name": "We Escape",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/we-escape.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/we-escape.ja.html?label=gen173nr-10CAsohQFCCXdlLWVzY2FwZUgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCkcbc0gbAAgHSAiRjMjNkZGU1Yi1iN2I4LTQyZjEtOTM1OS0zNzQyNTUzZWU5MGXYAgHgAgE&sid=b23dc244f9f0f3fd1cd3938acbe734e6&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "weligama",
+      "name": "We Escape",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/we-escape/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "weligama",
+      "name": "Neptune Bay Hotel",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/neptune-bay-hotel.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/neptune-bay-hotel.ja.html?label=gen173nr-10CAsohQFCEW5lcHR1bmUtYmF5LWhvdGVsSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKUxtzSBsACAdICJDhhZmRhZDZmLWM2OWItNDE5Yy04MTJkLWVjNWNlNGMyNTEwNdgCAeACAQ&sid=dd963336352061f5c46c24dc37706647&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "weligama",
+      "name": "Neptune Bay Hotel",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/neptune-bay-hotel/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "weligama",
+      "name": "Weligama Ocean Breeze",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/weligama-ocean-breeze.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/weligama-ocean-breeze.ja.html?label=gen173nr-10CAsohQFCFXdlbGlnYW1hLW9jZWFuLWJyZWV6ZUgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgClsbc0gbAAgHSAiRiNTRlOTk2Mi04MDZhLTRiYWYtOGFhOC05NDZiNGEyNGEwYzLYAgHgAgE&sid=5f24430b8fcb6c7f8070db1e1dfe5323&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "weligama",
+      "name": "Weligama Ocean Breeze",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/weligama-ocean-breeze/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "weligama",
+      "name": "Surf n Lanka Guest House",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/surf-n-lanka-guest-house.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/surf-n-lanka-guest-house.ja.html?label=gen173nr-10CAsohQFCGHN1cmYtbi1sYW5rYS1ndWVzdC1ob3VzZUgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCmMbc0gbAAgHSAiQ0OTczYzkxMC1kMzRmLTQzYjYtYjZiYy1hNTZiMjk1ZWE0ZjDYAgHgAgE&sid=5de929176e1c22813ab033da41ca22a4&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "weligama",
+      "name": "Surf n Lanka Guest House",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/surf-n-lanka-guest-house/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "weligama",
+      "name": "Spindrift Hostel Weligama",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/spindrift-hostel-weligama.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/spindrift-hostel-weligama.ja.html?label=gen173nr-10CAsohQFCGXNwaW5kcmlmdC1ob3N0ZWwtd2VsaWdhbWFIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AprG3NIGwAIB0gIkMWU5ZDM3MGMtM2I5OS00MmEwLTgwNjctMzM5YTM3N2I4NjQ32AIB4AIB&sid=ba94826ccf903f021434b86620eb9494&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "weligama",
+      "name": "Spindrift Hostel Weligama",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/spindrift-hostel-weligama/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "weligama",
+      "name": "Beatroot Hostels Weligama",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/beatroot-hostels-weligama.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/beatroot-hostels-weligama.ja.html?label=gen173nr-10CAsohQFCGWJlYXRyb290LWhvc3RlbHMtd2VsaWdhbWFIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4ApzG3NIGwAIB0gIkNjg3YmU4ZmEtODE2ZS00ZTAzLWEzODItYWI2NDgxMzBiZmQ22AIB4AIB&sid=7cde75e9c10757fc154329f18d125dd3&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "weligama",
+      "name": "Beatroot Hostels Weligama",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/beatroot-hostels-weligama/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "yala",
+      "name": "Wild Coast Tented Lodge",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/wild-coast-tented-lodge.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/wild-coast-tented-lodge.ja.html?label=gen173nr-10CAsohQFCF3dpbGQtY29hc3QtdGVudGVkLWxvZGdlSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKextzSBsACAdICJGRiNTVjNmJlLTFjMTEtNGZlNi1iY2Q1LTMwZWJlYWRlODVlYdgCAeACAQ&sid=08e94d87b5ccdbfc93c4c44cf4146923&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "yala",
+      "name": "Wild Coast Tented Lodge",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/wild-coast-tented-lodge/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "yala",
+      "name": "Jetwing Yala",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/jetwing-yala.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/jetwing-yala.ja.html?label=gen173nr-10CAsohQFCDGpldHdpbmcteWFsYUgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCoMbc0gbAAgHSAiQ0ZDVjMDFjYy1iY2U3LTQzOGYtYWI2ZC04ZmVkMGRhMmQ0M2XYAgHgAgE&sid=065bbff290d0bb780766c51cbf006db5&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "yala",
+      "name": "Jetwing Yala",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/jetwing-yala/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "yala",
+      "name": "Cinnamon Wild Yala",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/cinnamon-wild-yala.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/cinnamon-wild-yala.ja.html?label=gen173nr-10CAsohQFCEmNpbm5hbW9uLXdpbGQteWFsYUgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCosbc0gbAAgHSAiQ2ZWViNTk5MC03YjlkLTRmYzktYjYxZi1hN2E4MDg0OTU1MzDYAgHgAgE&sid=c09616a76aac2759363eff3cdc40cdb3&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "yala",
+      "name": "Cinnamon Wild Yala",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/cinnamon-wild-yala/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "yala",
+      "name": "Hilton Yala Resort",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/hilton-yala-resort.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/hilton-yala-resort.ja.html?label=gen173nr-10CAsohQFCEmhpbHRvbi15YWxhLXJlc29ydEgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCpcbc0gbAAgHSAiQ4ZWQ4ZTM3Ny1hZjEzLTQ0YmItYTdiMS1hNzViNTMwOGI5OGXYAgHgAgE&sid=8dd2d7f933e73cfe4e6de53e34940a41&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "yala",
+      "name": "Hilton Yala Resort",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/hilton-yala-resort/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "yala",
+      "name": "Uga Chena Huts Yala",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/uga-chena-huts-yala.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/uga-chena-huts-yala.ja.html?label=gen173nr-10CAsohQFCE3VnYS1jaGVuYS1odXRzLXlhbGFIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AqfG3NIGwAIB0gIkYzM2ZWJkNmEtNTQyYy00YjVkLTk0ZmMtNzFlZDM1OWI0NGRh2AIB4AIB&sid=a9cdf6d040b63865ed8d231f0cb5747f&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "yala",
+      "name": "Uga Chena Huts Yala",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/uga-chena-huts-yala/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "yala",
+      "name": "Yala Safari Camping",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/yala-safari-camping.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/yala-safari-camping.ja.html?label=gen173nr-10CAsohQFCE3lhbGEtc2FmYXJpLWNhbXBpbmdIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AqnG3NIGwAIB0gIkYmE3NWQ0N2EtYzZjYS00OGRhLWIwMmQtYjlhYzA5YzQ1M2Jk2AIB4AIB&sid=1a3f037c0bc3fa9d09fbac7ad3f8f1ec&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "yala",
+      "name": "Yala Safari Camping",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/yala-safari-camping/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "yala",
+      "name": "Kithala Resort",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/kithala-resort.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/kithala-resort.ja.html?label=gen173nr-10CAsohQFCDmtpdGhhbGEtcmVzb3J0SDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKrxtzSBsACAdICJDA1NjE1YTA3LTBiZDQtNGVmYi1hZTE0LTI4MDZjZGM5OGRmZNgCAeACAQ&sid=42d23a6ce676053bbc70a45ddad76728&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "yala",
+      "name": "Kithala Resort",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/kithala-resort/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "yala",
+      "name": "Oak Ray Wild Yala",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/oak-ray-wild-yala.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/oak-ray-wild-yala.ja.html?label=gen173nr-10CAsohQFCEW9hay1yYXktd2lsZC15YWxhSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKuxtzSBsACAdICJDE3MDQ1OTgyLTUyNTAtNDM5NS04YjJjLTFmOGIwNTVkMzVjONgCAeACAQ&sid=3fa23301f0b7b272c9d2f49a1a1d28a2&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "yala",
+      "name": "Oak Ray Wild Yala",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/oak-ray-wild-yala/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "yala",
+      "name": "Yala Adventure",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/yala-adventure.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/yala-adventure.ja.html?label=gen173nr-10CAsohQFCDnlhbGEtYWR2ZW50dXJlSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKwxtzSBsACAdICJDBlOTVmOThhLTJhOTItNGZjMi04NTE3LThhNWM5NTMyOGFjZtgCAeACAQ&sid=beffa935ffab06b33fbec6aa15a94c55&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "yala",
+      "name": "Yala Adventure",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/yala-adventure/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "yala",
+      "name": "Tissamaharama Resort",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/tissamaharama-resort.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/tissamaharama-resort.ja.html?label=gen173nr-10CAsohQFCFHRpc3NhbWFoYXJhbWEtcmVzb3J0SDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKyxtzSBsACAdICJGI3YjU2ODc0LWIwZTYtNDEzNC05YzViLWE0NmQ1MmVjYzg4NtgCAeACAQ&sid=c2ad1748e3cc0185922fc2594f992262&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "yala",
+      "name": "Tissamaharama Resort",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/tissamaharama-resort/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "yala",
+      "name": "Hotel Chandrika",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/hotel-chandrika.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/hotel-chandrika.ja.html?label=gen173nr-10CAsohQFCD2hvdGVsLWNoYW5kcmlrYUgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCtMbc0gbAAgHSAiRjNmRlZjAxMi05ZGFiLTQzZTYtYjMwMS0zNTQyMDk1Njk3NmPYAgHgAgE&sid=60a4cf648a8188d92a7204fbc99903f6&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "yala",
+      "name": "Hotel Chandrika",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/hotel-chandrika/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "yala",
+      "name": "Priyankara Hotel",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/priyankara-hotel.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/priyankara-hotel.ja.html?label=gen173nr-10CAsohQFCEHByaXlhbmthcmEtaG90ZWxIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4ArbG3NIGwAIB0gIkMGE0OTg1MTEtYzM5Zi00ZDIzLTg2MGEtYzU5NzQxNzc2NjYy2AIB4AIB&sid=d8f52735a570a4220b14d7687cb2906d&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "yala",
+      "name": "Priyankara Hotel",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/priyankara-hotel/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "yala",
+      "name": "Gem River Edge Eco Home",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/gem-river-edge-eco-home.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/gem-river-edge-eco-home.ja.html?label=gen173nr-10CAsohQFCF2dlbS1yaXZlci1lZGdlLWVjby1ob21lSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAK4xtzSBsACAdICJDZhYzM2OTQwLTE5ZGMtNDVhOC04NTc1LWY3MmJiNDdhMzhmMNgCAeACAQ&sid=55ae8a043319925ab4de26d2077eaefe&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "yala",
+      "name": "Gem River Edge Eco Home",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/gem-river-edge-eco-home/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "yala",
+      "name": "Elephant Lake Yala",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/elephant-lake-yala.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/elephant-lake-yala.ja.html?label=gen173nr-10CAsohQFCEmVsZXBoYW50LWxha2UteWFsYUgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCusbc0gbAAgHSAiRkYWMyNDI5MS02MDlkLTRlN2EtODMxOC1hOGMxYjVlYmYyY2PYAgHgAgE&sid=d30ebd383a937ab9d9fd00ee3163819a&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "yala",
+      "name": "Elephant Lake Yala",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/elephant-lake-yala/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "yala",
+      "name": "Yala Caravan Village",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/yala-caravan-village.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/yala-caravan-village.ja.html?label=gen173nr-10CAsohQFCFHlhbGEtY2FyYXZhbi12aWxsYWdlSDNYBGh1iAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAK8xtzSBsACAdICJDIxOWIwOWRiLWU5MTgtNGFhNi1iYWY5LTJlZDQwMjAyZGM3NdgCAeACAQ&sid=ae61476132c7499e6e0b19060ec64109&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "yala",
+      "name": "Yala Caravan Village",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/yala-caravan-village/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "yala",
+      "name": "Yala Peace Cottage",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/yala-peace-cottage.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/yala-peace-cottage.ja.html?label=gen173nr-10CAsohQFCEnlhbGEtcGVhY2UtY290dGFnZUgzWARodYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCvsbc0gbAAgHSAiQ2NGMxZDE5Yy1jYzVmLTQ3NDgtYjFlMy1jNzQ1NGMzZWNkZjbYAgHgAgE&sid=3a30b48479ad15fa45d0fb8ef6f083e4&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "yala",
+      "name": "Yala Peace Cottage",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/yala-peace-cottage/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "yala",
+      "name": "Yala Parkview Hotel",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/yala-parkview-hotel.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/yala-parkview-hotel.ja.html?label=gen173nr-10CAsohQFCE3lhbGEtcGFya3ZpZXctaG90ZWxIM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsDG3NIGwAIB0gIkZTEwMWQ1ZjMtMjViYS00Yzg0LWFkYjgtMzFiMmMzZjI4N2Jl2AIB4AIB&sid=97d765000abc0e085613ff59b8ad3283&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "yala",
+      "name": "Yala Parkview Hotel",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/yala-parkview-hotel/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    },
+    {
+      "destination": "yala",
+      "name": "Leopard Nest Budget Cabin",
+      "field": "booking_url",
+      "url": "https://www.booking.com/hotel/lk/leopard-nest-budget-cabin.html",
+      "status": "http_403",
+      "final_url": "https://www.booking.com/hotel/lk/leopard-nest-budget-cabin.ja.html?label=gen173nr-10CAsohQFCGWxlb3BhcmQtbmVzdC1idWRnZXQtY2FiaW5IM1gEaHWIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsPG3NIGwAIB0gIkNzVkZDI3NGEtMWYxNS00NzJiLThjNjgtNzZhNDBkNWJmYWU32AIB4AIB&sid=b1666dcdd4fbd87f0e6a54448b575504&dist=0&keep_landing=1&sb_price_type=total&type=total&",
+      "note": "HTTP 202 but body is a bot-block/interstitial/JS-challenge page"
+    },
+    {
+      "destination": "yala",
+      "name": "Leopard Nest Budget Cabin",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/leopard-nest-budget-cabin/hotel/sri-lanka.html",
+      "status": "http_404",
+      "final_url": "https://www.agoda.com/pagenotfound.html",
+      "note": "HTTP 404"
+    }
+  ],
+  "og_image_sample": [
+    {
+      "destination": "colombo_arrival",
+      "name": "The Kingsbury Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/the-kingsbury/hotel/colombo-lk.html",
+      "og_image_found": false,
+      "og_image_url": ""
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Cinnamon Grand Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/cinnamon-grand-colombo/hotel/colombo-lk.html",
+      "og_image_found": false,
+      "og_image_url": ""
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Taj Samudra Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/taj-samudra-hotel/hotel/colombo-lk.html",
+      "og_image_found": false,
+      "og_image_url": ""
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Cinnamon Red Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/cinnamon-red-colombo/hotel/colombo-lk.html",
+      "og_image_found": false,
+      "og_image_url": ""
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Fairway Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/fairway-colombo/hotel/colombo-lk.html",
+      "og_image_found": false,
+      "og_image_url": ""
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Jetwing Colombo Seven",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/jetwing-colombo-seven/hotel/colombo-lk.html",
+      "og_image_found": false,
+      "og_image_url": ""
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Mandarina Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/mandarina-colombo/hotel/colombo-lk.html",
+      "og_image_found": false,
+      "og_image_url": ""
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Marino Beach Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/marino-beach-colombo/hotel/colombo-lk.html",
+      "og_image_found": false,
+      "og_image_url": ""
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Ramada Colombo",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/ramada-colombo/hotel/colombo-lk.html",
+      "og_image_found": false,
+      "og_image_url": ""
+    },
+    {
+      "destination": "colombo_arrival",
+      "name": "Colombo City Hotels",
+      "field": "agoda_url",
+      "url": "https://www.agoda.com/colombo-city-hotels/hotel/colombo-lk.html",
+      "og_image_found": false,
+      "og_image_url": ""
+    }
+  ]
+}
