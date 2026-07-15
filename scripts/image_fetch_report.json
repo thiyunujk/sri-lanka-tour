@@ -1,0 +1,866 @@
+[
+  {
+    "destination": "colombo_arrival",
+    "name": "The Kingsbury Colombo",
+    "status": "ok",
+    "url": "https://thekingsburyhotel.eme-devops.com/2024/09/Day-Exterior-4.jpg"
+  },
+  {
+    "destination": "colombo_arrival",
+    "name": "Cinnamon Grand Colombo",
+    "status": "no_og_tag",
+    "url": ""
+  },
+  {
+    "destination": "colombo_arrival",
+    "name": "Galle Face Hotel",
+    "status": "no_og_tag",
+    "url": ""
+  },
+  {
+    "destination": "colombo_arrival",
+    "name": "Cinnamon Lakeside Colombo",
+    "status": "no_og_tag",
+    "url": ""
+  },
+  {
+    "destination": "colombo_arrival",
+    "name": "Taj Samudra Colombo",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "colombo_arrival",
+    "name": "Hilton Colombo",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "colombo_arrival",
+    "name": "Cinnamon Red Colombo",
+    "status": "no_og_tag",
+    "url": ""
+  },
+  {
+    "destination": "colombo_arrival",
+    "name": "Fairway Colombo",
+    "status": "ok",
+    "url": "https://r.profitroom.pl/fairwaycolombo/images/202507080948250.DSC7132_img.jpg"
+  },
+  {
+    "destination": "colombo_arrival",
+    "name": "Jetwing Colombo Seven",
+    "status": "ok",
+    "url": "https://www.jetwinghotels.com/jetwingcolomboseven/wp-content/uploads/sites/7/2024/11/Jetwing-Colombo-Seven-1200x630-1.jpg"
+  },
+  {
+    "destination": "colombo_arrival",
+    "name": "Mandarina Colombo",
+    "status": "ok",
+    "url": "https://mandarinacolombo.eme-devops.com/2025/03/og.jpg"
+  },
+  {
+    "destination": "colombo_arrival",
+    "name": "Marino Beach Colombo",
+    "status": "no_og_tag",
+    "url": ""
+  },
+  {
+    "destination": "colombo_arrival",
+    "name": "Ramada Colombo",
+    "status": "no_og_tag",
+    "url": ""
+  },
+  {
+    "destination": "colombo_arrival",
+    "name": "Colombo City Hotels",
+    "status": "no_og_tag",
+    "url": ""
+  },
+  {
+    "destination": "colombo_arrival",
+    "name": "Clock Inn Colombo",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "colombo_arrival",
+    "name": "City Beds - The Regent",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "colombo_arrival",
+    "name": "Bunkyard Hostels",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "colombo_arrival",
+    "name": "Moss Colombo",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "colombo_arrival",
+    "name": "Haven Colombo",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "colombo_departure",
+    "name": "Shangri-La Colombo",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "colombo_departure",
+    "name": "Hilton Colombo",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "colombo_departure",
+    "name": "Taj Samudra Colombo",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "colombo_departure",
+    "name": "Cinnamon Grand Colombo",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "colombo_departure",
+    "name": "Cinnamon Lakeside Colombo",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "colombo_departure",
+    "name": "The Kingsbury Colombo",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "colombo_departure",
+    "name": "Marino Beach Colombo",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "colombo_departure",
+    "name": "Mandarina Colombo",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "colombo_departure",
+    "name": "OZO Colombo",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "colombo_departure",
+    "name": "Radisson Hotel Colombo",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "colombo_departure",
+    "name": "Ramada Colombo",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "colombo_departure",
+    "name": "Cinnamon Red Colombo",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "colombo_departure",
+    "name": "Moss Colombo",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "colombo_departure",
+    "name": "Haven Colombo",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "colombo_departure",
+    "name": "Colombo Downtown Hostel",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "colombo_departure",
+    "name": "Clock Inn Colombo",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "colombo_departure",
+    "name": "City Beds - The Regent",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "colombo_departure",
+    "name": "Bunkyard Hostels",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "galle",
+    "name": "Amangalla",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "galle",
+    "name": "Le Grand Galle By Asia Leisure",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "galle",
+    "name": "Jetwing Lighthouse",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "galle",
+    "name": "Fort Bazaar Premium",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "galle",
+    "name": "Galle Fort Hotel Historic Suite",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "galle",
+    "name": "Kahanda Kanda",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "galle",
+    "name": "Fort Bazaar",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "galle",
+    "name": "Tamarind Hill by Asia Leisure",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "galle",
+    "name": "Lady Hill Hotel",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "galle",
+    "name": "The Fort Printers",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "galle",
+    "name": "Era Beach by Asia Leisure",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "galle",
+    "name": "Closenberg Hotel",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "galle",
+    "name": "Cozy Nest Galle Fort",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "galle",
+    "name": "Pedlar's Inn Hostel",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "galle",
+    "name": "Sunset Fort Hotel",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "galle",
+    "name": "Galle Fort Hostel",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "galle",
+    "name": "Pilgrim's Eye Guest House",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "galle",
+    "name": "Fort Castle Galle Fort",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "kandy",
+    "name": "The Golden Crown Hotel",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "kandy",
+    "name": "Earl's Regency Hotel",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "kandy",
+    "name": "Amaya Hills Kandy",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "kandy",
+    "name": "King's Pavilion Kandy",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "kandy",
+    "name": "Mountbatten Bungalow",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "kandy",
+    "name": "W15 Hanthana Kandy",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "kandy",
+    "name": "Cinnamon Citadel Kandy",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "kandy",
+    "name": "OZO Kandy Sri Lanka",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "kandy",
+    "name": "Hotel Topaz",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "kandy",
+    "name": "Hotel Suisse",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "kandy",
+    "name": "Randholee Resort & Spa",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "kandy",
+    "name": "The Radh Hotel",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "kandy",
+    "name": "Kandy City Hotel by Sangreea",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "kandy",
+    "name": "Clock Inn Kandy",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "kandy",
+    "name": "Sevana City Hotel",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "kandy",
+    "name": "Kandy Backpackers Hostel",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "kandy",
+    "name": "Villa 49",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "kandy",
+    "name": "Pink House Kandy",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "nuwara_eliya",
+    "name": "The Grand Hotel",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "nuwara_eliya",
+    "name": "Heritance Tea Factory",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "nuwara_eliya",
+    "name": "Jetwing St. Andrew's",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "nuwara_eliya",
+    "name": "Araliya Red",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "nuwara_eliya",
+    "name": "Stafford Bungalow",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "nuwara_eliya",
+    "name": "Jetwing Warwick Gardens",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "nuwara_eliya",
+    "name": "Araliya Green City",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "nuwara_eliya",
+    "name": "The Hill Club",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "nuwara_eliya",
+    "name": "Oak Ray Summer Hill Breeze",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "nuwara_eliya",
+    "name": "The Golden Ridge Hotel",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "nuwara_eliya",
+    "name": "Glenfall Reach Hotel",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "nuwara_eliya",
+    "name": "Heaven Seven Hotel",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "nuwara_eliya",
+    "name": "Unique Cottages",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "nuwara_eliya",
+    "name": "Single Tree Hotel",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "nuwara_eliya",
+    "name": "Alpine Hotel Nuwara Eliya",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "nuwara_eliya",
+    "name": "Kings Park Hotel",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "nuwara_eliya",
+    "name": "Greenstars Guest House",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "nuwara_eliya",
+    "name": "Nuwara Eliya Hills Rest",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "sigiriya",
+    "name": "Heritance Kandalama",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "sigiriya",
+    "name": "Jetwing Vil Uyana",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "sigiriya",
+    "name": "Aliya Resort & Spa",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "sigiriya",
+    "name": "Water Garden Sigiriya",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "sigiriya",
+    "name": "Sigiriya King's Resort",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "sigiriya",
+    "name": "Seerock King's Domain",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "sigiriya",
+    "name": "Hotel Sigiriya",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "sigiriya",
+    "name": "Sigiriya Jungles",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "sigiriya",
+    "name": "Amaara Forest Hotel",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "sigiriya",
+    "name": "Kassapa Lions Rock",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "sigiriya",
+    "name": "Sigiriya Village",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "sigiriya",
+    "name": "Kaveri Resort Sigiriya",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "sigiriya",
+    "name": "Sigiriya Rock Side Homestay",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "sigiriya",
+    "name": "Wewa Addara Hotel",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "sigiriya",
+    "name": "Flower Garden Eco Village",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "sigiriya",
+    "name": "Sigiri Lodge",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "sigiriya",
+    "name": "Lion Lodge Sigiriya",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "sigiriya",
+    "name": "Roy's Villa Hostel",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "weligama",
+    "name": "Weligama Bay Marriott Resort & Spa",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "weligama",
+    "name": "Cape Weligama",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "weligama",
+    "name": "Eraeliya Villas & Gardens",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "weligama",
+    "name": "W15 Weligama Luxury Suite",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "weligama",
+    "name": "Weligama Bay Resort Suite",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "weligama",
+    "name": "We Escape Private Villa",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "weligama",
+    "name": "Weligama Bay Resort",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "weligama",
+    "name": "W15 Weligama",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "weligama",
+    "name": "Jagabay Resort & Restaurant",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "weligama",
+    "name": "Bay House Weligama",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "weligama",
+    "name": "Weligama Heights Villa",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "weligama",
+    "name": "Insight Resort Ahangama",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "weligama",
+    "name": "We Escape",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "weligama",
+    "name": "Neptune Bay Hotel",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "weligama",
+    "name": "Weligama Ocean Breeze",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "weligama",
+    "name": "Surf n Lanka Guest House",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "weligama",
+    "name": "Spindrift Hostel Weligama",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "weligama",
+    "name": "Beatroot Hostels Weligama",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "yala",
+    "name": "Wild Coast Tented Lodge",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "yala",
+    "name": "Jetwing Yala",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "yala",
+    "name": "Cinnamon Wild Yala",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "yala",
+    "name": "Hilton Yala Resort",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "yala",
+    "name": "Uga Chena Huts Yala",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "yala",
+    "name": "Yala Safari Camping",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "yala",
+    "name": "Kithala Resort",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "yala",
+    "name": "Oak Ray Wild Yala",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "yala",
+    "name": "Yala Adventure",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "yala",
+    "name": "Tissamaharama Resort",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "yala",
+    "name": "Hotel Chandrika",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "yala",
+    "name": "Priyankara Hotel",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "yala",
+    "name": "Gem River Edge Eco Home",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "yala",
+    "name": "Elephant Lake Yala",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "yala",
+    "name": "Yala Caravan Village",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "yala",
+    "name": "Yala Peace Cottage",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "yala",
+    "name": "Yala Parkview Hotel",
+    "status": "http_error",
+    "url": ""
+  },
+  {
+    "destination": "yala",
+    "name": "Leopard Nest Budget Cabin",
+    "status": "http_error",
+    "url": ""
+  }
+]
