@@ -43,7 +43,10 @@ const votingUI = {
     facilities: {
       breakfast: '朝食', swimming_pool: 'プール', wifi: 'WiFi', air_conditioning: 'エアコン',
       restaurant: 'レストラン', parking: '駐車場', gym: 'ジム', front_desk_24h: '24hフロント'
-    }
+    },
+    verifiedBadge: (monthDay) => `✓ 空室確認済み (${monthDay}時点)`,
+    freeCancellation: 'キャンセル無料',
+    morePhotos: 'もっと写真を見る'
   },
   en: {
     choices: ['1st Choice', '2nd Choice', '3rd Choice'],
@@ -75,7 +78,10 @@ const votingUI = {
     facilities: {
       breakfast: 'Breakfast', swimming_pool: 'Pool', wifi: 'WiFi', air_conditioning: 'A/C',
       restaurant: 'Restaurant', parking: 'Parking', gym: 'Gym', front_desk_24h: '24h Desk'
-    }
+    },
+    verifiedBadge: (monthDay) => `✓ Availability checked (as of ${monthDay})`,
+    freeCancellation: 'Free cancellation',
+    morePhotos: 'More photos'
   }
 };
 
@@ -124,6 +130,89 @@ const dayToDest = {
   10: 'colombo_departure',
   11: 'colombo_departure'
 };
+
+// Gradient shown behind the 🏨 placeholder icon for hotels with no photo,
+// one per destination so cards stay visually distinguishable in a list.
+const destPlaceholderGradient = {
+  colombo_arrival:   'from-sky-400 to-sky-600',
+  colombo_departure: 'from-sky-500 to-indigo-600',
+  sigiriya:          'from-amber-500 to-orange-600',
+  kandy:             'from-emerald-500 to-teal-600',
+  nuwara_eliya:      'from-teal-400 to-emerald-600',
+  yala:              'from-yellow-600 to-amber-700',
+  galle:             'from-blue-500 to-cyan-600',
+  weligama:          'from-cyan-400 to-blue-500'
+};
+const DEFAULT_PLACEHOLDER_GRADIENT = 'from-slate-400 to-slate-600';
+
+// Day 1 of the trip. destDates below is derived from this + dayToDest, so
+// it stays correct if the itinerary's day-to-destination mapping changes.
+const TRIP_START_DATE = new Date(Date.UTC(2026, 7, 10)); // Aug 10, 2026
+
+function addDaysISO(baseDate, days) {
+  const d = new Date(baseDate.getTime());
+  d.setUTCDate(d.getUTCDate() + days);
+  return d.toISOString().slice(0, 10);
+}
+
+// Day 11 is the trip's final day: per itineraryData (js/app.js) its "hotel"
+// field is null -- the group just uses the Colombo hotel as a daytime base
+// before a 21:00 flight, with no additional night booked. It's still
+// mapped to colombo_departure in dayToDest above (so voting still resolves
+// to the right hotel list from the Day 11 card), but it must NOT extend
+// the colombo_departure checkout date the way an actual night would.
+const DAYS_WITH_NO_HOTEL_NIGHT = [11];
+
+// { destKey: { checkin: 'YYYY-MM-DD', checkout: 'YYYY-MM-DD' } }, derived
+// from dayToDest: checkin = first day slept at that destination, checkout
+// = the morning after the last day slept there.
+function buildDestDates() {
+  const spanByDest = {};
+  Object.entries(dayToDest).forEach(([dayStr, dest]) => {
+    const day = Number(dayStr);
+    if (DAYS_WITH_NO_HOTEL_NIGHT.includes(day)) return;
+    if (!spanByDest[dest]) {
+      spanByDest[dest] = { minDay: day, maxDay: day };
+    } else {
+      spanByDest[dest].minDay = Math.min(spanByDest[dest].minDay, day);
+      spanByDest[dest].maxDay = Math.max(spanByDest[dest].maxDay, day);
+    }
+  });
+  const result = {};
+  Object.entries(spanByDest).forEach(([dest, { minDay, maxDay }]) => {
+    result[dest] = {
+      checkin: addDaysISO(TRIP_START_DATE, minDay - 1),
+      checkout: addDaysISO(TRIP_START_DATE, maxDay)
+    };
+  });
+  return result;
+}
+
+const destDates = buildDestDates();
+
+// Appends checkin/checkout/group size to a Booking.com URL for verified
+// hotels only (old, unverified booking_urls are known WAF-blocked anyway
+// -- see scripts/url_audit_report.json -- so there's no point dating them).
+function withBookingDates(url, destKey) {
+  if (!url) return url;
+  const dates = destDates[destKey];
+  if (!dates) return url;
+  const params = new URLSearchParams({
+    checkin: dates.checkin,
+    checkout: dates.checkout,
+    group_adults: '5',
+    no_rooms: '3'
+  });
+  const sep = url.includes('?') ? '&' : '?';
+  return url + sep + params.toString();
+}
+
+// 'YYYY-MM-DD' -> 'M/D' (no leading zeros), used in the verified-availability badge.
+function formatMonthDay(isoDate) {
+  const m = /^\d{4}-(\d{2})-(\d{2})/.exec(isoDate || '');
+  if (!m) return isoDate || '';
+  return `${Number(m[1])}/${Number(m[2])}`;
+}
 
 const firebaseConfig = {
   apiKey: "AIzaSyAt9qkyMnpz5G9lJ6Sv0rZrZwrZMXP5zaw",
@@ -201,7 +290,7 @@ function switchHotelTier(tier) {
 }
 
 // Compact card + hidden expandable detail section for one hotel
-function hotelCardHTML(h, lang, T) {
+function hotelCardHTML(h, lang, T, destKey) {
   const jaName = h.japanese_name || '';
   const enName = h.name || '';
   const primaryName = lang === 'ja' ? (jaName || enName) : (enName || jaName);
@@ -215,10 +304,24 @@ function hotelCardHTML(h, lang, T) {
   const imgs = h.images || {};
 
   // --- compact section ---
+  // Every hotel gets a thumbnail block: a real photo if we have one, else a
+  // clean destination-colored placeholder (never a broken <img> icon).
   const thumb = imgs.exterior_image ? `
       <div class="h-32 bg-slate-100 overflow-hidden">
         <img src="${escapeHtml(imgs.exterior_image)}" alt="${escapeHtml(primaryName)}" loading="lazy" class="w-full h-32 object-cover">
-      </div>` : '';
+      </div>` : `
+      <div class="h-32 bg-gradient-to-br ${destPlaceholderGradient[destKey] || DEFAULT_PLACEHOLDER_GRADIENT} flex flex-col items-center justify-center gap-1 px-3 text-white">
+        <span class="text-3xl leading-none" aria-hidden="true">🏨</span>
+        <span class="text-[11px] font-bold text-center leading-tight line-clamp-2">${escapeHtml(primaryName)}</span>
+      </div>`;
+
+  const verifiedBadge = h.verified === true && h.availability_checked
+    ? `<span class="inline-flex items-center gap-1 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-full px-2 py-0.5 text-[10px] font-bold">${T.verifiedBadge(formatMonthDay(h.availability_checked))}</span>`
+    : '';
+  const freeCancelChip = h.price_note === 'free_cancellation'
+    ? `<span class="inline-flex items-center gap-1 bg-sky-50 text-sky-700 border border-sky-200 rounded-full px-2 py-0.5 text-[10px] font-bold">${T.freeCancellation}</span>`
+    : '';
+  const badgeChips = [verifiedBadge, freeCancelChip].filter(Boolean).join('');
 
   const ratings = [];
   if (isFinite(Number(h.booking_rating)) && h.booking_rating != null && h.booking_rating !== '') {
@@ -257,19 +360,23 @@ function hotelCardHTML(h, lang, T) {
         <ul class="space-y-0.5">${disadvantages.map(x => `<li class="text-xs text-slate-600"><span class="text-amber-500 font-bold">⚠</span> ${escapeHtml(x)}</li>`).join('')}</ul>
       </div>` : '';
 
+  // Booking.com deep-links get the trip's check-in/out dates and group size
+  // baked in, but only for verified (curated) hotels -- old, unverified
+  // booking_urls are known WAF-blocked regardless (see url_audit_report.json).
+  const bookingHref = h.verified === true ? withBookingDates(h.booking_url, destKey) : h.booking_url;
+
   const links = [
     [h.official_website, T.officialSite],
-    [h.booking_url, 'Booking.com'],
+    [bookingHref, 'Booking.com'],
     [h.agoda_url, 'Agoda'],
     [h.google_maps_url, 'Google Maps']
   ].filter(([url]) => typeof url === 'string' && url.trim() !== '')
    .map(([url, label]) => `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" class="flex-1 min-w-[45%] text-center py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-bold rounded-lg transition-colors">${label}</a>`)
    .join('');
 
-  const extraImages = [imgs.room_image, imgs.bathroom_image, imgs.facility_image]
-    .filter(src => typeof src === 'string' && src.trim() !== '')
-    .map(src => `<img src="${escapeHtml(src)}" alt="" loading="lazy" class="h-16 w-full object-cover rounded-lg bg-slate-100">`)
-    .join('');
+  const morePhotosHTML = typeof h.booking_url === 'string' && h.booking_url.trim() !== ''
+    ? `<a href="${escapeHtml(bookingHref)}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-sky-600 hover:text-sky-700 inline-flex items-center gap-1">${T.morePhotos} <span aria-hidden="true">→</span> Booking.com</a>`
+    : '';
 
   const detailSections = [
     (priceRows || timeRows) ? `<div class="space-y-1.5 text-xs">${priceRows}${timeRows}</div>` : '',
@@ -278,7 +385,7 @@ function hotelCardHTML(h, lang, T) {
     disadvantagesHTML,
     desc ? `<p class="text-xs text-slate-500 leading-relaxed">${escapeHtml(desc)}</p>` : '',
     links ? `<div class="flex flex-wrap gap-2">${links}</div>` : '',
-    extraImages ? `<div class="grid grid-cols-3 gap-2">${extraImages}</div>` : ''
+    morePhotosHTML
   ].filter(Boolean).join('');
 
   return `
@@ -295,6 +402,8 @@ function hotelCardHTML(h, lang, T) {
             ${tierLabel ? `<span class="bg-slate-100 text-slate-600 rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider">${escapeHtml(tierLabel)}</span>` : ''}
           </div>
         </div>
+
+        ${badgeChips ? `<div class="flex flex-wrap gap-1.5">${badgeChips}</div>` : ''}
 
         ${groupPrice ? `
         <div class="flex justify-between items-center bg-orange-50/60 border border-orange-100 rounded-lg px-3 py-2">
@@ -333,7 +442,7 @@ function renderHotelList() {
     return;
   }
 
-  container.innerHTML = hotels.map(h => hotelCardHTML(h, lang, T)).join('');
+  container.innerHTML = hotels.map(h => hotelCardHTML(h, lang, T, currentDestKey)).join('');
 }
 
 function voteHotel(hotelName, choiceLevel) {
