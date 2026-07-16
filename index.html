@@ -45,8 +45,8 @@
       
       <div class="relative z-10">
         <div class="flex items-center gap-2 mb-3">
-          <span class="bg-white/10 border border-white/20 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide backdrop-blur-md">Private Group of 5</span>
-          <span class="bg-white/10 border border-white/20 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide backdrop-blur-md">11 Days</span>
+          <span class="bg-white/10 border border-white/20 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide backdrop-blur-md" id="badge-group-size">Private Group of 5</span>
+          <span class="bg-white/10 border border-white/20 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide backdrop-blur-md" id="badge-days">11 Days</span>
         </div>
         <h2 class="text-2xl font-bold leading-tight mb-2" id="hero-title">Your Detailed Itinerary</h2>
         <p class="text-slate-300 text-xs leading-relaxed max-w-[90%]" id="hero-subtitle">Tap any day header to collapse or expand its details.</p>
@@ -133,6 +133,16 @@
           <p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mt-0.5" id="modal-subtitle-hotel">第1、第2、第3希望を選択</p>
         </div>
         <button onclick="closeAllModals()" class="p-2 bg-slate-100 text-slate-500 rounded-full hover:bg-slate-200 transition-colors focus:outline-none"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+      </div>
+
+      <div class="border-b border-slate-100">
+        <button id="how-to-toggle" onclick="toggleHowTo()" class="w-full flex items-center justify-between px-4 py-2 text-[11px] font-bold text-slate-400 hover:text-emerald-600 transition-colors focus:outline-none">
+          <span id="how-to-toggle-label">使い方 ❔</span>
+          <svg id="how-to-chevron" class="w-3.5 h-3.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+        </button>
+        <div id="how-to-content" class="hidden px-4 pb-3">
+          <ul id="how-to-list" class="space-y-1 text-[11px] text-slate-500 leading-relaxed list-disc list-inside"></ul>
+        </div>
       </div>
 
       <div id="vote-deadline-banner-hotel" class="px-4 py-2 bg-amber-50 border-b border-amber-100 text-amber-700 text-[11px] font-bold text-center"></div>

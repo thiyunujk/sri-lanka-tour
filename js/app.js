@@ -312,12 +312,15 @@ const staticTextUI = {
     btnChecklist: "Checklist",
     btnDocs: "Documents",
     btnGroupVotes: "Group Votes",
+    btnChooseHotel: "Choose Hotels",
     modalTitleChecklist: "Packing Checklist",
     modalTitleDocs: "Important Documents",
     lblRoute: "Transit Route",
     lblHotel: "Accommodation",
     lblMap: "Open Map",
-    lblBooking: "View Booking"
+    lblBooking: "View Booking",
+    badgeGroupSize: "Private Group of 5",
+    badgeDays: "11 Days"
   },
   ja: {
     headerTitle: "スリランカ ツアー",
@@ -329,12 +332,15 @@ const staticTextUI = {
     btnChecklist: "持ち物",
     btnDocs: "書類",
     btnGroupVotes: "グループ投票",
+    btnChooseHotel: "ホテルを選択",
     modalTitleChecklist: "持ち物リスト",
     modalTitleDocs: "重要書類",
     lblRoute: "移動ルート",
     lblHotel: "宿泊先",
     lblMap: "地図を開く",
-    lblBooking: "予約を確認"
+    lblBooking: "予約を確認",
+    badgeGroupSize: "プライベートグループ5名",
+    badgeDays: "11日間"
   }
 };
 
@@ -378,6 +384,8 @@ const domEls = {
   headerDates: document.getElementById('header-dates'),
   heroTitle: document.getElementById('hero-title'),
   heroSubtitle: document.getElementById('hero-subtitle'),
+  badgeGroupSize: document.getElementById('badge-group-size'),
+  badgeDays: document.getElementById('badge-days'),
   btnTop: document.getElementById('btn-top'),
   btnChecklist: document.getElementById('btn-checklist'),
   btnDocs: document.getElementById('btn-docs'),
@@ -497,7 +505,7 @@ function renderItinerary() {
             <p class="text-[13px] text-slate-800 leading-relaxed font-semibold mb-3">${data.hotel}</p>
             <button onclick="openHotelVoting(${day.dayNum})" class="w-full py-2.5 bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white text-xs font-bold rounded-xl transition-colors shadow-sm flex items-center justify-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              ホテルを選択
+              ${uiText.btnChooseHotel}
             </button>
           </div>
         </div>
@@ -521,6 +529,9 @@ function updateStaticGlobalText() {
   domEls.headerDates.textContent = texts.headerDates;
   domEls.heroTitle.textContent = texts.heroTitle;
   domEls.heroSubtitle.textContent = texts.heroSubtitle;
+  if (domEls.badgeGroupSize) domEls.badgeGroupSize.textContent = texts.badgeGroupSize;
+  if (domEls.badgeDays) domEls.badgeDays.textContent = texts.badgeDays;
+  document.title = texts.headerTitle;
   domEls.btnTop.textContent = texts.btnTop;
   domEls.btnChecklist.textContent = texts.btnChecklist;
   domEls.btnDocs.textContent = texts.btnDocs;

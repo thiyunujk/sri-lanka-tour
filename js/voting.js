@@ -25,10 +25,12 @@ const votingUI = {
     welcome: (name) => `ようこそ、${name}さん！ホテルの投票ができます。`,
     dbConnectError: 'データベースに接続できませんでした！',
     saveSuccess: (hotel, n) => `${hotel} を第${n}希望として保存しました！`,
+    moveSuccess: (hotel, n) => `${hotel} を第${n}希望に変更しました！`,
+    unvoteSuccess: (hotel, n) => `${hotel} の第${n}希望を取り消しました。`,
     saveErrorPrefix: '保存エラー: ',
     dbNotInit: 'データベースが初期化されていません！',
     loadingVotes: '投票を読み込んでいます...',
-    noVotes: 'まだ投票されていません。',
+    noVotes: 'まだ投票がありません — 最初の投票をどうぞ！',
     loadErrorPrefix: '読み込みエラー: ',
     groupTotal: 'グループ合計',
     showDetails: '詳細を見る ▾',
@@ -56,7 +58,15 @@ const votingUI = {
     newProperty: '新規オープン',
     fewReviewsNote: '※レビュー数少',
     voteDeadlineBanner: '投票締切: 8月3日（キャンセル無料期限のため）',
-    deadlineWarningChip: '⚠ 締切前に要決定'
+    deadlineWarningChip: '⚠ 締切前に要決定',
+    howToTitle: '使い方 ❔',
+    howToBullets: [
+      '価格は私たちの実際の日程・5人分の実際の総額です（2026年7月中旬に確認済み）。',
+      '「Booking.com」ボタンをタップすると最新の価格を確認できます。',
+      'プレミアム／スタンダード／エコノミーは星評価ではなく予算帯の目安です。',
+      '第1〜第3希望をタップして順位をつけられます。8月3日まで何度でも変更・取り消しができます。',
+      '⚠マークは、投票終了前にこのホテルのキャンセル無料期限が来ることを示します。早めの決定が必要です。'
+    ]
   },
   en: {
     choices: ['1st Choice', '2nd Choice', '3rd Choice'],
@@ -70,10 +80,12 @@ const votingUI = {
     welcome: (name) => `Welcome, ${name}! You can now vote for hotels.`,
     dbConnectError: 'Could not connect to the database!',
     saveSuccess: (hotel, n) => `Saved ${hotel} as your ${['1st', '2nd', '3rd'][n - 1] || n} choice!`,
+    moveSuccess: (hotel, n) => `Moved ${hotel} to your ${['1st', '2nd', '3rd'][n - 1] || n} choice!`,
+    unvoteSuccess: (hotel, n) => `Removed ${hotel} from your ${['1st', '2nd', '3rd'][n - 1] || n} choice.`,
     saveErrorPrefix: 'Save error: ',
     dbNotInit: 'The database is not initialized!',
     loadingVotes: 'Loading votes...',
-    noVotes: 'No votes have been cast yet.',
+    noVotes: 'No votes yet — be the first!',
     loadErrorPrefix: 'Load error: ',
     groupTotal: 'Group Total',
     showDetails: 'See details ▾',
@@ -101,7 +113,15 @@ const votingUI = {
     newProperty: 'New property',
     fewReviewsNote: '※ few reviews',
     voteDeadlineBanner: 'Voting closes Aug 3 (due to free-cancellation deadlines)',
-    deadlineWarningChip: '⚠ Decide before vote close'
+    deadlineWarningChip: '⚠ Decide before vote close',
+    howToTitle: 'How to use ❔',
+    howToBullets: [
+      "Prices are real, verified totals for our exact dates and group of 5 (checked mid-July 2026).",
+      'Tap "Booking.com" on a card to check the current live price.',
+      'Premium / Standard / Economy are budget bands, not star ratings.',
+      'Tap 1st–3rd Choice to rank your picks — change or remove them anytime until Aug 3.',
+      "A ⚠ chip means this hotel's free-cancellation window closes before voting ends, so it needs an early decision."
+    ]
   }
 };
 
@@ -274,6 +294,11 @@ const VOTER_NAMES = ["チユヌ", "イガラシ", "チコ", "ナカマ", "ルミ
 let currentVoter = localStorage.getItem('voterName');
 let currentDestKey = null;
 let currentTier = 'Premium';
+// { choice1: hotelName|null, choice2: ..., choice3: ... } for currentVoter at
+// currentDestKey. Fetched once per modal open (see refreshMyVotes), then
+// kept in sync locally via optimistic updates after each successful vote
+// write -- not a live listener, since only this user's own actions change it.
+let currentUserVotes = {};
 
 function checkIdentity() {
   if (!currentVoter) {
@@ -312,7 +337,33 @@ function openHotelVoting(dayNum) {
   ['Premium', 'Standard', 'Economy'].forEach(t => {
     document.getElementById(`tab-${t}`).textContent = T.tierTabs[t];
   });
-  switchHotelTier('Premium');
+
+  document.getElementById('how-to-toggle-label').textContent = T.howToTitle;
+  document.getElementById('how-to-list').innerHTML = T.howToBullets.map(b => `<li>${escapeHtml(b)}</li>`).join('');
+  document.getElementById('how-to-content').classList.add('hidden');
+  document.getElementById('how-to-chevron').classList.remove('rotate-180');
+
+  currentUserVotes = {};
+  refreshMyVotes().then(() => switchHotelTier('Premium'));
+}
+
+// Fetches this user's votes for the currently open destination ONCE (not a
+// live listener -- see currentUserVotes comment above).
+function refreshMyVotes() {
+  if (!currentVoter || !db || !currentDestKey) {
+    currentUserVotes = {};
+    return Promise.resolve();
+  }
+  return db.ref(`votes/${currentDestKey}/${currentVoter}`).once('value')
+    .then(snapshot => { currentUserVotes = snapshot.val() || {}; })
+    .catch(() => { currentUserVotes = {}; });
+}
+
+function toggleHowTo() {
+  const content = document.getElementById('how-to-content');
+  const chevron = document.getElementById('how-to-chevron');
+  const nowHidden = content.classList.toggle('hidden');
+  chevron.classList.toggle('rotate-180', !nowHidden);
 }
 
 function switchHotelTier(tier) {
@@ -455,6 +506,23 @@ function hotelCardHTML(h, lang, T, destKey) {
    .map(([url, label]) => `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" class="flex-1 min-w-[45%] text-center py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-bold rounded-lg transition-colors">${label}</a>`)
    .join('');
 
+  // Highlight whichever of this user's 3 slots (if any) this hotel currently
+  // occupies -- a hotel can hold at most one slot at a time (see voteHotel's
+  // move logic), so at most one of these three is ever true.
+  const myChoiceLevel = [1, 2, 3].find(n => currentUserVotes[`choice${n}`] === h.name) || null;
+  const CHOICE_STYLES = [
+    { base: 'bg-emerald-50 text-emerald-600 hover:bg-emerald-500 hover:text-white border-emerald-100', selected: 'bg-emerald-500 text-white border-emerald-500' },
+    { base: 'bg-sky-50 text-sky-600 hover:bg-sky-500 hover:text-white border-sky-100', selected: 'bg-sky-500 text-white border-sky-500' },
+    { base: 'bg-amber-50 text-amber-600 hover:bg-amber-500 hover:text-white border-amber-100', selected: 'bg-amber-500 text-white border-amber-500' }
+  ];
+  const choiceButtons = [1, 2, 3].map(n => {
+    const isSelected = myChoiceLevel === n;
+    const style = isSelected ? CHOICE_STYLES[n - 1].selected : CHOICE_STYLES[n - 1].base;
+    const label = isSelected ? `✓ ${T.choices[n - 1]}` : T.choices[n - 1];
+    return `<button data-hotel="${escapeHtml(h.name)}" data-choice="${n}" class="flex-1 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider border transition-colors ${style}">${label}</button>`;
+  }).join('');
+  const selectedCardClass = myChoiceLevel ? 'border-2 border-emerald-300' : 'border border-slate-100';
+
   const morePhotosHTML = typeof h.booking_url === 'string' && h.booking_url.trim() !== ''
     ? `<a href="${escapeHtml(bookingHref)}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-sky-600 hover:text-sky-700 inline-flex items-center gap-1">${T.morePhotos} <span aria-hidden="true">→</span> Booking.com</a>`
     : '';
@@ -471,7 +539,7 @@ function hotelCardHTML(h, lang, T, destKey) {
   ].filter(Boolean).join('');
 
   return `
-    <div data-hotel-card class="bg-white rounded-[16px] mb-4 shadow-sm border border-slate-100 overflow-hidden">
+    <div data-hotel-card class="bg-white rounded-[16px] mb-4 shadow-sm ${selectedCardClass} overflow-hidden">
       ${thumb}
       <div class="p-4 flex flex-col gap-2">
         <div class="flex justify-between items-start gap-2">
@@ -496,9 +564,7 @@ function hotelCardHTML(h, lang, T, destKey) {
         ${ratings.length ? `<div class="flex gap-3">${ratings.join('')}</div>` : ''}
 
         <div class="pt-2 border-t border-slate-100 flex gap-2">
-          <button data-hotel="${escapeHtml(h.name)}" data-choice="1" class="flex-1 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider bg-emerald-50 text-emerald-600 hover:bg-emerald-500 hover:text-white transition-colors border border-emerald-100">${T.choices[0]}</button>
-          <button data-hotel="${escapeHtml(h.name)}" data-choice="2" class="flex-1 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider bg-sky-50 text-sky-600 hover:bg-sky-500 hover:text-white transition-colors border border-sky-100">${T.choices[1]}</button>
-          <button data-hotel="${escapeHtml(h.name)}" data-choice="3" class="flex-1 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider bg-amber-50 text-amber-600 hover:bg-amber-500 hover:text-white transition-colors border border-amber-100">${T.choices[2]}</button>
+          ${choiceButtons}
         </div>
 
         <button data-toggle-details class="w-full py-1.5 text-[11px] font-bold text-slate-500 hover:text-emerald-600 transition-colors">${T.showDetails}</button>
@@ -538,12 +604,41 @@ function voteHotel(hotelName, choiceLevel) {
     return;
   }
 
+  const key = `choice${choiceLevel}`;
+  // Tapping the already-✓-highlighted button for this hotel/slot means
+  // "unvote" -- clear it rather than re-saving the same value.
+  const isUnvote = currentUserVotes[key] === hotelName;
+  // A hotel can only occupy one of the user's three slots at a time: if
+  // it's currently sitting in a different slot, moving it here must clear
+  // that other slot in the same multi-path update (not two separate writes,
+  // so there's no window where the hotel briefly occupies both).
+  const vacatedLevel = !isUnvote
+    ? [1, 2, 3].find(n => n !== choiceLevel && currentUserVotes[`choice${n}`] === hotelName)
+    : null;
+
   const voteRef = db.ref(`votes/${currentDestKey}/${currentVoter}`);
-  let updates = {};
-  updates[`choice${choiceLevel}`] = hotelName;
+  const updates = {};
+  if (isUnvote) {
+    updates[key] = null;
+  } else {
+    if (vacatedLevel) updates[`choice${vacatedLevel}`] = null;
+    updates[key] = hotelName;
+  }
 
   voteRef.update(updates)
-    .then(() => alert(T.saveSuccess(hotelName, choiceLevel)))
+    .then(() => {
+      // Optimistic local update: reflect the write immediately in the
+      // highlight/border without waiting on a fresh fetch from Firebase.
+      Object.assign(currentUserVotes, updates);
+      renderHotelList();
+      if (isUnvote) {
+        alert(T.unvoteSuccess(hotelName, choiceLevel));
+      } else if (vacatedLevel) {
+        alert(T.moveSuccess(hotelName, choiceLevel));
+      } else {
+        alert(T.saveSuccess(hotelName, choiceLevel));
+      }
+    })
     .catch(e => alert(T.saveErrorPrefix + e.message));
 }
 
