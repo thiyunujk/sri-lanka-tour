@@ -2903,922 +2903,143 @@ const hotelData = {
   ],
   "nuwara_eliya": [
     {
-      "name": "The Grand Hotel",
-      "japanese_name": "ザ グランド ホテル ヌワラエリヤ",
+      "name": "Araliya Green City - Your Gateway to Everything in Nuwara Eliya",
+      "japanese_name": "アラリヤ グリーン シティ - ヨウル ガテウェイ ト エヴェルユスイング イン ヌワラ エイヤ",
       "tier": "Premium",
       "tier_japanese": "プレミアム",
       "star_rating": 5,
-      "address": "The Grand Hotel Address, Nuwara eliya",
-      "twin_room_price": 28000,
-      "single_room_price": 20000,
-      "group_total_price": 76000,
+      "is_new": false,
+      "room_config": "Superior Double Room with 10% discount on wellness spa and Araliya Fashion and wood carving 3 rooms",
+      "price_base": 57963,
+      "price_taxes": 19199,
+      "price_total": 77162,
       "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
+      "review_score": 8.3,
+      "cancellation": {
+        "free": true,
+        "deadline": "2026-08-15",
+        "raw": "Free cancellation before 15 August 2026"
       },
-      "booking_rating": 8.8,
-      "google_rating": 4.6,
-      "official_website": "https://example.com/thegrandhotel",
-      "booking_url": "https://www.booking.com/hotel/lk/the-grand-hotel.html",
-      "agoda_url": "https://www.agoda.com/the-grand-hotel/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=The+Grand+Hotel",
-      "short_description_en": "A beautiful premium option in Nuwara eliya.",
-      "short_description_ja": "ヌワラエリヤ地区にある快適なPremiumクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
+      "booking_url": "https://www.booking.com/hotel/lk/araliya-green-city.en-gb.html?checkin=2026-08-16&checkout=2026-08-17&group_adults=5&no_rooms=3&group_children=0",
+      "short_description_en": "Elegant Accommodation: Araliya Green City in Nuwara Eliya offers a 5-star experience with a rooftop swimming pool, indoor pool, spa facilities, fitness centre, and a lush garden. Guests enjoy free WiFi, private check-in, and a 24-hour front desk.",
+      "long_note_en": "Elegant Accommodation: Araliya Green City in Nuwara Eliya offers a 5-star experience with a rooftop swimming pool, indoor pool, spa facilities, fitness centre, and a lush garden. Guests enjoy free WiFi, private check-in, and a 24-hour front desk.\n\nComfortable Amenities: The hotel features family rooms, a child-friendly buffet, and a pool bar. Additional services include beauty treatments, a steam room, wellness packages, and a minimarket.\n\nDining Options: Dining options include a family-friendly restaurant serving Chinese, Indian, and local cuisines, a bar, and a coffee shop. Breakfast is available in various styles, including continental, American, and vegetarian.\n\nPrime Location: Located 2.4 km from Gregory Lake and 9 km from Hakgala Botanical Garden, the hotel is 47 km from Castlereigh Reservoir Seaplane Base. Nearby attractions include Gregory Lake and Hakgala Botanical Garden.",
       "images": {
         "exterior_image": ""
       },
-      "image_source": "none"
+      "image_source": "none",
+      "verified": true,
+      "availability_checked": "2026-07-16"
     },
     {
-      "name": "Heritance Tea Factory",
-      "japanese_name": "ヘリタンス ティー ファクトリー",
+      "name": "Jetwing Broomfield Bungalow",
+      "japanese_name": "ジェットウィング ブロオムフィエド バンガロー",
       "tier": "Premium",
       "tier_japanese": "プレミアム",
       "star_rating": 5,
-      "address": "Heritance Tea Factory Address, Nuwara eliya",
-      "twin_room_price": 30000,
-      "single_room_price": 22000,
-      "group_total_price": 82000,
+      "is_new": false,
+      "room_config": "Deluxe Double Room 2 rooms, Deluxe Twin Room 1 room",
+      "price_base": 64019,
+      "price_taxes": 19078,
+      "price_total": 83097,
       "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
+      "review_score": 8.5,
+      "cancellation": {
+        "free": true,
+        "deadline": "2026-08-02",
+        "raw": "Free cancellation before 2 August 2026"
       },
-      "booking_rating": 8.8,
-      "google_rating": 4.6,
-      "official_website": "https://example.com/heritanceteafactory",
-      "booking_url": "https://www.booking.com/hotel/lk/heritance-tea-factory.html",
-      "agoda_url": "https://www.agoda.com/heritance-tea-factory/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Heritance+Tea+Factory",
-      "short_description_en": "A beautiful premium option in Nuwara eliya.",
-      "short_description_ja": "ヌワラエリヤ地区にある快適なPremiumクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
+      "booking_url": "https://www.booking.com/hotel/lk/broomfield-by-jetwing.en-gb.html?checkin=2026-08-16&checkout=2026-08-17&group_adults=5&no_rooms=3&group_children=0",
+      "short_description_en": "Elegant Accommodation: Jetwing Broomfield Bungalow in Nuwara Eliya offers a 5-star experience with a beautiful garden and a stylish bar. Guests enjoy free on-site private parking and room service for added convenience.",
+      "long_note_en": "Elegant Accommodation: Jetwing Broomfield Bungalow in Nuwara Eliya offers a 5-star experience with a beautiful garden and a stylish bar. Guests enjoy free on-site private parking and room service for added convenience.\n\nComfortable Amenities: Rooms feature private bathrooms with garden views, hairdryers, work desks, free toiletries, showers, slippers, baths, seating areas, TVs, and sofas. Continental, American, full English/Irish, vegetarian, and Asian breakfast options are available.\n\nLocal Attractions: Gregory Lake is 2.5 km away, Hakgala Botanical Garden 7 km, and Castlereigh Reservoir Seaplane Base 48 km from the hotel.",
       "images": {
         "exterior_image": ""
       },
-      "image_source": "none"
+      "image_source": "none",
+      "verified": true,
+      "availability_checked": "2026-07-16"
     },
     {
-      "name": "Jetwing St. Andrew's",
-      "japanese_name": "ジェットウィング セント アンドリュース",
-      "tier": "Premium",
-      "tier_japanese": "プレミアム",
-      "star_rating": 5,
-      "address": "Jetwing St. Andrew's Address, Nuwara eliya",
-      "twin_room_price": 24000,
-      "single_room_price": 18000,
-      "group_total_price": 66000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.8,
-      "google_rating": 4.6,
-      "official_website": "https://example.com/jetwingst.andrew's",
-      "booking_url": "https://www.booking.com/hotel/lk/jetwing-st.-andrew's.html",
-      "agoda_url": "https://www.agoda.com/jetwing-st.-andrew's/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Jetwing+St.+Andrew's",
-      "short_description_en": "A beautiful premium option in Nuwara eliya.",
-      "short_description_ja": "ヌワラエリヤ地区にある快適なPremiumクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Araliya Red",
-      "japanese_name": "アラリヤ レッド ヌワラエリヤ",
-      "tier": "Premium",
-      "tier_japanese": "プレミアム",
-      "star_rating": 4,
-      "address": "Araliya Red Address, Nuwara eliya",
-      "twin_room_price": 20000,
-      "single_room_price": 15000,
-      "group_total_price": 55000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.8,
-      "google_rating": 4.6,
-      "official_website": "https://example.com/araliyared",
-      "booking_url": "https://www.booking.com/hotel/lk/araliya-red.html",
-      "agoda_url": "https://www.agoda.com/araliya-red/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Araliya+Red",
-      "short_description_en": "A beautiful premium option in Nuwara eliya.",
-      "short_description_ja": "ヌワラエリヤ地区にある快適なPremiumクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Stafford Bungalow",
-      "japanese_name": "スタッフォード バンガロー",
-      "tier": "Premium",
-      "tier_japanese": "プレミアム",
-      "star_rating": 5,
-      "address": "Stafford Bungalow Address, Nuwara eliya",
-      "twin_room_price": 48000,
-      "single_room_price": 35000,
-      "group_total_price": 131000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.8,
-      "google_rating": 4.6,
-      "official_website": "https://example.com/staffordbungalow",
-      "booking_url": "https://www.booking.com/hotel/lk/stafford-bungalow.html",
-      "agoda_url": "https://www.agoda.com/stafford-bungalow/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Stafford+Bungalow",
-      "short_description_en": "A beautiful premium option in Nuwara eliya.",
-      "short_description_ja": "ヌワラエリヤ地区にある快適なPremiumクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Jetwing Warwick Gardens",
-      "japanese_name": "ジェットウィング ワーウィック ガーデンズ",
-      "tier": "Premium",
-      "tier_japanese": "プレミアム",
-      "star_rating": 5,
-      "address": "Jetwing Warwick Gardens Address, Nuwara eliya",
-      "twin_room_price": 32000,
-      "single_room_price": 24000,
-      "group_total_price": 88000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.8,
-      "google_rating": 4.6,
-      "official_website": "https://example.com/jetwingwarwickgardens",
-      "booking_url": "https://www.booking.com/hotel/lk/jetwing-warwick-gardens.html",
-      "agoda_url": "https://www.agoda.com/jetwing-warwick-gardens/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Jetwing+Warwick+Gardens",
-      "short_description_en": "A beautiful premium option in Nuwara eliya.",
-      "short_description_ja": "ヌワラエリヤ地区にある快適なPremiumクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Araliya Green City",
-      "japanese_name": "アラリヤ グリーン シティ",
-      "tier": "Standard",
-      "tier_japanese": "スタンダード",
-      "star_rating": 5,
-      "address": "Araliya Green City Address, Nuwara eliya",
-      "twin_room_price": 16000,
-      "single_room_price": 12000,
-      "group_total_price": 44000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.2,
-      "google_rating": 4.3,
-      "official_website": "https://example.com/araliyagreencity",
-      "booking_url": "https://www.booking.com/hotel/lk/araliya-green-city.html",
-      "agoda_url": "https://www.agoda.com/araliya-green-city/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Araliya+Green+City",
-      "short_description_en": "A beautiful standard option in Nuwara eliya.",
-      "short_description_ja": "ヌワラエリヤ地区にある快適なStandardクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "The Hill Club",
-      "japanese_name": "ザ ヒル クラブ",
+      "name": "Winsanda Boutique Bungalow, Nuwara Eliya l Heated Pool & Buffet Dining",
+      "japanese_name": "ウィンサンダ ブティック バンガロー ヌワラ エイヤ  ヘアテド ポオ ＆ ブフフェト ディニング",
       "tier": "Standard",
       "tier_japanese": "スタンダード",
       "star_rating": 4,
-      "address": "The Hill Club Address, Nuwara eliya",
-      "twin_room_price": 14000,
-      "single_room_price": 10000,
-      "group_total_price": 38000,
+      "is_new": false,
+      "room_config": "Deluxe Double Room 2 rooms, Queen Room 1 room",
+      "price_base": 26144,
+      "price_taxes": 9020,
+      "price_total": 35164,
       "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
+      "review_score": 8.6,
+      "cancellation": {
+        "free": true,
+        "deadline": null,
+        "raw": "Free cancellation anytime"
       },
-      "booking_rating": 8.2,
-      "google_rating": 4.3,
-      "official_website": "https://example.com/thehillclub",
-      "booking_url": "https://www.booking.com/hotel/lk/the-hill-club.html",
-      "agoda_url": "https://www.agoda.com/the-hill-club/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=The+Hill+Club",
-      "short_description_en": "A beautiful standard option in Nuwara eliya.",
-      "short_description_ja": "ヌワラエリヤ地区にある快適なStandardクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
+      "booking_url": "https://www.booking.com/hotel/lk/winsanda-bungalow-nuwara-eliya.en-gb.html?checkin=2026-08-16&checkout=2026-08-17&group_adults=5&no_rooms=3&group_children=0",
+      "short_description_en": "Comfortable Accommodation: Winsanda Boutique Bungalow in Nuwara Eliya offers family rooms with private bathrooms, balconies, and garden views. Each room includes a tea and coffee maker, walk-in shower, and free WiFi.",
+      "long_note_en": "Comfortable Accommodation: Winsanda Boutique Bungalow in Nuwara Eliya offers family rooms with private bathrooms, balconies, and garden views. Each room includes a tea and coffee maker, walk-in shower, and free WiFi.\n\nExceptional Facilities: Guests enjoy a year-round outdoor swimming pool, heated pool, and terrace. The hotel features a modern restaurant, bar, and lounge. Additional amenities include a games room, kids' pool, and outdoor seating area.\n\nDining Experience: The family-friendly restaurant serves Chinese, Indian, Mediterranean, seafood, local, Asian, international, and barbecue grill cuisines. Breakfast options include continental, à la carte, vegetarian, vegan, halal, and gluten-free.\n\nPrime Location: Located 3.2 km from Gregory Lake and 4 km from Hakgala Botanical Garden, the hotel is 50 km from Castlereigh Reservoir Seaplane Base.",
       "images": {
         "exterior_image": ""
       },
-      "image_source": "none"
+      "image_source": "none",
+      "verified": true,
+      "availability_checked": "2026-07-16"
     },
     {
-      "name": "Oak Ray Summer Hill Breeze",
-      "japanese_name": "オークレイ サマー ヒル ブリーズ",
+      "name": "Yara Nuwara Eliya",
+      "japanese_name": "ヤラ ヌワラ エイヤ",
       "tier": "Standard",
       "tier_japanese": "スタンダード",
       "star_rating": 4,
-      "address": "Oak Ray Summer Hill Breeze Address, Nuwara eliya",
-      "twin_room_price": 12000,
-      "single_room_price": 9000,
-      "group_total_price": 33000,
+      "is_new": false,
+      "room_config": "Double Room - No View 3 rooms",
+      "price_base": 41344,
+      "price_taxes": 11990,
+      "price_total": 53334,
       "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
+      "review_score": 8.3,
+      "cancellation": {
+        "free": true,
+        "deadline": "2026-08-13",
+        "raw": "Free cancellation before 13 August 2026"
       },
-      "booking_rating": 8.2,
-      "google_rating": 4.3,
-      "official_website": "https://example.com/oakraysummerhillbreeze",
-      "booking_url": "https://www.booking.com/hotel/lk/oak-ray-summer-hill-breeze.html",
-      "agoda_url": "https://www.agoda.com/oak-ray-summer-hill-breeze/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Oak+Ray+Summer+Hill+Breeze",
-      "short_description_en": "A beautiful standard option in Nuwara eliya.",
-      "short_description_ja": "ヌワラエリヤ地区にある快適なStandardクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
+      "booking_url": "https://www.booking.com/hotel/lk/yara-nuwara-eliya.en-gb.html?checkin=2026-08-16&checkout=2026-08-17&group_adults=5&no_rooms=3&group_children=0",
+      "short_description_en": "Central Location: Yara Nuwara Eliya in Nuwara Eliya offers a central setting with Gregory Lake 3 km away and Hakgala Botanical Garden 10 km from the hotel. Castlereigh Reservoir Seaplane Base is 47 km distant.",
+      "long_note_en": "Central Location: Yara Nuwara Eliya in Nuwara Eliya offers a central setting with Gregory Lake 3 km away and Hakgala Botanical Garden 10 km from the hotel. Castlereigh Reservoir Seaplane Base is 47 km distant.\n\nComfortable Accommodations: Rooms feature private bathrooms, city views, and modern amenities including free WiFi, minibars, and work desks. Additional comforts include bathrobes, sofa beds, and interconnected rooms.\n\nDining Options: The hotel provides a restaurant serving Chinese, British, Indian, and international cuisines. Breakfast options include continental, American, buffet, full English/Irish, vegetarian, vegan, halal, gluten-free, and Asian.\n\nGuest Services: Guests benefit from free on-site private parking, a paid airport shuttle service, lift, family rooms, full-day security, and a variety of meal choices.",
       "images": {
         "exterior_image": ""
       },
-      "image_source": "none"
+      "image_source": "none",
+      "verified": true,
+      "availability_checked": "2026-07-16"
     },
     {
-      "name": "The Golden Ridge Hotel",
-      "japanese_name": "ザ ゴールデン リッジ ホテル",
-      "tier": "Standard",
-      "tier_japanese": "スタンダード",
-      "star_rating": 5,
-      "address": "The Golden Ridge Hotel Address, Nuwara eliya",
-      "twin_room_price": 15000,
-      "single_room_price": 11000,
-      "group_total_price": 41000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.2,
-      "google_rating": 4.3,
-      "official_website": "https://example.com/thegoldenridgehotel",
-      "booking_url": "https://www.booking.com/hotel/lk/the-golden-ridge-hotel.html",
-      "agoda_url": "https://www.agoda.com/the-golden-ridge-hotel/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=The+Golden+Ridge+Hotel",
-      "short_description_en": "A beautiful standard option in Nuwara eliya.",
-      "short_description_ja": "ヌワラエリヤ地区にある快適なStandardクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Glenfall Reach Hotel",
-      "japanese_name": "グレンフォール リーチ ホテル",
-      "tier": "Standard",
-      "tier_japanese": "スタンダード",
-      "star_rating": 3,
-      "address": "Glenfall Reach Hotel Address, Nuwara eliya",
-      "twin_room_price": 11000,
-      "single_room_price": 8000,
-      "group_total_price": 30000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.2,
-      "google_rating": 4.3,
-      "official_website": "https://example.com/glenfallreachhotel",
-      "booking_url": "https://www.booking.com/hotel/lk/glenfall-reach-hotel.html",
-      "agoda_url": "https://www.agoda.com/glenfall-reach-hotel/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Glenfall+Reach+Hotel",
-      "short_description_en": "A beautiful standard option in Nuwara eliya.",
-      "short_description_ja": "ヌワラエリヤ地区にある快適なStandardクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Heaven Seven Hotel",
-      "japanese_name": "ヘブン セブン ホテル",
-      "tier": "Standard",
-      "tier_japanese": "スタンダード",
-      "star_rating": 3,
-      "address": "Heaven Seven Hotel Address, Nuwara eliya",
-      "twin_room_price": 12000,
-      "single_room_price": 8500,
-      "group_total_price": 32500,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.2,
-      "google_rating": 4.3,
-      "official_website": "https://example.com/heavensevenhotel",
-      "booking_url": "https://www.booking.com/hotel/lk/heaven-seven-hotel.html",
-      "agoda_url": "https://www.agoda.com/heaven-seven-hotel/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Heaven+Seven+Hotel",
-      "short_description_en": "A beautiful standard option in Nuwara eliya.",
-      "short_description_ja": "ヌワラエリヤ地区にある快適なStandardクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Unique Cottages",
-      "japanese_name": "ユニーク コテージズ",
+      "name": "Wonder hills",
+      "japanese_name": "ヲンデル ヒルズ",
       "tier": "Economy",
       "tier_japanese": "エコノミー",
-      "star_rating": 3,
-      "address": "Unique Cottages Address, Nuwara eliya",
-      "twin_room_price": 7500,
-      "single_room_price": 5500,
-      "group_total_price": 20500,
+      "is_new": false,
+      "room_config": "Double Room 1 room, triple room 2 rooms",
+      "price_base": 4248,
+      "price_taxes": 892,
+      "price_total": 5140,
       "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": false,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
+      "review_score": 7.7,
+      "cancellation": {
+        "free": true,
+        "deadline": "2026-08-15",
+        "raw": "Free cancellation before 15 August 2026"
       },
-      "booking_rating": 7.8,
-      "google_rating": 4.0,
-      "official_website": "https://example.com/uniquecottages",
-      "booking_url": "https://www.booking.com/hotel/lk/unique-cottages.html",
-      "agoda_url": "https://www.agoda.com/unique-cottages/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Unique+Cottages",
-      "short_description_en": "A beautiful economy option in Nuwara eliya.",
-      "short_description_ja": "ヌワラエリヤ地区にある快適なEconomyクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
+      "booking_url": "https://www.booking.com/hotel/lk/wonder-hills-nuwara-eliya.en-gb.html?checkin=2026-08-16&checkout=2026-08-17&group_adults=5&no_rooms=3&group_children=0",
+      "short_description_en": "Comfortable Accommodation: Wonder hills in Nuwara Eliya offers family rooms with private bathrooms, balconies, and mountain views. Each room includes a bidet and soundproofing for a peaceful stay.",
+      "long_note_en": "Comfortable Accommodation: Wonder hills in Nuwara Eliya offers family rooms with private bathrooms, balconies, and mountain views. Each room includes a bidet and soundproofing for a peaceful stay.\n\nOutdoor Spaces: Guests can relax on the terrace or balcony, enjoying the scenic mountain views. The property features a spacious terrace, perfect for unwinding.\n\nConvenient Amenities: The bed and breakfast provides free on-site private parking, ensuring easy access for all visitors. Reception staff speak English, assisting guests with their needs.\n\nLocal Attractions: Hakgala Botanical Garden is a 6-minute walk away, while Gregory Lake lies 7 km from the property. Castlereigh Reservoir Seaplane Base is 55 km distant.",
       "images": {
         "exterior_image": ""
       },
-      "image_source": "none"
-    },
-    {
-      "name": "Single Tree Hotel",
-      "japanese_name": "シングル ツリー ホテル",
-      "tier": "Economy",
-      "tier_japanese": "エコノミー",
-      "star_rating": 2,
-      "address": "Single Tree Hotel Address, Nuwara eliya",
-      "twin_room_price": 6000,
-      "single_room_price": 4500,
-      "group_total_price": 16500,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": false,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 7.8,
-      "google_rating": 4.0,
-      "official_website": "https://example.com/singletreehotel",
-      "booking_url": "https://www.booking.com/hotel/lk/single-tree-hotel.html",
-      "agoda_url": "https://www.agoda.com/single-tree-hotel/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Single+Tree+Hotel",
-      "short_description_en": "A beautiful economy option in Nuwara eliya.",
-      "short_description_ja": "ヌワラエリヤ地区にある快適なEconomyクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Alpine Hotel Nuwara Eliya",
-      "japanese_name": "アルパイン ホテル ヌワラエリヤ",
-      "tier": "Economy",
-      "tier_japanese": "エコノミー",
-      "star_rating": 3,
-      "address": "Alpine Hotel Nuwara Eliya Address, Nuwara eliya",
-      "twin_room_price": 6500,
-      "single_room_price": 4800,
-      "group_total_price": 17800,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": false,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 7.8,
-      "google_rating": 4.0,
-      "official_website": "https://example.com/alpinehotelnuwaraeliya",
-      "booking_url": "https://www.booking.com/hotel/lk/alpine-hotel-nuwara-eliya.html",
-      "agoda_url": "https://www.agoda.com/alpine-hotel-nuwara-eliya/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Alpine+Hotel+Nuwara+Eliya",
-      "short_description_en": "A beautiful economy option in Nuwara eliya.",
-      "short_description_ja": "ヌワラエリヤ地区にある快適なEconomyクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Kings Park Hotel",
-      "japanese_name": "キングス パーク ホテル",
-      "tier": "Economy",
-      "tier_japanese": "エコノミー",
-      "star_rating": 2,
-      "address": "Kings Park Hotel Address, Nuwara eliya",
-      "twin_room_price": 5800,
-      "single_room_price": 4000,
-      "group_total_price": 15600,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": false,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 7.8,
-      "google_rating": 4.0,
-      "official_website": "https://example.com/kingsparkhotel",
-      "booking_url": "https://www.booking.com/hotel/lk/kings-park-hotel.html",
-      "agoda_url": "https://www.agoda.com/kings-park-hotel/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Kings+Park+Hotel",
-      "short_description_en": "A beautiful economy option in Nuwara eliya.",
-      "short_description_ja": "ヌワラエリヤ地区にある快適なEconomyクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Greenstars Guest House",
-      "japanese_name": "グリーンスターズ ゲストハウス",
-      "tier": "Economy",
-      "tier_japanese": "エコノミー",
-      "star_rating": 2,
-      "address": "Greenstars Guest House Address, Nuwara eliya",
-      "twin_room_price": 5000,
-      "single_room_price": 3500,
-      "group_total_price": 13500,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": false,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 7.8,
-      "google_rating": 4.0,
-      "official_website": "https://example.com/greenstarsguesthouse",
-      "booking_url": "https://www.booking.com/hotel/lk/greenstars-guest-house.html",
-      "agoda_url": "https://www.agoda.com/greenstars-guest-house/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Greenstars+Guest+House",
-      "short_description_en": "A beautiful economy option in Nuwara eliya.",
-      "short_description_ja": "ヌワラエリヤ地区にある快適なEconomyクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Nuwara Eliya Hills Rest",
-      "japanese_name": "ヌワラエリヤ ヒルズ レスト",
-      "tier": "Economy",
-      "tier_japanese": "エコノミー",
-      "star_rating": 2,
-      "address": "Nuwara Eliya Hills Rest Address, Nuwara eliya",
-      "twin_room_price": 5500,
-      "single_room_price": 3800,
-      "group_total_price": 14800,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": false,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 7.8,
-      "google_rating": 4.0,
-      "official_website": "https://example.com/nuwaraeliyahillsrest",
-      "booking_url": "https://www.booking.com/hotel/lk/nuwara-eliya-hills-rest.html",
-      "agoda_url": "https://www.agoda.com/nuwara-eliya-hills-rest/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Nuwara+Eliya+Hills+Rest",
-      "short_description_en": "A beautiful economy option in Nuwara eliya.",
-      "short_description_ja": "ヌワラエリヤ地区にある快適なEconomyクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
+      "image_source": "none",
+      "verified": true,
+      "availability_checked": "2026-07-16"
     }
   ],
   "sigiriya": [
