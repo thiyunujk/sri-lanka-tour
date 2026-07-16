@@ -148,7 +148,23 @@ def parse_star_rating(text):
 
 def parse_cancellation(raw_text):
     raw = raw_text.strip()
-    m = re.search(r"(?i)free cancellation\s+before\s+(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})", raw)
+    lowered = raw.lower()
+    # Curated-input placeholders the collector forgot to replace with real
+    # Booking.com text (e.g. "<copy the EXACT text from Booking.com, e.g.
+    # ...>"). These must error out rather than parse -- the bracketed
+    # example text often contains a fake but well-formed date, which would
+    # otherwise be silently ingested as a real cancellation deadline.
+    if "<" in raw or lowered.startswith("e.g.") or "copy the exact text" in lowered:
+        raise IngestError(f"cancellation text looks like an unfilled placeholder, not real data: {raw!r}")
+    if re.fullmatch(r"(?i)free cancellation\s+anytime\.?", raw):
+        return {"free": True, "deadline": None, "raw": raw}
+    # Optional "HH:MM on" between "before" and the date -- Booking.com
+    # sometimes includes a same-day cutoff time (e.g. "before 18:00 on 17
+    # August 2026"); the time itself isn't tracked, only the date.
+    m = re.search(
+        r"(?i)free cancellation\s+before\s+(?:\d{1,2}:\d{2}\s+on\s+)?(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})",
+        raw,
+    )
     if m:
         day, month_name, year = m.groups()
         month = MONTHS.get(month_name.lower())
@@ -281,8 +297,12 @@ def parse_block(block, block_no, today, destination):
     score_text = _simple_field(block, "Booking.com score")
     if score_text is None:
         raise IngestError(f"block ({name}): missing 'Booking.com score' field")
+    # Tolerate stray trailing punctuation from copy-paste typos (e.g. "8.6>"),
+    # since the leading number is unambiguous -- unlike price or cancellation
+    # fields, there's no real value being guessed here.
+    score_clean = re.sub(r"[^\d.]+$", "", score_text.strip())
     try:
-        review_score = float(score_text)
+        review_score = float(score_clean)
     except ValueError:
         raise IngestError(f"block ({name}): could not parse Booking.com score from {score_text!r}") from None
 
@@ -364,6 +384,9 @@ def main():
     parser.add_argument("destination", help="destination key, e.g. sigiriya")
     parser.add_argument("input_file", help="path to the curated text file, or '-' for stdin")
     parser.add_argument("--date", default=None, help="override availability_checked date (YYYY-MM-DD); defaults to today")
+    parser.add_argument("--allow-partial", action="store_true",
+                         help="write successfully parsed hotels even if some blocks failed "
+                              "(failures are printed to stderr, not silently dropped)")
     args = parser.parse_args()
 
     today = args.date or datetime.date.today().isoformat()
@@ -387,10 +410,17 @@ def main():
             errors.append(str(e))
 
     if errors:
-        print(f"{len(errors)} error(s) while parsing -- fix and re-run. Nothing was written.", file=sys.stderr)
+        if not args.allow_partial:
+            print(f"{len(errors)} error(s) while parsing -- fix and re-run. Nothing was written.", file=sys.stderr)
+            for e in errors:
+                print(" -", e, file=sys.stderr)
+            sys.exit(1)
+        print(f"{len(errors)} block(s) failed to parse and were skipped (--allow-partial set):", file=sys.stderr)
         for e in errors:
             print(" -", e, file=sys.stderr)
-        sys.exit(1)
+        if not hotels:
+            print("No blocks parsed successfully; nothing written.", file=sys.stderr)
+            sys.exit(1)
 
     data = load_hotel_data()
     previous_count = len(data.get(args.destination, []))
