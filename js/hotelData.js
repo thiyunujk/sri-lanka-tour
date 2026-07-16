@@ -1,463 +1,88 @@
 const hotelData = {
   "colombo_arrival": [
     {
-      "name": "The Kingsbury Colombo",
-      "japanese_name": "ザ キングズベリー コロンボ",
+      "name": "Shangri-La Colombo",
+      "japanese_name": "シャングリラ コロンボ",
       "tier": "Premium",
       "tier_japanese": "プレミアム",
       "star_rating": 5,
-      "address": "48 Janadhipathi Mawatha, Colombo 00100",
-      "twin_room_price": 24000,
-      "single_room_price": 18000,
-      "group_total_price": 66000,
+      "is_new": false,
+      "room_config": "Deluxe Ocean View King 2 rooms",
+      "price_base": 97281,
+      "price_taxes": 32928,
+      "price_total": 130209,
       "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
+      "review_score": 8.8,
+      "cancellation": {
+        "free": false,
+        "deadline": null,
+        "raw": "Non-refundable"
       },
-      "booking_rating": 8.3,
-      "google_rating": 4.4,
-      "official_website": "https://www.thekingsburyhotel.com/",
-      "booking_url": "https://www.booking.com/hotel/lk/the-kingsbury.html",
-      "agoda_url": "https://www.agoda.com/the-kingsbury/hotel/colombo-lk.html",
-      "google_maps_url": "https://maps.google.com/?q=The+Kingsbury+Colombo",
-      "short_description_en": "Luxury oceanfront hotel in the business district.",
-      "short_description_ja": "ビジネス街に位置する、海に面したラグジュアリーホテル。",
-      "highlights_en": [
-        "Infinity pool",
-        "Seafood dining"
-      ],
-      "highlights_ja": [
-        "インフィニティプール",
-        "シーフード料理"
-      ],
-      "disadvantages_en": [
-        "Busy lobby"
-      ],
-      "disadvantages_ja": [
-        "ロビーが混雑しやすい"
-      ],
-      "images": {
-        "exterior_image": "https://thekingsburyhotel.eme-devops.com/2024/09/Day-Exterior-4.jpg"
-      },
-      "image_source": "official_og"
-    },
-    {
-      "name": "Cinnamon Grand Colombo",
-      "japanese_name": "シナモン グランド コロンボ",
-      "tier": "Premium",
-      "tier_japanese": "プレミアム",
-      "star_rating": 5,
-      "address": "77 Galle Road, Colombo 00300",
-      "twin_room_price": 22000,
-      "single_room_price": 16000,
-      "group_total_price": 60000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.4,
-      "google_rating": 4.5,
-      "official_website": "https://www.cinnamonhotels.com/cinnamongrandcolombo",
-      "booking_url": "https://www.booking.com/hotel/lk/cinnamon-grand-colombo.html",
-      "agoda_url": "https://www.agoda.com/cinnamon-grand-colombo/hotel/colombo-lk.html",
-      "google_maps_url": "https://maps.google.com/?q=Cinnamon+Grand+Colombo",
-      "short_description_en": "Premier lifestyle hotel with 14 dining options.",
-      "short_description_ja": "14の飲食店を併設する、コロンボ随一の大型ライフスタイルホテル。",
-      "highlights_en": [
-        "Diverse restaurants",
-        "Connected to Crestcat Mall"
-      ],
-      "highlights_ja": [
-        "多彩なレストラン",
-        "ショッピングモール直結"
-      ],
-      "disadvantages_en": [
-        "Sprawling property"
-      ],
-      "disadvantages_ja": [
-        "敷地が広すぎて移動が多い"
-      ],
+      "booking_url": "https://www.booking.com/hotel/lk/shangri-la-colombo.en-gb.html?checkin=2026-08-10&checkout=2026-08-12&group_adults=5&no_rooms=3&group_children=0",
+      "short_description_en": "Shangri-La Colombo presents a new level of luxury in the city. Located in the heart of the business and entertainment district, the hotel offers the various collection of guestrooms with stunning views of the Indian Ocean, Beira Lake or cityscape.",
+      "long_note_en": "Shangri-La Colombo presents a new level of luxury in the city. Located in the heart of the business and entertainment district, the hotel offers the various collection of guestrooms with stunning views of the Indian Ocean, Beira Lake or cityscape. The property has 3 innovative restaurants and 2 bars, and it is Colombo’s largest and stylish event spaces.\n\nSet to be the city’s dining destination, Shangri-La Colombo's restaurants and bars include Capital Bar & Grill, presenting tasty steaks and seafood grills with a wide selection of whisky. Shangri-La Colombo’s signature Chinese restaurant Shang Palace celebrates cuisine steeped in rich tradition and Central, the hotel's vibrant all-day dining restaurant and café which is the elegant addition to Colombo’s dining scene. Sapphyr Lounge is a place to meet with friends and family over simple indulgences. There is a Pool Bar overlooking the Indian Ocean and it is perfect for light refreshments. The hotel also offers direct access to the most extensive international shopping mall in Sri Lanka, Shangri-La Colombo’s own One Galle Face Mall.\n\nChi, The Spa is a place of personal peace and enchantment offering holistic therapies for the body, mind and soul. The Health Club features state-of-the-art fitness equipment and personal trainers to ensure you stay true to your fitness regime when away from home.\n\nDaily buffet breakfast and dinner are served at Central Restaurant.\n\nCo-nnect, Shangri-La Colombo, Colombo’s stylish, new co-working space offers a versatile environment to meet, work and create. These exclusive spaces include private offices, meeting rooms, work pods and individual work stations, and is an inspired alternative to working in a traditional office setting.",
       "images": {
         "exterior_image": ""
       },
-      "image_source": "none"
+      "image_source": "none",
+      "verified": true,
+      "availability_checked": "2026-07-16"
     },
     {
-      "name": "Galle Face Hotel",
-      "japanese_name": "ゴール フェイス ホテル",
-      "tier": "Premium",
-      "tier_japanese": "プレミアム",
-      "star_rating": 5,
-      "address": "2 Galle Road, Colombo 00300",
-      "twin_room_price": 26000,
-      "single_room_price": 20000,
-      "group_total_price": 72000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.5,
-      "google_rating": 4.5,
-      "official_website": "https://www.gallefacehotel.com/",
-      "booking_url": "https://www.booking.com/hotel/lk/the-galle-face.html",
-      "agoda_url": "https://www.agoda.com/the-galle-face-hotel/hotel/colombo-lk.html",
-      "google_maps_url": "https://maps.google.com/?q=Galle+Face+Hotel",
-      "short_description_en": "Historic colonial hotel East of Suez.",
-      "short_description_ja": "植民地時代の面影を残す歴史的なコロニアルホテル。",
-      "highlights_en": [
-        "Sunset view from bar",
-        "Sea saltwater pool"
-      ],
-      "highlights_ja": [
-        "バーからの夕日",
-        "海水プール"
-      ],
-      "disadvantages_en": [
-        "Older rooms show age"
-      ],
-      "disadvantages_ja": [
-        "一部の部屋に古さが見られる"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Cinnamon Lakeside Colombo",
-      "japanese_name": "シナモン レイクサイド コロンボ",
-      "tier": "Premium",
-      "tier_japanese": "プレミアム",
-      "star_rating": 5,
-      "address": "115 Sir Chittampalam A. Gardiner Mawatha, Colombo 00200",
-      "twin_room_price": 23000,
-      "single_room_price": 17000,
-      "group_total_price": 63000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.4,
-      "google_rating": 4.4,
-      "official_website": "https://www.cinnamonhotels.com/cinnamonlakesidecolombo",
-      "booking_url": "https://www.booking.com/hotel/lk/cinnamon-lakeside.html",
-      "agoda_url": "https://www.agoda.com/cinnamon-lakeside-colombo/hotel/colombo-lk.html",
-      "google_maps_url": "https://maps.google.com/?q=Cinnamon+Lakeside+Colombo",
-      "short_description_en": "Elegant resort on the banks of Beira Lake.",
-      "short_description_ja": "ベイラ湖畔にたたずむ、オアシスのようなリゾートホテル。",
-      "highlights_en": [
-        "Beautiful lake views",
-        "Excellent resort pool"
-      ],
-      "highlights_ja": [
-        "美しい湖畔の眺望",
-        "充実したプール施設"
-      ],
-      "disadvantages_en": [
-        "A bit away from the beach"
-      ],
-      "disadvantages_ja": [
-        "海岸沿いからは少し離れている"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Taj Samudra Colombo",
-      "japanese_name": "タージ サムドラ コロンボ",
-      "tier": "Premium",
-      "tier_japanese": "プレミアム",
-      "star_rating": 5,
-      "address": "25 Galle Face Center Road, Colombo 00300",
-      "twin_room_price": 25000,
-      "single_room_price": 19000,
-      "group_total_price": 69000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.4,
-      "google_rating": 4.5,
-      "official_website": "https://www.tajhotels.com/en-in/taj/taj-samudra-colombo/",
-      "booking_url": "https://www.booking.com/hotel/lk/taj-samudra.html",
-      "agoda_url": "https://www.agoda.com/taj-samudra-hotel/hotel/colombo-lk.html",
-      "google_maps_url": "https://maps.google.com/?q=Taj+Samudra+Colombo",
-      "short_description_en": "Luxury hotel overlooking Galle Face Green and the Indian Ocean.",
-      "short_description_ja": "ゴールフェイスグリーンとインド洋を見晴らす5つ星ホテル。",
-      "highlights_en": [
-        "Galle Face ocean views",
-        "Top Indian specialty restaurant"
-      ],
-      "highlights_ja": [
-        "ゴールフェイスのオーシャンビュー",
-        "高級インド料理レストラン"
-      ],
-      "disadvantages_en": [
-        "Traditional styling can feel dated"
-      ],
-      "disadvantages_ja": [
-        "伝統的な内装が少し古く感じられる"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Hilton Colombo",
-      "japanese_name": "ヒルトン コロンボ",
-      "tier": "Premium",
-      "tier_japanese": "プレミアム",
-      "star_rating": 5,
-      "address": "2 Sir Chittampalam A Gardiner Mawatha, Colombo 00200",
-      "twin_room_price": 27000,
-      "single_room_price": 20000,
-      "group_total_price": 74000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.3,
-      "google_rating": 4.4,
-      "official_website": "https://www.hilton.com/en/hotels/colhitw-hilton-colombo/",
-      "booking_url": "https://www.booking.com/hotel/lk/hilton-colombo.html",
-      "agoda_url": "https://www.agoda.com/hilton-colombo-hotel/hotel/colombo-lk.html",
-      "google_maps_url": "https://maps.google.com/?q=Hilton+Colombo",
-      "short_description_en": "Iconic city hotel connected to Dutch Hospital precinct.",
-      "short_description_ja": "ダッチホスピタル地区と歩道橋で直結する、コロンボ要塞のランドマーク。",
-      "highlights_en": [
-        "Connected to shopping",
-        "Excellent sports complex"
-      ],
-      "highlights_ja": [
-        "ショッピング地区直結",
-        "充実したスポーツジム"
-      ],
-      "disadvantages_en": [
-        "Lobby can get crowded"
-      ],
-      "disadvantages_ja": [
-        "ロビーが混雑しやすい"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Cinnamon Red Colombo",
-      "japanese_name": "シナモン レッド コロンボ",
+      "name": "Amari Colombo, Sri Lanka",
+      "japanese_name": "アマリ コロンボ スリ アンカ",
       "tier": "Standard",
       "tier_japanese": "スタンダード",
-      "star_rating": 4,
-      "address": "59 Ananda Coomaraswamy Mawatha, Colombo 00300",
-      "twin_room_price": 14000,
-      "single_room_price": 10000,
-      "group_total_price": 38000,
+      "star_rating": 5,
+      "is_new": false,
+      "room_config": "Superior Ocean View King 2 rooms",
+      "price_base": 58369,
+      "price_taxes": 20050,
+      "price_total": 78419,
       "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
+      "review_score": 8.8,
+      "cancellation": {
+        "free": true,
+        "deadline": "2026-08-03",
+        "raw": "Free cancellation before 3 August 2026"
       },
-      "booking_rating": 8.2,
-      "google_rating": 4.3,
-      "official_website": "https://www.cinnamonhotels.com/cinnamonredcolombo",
-      "booking_url": "https://www.booking.com/hotel/lk/cinnamon-red-colombo.html",
-      "agoda_url": "https://www.agoda.com/cinnamon-red-colombo/hotel/colombo-lk.html",
-      "google_maps_url": "https://maps.google.com/?q=Cinnamon+Red+Colombo",
-      "short_description_en": "Trendy, tech-smart rooftop-pool hotel.",
-      "short_description_ja": "屋上インフィニティプールを備えた、アート感覚あふれるホテル。",
-      "highlights_en": [
-        "Rooftop pool",
-        "Trendy design"
-      ],
-      "highlights_ja": [
-        "ルーフトッププール",
-        "トレンディなデザイン"
-      ],
-      "disadvantages_en": [
-        "Rooms are slightly compact"
-      ],
-      "disadvantages_ja": [
-        "部屋がやや狭い"
-      ],
+      "booking_url": "https://www.booking.com/hotel/lk/amari-colombo-sri-lanka.en-gb.html?checkin=2026-08-10&checkout=2026-08-12&group_adults=5&no_rooms=3&group_children=0",
+      "short_description_en": "Get the celebrity treatment with world-class service at Amari Colombo, Sri Lanka\nElegant Accommodation: Amari Colombo in Colombo offers a 5-star experience with a rooftop swimming pool, fitness centre, sun terrace, restaurant, bar, and free WiFi.",
+      "long_note_en": "Get the celebrity treatment with world-class service at Amari Colombo, Sri Lanka\nElegant Accommodation: Amari Colombo in Colombo offers a 5-star experience with a rooftop swimming pool, fitness centre, sun terrace, restaurant, bar, and free WiFi.\n\nComfortable Amenities: Guests enjoy private check-in and check-out, a 24-hour front desk, concierge service, and free on-site parking. Additional facilities include a coffee shop, outdoor seating area, and live music.\n\nDining Options: The family-friendly restaurant serves Italian, Thai, and international cuisines with halal, vegetarian, vegan, gluten-free, and other dietary options. Breakfast includes continental, American, and full English/Irish.\n\nPrime Location: Located a 2-minute walk from Kollupitiya Beach and near attractions such as Gangaramaya Buddhist Temple (1.4 km) and Colombo City Centre Shopping Mall (18-minute walk). Guests can enjoy kayaking or canoeing in the surroundings.",
       "images": {
         "exterior_image": ""
       },
-      "image_source": "none"
+      "image_source": "none",
+      "verified": true,
+      "availability_checked": "2026-07-16"
     },
     {
-      "name": "Fairway Colombo",
-      "japanese_name": "フェアウェイ コロンボ",
-      "tier": "Standard",
-      "tier_japanese": "スタンダード",
+      "name": "Granbell Hotel Colombo",
+      "japanese_name": "グランベ ホテル コロンボ",
+      "tier": "Premium",
+      "tier_japanese": "プレミアム",
       "star_rating": 4,
-      "address": "7 Hospital St, Colombo 00100",
-      "twin_room_price": 12000,
-      "single_room_price": 9000,
-      "group_total_price": 33000,
+      "is_new": false,
+      "room_config": "Premium Double Sea View Room with Terrace 2 rooms",
+      "price_base": 79381,
+      "price_taxes": 26944,
+      "price_total": 106325,
       "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": false,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
+      "review_score": 8.6,
+      "cancellation": {
+        "free": true,
+        "deadline": "2026-08-09",
+        "raw": "Free cancellation before 9 August 2026"
       },
-      "booking_rating": 8.3,
-      "google_rating": 4.2,
-      "official_website": "https://www.fairwaycolombo.com/",
-      "booking_url": "https://www.booking.com/hotel/lk/fairway-colombo.html",
-      "agoda_url": "https://www.agoda.com/fairway-colombo/hotel/colombo-lk.html",
-      "google_maps_url": "https://maps.google.com/?q=Fairway+Colombo",
-      "short_description_en": "Modern, eco-friendly hotel in Dutch Hospital area.",
-      "short_description_ja": "ダッチホスピタル飲食街のすぐ隣に位置するスマートエコホテル。",
-      "highlights_en": [
-        "Location for dining",
-        "Quiet soundproof rooms"
-      ],
-      "highlights_ja": [
-        "飲食店が至近",
-        "静かな防音客室"
-      ],
-      "disadvantages_en": [
-        "No swimming pool"
-      ],
-      "disadvantages_ja": [
-        "プールがありません"
-      ],
+      "booking_url": "https://www.booking.com/hotel/lk/granbell-colombo.en-gb.html?checkin=2026-08-10&checkout=2026-08-12&group_adults=5&no_rooms=3&group_children=0",
+      "short_description_en": "Comfortable Accommodations: Granbell Hotel Colombo in Colombo offers air-conditioned rooms with private bathrooms, sea or city views, balconies, and modern amenities. Each room includes a tea and coffee maker, refrigerator, and free toiletries.",
+      "long_note_en": "Comfortable Accommodations: Granbell Hotel Colombo in Colombo offers air-conditioned rooms with private bathrooms, sea or city views, balconies, and modern amenities. Each room includes a tea and coffee maker, refrigerator, and free toiletries.\n\nExceptional Facilities: Guests can enjoy a rooftop swimming pool with stunning views, spa facilities, sauna, fitness centre, terrace, restaurant, bar, and free WiFi. Additional amenities include a steam room, hot tub, and bicycle parking.\n\nDining Experience: The modern restaurant serves Japanese and international cuisines for dinner. Breakfast options include continental, American, buffet, full English/Irish, vegetarian, and Asian.\n\nPrime Location: Located a few steps from Kollupitiya Beach and near attractions such as Gangaramaya Buddhist Temple and Colombo City Centre Shopping Mall. Guests can enjoy kayaking or canoeing in the surroundings.",
       "images": {
-        "exterior_image": "https://r.profitroom.pl/fairwaycolombo/images/202507080948250.DSC7132_img.jpg"
+        "exterior_image": ""
       },
-      "image_source": "official_og"
-    },
-    {
-      "name": "Jetwing Colombo Seven",
-      "japanese_name": "ジェットウィング コロンボ セブン",
-      "tier": "Standard",
-      "tier_japanese": "スタンダード",
-      "star_rating": 4,
-      "address": "57 Ward Place, Colombo 00700",
-      "twin_room_price": 16000,
-      "single_room_price": 12000,
-      "group_total_price": 44000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.4,
-      "google_rating": 4.4,
-      "official_website": "https://www.jetwinghotels.com/jetwingcolomboseven/",
-      "booking_url": "https://www.booking.com/hotel/lk/jetwing-colombo-seven.html",
-      "agoda_url": "https://www.agoda.com/jetwing-colombo-seven/hotel/colombo-lk.html",
-      "google_maps_url": "https://maps.google.com/?q=Jetwing+Colombo+Seven",
-      "short_description_en": "Contemporary hotel in quiet residential Colombo 7.",
-      "short_description_ja": "高級住宅街コロンボ7に位置するスタイリッシュで現代的なホテル。",
-      "highlights_en": [
-        "Rooftop bar and pool",
-        "Quiet neighborhood"
-      ],
-      "highlights_ja": [
-        "屋上バーとプール",
-        "静かなエリア"
-      ],
-      "disadvantages_en": [
-        "A bit far from coastal sites"
-      ],
-      "disadvantages_ja": [
-        "海岸沿いから少し離れている"
-      ],
-      "images": {
-        "exterior_image": "https://www.jetwinghotels.com/jetwingcolomboseven/wp-content/uploads/sites/7/2024/11/Jetwing-Colombo-Seven-1200x630-1.jpg"
-      },
-      "image_source": "official_og"
+      "image_source": "none",
+      "verified": true,
+      "availability_checked": "2026-07-16"
     },
     {
       "name": "Mandarina Colombo",
@@ -465,458 +90,55 @@ const hotelData = {
       "tier": "Standard",
       "tier_japanese": "スタンダード",
       "star_rating": 4,
-      "address": "433 Galle Road, Colombo 00300",
-      "twin_room_price": 14000,
-      "single_room_price": 10000,
-      "group_total_price": 38000,
+      "is_new": false,
+      "room_config": "Premium King Room with Balcony - Free access to the Infinity Pool 2 rooms",
+      "price_base": 55126,
+      "price_taxes": 20020,
+      "price_total": 75146,
       "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
+      "review_score": 7.0,
+      "cancellation": {
+        "free": true,
+        "deadline": "2026-08-08",
+        "raw": "Free cancellation before 8 August 2026"
       },
-      "booking_rating": 8.2,
-      "google_rating": 4.3,
-      "official_website": "https://www.mandarinacolombo.com/",
-      "booking_url": "https://www.booking.com/hotel/lk/mandarina-colombo.html",
-      "agoda_url": "https://www.agoda.com/mandarina-colombo/hotel/colombo-lk.html",
-      "google_maps_url": "https://maps.google.com/?q=Mandarina+Colombo",
-      "short_description_en": "Sleek business-friendly hotel on Galle Road.",
-      "short_description_ja": "ゴールロード沿いに立つ、スタイリッシュな高層ビジネスホテル。",
-      "highlights_en": [
-        "Glass-walled rooftop pool",
-        "Carpet-free wooden floors"
-      ],
-      "highlights_ja": [
-        "ガラス張りの屋上プール",
-        "フローリング床で清潔"
-      ],
-      "disadvantages_en": [
-        "No alcohol served in restaurants"
-      ],
-      "disadvantages_ja": [
-        "パブリックスペースでの禁酒規定あり"
-      ],
+      "booking_url": "https://www.booking.com/hotel/lk/mandarina-colombo.en-gb.html?checkin=2026-08-10&checkout=2026-08-12&group_adults=5&no_rooms=3&group_children=0",
+      "short_description_en": "trategically located in Colombo and only 1.5 km from the U.S Embassy, Mandarina Colombo offers modern and comfortable accommodation with free WiFi access throughout the property. It features a rooftop infinity outdoor pool and provides complimentary parking on site.",
+      "long_note_en": "trategically located in Colombo and only 1.5 km from the U.S Embassy, Mandarina Colombo offers modern and comfortable accommodation with free WiFi access throughout the property. It features a rooftop infinity outdoor pool and provides complimentary parking on site.\n\nThe hotel is just a 10-minute walk from Majestic City, Barefoot Gallery, Casino Marina Colombo and 1.5 km from Sri Lanka National Museum. The Colombo Town Hall is about 1.2 km away, while Asiri Surgical and Lanka Hospital is 2.9 km away. The Bandaranaike International Airport is accessible within a 1-hour drive.\n\nFitted with carpet flooring, air-conditioned rooms include a wardrobe, in-room safe, a flat-screen satellite/cable TV and sofa seating area. Electric kettle and minibar are also provided. The en suite bathroom comes with towels, hairdryer, bathrobes, slippers and shower facility accompanied with free toiletries.\n\nOperating a 24-hour front desk, staff at Mandarina Colombo can assist guests with car rental, currency exchange and laundry services.\n\nThe in-house restaurant, On The Eleventh serves a selection of international dishes for guests to enjoy, while Café M serves a selection of quick snacks with tea/coffee.",
       "images": {
-        "exterior_image": "https://mandarinacolombo.eme-devops.com/2025/03/og.jpg"
+        "exterior_image": ""
       },
-      "image_source": "official_og"
+      "image_source": "none",
+      "verified": true,
+      "availability_checked": "2026-07-16"
     },
     {
-      "name": "Marino Beach Colombo",
-      "japanese_name": "マリーノ ビーチ コロンボ",
-      "tier": "Standard",
-      "tier_japanese": "スタンダード",
+      "name": "Orion City Hotel",
+      "japanese_name": "オリオン シティ ホテル",
+      "tier": "Economy",
+      "tier_japanese": "エコノミー",
       "star_rating": 4,
-      "address": "590 Galle Road, Colombo 00300",
-      "twin_room_price": 16000,
-      "single_room_price": 12000,
-      "group_total_price": 44000,
+      "is_new": false,
+      "room_config": "Superor Yard View 2 rooms",
+      "price_base": 39691,
+      "price_taxes": 8343,
+      "price_total": 48034,
       "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
+      "review_score": 8.3,
+      "cancellation": {
+        "free": true,
+        "deadline": "2026-08-09",
+        "raw": "Free cancellation before 9 August 2026"
       },
-      "booking_rating": 8.7,
-      "google_rating": 4.5,
-      "official_website": "http://www.marinobeach.com/",
-      "booking_url": "https://www.booking.com/hotel/lk/marino-beach-colombo.html",
-      "agoda_url": "https://www.agoda.com/marino-beach-colombo/hotel/colombo-lk.html",
-      "google_maps_url": "https://maps.google.com/?q=Marino+Beach+Colombo",
-      "short_description_en": "Hotel with massive rooftop infinity pool and mall below.",
-      "short_description_ja": "巨大な屋上インフィニティプールを備え、ショッピングモール直結 of ホテル。",
-      "highlights_en": [
-        "Giant rooftop pool",
-        "Marino Mall attached"
-      ],
-      "highlights_ja": [
-        "巨大な屋上プール",
-        "ショッピングモール直結"
-      ],
-      "disadvantages_en": [
-        "Lifts can be busy"
-      ],
-      "disadvantages_ja": [
-        "エレベーターが混雑しやすい"
-      ],
+      "booking_url": "https://www.booking.com/hotel/lk/hatch-house.en-gb.html?checkin=2026-08-10&checkout=2026-08-12&group_adults=5&no_rooms=3&group_children=0",
+      "short_description_en": "Comfortable Accommodation: Orion City Hotel in Colombo offers adults-only rooms with air-conditioning, private bathrooms, and city views. Each room includes a work desk, TV, and free WiFi.",
+      "long_note_en": "Comfortable Accommodation: Orion City Hotel in Colombo offers adults-only rooms with air-conditioning, private bathrooms, and city views. Each room includes a work desk, TV, and free WiFi.\n\nDining and Leisure: Guests can enjoy a fitness centre, terrace, restaurant, and bar. The restaurant serves local, Asian, and international cuisines, including pizza and barbecue grill. Additional facilities include a minimarket, outdoor seating area, and free on-site private parking.\n\nPrime Location: Located 15 minutes from R Premadasa Stadium, the hotel is near attractions such as Khan Clock Tower (4.2 km) and Colombo Dutch Museum (4.3 km). Free WiFi is available throughout the property.",
       "images": {
         "exterior_image": ""
       },
-      "image_source": "none"
-    },
-    {
-      "name": "Ramada Colombo",
-      "japanese_name": "ラマダ コロンボ",
-      "tier": "Standard",
-      "tier_japanese": "スタンダード",
-      "star_rating": 4,
-      "address": "30 Sir Mohamed Macan Markar Mawatha, Colombo 00300",
-      "twin_room_price": 13000,
-      "single_room_price": 9500,
-      "group_total_price": 35500,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
-      },
-      "booking_rating": 7.9,
-      "google_rating": 4.1,
-      "official_website": "http://www.ramadacolombo.com/",
-      "booking_url": "https://www.booking.com/hotel/lk/ramada-colombo.html",
-      "agoda_url": "https://www.agoda.com/ramada-colombo/hotel/colombo-lk.html",
-      "google_maps_url": "https://maps.google.com/?q=Ramada+Colombo",
-      "short_description_en": "Comfortable hotel near Galle Face with a large pool.",
-      "short_description_ja": "ゴールフェイス近くに位置する、広いプールがある快適なホテル。",
-      "highlights_en": [
-        "Close to Galle Face",
-        "Spacious room layout"
-      ],
-      "highlights_ja": [
-        "ゴールフェイスに近い",
-        "広々とした室内の間取り"
-      ],
-      "disadvantages_en": [
-        "Exterior building looks older"
-      ],
-      "disadvantages_ja": [
-        "外観にやや古さを感じる"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Colombo City Hotels",
-      "japanese_name": "コロンボ シティ ホテルズ",
-      "tier": "Economy",
-      "tier_japanese": "エコノミー",
-      "star_rating": 3,
-      "address": "33 Canal Row, Colombo 00100",
-      "twin_room_price": 7500,
-      "single_room_price": 5500,
-      "group_total_price": 20500,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": false,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": false,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 7.5,
-      "google_rating": 3.8,
-      "official_website": "http://www.colombocityhotels.com/",
-      "booking_url": "https://www.booking.com/hotel/lk/colombo-city-hotels.html",
-      "agoda_url": "https://www.agoda.com/colombo-city-hotels/hotel/colombo-lk.html",
-      "google_maps_url": "https://maps.google.com/?q=Colombo+City+Hotels",
-      "short_description_en": "Simple, functional hotel in Fort near the railway station.",
-      "short_description_ja": "フォート駅近くに位置する、シンプルで実用的な格安ホテル。",
-      "highlights_en": [
-        "Near Fort railway station",
-        "Value for money"
-      ],
-      "highlights_ja": [
-        "コロンボフォート駅の近く",
-        "優れたコストパフォーマンス"
-      ],
-      "disadvantages_en": [
-        "No swimming pool or gym"
-      ],
-      "disadvantages_ja": [
-        "プールやジムはありません"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Clock Inn Colombo",
-      "japanese_name": "クロック イン コロンボ",
-      "tier": "Economy",
-      "tier_japanese": "エコノミー",
-      "star_rating": 2,
-      "address": "557 Galle Road, Colombo 00300",
-      "twin_room_price": 6000,
-      "single_room_price": 4500,
-      "group_total_price": 16500,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": false,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": false,
-        "parking": false,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 7.8,
-      "google_rating": 4.0,
-      "official_website": "http://www.clockinn.lk/colombo",
-      "booking_url": "https://www.booking.com/hotel/lk/clock-inn-colombo.html",
-      "agoda_url": "https://www.agoda.com/clock-inn-colombo/hotel/colombo-lk.html",
-      "google_maps_url": "https://maps.google.com/?q=Clock+Inn+Colombo",
-      "short_description_en": "Industrial-style hostel and budget hotel on Galle Road.",
-      "short_description_ja": "ゴールロード沿いに立つ、若者に人気のカジュアルな格安宿。",
-      "highlights_en": [
-        "Social lobby area",
-        "Central location on Galle Road"
-      ],
-      "highlights_ja": [
-        "共用ロビーが賑やか",
-        "ゴールロード沿いで便利"
-      ],
-      "disadvantages_en": [
-        "Traffic noise in front rooms"
-      ],
-      "disadvantages_ja": [
-        "大通り側の部屋で車の音が聞こえる"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "City Beds - The Regent",
-      "japanese_name": "シティ ベッド ザ リージェント",
-      "tier": "Economy",
-      "tier_japanese": "エコノミー",
-      "star_rating": 2,
-      "address": "Regent Building, Sir Chittampalam A Gardiner Mawatha, Colombo 00200",
-      "twin_room_price": 6500,
-      "single_room_price": 5000,
-      "group_total_price": 18000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": false,
-        "swimming_pool": false,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": false,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 7.9,
-      "google_rating": 4.1,
-      "official_website": "http://www.citybeds.lk/",
-      "booking_url": "https://www.booking.com/hotel/lk/city-beds-the-regent.html",
-      "agoda_url": "https://www.agoda.com/city-beds-the-regent/hotel/colombo-lk.html",
-      "google_maps_url": "https://maps.google.com/?q=City+Beds+The+Regent",
-      "short_description_en": "Basic, clean, air-conditioned rooms at budget price.",
-      "short_description_ja": "エアコン完備で非常に清潔な、コロンボ要塞近くの格安ホテル。",
-      "highlights_en": [
-        "Very clean rooms",
-        "Friendly desk staff"
-      ],
-      "highlights_ja": [
-        "清潔に保たれた客室",
-        "親身なフロント対応"
-      ],
-      "disadvantages_en": [
-        "No breakfast served"
-      ],
-      "disadvantages_ja": [
-        "朝食の提供はありません"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Bunkyard Hostels",
-      "japanese_name": "バンキヤード ホステルズ",
-      "tier": "Economy",
-      "tier_japanese": "エコノミー",
-      "star_rating": 2,
-      "address": "20A, Guildford Crescent, Colombo 00700",
-      "twin_room_price": 5500,
-      "single_room_price": 4000,
-      "group_total_price": 15000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": false,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": false,
-        "gym": false,
-        "front_desk_24h": false
-      },
-      "booking_rating": 8.1,
-      "google_rating": 4.2,
-      "official_website": "https://example.com/bunkyard",
-      "booking_url": "https://www.booking.com/hotel/lk/bunkyard-hostels.html",
-      "agoda_url": "https://www.agoda.com/bunkyard-hostels/hotel/colombo-lk.html",
-      "google_maps_url": "https://maps.google.com/?q=Bunkyard+Hostels+Colombo",
-      "short_description_en": "Quirky, artistic eco-hostel in safe residential zone.",
-      "short_description_ja": "高級住宅地区にある、芸術的でエコロジーな格安ホステル。",
-      "highlights_en": [
-        "Charming local artwork",
-        "Social group kitchen"
-      ],
-      "highlights_ja": [
-        "ローカルアートが散りばめられた内装",
-        "宿泊客が交流できる共用キッチン"
-      ],
-      "disadvantages_en": [
-        "Shared bathrooms for lower rooms"
-      ],
-      "disadvantages_ja": [
-        "一部の部屋はバスルームが共有"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Moss Colombo",
-      "japanese_name": "モス コロンボ",
-      "tier": "Economy",
-      "tier_japanese": "エコノミー",
-      "star_rating": 3,
-      "address": "160/2 Bauddhaloka Mawatha, Colombo 00400",
-      "twin_room_price": 7500,
-      "single_room_price": 5500,
-      "group_total_price": 20500,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": false,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": false,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.3,
-      "google_rating": 4.3,
-      "official_website": "http://www.mosscolombo.com/",
-      "booking_url": "https://www.booking.com/hotel/lk/moss-colombo.html",
-      "agoda_url": "https://www.agoda.com/moss-colombo/hotel/colombo-lk.html",
-      "google_maps_url": "https://maps.google.com/?q=Moss+Colombo",
-      "short_description_en": "Minimalist concrete-designed guest house.",
-      "short_description_ja": "コンクリート打ち放しが特徴的なデザイナーズ格安ゲストハウス。",
-      "highlights_en": [
-        "Quiet courtyard lounge",
-        "Walking to nice cafes"
-      ],
-      "highlights_ja": [
-        "静かな中庭ラウンジ",
-        "周辺にお洒落なカフェが多数"
-      ],
-      "disadvantages_en": [
-        "Simple continental breakfast"
-      ],
-      "disadvantages_ja": [
-        "朝食がパン程度で極めてシンプル"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Haven Colombo",
-      "japanese_name": "ヘブン コロンボ",
-      "tier": "Economy",
-      "tier_japanese": "エコノミー",
-      "star_rating": 3,
-      "address": "No. 5, Sinsapa Road, Colombo 00600",
-      "twin_room_price": 7000,
-      "single_room_price": 5000,
-      "group_total_price": 19000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": false,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": false,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.5,
-      "google_rating": 4.4,
-      "official_website": "https://example.com/havencolombo",
-      "booking_url": "https://www.booking.com/hotel/lk/haven-colombo.html",
-      "agoda_url": "https://www.agoda.com/haven-colombo/hotel/colombo-lk.html",
-      "google_maps_url": "https://maps.google.com/?q=Haven+Colombo",
-      "short_description_en": "Highly-rated, quiet residential guest house.",
-      "short_description_ja": "コロンボ6の静かな住宅街に位置する、清掃の行き届いた格安ゲストハウス。",
-      "highlights_en": [
-        "Spotless clean rooms",
-        "Atherhome service"
-      ],
-      "highlights_ja": [
-        "とても綺麗なバスルーム",
-        "アットホームな接客"
-      ],
-      "disadvantages_en": [
-        "A bit south of Fort city center"
-      ],
-      "disadvantages_ja": [
-        "コロンボ要塞などの中心街からは少し遠い"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
+      "image_source": "none",
+      "verified": true,
+      "availability_checked": "2026-07-16"
     }
   ],
   "colombo_departure": [
