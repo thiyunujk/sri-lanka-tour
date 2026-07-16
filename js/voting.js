@@ -59,6 +59,11 @@ const votingUI = {
     fewReviewsNote: '※レビュー数少',
     voteDeadlineBanner: '投票締切: 8月3日（キャンセル無料期限のため）',
     deadlineWarningChip: '⚠ 締切前に要決定',
+    switchUser: 'ユーザー切替',
+    votesCount: (n, total) => `${n}/${total}人が投票済み`,
+    pointsLabel: (n) => `${n}点`,
+    closeRace: '接戦！',
+    seeAllVotes: '全員の投票を見る ▾',
     howToTitle: '使い方 ❔',
     howToBullets: [
       '価格は私たちの実際の日程・5人分の実際の総額です（2026年7月中旬に確認済み）。',
@@ -114,6 +119,11 @@ const votingUI = {
     fewReviewsNote: '※ few reviews',
     voteDeadlineBanner: 'Voting closes Aug 3 (due to free-cancellation deadlines)',
     deadlineWarningChip: '⚠ Decide before vote close',
+    switchUser: 'Switch user',
+    votesCount: (n, total) => `${n} of ${total} voted`,
+    pointsLabel: (n) => `${n} pt${n === 1 ? '' : 's'}`,
+    closeRace: 'Close race!',
+    seeAllVotes: 'See everyone\'s votes ▾',
     howToTitle: 'How to use ❔',
     howToBullets: [
       "Prices are real, verified totals for our exact dates and group of 5 (checked mid-July 2026).",
@@ -300,6 +310,40 @@ let currentTier = 'Premium';
 // write -- not a live listener, since only this user's own actions change it.
 let currentUserVotes = {};
 
+// { destKey: { choice1, choice2, choice3 } } for currentVoter, across ALL
+// destinations -- powers the day cards' Choose/Voted button state. Loaded
+// once on identity resolution (see refreshAllMyVotes), then kept in sync
+// via optimistic updates alongside currentUserVotes after each vote write.
+let myVotesByDest = {};
+
+function hasAnyVoteForDest(destKey) {
+  const v = myVotesByDest[destKey];
+  return !!(v && (v.choice1 || v.choice2 || v.choice3));
+}
+
+// Fetches currentVoter's votes for every destination in one read of the
+// `votes` node (cheaper than 6 separate per-destination reads).
+function refreshAllMyVotes() {
+  if (!currentVoter || !db) {
+    myVotesByDest = {};
+    return Promise.resolve();
+  }
+  return db.ref('votes').once('value')
+    .then(snapshot => {
+      const data = snapshot.val() || {};
+      const next = {};
+      Object.keys(hotelData).forEach(destKey => {
+        next[destKey] = (data[destKey] && data[destKey][currentVoter]) || {};
+      });
+      myVotesByDest = next;
+    })
+    .catch(() => { myVotesByDest = {}; });
+}
+
+function refreshHotelButtonsIfReady() {
+  if (typeof updateAllHotelButtons === 'function') updateAllHotelButtons();
+}
+
 function checkIdentity() {
   if (!currentVoter) {
     const T = votingT();
@@ -317,10 +361,35 @@ function setVoter(name) {
   currentVoter = name;
   localStorage.setItem('voterName', name);
   closeAllModals();
+  refreshAllMyVotes().then(refreshHotelButtonsIfReady);
   // Small delay for UI smoothness
   setTimeout(() => {
     alert(votingT().welcome(name));
   }, 300);
+}
+
+// Clears the stored identity and reopens the identity gate, so a different
+// traveler can vote from the same device/browser without clearing storage
+// manually.
+function switchUser() {
+  currentVoter = null;
+  localStorage.removeItem('voterName');
+  myVotesByDest = {};
+  currentUserVotes = {};
+  refreshHotelButtonsIfReady();
+  closeAllModals();
+  setTimeout(() => {
+    checkIdentity();
+  }, 300);
+}
+
+// Kick off the votes fetch immediately for a returning visitor whose
+// identity is already known from localStorage (checkIdentity only handles
+// the first-visit case). Buttons refresh once this resolves -- app.js may
+// not have defined updateAllHotelButtons yet at this exact line, but by the
+// time this async read comes back it certainly has (see refreshHotelButtonsIfReady).
+if (currentVoter) {
+  refreshAllMyVotes().then(refreshHotelButtonsIfReady);
 }
 
 function openHotelVoting(dayNum) {
@@ -405,13 +474,21 @@ function hotelCardHTML(h, lang, T, destKey) {
   // --- compact section ---
   // Every hotel gets a thumbnail block: a real photo if we have one, else a
   // clean destination-colored placeholder (never a broken <img> icon).
-  const thumb = imgs.exterior_image ? `
-      <div class="h-32 bg-slate-100 overflow-hidden">
-        <img src="${escapeHtml(imgs.exterior_image)}" alt="${escapeHtml(primaryName)}" loading="lazy" class="w-full h-32 object-cover">
-      </div>` : `
-      <div class="h-32 bg-gradient-to-br ${destPlaceholderGradient[destKey] || DEFAULT_PLACEHOLDER_GRADIENT} flex flex-col items-center justify-center gap-1 px-3 text-white">
+  // Local photos live at resources/hotels/<slug>.jpg and are dropped in
+  // incrementally -- existence is checked via the <img> onerror handler
+  // (swap to the placeholder sibling) rather than a fetch, since a fetch
+  // would mean a network round-trip per card just to check existence.
+  const placeholderInner = `
         <span class="text-3xl leading-none" aria-hidden="true">🏨</span>
-        <span class="text-[11px] font-bold text-center leading-tight line-clamp-2">${escapeHtml(primaryName)}</span>
+        <span class="text-[11px] font-bold text-center leading-tight line-clamp-2">${escapeHtml(primaryName)}</span>`;
+  const photoSrc = imgs.exterior_image || (h.slug ? `resources/hotels/${h.slug}.jpg` : '');
+  const thumb = photoSrc ? `
+      <div class="h-32 bg-slate-100 overflow-hidden">
+        <img src="${escapeHtml(photoSrc)}" alt="${escapeHtml(primaryName)}" loading="lazy" class="w-full h-32 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div style="display:none" class="h-32 bg-gradient-to-br ${destPlaceholderGradient[destKey] || DEFAULT_PLACEHOLDER_GRADIENT} flex-col items-center justify-center gap-1 px-3 text-white">${placeholderInner}
+        </div>
+      </div>` : `
+      <div class="h-32 bg-gradient-to-br ${destPlaceholderGradient[destKey] || DEFAULT_PLACEHOLDER_GRADIENT} flex flex-col items-center justify-center gap-1 px-3 text-white">${placeholderInner}
       </div>`;
 
   const verifiedBadge = h.verified === true && h.availability_checked
@@ -630,7 +707,9 @@ function voteHotel(hotelName, choiceLevel) {
       // Optimistic local update: reflect the write immediately in the
       // highlight/border without waiting on a fresh fetch from Firebase.
       Object.assign(currentUserVotes, updates);
+      myVotesByDest[currentDestKey] = Object.assign({}, myVotesByDest[currentDestKey], updates);
       renderHotelList();
+      refreshHotelButtonsIfReady();
       if (isUnvote) {
         alert(T.unvoteSuccess(hotelName, choiceLevel));
       } else if (vacatedLevel) {
@@ -647,6 +726,8 @@ function openGroupVotes() {
   const T = votingT();
   document.getElementById('modal-title-group-votes').textContent = T.groupVotesTitle;
   document.getElementById('vote-deadline-banner-group').textContent = T.voteDeadlineBanner;
+  const switchUserBtn = document.getElementById('btn-switch-user');
+  if (switchUserBtn) switchUserBtn.textContent = T.switchUser;
   renderGroupVotes();
 }
 
@@ -680,6 +761,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Delegated listener for the per-destination "see everyone's votes" toggles
+  // rendered by renderGroupVotes
+  const groupVotesContainer = document.getElementById('group-votes-container');
+  if (groupVotesContainer) {
+    groupVotesContainer.addEventListener('click', (e) => {
+      const toggleBtn = e.target.closest('[data-toggle-group-detail]');
+      if (toggleBtn) {
+        const target = document.getElementById(toggleBtn.dataset.target);
+        if (target) {
+          const nowHidden = target.classList.toggle('hidden');
+          const T = votingT();
+          toggleBtn.textContent = nowHidden ? T.seeAllVotes : T.hideDetails;
+        }
+      }
+    });
+  }
+
   // Check identity slightly after load
   setTimeout(() => {
     checkIdentity();
@@ -698,6 +796,45 @@ function displayVoteName(dest, storedName) {
   return storedName;
 }
 
+// Points-based ranking: 1st choice = 3, 2nd = 2, 3rd = 1. Returns
+// { hotelName: { points, voters: [{ name, rank }] } } for one destination's
+// voters object (as stored at votes/{dest}).
+const CHOICE_POINTS = { 1: 3, 2: 2, 3: 1 };
+function aggregateDestVotes(voters) {
+  const byHotel = {};
+  Object.entries(voters || {}).forEach(([voter, choices]) => {
+    [1, 2, 3].forEach(n => {
+      const hotelName = choices && choices[`choice${n}`];
+      if (!hotelName) return;
+      if (!byHotel[hotelName]) byHotel[hotelName] = { points: 0, voters: [] };
+      byHotel[hotelName].points += CHOICE_POINTS[n];
+      byHotel[hotelName].voters.push({ name: voter, rank: n });
+    });
+  });
+  return byHotel;
+}
+
+// Bilingual hotel name resolution matching hotelCardHTML's primary/secondary
+// rule, but keyed off a vote's stored (always-English) hotel name.
+function resolveHotelNames(dest, storedName) {
+  const hotels = hotelData[dest];
+  const hotel = Array.isArray(hotels) ? hotels.find(h => h.name === storedName) : null;
+  const jaName = (hotel && hotel.japanese_name) || '';
+  const enName = (hotel && hotel.name) || storedName;
+  const lang = votingLang();
+  const primary = lang === 'ja' ? (jaName || enName) : (enName || jaName);
+  const secondary = lang === 'ja' ? enName : jaName;
+  return { primary, secondary: (secondary && secondary !== primary) ? secondary : '' };
+}
+
+// Small rank-colored avatar chips, one per voter who ranked this hotel,
+// matching the emerald/sky/amber 1st/2nd/3rd-choice colors used elsewhere.
+const RANK_AVATAR_STYLES = [
+  'bg-emerald-100 text-emerald-700 border-emerald-200',
+  'bg-sky-100 text-sky-700 border-sky-200',
+  'bg-amber-100 text-amber-700 border-amber-200'
+];
+
 function renderGroupVotes() {
   const container = document.getElementById('group-votes-container');
   const T = votingT();
@@ -708,31 +845,92 @@ function renderGroupVotes() {
 
   container.innerHTML = `<p class="text-center text-slate-500 py-10">${T.loadingVotes}</p>`;
 
+  // Chronological destination order (each destKey's first appearance in
+  // dayToDest), so the dashboard reads in itinerary order rather than
+  // hotelData.js's file order.
+  const orderedDestKeys = [...new Set(Object.keys(dayToDest).map(d => dayToDest[d]))]
+    .filter(dest => Array.isArray(hotelData[dest]));
+
   db.ref('votes').once('value').then(snapshot => {
-    const data = snapshot.val();
-    if (!data) {
-      container.innerHTML = `<p class="text-center text-slate-500 py-10">${T.noVotes}</p>`;
-      return;
-    }
+    const data = snapshot.val() || {};
+    const totalVoters = VOTER_NAMES.length;
 
-    let html = '';
-    for (const [dest, voters] of Object.entries(data)) {
+    const html = orderedDestKeys.map(dest => {
+      const voters = data[dest] || {};
       const destName = getDestName(dest);
-      html += `<h4 class="font-bold text-slate-800 mt-4 mb-2 pb-1 border-b border-slate-200">${escapeHtml(destName)}</h4>`;
+      const participantEntries = Object.entries(voters).filter(([, choices]) =>
+        choices && (choices.choice1 || choices.choice2 || choices.choice3));
+      const participationCount = participantEntries.length;
 
-      for (const [voter, choices] of Object.entries(voters)) {
-        html += `
-          <div class="bg-white rounded-xl p-3 mb-2 shadow-sm border border-slate-100">
+      const header = `
+        <div class="flex items-center justify-between mb-2">
+          <h4 class="font-bold text-slate-800 text-[15px]">${escapeHtml(destName)}</h4>
+          <span class="text-[10px] font-bold text-slate-500 bg-slate-100 rounded-full px-2 py-0.5 shrink-0">${T.votesCount(participationCount, totalVoters)}</span>
+        </div>`;
+
+      if (participationCount === 0) {
+        return `
+        <div class="mb-6">
+          ${header}
+          <p class="text-center text-slate-400 text-xs py-6 bg-white rounded-xl border border-dashed border-slate-200">${T.noVotes}</p>
+        </div>`;
+      }
+
+      const byHotel = aggregateDestVotes(voters);
+      const ranked = Object.entries(byHotel)
+        .map(([hotelName, info]) => ({ hotelName, ...info }))
+        .sort((a, b) => b.points - a.points);
+
+      const closeRace = ranked.length >= 2 && (ranked[0].points - ranked[1].points) <= 1;
+
+      const rows = ranked.map((entry, idx) => {
+        const rank = idx + 1;
+        const { primary, secondary } = resolveHotelNames(dest, entry.hotelName);
+        const isTop = rank === 1;
+        const medal = rank === 1 ? '🏆' : rank === 2 ? '🥈' : rank === 3 ? '🥉' : '';
+        const avatars = [...entry.voters].sort((a, b) => a.rank - b.rank).map(v => {
+          const style = RANK_AVATAR_STYLES[v.rank - 1] || RANK_AVATAR_STYLES[2];
+          const initial = v.name.charAt(0);
+          return `<span title="${escapeHtml(v.name)} · ${escapeHtml(T.choices[v.rank - 1])}" class="inline-flex items-center justify-center w-6 h-6 rounded-full text-[10px] font-bold border ${style}">${escapeHtml(initial)}</span>`;
+        }).join('');
+
+        return `
+          <div class="bg-white rounded-xl p-3 shadow-sm border ${isTop ? 'border-amber-300 ring-1 ring-amber-200' : 'border-slate-100'} flex items-center gap-3">
+            <div class="w-7 text-center shrink-0">
+              ${medal ? `<span class="text-lg leading-none">${medal}</span>` : `<span class="text-xs font-bold text-slate-400">#${rank}</span>`}
+            </div>
+            <div class="flex-1 min-w-0">
+              <p class="font-bold text-slate-800 text-sm truncate">${escapeHtml(primary)}</p>
+              ${secondary ? `<p class="text-[10px] text-slate-400 truncate">${escapeHtml(secondary)}</p>` : ''}
+              <div class="flex flex-wrap gap-1 mt-1.5">${avatars}</div>
+            </div>
+            <div class="text-right shrink-0">
+              <p class="font-bold text-emerald-600 text-sm">${T.pointsLabel(entry.points)}</p>
+              ${rank === 1 && closeRace ? `<span class="inline-block mt-1 bg-red-50 text-red-600 border border-red-200 rounded-full px-1.5 py-0.5 text-[9px] font-bold">${T.closeRace}</span>` : ''}
+            </div>
+          </div>`;
+      }).join('<div class="h-2"></div>');
+
+      const detailId = `group-detail-${dest}`;
+      const detailHTML = Object.entries(voters).map(([voter, choices]) => `
+          <div class="bg-white rounded-xl p-3 shadow-sm border border-slate-100">
             <p class="font-bold text-emerald-700 text-sm mb-1">${escapeHtml(voter)}</p>
             <ul class="text-xs text-slate-600 space-y-1 pl-2 border-l-2 border-emerald-100">
               <li><span class="font-semibold text-emerald-600">${T.choices[0]}:</span> ${escapeHtml(displayVoteName(dest, choices.choice1))}</li>
               <li><span class="font-semibold text-sky-600">${T.choices[1]}:</span> ${escapeHtml(displayVoteName(dest, choices.choice2))}</li>
               <li><span class="font-semibold text-amber-600">${T.choices[2]}:</span> ${escapeHtml(displayVoteName(dest, choices.choice3))}</li>
             </ul>
-          </div>
-        `;
-      }
-    }
+          </div>`).join('<div class="h-2"></div>');
+
+      return `
+        <div class="mb-6">
+          ${header}
+          <div>${rows}</div>
+          <button data-toggle-group-detail data-target="${detailId}" class="w-full mt-2 py-1.5 text-[11px] font-bold text-slate-500 hover:text-emerald-600 transition-colors">${T.seeAllVotes}</button>
+          <div id="${detailId}" class="hidden space-y-2 mt-1">${detailHTML}</div>
+        </div>`;
+    }).join('');
+
     container.innerHTML = html;
   }).catch(e => {
     container.innerHTML = `<p class="text-red-500 text-center py-10">${T.loadErrorPrefix}${escapeHtml(e.message)}</p>`;

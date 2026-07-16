@@ -300,6 +300,33 @@ const itineraryData = [
   }
 ];
 
+// The hotel field lives per-language (day.en.hotel / day.ja.hotel), not at
+// the top level -- both are always set or unset together, so either can be
+// used as the presence check regardless of the current display language.
+function dayHasHotel(day) {
+  return !!(day.en && day.en.hotel);
+}
+
+// Days that actually render a Choose Hotels button (dayHasHotel true),
+// grouped by shared destination -- e.g. Sigiriya nights are Days 3-5. Used
+// to derive the "same stay" caption span, which must match what's visibly
+// on screen rather than the raw dayToDest mapping (Day 11 also maps to
+// colombo_departure, but its hotel field is null so it never gets a button).
+function computeDestDayGroups() {
+  const groups = {};
+  itineraryData.forEach(day => {
+    if (!dayHasHotel(day)) return;
+    const dest = (typeof dayToDest !== 'undefined') ? dayToDest[day.dayNum] : null;
+    if (!dest) return;
+    (groups[dest] = groups[dest] || []).push(day.dayNum);
+  });
+  return groups;
+}
+const destDayGroups = computeDestDayGroups();
+
+const HOTEL_BTN_CLASS_DEFAULT = 'w-full py-2.5 bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white text-xs font-bold rounded-xl transition-colors shadow-sm flex items-center justify-center gap-2';
+const HOTEL_BTN_CLASS_VOTED = 'w-full py-2.5 bg-white hover:bg-emerald-50 active:bg-emerald-100 text-emerald-600 text-xs font-bold rounded-xl transition-colors shadow-sm border-2 border-emerald-500 flex items-center justify-center gap-2';
+
 // UI Dictionary for static texts
 const staticTextUI = {
   en: {
@@ -313,6 +340,8 @@ const staticTextUI = {
     btnDocs: "Documents",
     btnGroupVotes: "Group Votes",
     btnChooseHotel: "Choose Hotels",
+    btnChooseHotelVoted: "✓ Voted — change",
+    sameStayCaption: (a, b) => `Same stay, Days ${a}–${b}`,
     modalTitleChecklist: "Packing Checklist",
     modalTitleDocs: "Important Documents",
     lblRoute: "Transit Route",
@@ -333,6 +362,8 @@ const staticTextUI = {
     btnDocs: "書類",
     btnGroupVotes: "グループ投票",
     btnChooseHotel: "ホテルを選択",
+    btnChooseHotelVoted: "✓ 投票済み — 変更する",
+    sameStayCaption: (a, b) => `Day ${a}–${b} 共通の宿泊`,
     modalTitleChecklist: "持ち物リスト",
     modalTitleDocs: "重要書類",
     lblRoute: "移動ルート",
@@ -493,6 +524,14 @@ function renderItinerary() {
     // 3. Hotel Section
     let hotelHTML = '';
     if (data.hotel) {
+      const destKey = (typeof dayToDest !== 'undefined') ? dayToDest[day.dayNum] : null;
+      const group = (destKey && destDayGroups[destKey]) || [day.dayNum];
+      const isMultiNight = group.length > 1;
+      const spanCaption = isMultiNight ? uiText.sameStayCaption(Math.min(...group), Math.max(...group)) : '';
+      const hasVoted = !!(destKey && typeof hasAnyVoteForDest === 'function' && hasAnyVoteForDest(destKey));
+      const btnClass = hasVoted ? HOTEL_BTN_CLASS_VOTED : HOTEL_BTN_CLASS_DEFAULT;
+      const btnLabel = hasVoted ? uiText.btnChooseHotelVoted : uiText.btnChooseHotel;
+
       hotelHTML = `
         <div class="mb-4 bg-orange-50/40 border border-orange-100 rounded-[14px] p-3.5 flex items-start gap-3.5">
           <div class="bg-orange-100 text-orange-600 p-2 rounded-xl shrink-0 mt-0.5 shadow-sm">
@@ -503,10 +542,11 @@ function renderItinerary() {
           <div class="w-full">
             <p class="text-[10px] font-bold text-orange-800 uppercase tracking-widest mb-1">${uiText.lblHotel}</p>
             <p class="text-[13px] text-slate-800 leading-relaxed font-semibold mb-3">${data.hotel}</p>
-            <button onclick="openHotelVoting(${day.dayNum})" class="w-full py-2.5 bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white text-xs font-bold rounded-xl transition-colors shadow-sm flex items-center justify-center gap-2">
+            <button id="hotel-vote-btn-${day.dayNum}" onclick="openHotelVoting(${day.dayNum})" class="${btnClass}">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              ${uiText.btnChooseHotel}
+              <span data-btn-label>${btnLabel}</span>
             </button>
+            ${isMultiNight ? `<p class="text-[10px] text-slate-400 font-semibold text-center mt-1.5">${escapeHtml(spanCaption)}</p>` : ''}
           </div>
         </div>
       `;
@@ -541,6 +581,26 @@ function updateStaticGlobalText() {
   
   document.documentElement.lang = currentLang;
   domEls.langText.textContent = currentLang === 'ja' ? 'EN' : 'JA';
+}
+
+// Patches a single day's Choose Hotels button in place (label + color),
+// without rebuilding the itinerary -- rebuilding would reset every
+// accordion back to its default open state.
+function updateHotelButton(dayNum) {
+  const btn = document.getElementById(`hotel-vote-btn-${dayNum}`);
+  if (!btn) return;
+  const destKey = (typeof dayToDest !== 'undefined') ? dayToDest[dayNum] : null;
+  const hasVoted = !!(destKey && typeof hasAnyVoteForDest === 'function' && hasAnyVoteForDest(destKey));
+  const uiText = staticTextUI[currentLang];
+  const label = btn.querySelector('[data-btn-label]');
+  if (label) label.textContent = hasVoted ? uiText.btnChooseHotelVoted : uiText.btnChooseHotel;
+  btn.className = hasVoted ? HOTEL_BTN_CLASS_VOTED : HOTEL_BTN_CLASS_DEFAULT;
+}
+
+function updateAllHotelButtons() {
+  itineraryData.forEach(day => {
+    if (dayHasHotel(day)) updateHotelButton(day.dayNum);
+  });
 }
 
 /**

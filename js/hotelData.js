@@ -2,6 +2,7 @@ const hotelData = {
   "colombo_arrival": [
     {
       "name": "Shangri-La Colombo",
+      "slug": "shangri-la-colombo",
       "japanese_name": "シャングリ・ラ コロンボ",
       "tier": "Premium",
       "tier_japanese": "プレミアム",
@@ -30,6 +31,7 @@ const hotelData = {
     },
     {
       "name": "Amari Colombo, Sri Lanka",
+      "slug": "amari-colombo-sri-lanka",
       "japanese_name": "アマリ コロンボ スリランカ",
       "tier": "Standard",
       "tier_japanese": "スタンダード",
@@ -58,6 +60,7 @@ const hotelData = {
     },
     {
       "name": "Granbell Hotel Colombo",
+      "slug": "granbell-hotel-colombo",
       "japanese_name": "グランベル ホテル コロンボ",
       "tier": "Premium",
       "tier_japanese": "プレミアム",
@@ -86,6 +89,7 @@ const hotelData = {
     },
     {
       "name": "Mandarina Colombo",
+      "slug": "mandarina-colombo",
       "japanese_name": "マンダリナ コロンボ",
       "tier": "Standard",
       "tier_japanese": "スタンダード",
@@ -114,6 +118,7 @@ const hotelData = {
     },
     {
       "name": "Tarshish Villa - Colombo",
+      "slug": "tarshish-villa-colombo",
       "japanese_name": "タルシシュ ヴィラ - コロンボ",
       "tier": "Economy",
       "tier_japanese": "エコノミー",
@@ -141,6 +146,7 @@ const hotelData = {
     },
     {
       "name": "Orion City Hotel",
+      "slug": "orion-city-hotel",
       "japanese_name": "オリオン シティ ホテル",
       "tier": "Economy",
       "tier_japanese": "エコノミー",
@@ -171,6 +177,7 @@ const hotelData = {
   "colombo_departure": [
     {
       "name": "Hilton Colombo Residence",
+      "slug": "hilton-colombo-residence",
       "japanese_name": "ヒルトン コロンボ レジデンス",
       "tier": "Standard",
       "tier_japanese": "スタンダード",
@@ -199,6 +206,7 @@ const hotelData = {
     },
     {
       "name": "Radisson Hotel Colombo",
+      "slug": "radisson-hotel-colombo",
       "japanese_name": "ラディソン ホテル コロンボ",
       "tier": "Standard",
       "tier_japanese": "スタンダード",
@@ -227,6 +235,7 @@ const hotelData = {
     },
     {
       "name": "C 1 Colombo Fort",
+      "slug": "c-1-colombo-fort",
       "japanese_name": "シーワン コロンボ フォート",
       "tier": "Economy",
       "tier_japanese": "エコノミー",
@@ -255,6 +264,7 @@ const hotelData = {
     },
     {
       "name": "Srilax",
+      "slug": "srilax",
       "japanese_name": "スリラックス",
       "tier": "Economy",
       "tier_japanese": "エコノミー",
@@ -282,6 +292,7 @@ const hotelData = {
     },
     {
       "name": "Marino Beach Colombo",
+      "slug": "marino-beach-colombo",
       "japanese_name": "マリーノ ビーチ コロンボ",
       "tier": "Premium",
       "tier_japanese": "プレミアム",
@@ -310,6 +321,7 @@ const hotelData = {
     },
     {
       "name": "Cinnamon Lakeside",
+      "slug": "cinnamon-lakeside",
       "japanese_name": "シナモン レイクサイド",
       "tier": "Premium",
       "tier_japanese": "プレミアム",
@@ -340,6 +352,7 @@ const hotelData = {
   "kandy": [
     {
       "name": "360 Viewpoint by Queens Mount",
+      "slug": "360-viewpoint-by-queens-mount",
       "japanese_name": "360 ビューポイント バイ クイーンズ マウント",
       "tier": "Economy",
       "tier_japanese": "エコノミー",
@@ -368,6 +381,7 @@ const hotelData = {
     },
     {
       "name": "Eagle Regency Hotel",
+      "slug": "eagle-regency-hotel",
       "japanese_name": "イーグル リージェンシー ホテル",
       "tier": "Economy",
       "tier_japanese": "エコノミー",
@@ -396,6 +410,7 @@ const hotelData = {
     },
     {
       "name": "Cinnamon Citadel Kandy",
+      "slug": "cinnamon-citadel-kandy",
       "japanese_name": "シナモン シタデル キャンディ",
       "tier": "Standard",
       "tier_japanese": "スタンダード",
@@ -424,6 +439,7 @@ const hotelData = {
     },
     {
       "name": "Radisson Hotel Kandy",
+      "slug": "radisson-hotel-kandy",
       "japanese_name": "ラディソン ホテル キャンディ",
       "tier": "Standard",
       "tier_japanese": "スタンダード",
@@ -452,6 +468,7 @@ const hotelData = {
     },
     {
       "name": "Mountbatten Bungalow- Thema Collection",
+      "slug": "mountbatten-bungalow-thema-collection",
       "japanese_name": "マウントバッテン バンガロー - テーマ コレクション",
       "tier": "Premium",
       "tier_japanese": "プレミアム",
@@ -480,6 +497,7 @@ const hotelData = {
     },
     {
       "name": "Simpson's Forest - Luxury Boutique Resort & Spa - Kandy",
+      "slug": "simpson-s-forest-luxury-boutique-resort-spa-kandy",
       "japanese_name": "シンプソンズ フォレスト - ラグジュアリー ブティック リゾート ＆ スパ - キャンディ",
       "tier": "Premium",
       "tier_japanese": "プレミアム",
@@ -510,6 +528,7 @@ const hotelData = {
   "nuwara_eliya": [
     {
       "name": "Araliya Green City - Your Gateway to Everything in Nuwara Eliya",
+      "slug": "araliya-green-city-your-gateway-to-everything-in-nuwara-eliya",
       "japanese_name": "アラリヤ グリーン シティ",
       "tier": "Premium",
       "tier_japanese": "プレミアム",
@@ -538,6 +557,7 @@ const hotelData = {
     },
     {
       "name": "Jetwing Broomfield Bungalow",
+      "slug": "jetwing-broomfield-bungalow",
       "japanese_name": "ジェットウィング ブルームフィールド バンガロー",
       "tier": "Premium",
       "tier_japanese": "プレミアム",
@@ -566,6 +586,7 @@ const hotelData = {
     },
     {
       "name": "Winsanda Boutique Bungalow, Nuwara Eliya l Heated Pool & Buffet Dining",
+      "slug": "winsanda-boutique-bungalow-nuwara-eliya-l-heated-pool-buffet-dining",
       "japanese_name": "ウィンサンダ ブティック バンガロー、ヌワラエリヤ",
       "tier": "Standard",
       "tier_japanese": "スタンダード",
@@ -594,6 +615,7 @@ const hotelData = {
     },
     {
       "name": "Yara Nuwara Eliya",
+      "slug": "yara-nuwara-eliya",
       "japanese_name": "ヤラ ヌワラエリヤ",
       "tier": "Standard",
       "tier_japanese": "スタンダード",
@@ -622,6 +644,7 @@ const hotelData = {
     },
     {
       "name": "Cool Cloud Villa",
+      "slug": "cool-cloud-villa",
       "japanese_name": "クール クラウド ヴィラ",
       "tier": "Economy",
       "tier_japanese": "エコノミー",
@@ -650,6 +673,7 @@ const hotelData = {
     },
     {
       "name": "Wonder hills",
+      "slug": "wonder-hills",
       "japanese_name": "ワンダー ヒルズ",
       "tier": "Economy",
       "tier_japanese": "エコノミー",
@@ -679,6 +703,7 @@ const hotelData = {
   "sigiriya": [
     {
       "name": "Tepraas Sigiriya",
+      "slug": "tepraas-sigiriya",
       "japanese_name": "テプラース シーギリヤ",
       "tier": "Standard",
       "tier_japanese": "スタンダード",
@@ -706,6 +731,7 @@ const hotelData = {
     },
     {
       "name": "Cinnamon Lodge Habarana",
+      "slug": "cinnamon-lodge-habarana",
       "japanese_name": "シナモン ロッジ ハバラナ",
       "tier": "Premium",
       "tier_japanese": "プレミアム",
@@ -734,6 +760,7 @@ const hotelData = {
     },
     {
       "name": "Pinthaliya Resort",
+      "slug": "pinthaliya-resort",
       "japanese_name": "ピンタリヤ リゾート",
       "tier": "Standard",
       "tier_japanese": "スタンダード",
@@ -762,6 +789,7 @@ const hotelData = {
     },
     {
       "name": "Sigiriya Jungles Resort & Spa",
+      "slug": "sigiriya-jungles-resort-spa",
       "japanese_name": "シーギリヤ ジャングルズ リゾート ＆ スパ",
       "tier": "Premium",
       "tier_japanese": "プレミアム",
@@ -790,6 +818,7 @@ const hotelData = {
     },
     {
       "name": "Sandila Nivasa",
+      "slug": "sandila-nivasa",
       "japanese_name": "サンディラ ニヴァサ",
       "tier": "Economy",
       "tier_japanese": "エコノミー",
@@ -817,6 +846,7 @@ const hotelData = {
     },
     {
       "name": "Tropicara Resort",
+      "slug": "tropicara-resort",
       "japanese_name": "トロピカラ リゾート",
       "tier": "Economy",
       "tier_japanese": "エコノミー",
@@ -846,6 +876,7 @@ const hotelData = {
   "yala": [
     {
       "name": "Aqua Hotel Yala",
+      "slug": "aqua-hotel-yala",
       "japanese_name": "アクア ホテル ヤラ",
       "tier": "Economy",
       "tier_japanese": "エコノミー",
@@ -874,6 +905,7 @@ const hotelData = {
     },
     {
       "name": "Blue Sky Hotel Yala",
+      "slug": "blue-sky-hotel-yala",
       "japanese_name": "ブルー スカイ ホテル ヤラ",
       "tier": "Economy",
       "tier_japanese": "エコノミー",
@@ -901,6 +933,7 @@ const hotelData = {
     },
     {
       "name": "Yala Villa",
+      "slug": "yala-villa",
       "japanese_name": "ヤラ ヴィラ",
       "tier": "Standard",
       "tier_japanese": "スタンダード",
@@ -929,6 +962,7 @@ const hotelData = {
     },
     {
       "name": "Enchanted Escapes Yala",
+      "slug": "enchanted-escapes-yala",
       "japanese_name": "エンチャンテッド エスケープス ヤラ",
       "tier": "Standard",
       "tier_japanese": "スタンダード",
@@ -956,6 +990,7 @@ const hotelData = {
     },
     {
       "name": "Wild Coast Tented Lodge - Relais and Chateaux - All Inclusive",
+      "slug": "wild-coast-tented-lodge-relais-and-chateaux-all-inclusive",
       "japanese_name": "ワイルド コースト テンテッド ロッジ - ルレ・エ・シャトー - オールインクルーシブ",
       "tier": "Premium",
       "tier_japanese": "プレミアム",
@@ -984,6 +1019,7 @@ const hotelData = {
     },
     {
       "name": "Jetwing Yala",
+      "slug": "jetwing-yala",
       "japanese_name": "ジェットウィング ヤラ",
       "tier": "Premium",
       "tier_japanese": "プレミアム",
