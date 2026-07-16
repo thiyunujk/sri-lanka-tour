@@ -4131,922 +4131,142 @@ const hotelData = {
   ],
   "yala": [
     {
-      "name": "Wild Coast Tented Lodge",
-      "japanese_name": "ワイルド コースト テンティッド ロッジ",
+      "name": "Aqua Hotel Yala",
+      "japanese_name": "アクワ ホテル ヤーラ",
+      "tier": "Economy",
+      "tier_japanese": "エコノミー",
+      "star_rating": 3,
+      "is_new": false,
+      "room_config": "Deluxe Double Room 3 rooms",
+      "price_base": 25682,
+      "price_taxes": 2825,
+      "price_total": 28507,
+      "currency": "JPY",
+      "review_score": 8.0,
+      "cancellation": {
+        "free": true,
+        "deadline": "2026-08-17",
+        "raw": "Free cancellation before 18:00 on 17 August 2026"
+      },
+      "booking_url": "https://www.booking.com/hotel/lk/aqua-yala-yala3.en-gb.html?checkin=2026-08-17&checkout=2026-08-18&group_adults=5&no_rooms=3&group_children=0",
+      "short_description_en": "Comfortable Accommodations: Aqua Hotel Yala in Yala offers family rooms with air-conditioning, private bathrooms, and free WiFi. Each room includes a TV and electric kettle for added convenience.",
+      "long_note_en": "Comfortable Accommodations: Aqua Hotel Yala in Yala offers family rooms with air-conditioning, private bathrooms, and free WiFi. Each room includes a TV and electric kettle for added convenience.\n\nDining Experience: The family-friendly restaurant serves British, Indian, Russian, local, Asian, European, and barbecue grill cuisines. Guests can enjoy lunch and dinner with halal, vegetarian, gluten-free, and dairy-free options.\n\nLeisure Facilities: The hotel features a swimming pool with a view, a lush garden, and an outdoor seating area. Additional amenities include a lounge, 24-hour front desk, and free on-site private parking.\n\nLocal Attractions: Kirinda Beach is a 15-minute walk away, while Tissa Wewa lies 8 km from the property. Other attractions include Bundala Bird Sanctuary (23 km) and Kirinda Temple (4.5 km). Weerawila Airport is 17 km distant.",
+      "images": {
+        "exterior_image": ""
+      },
+      "image_source": "none",
+      "verified": true,
+      "availability_checked": "2026-07-16"
+    },
+    {
+      "name": "Blue Sky Hotel Yala",
+      "japanese_name": "ブウエ スカイ ホテル ヤーラ",
+      "tier": "Economy",
+      "tier_japanese": "エコノミー",
+      "is_new": false,
+      "room_config": "Deluxe Triple Room 2 rooms, Deluxe Double Room with Balcony 1 room",
+      "price_base": 23347,
+      "price_taxes": 2335,
+      "price_total": 25682,
+      "currency": "JPY",
+      "review_score": 8.3,
+      "cancellation": {
+        "free": true,
+        "deadline": "2026-08-16",
+        "raw": "Free cancellation before 16 August 2026"
+      },
+      "booking_url": "https://www.booking.com/hotel/lk/blue-sky-yala.en-gb.html?checkin=2026-08-17&checkout=2026-08-18&group_adults=5&no_rooms=3&group_children=0",
+      "short_description_en": "Comfortable Accommodations: Blue Sky Hotel Yala in Yala offers a garden and terrace with free WiFi. Guests enjoy air-conditioning, balconies with garden or lake views, and private bathrooms with bidets.",
+      "long_note_en": "Comfortable Accommodations: Blue Sky Hotel Yala in Yala offers a garden and terrace with free WiFi. Guests enjoy air-conditioning, balconies with garden or lake views, and private bathrooms with bidets.\n\nConvenient Facilities: The guest house provides private check-in and check-out, a 24-hour front desk, daily housekeeping, and free on-site parking. Additional amenities include an outdoor seating area, bicycle parking, and room service.\n\nDining Experience: A full English or Irish breakfast is served daily. The dining area includes a work desk and TV, ensuring a pleasant stay.\n\nLocal Attractions: Located 3 km from Tissa Wewa and 28 km from Bundala Bird Sanctuary, the hotel is also close to Tissamaharama Raja Maha Vihara (2.7 km) and Ranminitenna Tele Cinema Village (5 km). Mattala Rajapaksa International Airport is 30 km away.",
+      "images": {
+        "exterior_image": ""
+      },
+      "image_source": "none",
+      "verified": true,
+      "availability_checked": "2026-07-16"
+    },
+    {
+      "name": "Yala Villa",
+      "japanese_name": "ヤーラ ヴィラ",
+      "tier": "Standard",
+      "tier_japanese": "スタンダード",
+      "star_rating": 3,
+      "is_new": false,
+      "room_config": "Deluxe Double Room 2 rooms, Standard Double Room 1 rooms",
+      "price_base": 44587,
+      "price_taxes": 0,
+      "price_total": 44587,
+      "currency": "JPY",
+      "review_score": 8.4,
+      "cancellation": {
+        "free": true,
+        "deadline": "2026-07-18",
+        "raw": "Free cancellation before 18 July 2026"
+      },
+      "booking_url": "https://www.booking.com/hotel/lk/yala-villa.en-gb.html?checkin=2026-08-17&checkout=2026-08-18&group_adults=5&no_rooms=3&group_children=0",
+      "short_description_en": "Essential Facilities: Yala Villa in Yala offers a sun terrace, garden, outdoor swimming pool, and free WiFi in public areas. Private check-in and check-out services, a 24-hour front desk, and free on-site parking ensure a comfortable stay.",
+      "long_note_en": "Essential Facilities: Yala Villa in Yala offers a sun terrace, garden, outdoor swimming pool, and free WiFi in public areas. Private check-in and check-out services, a 24-hour front desk, and free on-site parking ensure a comfortable stay.\n\nComfortable Accommodations: Rooms feature air-conditioning, private bathrooms, garden views, and amenities such as free toiletries, showers, and wardrobes. Additional facilities include a lounge, outdoor seating area, and electric vehicle charging station.\n\nDining Options: Breakfast includes vegetarian and Asian options with local specialities, warm dishes, juice, and fruits. Room service and breakfast in the room cater to diverse dietary needs.\n\nNearby Attractions: Kirinda Beach is a 14-minute walk away, Kirinda Temple 1.8 km, and Tissa Wewa 12 km from the property. Mattala Rajapaksa International Airport is 39 km distant. Highly rated by guests.",
+      "images": {
+        "exterior_image": ""
+      },
+      "image_source": "none",
+      "verified": true,
+      "availability_checked": "2026-07-16"
+    },
+    {
+      "name": "Enchanted Escapes Yala",
+      "japanese_name": "エンクハンテド エスカペス ヤーラ",
+      "tier": "Standard",
+      "tier_japanese": "スタンダード",
+      "is_new": false,
+      "room_config": "Tent 3 rooms",
+      "price_base": 65554,
+      "price_taxes": 7211,
+      "price_total": 72765,
+      "currency": "JPY",
+      "review_score": 9.7,
+      "cancellation": {
+        "free": true,
+        "deadline": "2026-08-03",
+        "raw": "Free cancellation before 3 August 2026"
+      },
+      "booking_url": "https://www.booking.com/hotel/lk/enchanted-escapes-yala.en-gb.html?checkin=2026-08-17&checkout=2026-08-18&group_adults=5&no_rooms=3&group_children=0",
+      "short_description_en": "Elegant Accommodation: Enchanted Escapes Yala in Yala offers luxury tents with sea views, air-conditioning, and private bathrooms. Each tent features a terrace, garden, and free WiFi, ensuring a comfortable stay.",
+      "long_note_en": "Elegant Accommodation: Enchanted Escapes Yala in Yala offers luxury tents with sea views, air-conditioning, and private bathrooms. Each tent features a terrace, garden, and free WiFi, ensuring a comfortable stay.\n\nExceptional Facilities: Guests can enjoy a shuttle service, outdoor fireplace, and outdoor seating area. Additional amenities include barbecue facilities, picnic area, family rooms, and themed dinner nights.\n\nDelicious Breakfast: A variety of breakfast options are available, including continental, American, full English/Irish, vegetarian, and Asian. Local specialities, juice, and fruits are served daily.\n\nExplore the Area: Located 18 km from Tissa Wewa and 9 km from Kirinda Temple, the property is also close to Bundala Bird Sanctuary (33 km) and Weerawila Airport (24 km). Activities include film nights, walking tours, and hiking.",
+      "images": {
+        "exterior_image": ""
+      },
+      "image_source": "none",
+      "verified": true,
+      "availability_checked": "2026-07-16"
+    },
+    {
+      "name": "Wild Coast Tented Lodge - Relais and Chateaux - All Inclusive",
+      "japanese_name": "ワイルド コースト テンティッド ロッジ - レアイス アンド クハテアウクス - ア インクウスイヴ",
       "tier": "Premium",
       "tier_japanese": "プレミアム",
       "star_rating": 5,
-      "address": "Wild Coast Tented Lodge Address, Yala",
-      "twin_room_price": 30981,
-      "single_room_price": 23000,
-      "group_total_price": 84962,
+      "is_new": false,
+      "room_config": "Cocoon Suite with One Free Game Drive 1 room, Cocoon Pool Suite with One Free Game Drive 2 rooms",
+      "price_base": 582129,
+      "price_taxes": 180344,
+      "price_total": 762473,
       "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
+      "review_score": 9.5,
+      "cancellation": {
+        "free": false,
+        "deadline": null,
+        "raw": "Non-refundable Pay the property before arrival"
       },
-      "booking_rating": 8.8,
-      "google_rating": 4.6,
-      "official_website": "https://example.com/wildcoasttentedlodge",
-      "booking_url": "https://www.booking.com/hotel/lk/wild-coast-tented-lodge.html",
-      "agoda_url": "https://www.agoda.com/wild-coast-tented-lodge/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Wild+Coast+Tented+Lodge",
-      "short_description_en": "A beautiful premium option in Yala.",
-      "short_description_ja": "ヤーラ地区にある快適なPremiumクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
+      "booking_url": "https://www.booking.com/hotel/lk/wild-coast-tented-lodge.en-gb.html?checkin=2026-08-17&checkout=2026-08-18&group_adults=5&no_rooms=3&group_children=0",
+      "short_description_en": "Experience world-class service at Wild Coast Tented Lodge - Relais and Chateaux - All Inclusive\nWild Coast Tented Lodge - Relais and Chateaux - All Inclusive is adjacent to the famous Yala National Park, renowned for its dense leopard population. This luxury tented camp is situated where the jungle meets a pristine beach, overlooking the blue waters of the Indian Ocean.",
+      "long_note_en": "Experience world-class service at Wild Coast Tented Lodge - Relais and Chateaux - All Inclusive\nWild Coast Tented Lodge - Relais and Chateaux - All Inclusive is adjacent to the famous Yala National Park, renowned for its dense leopard population. This luxury tented camp is situated where the jungle meets a pristine beach, overlooking the blue waters of the Indian Ocean.\n\nWild Coast Lodge’s design uses arched fabric structures that allows the tents to take on the shape and colour of the rocks and boulders that lay scattered nearby, whilst a clever layout in the shape of a leopard’s paw print alludes to the area’s most famous resident. While the main buildings, made of bamboo, blend in with the distinctive rock formations of Yala, the air-conditioned tents offer state-of-the art amenities.\n\nThe open-air bamboo-clad Ten Tuskers bar and Dining Pavilion wrap around the resort’s free-form swimming pool. Guests can enjoy creative daily-changing menus of authentic Sri Lankan cuisine in the restaurant, as well as sundowner cocktails and picnics al fresco on the sand dunes, watching dusk settle over the Indian Ocean. Guests learn about the wildlife in the park and watch documentaries in the library.\n\nThe property offers vehicles to tour the quietest corners of Yala National Park and  expert naturalist guides talk guests through the incredible diversity. The Sanctuary Spa borders pristine ocean and dense bush and uses native Sri Lankan ingredients, Ceylon Tea and Ceylon Cinnamon.",
       "images": {
         "exterior_image": ""
       },
-      "image_source": "none"
-    },
-    {
-      "name": "Jetwing Yala",
-      "japanese_name": "ジェットウィング ヤーラ",
-      "tier": "Premium",
-      "tier_japanese": "プレミアム",
-      "star_rating": 5,
-      "address": "Jetwing Yala Address, Yala",
-      "twin_room_price": 26000,
-      "single_room_price": 18000,
-      "group_total_price": 70000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.8,
-      "google_rating": 4.6,
-      "official_website": "https://example.com/jetwingyala",
-      "booking_url": "https://www.booking.com/hotel/lk/jetwing-yala.html",
-      "agoda_url": "https://www.agoda.com/jetwing-yala/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Jetwing+Yala",
-      "short_description_en": "A beautiful premium option in Yala.",
-      "short_description_ja": "ヤーラ地区にある快適なPremiumクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Cinnamon Wild Yala",
-      "japanese_name": "シナモン ワイルド ヤーラ",
-      "tier": "Premium",
-      "tier_japanese": "プレミアム",
-      "star_rating": 4,
-      "address": "Cinnamon Wild Yala Address, Yala",
-      "twin_room_price": 24000,
-      "single_room_price": 17000,
-      "group_total_price": 65000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.8,
-      "google_rating": 4.6,
-      "official_website": "https://example.com/cinnamonwildyala",
-      "booking_url": "https://www.booking.com/hotel/lk/cinnamon-wild-yala.html",
-      "agoda_url": "https://www.agoda.com/cinnamon-wild-yala/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Cinnamon+Wild+Yala",
-      "short_description_en": "A beautiful premium option in Yala.",
-      "short_description_ja": "ヤーラ地区にある快適なPremiumクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Hilton Yala Resort",
-      "japanese_name": "ヒルトン ヤーラ リゾート",
-      "tier": "Premium",
-      "tier_japanese": "プレミアム",
-      "star_rating": 5,
-      "address": "Hilton Yala Resort Address, Yala",
-      "twin_room_price": 20508,
-      "single_room_price": 15500,
-      "group_total_price": 56516,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.8,
-      "google_rating": 4.6,
-      "official_website": "https://example.com/hiltonyalaresort",
-      "booking_url": "https://www.booking.com/hotel/lk/hilton-yala-resort.html",
-      "agoda_url": "https://www.agoda.com/hilton-yala-resort/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Hilton+Yala+Resort",
-      "short_description_en": "A beautiful premium option in Yala.",
-      "short_description_ja": "ヤーラ地区にある快適なPremiumクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Uga Chena Huts Yala",
-      "japanese_name": "ウガ チェナ ハッツ ヤーラ",
-      "tier": "Premium",
-      "tier_japanese": "プレミアム",
-      "star_rating": 5,
-      "address": "Uga Chena Huts Yala Address, Yala",
-      "twin_room_price": 85000,
-      "single_room_price": 60000,
-      "group_total_price": 230000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.8,
-      "google_rating": 4.6,
-      "official_website": "https://example.com/ugachenahutsyala",
-      "booking_url": "https://www.booking.com/hotel/lk/uga-chena-huts-yala.html",
-      "agoda_url": "https://www.agoda.com/uga-chena-huts-yala/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Uga+Chena+Huts+Yala",
-      "short_description_en": "A beautiful premium option in Yala.",
-      "short_description_ja": "ヤーラ地区にある快適なPremiumクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Yala Safari Camping",
-      "japanese_name": "ヤーラ サファリ キャンピング",
-      "tier": "Premium",
-      "tier_japanese": "プレミアム",
-      "star_rating": 4,
-      "address": "Yala Safari Camping Address, Yala",
-      "twin_room_price": 38000,
-      "single_room_price": 28000,
-      "group_total_price": 104000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": true,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.8,
-      "google_rating": 4.6,
-      "official_website": "https://example.com/yalasafaricamping",
-      "booking_url": "https://www.booking.com/hotel/lk/yala-safari-camping.html",
-      "agoda_url": "https://www.agoda.com/yala-safari-camping/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Yala+Safari+Camping",
-      "short_description_en": "A beautiful premium option in Yala.",
-      "short_description_ja": "ヤーラ地区にある快適なPremiumクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Kithala Resort",
-      "japanese_name": "キタラ リゾート",
-      "tier": "Standard",
-      "tier_japanese": "スタンダード",
-      "star_rating": 4,
-      "address": "Kithala Resort Address, Yala",
-      "twin_room_price": 12000,
-      "single_room_price": 9000,
-      "group_total_price": 33000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.2,
-      "google_rating": 4.3,
-      "official_website": "https://example.com/kithalaresort",
-      "booking_url": "https://www.booking.com/hotel/lk/kithala-resort.html",
-      "agoda_url": "https://www.agoda.com/kithala-resort/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Kithala+Resort",
-      "short_description_en": "A beautiful standard option in Yala.",
-      "short_description_ja": "ヤーラ地区にある快適なStandardクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Oak Ray Wild Yala",
-      "japanese_name": "オークレイ ワイルド ヤーラ",
-      "tier": "Standard",
-      "tier_japanese": "スタンダード",
-      "star_rating": 4,
-      "address": "Oak Ray Wild Yala Address, Yala",
-      "twin_room_price": 11000,
-      "single_room_price": 8500,
-      "group_total_price": 30500,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.2,
-      "google_rating": 4.3,
-      "official_website": "https://example.com/oakraywildyala",
-      "booking_url": "https://www.booking.com/hotel/lk/oak-ray-wild-yala.html",
-      "agoda_url": "https://www.agoda.com/oak-ray-wild-yala/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Oak+Ray+Wild+Yala",
-      "short_description_en": "A beautiful standard option in Yala.",
-      "short_description_ja": "ヤーラ地区にある快適なStandardクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Yala Adventure",
-      "japanese_name": "ヤーラ アドベンチャー",
-      "tier": "Standard",
-      "tier_japanese": "スタンダード",
-      "star_rating": 3,
-      "address": "Yala Adventure Address, Yala",
-      "twin_room_price": 10000,
-      "single_room_price": 7500,
-      "group_total_price": 27500,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.2,
-      "google_rating": 4.3,
-      "official_website": "https://example.com/yalaadventure",
-      "booking_url": "https://www.booking.com/hotel/lk/yala-adventure.html",
-      "agoda_url": "https://www.agoda.com/yala-adventure/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Yala+Adventure",
-      "short_description_en": "A beautiful standard option in Yala.",
-      "short_description_ja": "ヤーラ地区にある快適なStandardクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Tissamaharama Resort",
-      "japanese_name": "ティッサマハラーマ リゾート",
-      "tier": "Standard",
-      "tier_japanese": "スタンダード",
-      "star_rating": 3,
-      "address": "Tissamaharama Resort Address, Yala",
-      "twin_room_price": 9500,
-      "single_room_price": 7000,
-      "group_total_price": 26000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.2,
-      "google_rating": 4.3,
-      "official_website": "https://example.com/tissamaharamaresort",
-      "booking_url": "https://www.booking.com/hotel/lk/tissamaharama-resort.html",
-      "agoda_url": "https://www.agoda.com/tissamaharama-resort/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Tissamaharama+Resort",
-      "short_description_en": "A beautiful standard option in Yala.",
-      "short_description_ja": "ヤーラ地区にある快適なStandardクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Hotel Chandrika",
-      "japanese_name": "ホテル チャンドリカ",
-      "tier": "Standard",
-      "tier_japanese": "スタンダード",
-      "star_rating": 4,
-      "address": "Hotel Chandrika Address, Yala",
-      "twin_room_price": 11500,
-      "single_room_price": 8000,
-      "group_total_price": 31000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.2,
-      "google_rating": 4.3,
-      "official_website": "https://example.com/hotelchandrika",
-      "booking_url": "https://www.booking.com/hotel/lk/hotel-chandrika.html",
-      "agoda_url": "https://www.agoda.com/hotel-chandrika/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Hotel+Chandrika",
-      "short_description_en": "A beautiful standard option in Yala.",
-      "short_description_ja": "ヤーラ地区にある快適なStandardクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Priyankara Hotel",
-      "japanese_name": "プリヤンカラ ホテル",
-      "tier": "Standard",
-      "tier_japanese": "スタンダード",
-      "star_rating": 3,
-      "address": "Priyankara Hotel Address, Yala",
-      "twin_room_price": 10500,
-      "single_room_price": 7800,
-      "group_total_price": 28800,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": true,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 8.2,
-      "google_rating": 4.3,
-      "official_website": "https://example.com/priyankarahotel",
-      "booking_url": "https://www.booking.com/hotel/lk/priyankara-hotel.html",
-      "agoda_url": "https://www.agoda.com/priyankara-hotel/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Priyankara+Hotel",
-      "short_description_en": "A beautiful standard option in Yala.",
-      "short_description_ja": "ヤーラ地区にある快適なStandardクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Gem River Edge Eco Home",
-      "japanese_name": "ジェム リバー エッジ エコ ホーム",
-      "tier": "Economy",
-      "tier_japanese": "エコノミー",
-      "star_rating": 2,
-      "address": "Gem River Edge Eco Home Address, Yala",
-      "twin_room_price": 6000,
-      "single_room_price": 4500,
-      "group_total_price": 16500,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": false,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 7.8,
-      "google_rating": 4.0,
-      "official_website": "https://example.com/gemriveredgeecohome",
-      "booking_url": "https://www.booking.com/hotel/lk/gem-river-edge-eco-home.html",
-      "agoda_url": "https://www.agoda.com/gem-river-edge-eco-home/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Gem+River+Edge+Eco+Home",
-      "short_description_en": "A beautiful economy option in Yala.",
-      "short_description_ja": "ヤーラ地区にある快適なEconomyクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Elephant Lake Yala",
-      "japanese_name": "エレファント レイク ヤーラ",
-      "tier": "Economy",
-      "tier_japanese": "エコノミー",
-      "star_rating": 3,
-      "address": "Elephant Lake Yala Address, Yala",
-      "twin_room_price": 5500,
-      "single_room_price": 4000,
-      "group_total_price": 15000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": false,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 7.8,
-      "google_rating": 4.0,
-      "official_website": "https://example.com/elephantlakeyala",
-      "booking_url": "https://www.booking.com/hotel/lk/elephant-lake-yala.html",
-      "agoda_url": "https://www.agoda.com/elephant-lake-yala/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Elephant+Lake+Yala",
-      "short_description_en": "A beautiful economy option in Yala.",
-      "short_description_ja": "ヤーラ地区にある快適なEconomyクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Yala Caravan Village",
-      "japanese_name": "ヤーラ キャラバン ヴィレッジ",
-      "tier": "Economy",
-      "tier_japanese": "エコノミー",
-      "star_rating": 3,
-      "address": "Yala Caravan Village Address, Yala",
-      "twin_room_price": 5000,
-      "single_room_price": 3800,
-      "group_total_price": 13800,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": false,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 7.8,
-      "google_rating": 4.0,
-      "official_website": "https://example.com/yalacaravanvillage",
-      "booking_url": "https://www.booking.com/hotel/lk/yala-caravan-village.html",
-      "agoda_url": "https://www.agoda.com/yala-caravan-village/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Yala+Caravan+Village",
-      "short_description_en": "A beautiful economy option in Yala.",
-      "short_description_ja": "ヤーラ地区にある快適なEconomyクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Yala Peace Cottage",
-      "japanese_name": "ヤーラ ピース コテージ",
-      "tier": "Economy",
-      "tier_japanese": "エコノミー",
-      "star_rating": 2,
-      "address": "Yala Peace Cottage Address, Yala",
-      "twin_room_price": 4800,
-      "single_room_price": 3200,
-      "group_total_price": 12800,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": false,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 7.8,
-      "google_rating": 4.0,
-      "official_website": "https://example.com/yalapeacecottage",
-      "booking_url": "https://www.booking.com/hotel/lk/yala-peace-cottage.html",
-      "agoda_url": "https://www.agoda.com/yala-peace-cottage/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Yala+Peace+Cottage",
-      "short_description_en": "A beautiful economy option in Yala.",
-      "short_description_ja": "ヤーラ地区にある快適なEconomyクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Yala Parkview Hotel",
-      "japanese_name": "ヤーラ パークビュー ホテル",
-      "tier": "Economy",
-      "tier_japanese": "エコノミー",
-      "star_rating": 2,
-      "address": "Yala Parkview Hotel Address, Yala",
-      "twin_room_price": 5200,
-      "single_room_price": 3600,
-      "group_total_price": 14000,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": false,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 7.8,
-      "google_rating": 4.0,
-      "official_website": "https://example.com/yalaparkviewhotel",
-      "booking_url": "https://www.booking.com/hotel/lk/yala-parkview-hotel.html",
-      "agoda_url": "https://www.agoda.com/yala-parkview-hotel/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Yala+Parkview+Hotel",
-      "short_description_en": "A beautiful economy option in Yala.",
-      "short_description_ja": "ヤーラ地区にある快適なEconomyクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
-    },
-    {
-      "name": "Leopard Nest Budget Cabin",
-      "japanese_name": "レオパード ネスト キャビン",
-      "tier": "Economy",
-      "tier_japanese": "エコノミー",
-      "star_rating": 2,
-      "address": "Leopard Nest Budget Cabin Address, Yala",
-      "twin_room_price": 5800,
-      "single_room_price": 4200,
-      "group_total_price": 15800,
-      "currency": "JPY",
-      "yen_conversion_date": "2026-07-10",
-      "check_in_time": "14:00",
-      "check_out_time": "12:00",
-      "facilities": {
-        "breakfast": true,
-        "swimming_pool": false,
-        "wifi": true,
-        "air_conditioning": true,
-        "restaurant": true,
-        "parking": true,
-        "gym": false,
-        "front_desk_24h": true
-      },
-      "booking_rating": 7.8,
-      "google_rating": 4.0,
-      "official_website": "https://example.com/leopardnestbudgetcabin",
-      "booking_url": "https://www.booking.com/hotel/lk/leopard-nest-budget-cabin.html",
-      "agoda_url": "https://www.agoda.com/leopard-nest-budget-cabin/hotel/sri-lanka.html",
-      "google_maps_url": "https://maps.google.com/?q=Leopard+Nest+Budget+Cabin",
-      "short_description_en": "A beautiful economy option in Yala.",
-      "short_description_ja": "ヤーラ地区にある快適なEconomyクラスの宿泊施設。",
-      "highlights_en": [
-        "Great location",
-        "Friendly staff"
-      ],
-      "highlights_ja": [
-        "素晴らしい立地",
-        "親切なスタッフの対応"
-      ],
-      "disadvantages_en": [
-        "Limited parking"
-      ],
-      "disadvantages_ja": [
-        "駐車スペースが限られています"
-      ],
-      "images": {
-        "exterior_image": ""
-      },
-      "image_source": "none"
+      "image_source": "none",
+      "verified": true,
+      "availability_checked": "2026-07-16"
     }
   ]
 };
