@@ -113,6 +113,33 @@ const hotelData = {
       "availability_checked": "2026-07-16"
     },
     {
+      "name": "Tarshish Villa - Colombo",
+      "japanese_name": "タルシスホ ヴィラ - コロンボ",
+      "tier": "Economy",
+      "tier_japanese": "エコノミー",
+      "is_new": false,
+      "room_config": "standard double room 2 rooms",
+      "price_base": 48640,
+      "price_taxes": 0,
+      "price_total": 48640,
+      "currency": "JPY",
+      "review_score": 8.3,
+      "cancellation": {
+        "free": true,
+        "deadline": null,
+        "raw": "Free cancellation anytime"
+      },
+      "booking_url": "https://www.booking.com/hotel/lk/tarshish-villas.en-gb.html?checkin=2026-08-10&checkout=2026-08-12&group_adults=5&no_rooms=3&group_children=0",
+      "short_description_en": "Comfortable Accommodations: Tarshish Villa - Colombo in Colombo offers air-conditioned rooms with private bathrooms, tea and coffee makers, and free WiFi. Each room includes a work desk, seating area, and modern amenities.",
+      "long_note_en": "Comfortable Accommodations: Tarshish Villa - Colombo in Colombo offers air-conditioned rooms with private bathrooms, tea and coffee makers, and free WiFi. Each room includes a work desk, seating area, and modern amenities.\n\nDining Experience: Guests can enjoy a restaurant serving Chinese, seafood, local, Asian, and international cuisines. Breakfast options include continental, à la carte, vegetarian, halal, and Asian. The outdoor seating area provides a pleasant setting.\n\nConvenient Location: Located less than 1 km from Colombo Town Hall and 800 metres from Colombo City Centre Shopping Mall, the property is a 13-minute walk from Kollupitiya Beach. Nearby attractions include Gangaramaya Buddhist Temple and The Independence Square.\n\nGuest Services: The bed and breakfast offers private check-in and check-out, a 24-hour front desk, concierge service, and free off-site parking. Additional services include room service, car hire, and a tour desk.",
+      "images": {
+        "exterior_image": ""
+      },
+      "image_source": "none",
+      "verified": true,
+      "availability_checked": "2026-07-16"
+    },
+    {
       "name": "Orion City Hotel",
       "japanese_name": "オリオン シティ ホテル",
       "tier": "Economy",
@@ -219,6 +246,33 @@ const hotelData = {
       "booking_url": "https://www.booking.com/hotel/lk/c-1-colombo-fort.en-gb.html?checkin=2026-08-18&checkout=2026-08-20&group_adults=5&no_rooms=3&group_children=0",
       "short_description_en": "Comfortable Accommodations: C 1 Colombo Fort in Colombo offers family rooms with air-conditioning, private bathrooms, and balconies. Each room includes a kitchenette, work desk, and free toiletries.",
       "long_note_en": "Comfortable Accommodations: C 1 Colombo Fort in Colombo offers family rooms with air-conditioning, private bathrooms, and balconies. Each room includes a kitchenette, work desk, and free toiletries.\n\nEssential Facilities: Guests enjoy free WiFi, a lounge, lift, 24-hour front desk, shared kitchen, daily housekeeping, outdoor seating, and full-day security. Additional amenities include a sofa bed, TV, and wardrobe.\n\nPrime Location: Located in the city centre, the hotel is a 9-minute walk from Galle Face Beach and 600 metres from Khan Clock Tower. Nearby attractions include Colombo Dutch Museum and One Galle Face.\n\nGuest Highlights: Guests appreciate the central location, bed comfort, and excellent public transport options.",
+      "images": {
+        "exterior_image": ""
+      },
+      "image_source": "none",
+      "verified": true,
+      "availability_checked": "2026-07-16"
+    },
+    {
+      "name": "Srilax",
+      "japanese_name": "スリアクス",
+      "tier": "Economy",
+      "tier_japanese": "エコノミー",
+      "is_new": false,
+      "room_config": "Deluxe Suite 1 room, Deluxe Double Room 1 room",
+      "price_base": 37617,
+      "price_taxes": 1125,
+      "price_total": 38742,
+      "currency": "JPY",
+      "review_score": 8.6,
+      "cancellation": {
+        "free": true,
+        "deadline": "2026-08-17",
+        "raw": "Free cancellation before 17 August 2026"
+      },
+      "booking_url": "https://www.booking.com/hotel/lk/srilax.en-gb.html?checkin=2026-08-18&checkout=2026-08-20&group_adults=5&no_rooms=3&group_children=0",
+      "short_description_en": "Comfortable Accommodations: Srilax in Colombo offers family rooms with air-conditioning, private bathrooms, and garden views. Each room includes a balcony, free toiletries, and a work desk.",
+      "long_note_en": "Comfortable Accommodations: Srilax in Colombo offers family rooms with air-conditioning, private bathrooms, and garden views. Each room includes a balcony, free toiletries, and a work desk.\n\nDining Experience: The modern, family-friendly restaurant serves brunch with British, American, Australian, local, Asian, and international cuisines. Guests can also enjoy the terrace and outdoor seating area.\n\nLeisure Facilities: The property features a garden, terrace, and patio. Additional amenities include a coffee shop, minibar, and free WiFi.\n\nPrime Location: Located 1.9 km from Bambalapitiya Beach and near attractions such as The Independence Square and Gangaramaya Buddhist Temple. Kayaking and canoeing are available in the surroundings.",
       "images": {
         "exterior_image": ""
       },
@@ -1343,6 +1397,34 @@ const hotelData = {
       "image_source": "none",
       "verified": true,
       "availability_checked": "2026-07-16"
+    },
+    {
+      "name": "Simpson's Forest - Luxury Boutique Resort & Spa - Kandy",
+      "japanese_name": "スイムプソンス フォレスト - ラグジュアリー ブティック リゾート ＆ スパ - キャンディ",
+      "tier": "Premium",
+      "tier_japanese": "プレミアム",
+      "star_rating": 5,
+      "is_new": false,
+      "room_config": "Deluxe Tea Room Mountain View - Complimentary Nature Trek 3 rooms, your own words>",
+      "price_base": 106897,
+      "price_taxes": 34630,
+      "price_total": 141527,
+      "currency": "JPY",
+      "review_score": 9.2,
+      "cancellation": {
+        "free": true,
+        "deadline": "2026-08-14",
+        "raw": "Free cancellation before 14 August 2026"
+      },
+      "booking_url": "https://www.booking.com/hotel/lk/simpson-39-s-forest.en-gb.html?checkin=2026-08-15&checkout=2026-08-16&group_adults=5&no_rooms=3&group_children=0",
+      "short_description_en": "Elegant Accommodation: Simpson's Forest - Luxury Boutique Resort & Spa in Kandy offers a 5-star experience with luxurious rooms featuring air-conditioning, private bathrooms, and garden or mountain views. Exceptional Facilities: Guests enjoy spa facilities, a swimming pool with a view, fitness centre, free bicycles, and a lush garden.",
+      "long_note_en": "Elegant Accommodation: Simpson's Forest - Luxury Boutique Resort & Spa in Kandy offers a 5-star experience with luxurious rooms featuring air-conditioning, private bathrooms, and garden or mountain views.\nExceptional Facilities: Guests enjoy spa facilities, a swimming pool with a view, fitness centre, free bicycles, and a lush garden. Additional amenities include a terrace, open-air bath, restaurant, bar, and free WiFi.\nDining Experience: The resort serves a variety of cuisines, including Chinese, American, and Asian, with breakfast options such as continental, American, buffet, and full English. Special dietary menus are available.\nPrime Location: Located 19 km from Victoria Reservoir Kandy Seaplane Base, the hotel is near attractions like Sri Dalada Maligawa and Kandy Royal Botanic Gardens. Free on-site parking and a shuttle service enhance convenience.",
+      "images": {
+        "exterior_image": ""
+      },
+      "image_source": "none",
+      "verified": true,
+      "availability_checked": "2026-07-16"
     }
   ],
   "nuwara_eliya": [
@@ -1451,6 +1533,34 @@ const hotelData = {
       "booking_url": "https://www.booking.com/hotel/lk/yara-nuwara-eliya.en-gb.html?checkin=2026-08-16&checkout=2026-08-17&group_adults=5&no_rooms=3&group_children=0",
       "short_description_en": "Central Location: Yara Nuwara Eliya in Nuwara Eliya offers a central setting with Gregory Lake 3 km away and Hakgala Botanical Garden 10 km from the hotel. Castlereigh Reservoir Seaplane Base is 47 km distant.",
       "long_note_en": "Central Location: Yara Nuwara Eliya in Nuwara Eliya offers a central setting with Gregory Lake 3 km away and Hakgala Botanical Garden 10 km from the hotel. Castlereigh Reservoir Seaplane Base is 47 km distant.\n\nComfortable Accommodations: Rooms feature private bathrooms, city views, and modern amenities including free WiFi, minibars, and work desks. Additional comforts include bathrobes, sofa beds, and interconnected rooms.\n\nDining Options: The hotel provides a restaurant serving Chinese, British, Indian, and international cuisines. Breakfast options include continental, American, buffet, full English/Irish, vegetarian, vegan, halal, gluten-free, and Asian.\n\nGuest Services: Guests benefit from free on-site private parking, a paid airport shuttle service, lift, family rooms, full-day security, and a variety of meal choices.",
+      "images": {
+        "exterior_image": ""
+      },
+      "image_source": "none",
+      "verified": true,
+      "availability_checked": "2026-07-16"
+    },
+    {
+      "name": "Cool Cloud Villa",
+      "japanese_name": "コオ クオウド ヴィラ",
+      "tier": "Economy",
+      "tier_japanese": "エコノミー",
+      "star_rating": 3,
+      "is_new": false,
+      "room_config": "supirior triple room 1 room, superior double room 2 Rooms",
+      "price_base": 11674,
+      "price_taxes": 2451,
+      "price_total": 14125,
+      "currency": "JPY",
+      "review_score": 5.7,
+      "cancellation": {
+        "free": true,
+        "deadline": "2026-08-13",
+        "raw": "Free cancellation before 13 August 2026"
+      },
+      "booking_url": "https://www.booking.com/hotel/lk/cool-cloud-villa-nuwara-eliya.en-gb.html?checkin=2026-08-16&checkout=2026-08-17&group_adults=5&no_rooms=3&group_children=0",
+      "short_description_en": "Comfortable Accommodation: Cool Cloud Villa in Nuwara Eliya offers family rooms with private bathrooms, balconies, and garden or mountain views. Each room includes a kitchenette, work desk, and free WiFi.",
+      "long_note_en": "Comfortable Accommodation: Cool Cloud Villa in Nuwara Eliya offers family rooms with private bathrooms, balconies, and garden or mountain views. Each room includes a kitchenette, work desk, and free WiFi.\n\nDining and Leisure: Guests can enjoy a restaurant serving continental, Ã la carte, full English/Irish, vegetarian, and halal breakfasts. The hotel features a terrace, garden, and outdoor dining area. Free on-site private parking is available.\n\nLocal Attractions: Gregory Lake is 6 km away, Hakgala Botanical Garden 10 km, and Castlereigh Reservoir Seaplane Base 48 km from the property.",
       "images": {
         "exterior_image": ""
       },
@@ -2705,6 +2815,34 @@ const hotelData = {
       "booking_url": "https://www.booking.com/hotel/lk/wild-coast-tented-lodge.en-gb.html?checkin=2026-08-17&checkout=2026-08-18&group_adults=5&no_rooms=3&group_children=0",
       "short_description_en": "Experience world-class service at Wild Coast Tented Lodge - Relais and Chateaux - All Inclusive\nWild Coast Tented Lodge - Relais and Chateaux - All Inclusive is adjacent to the famous Yala National Park, renowned for its dense leopard population. This luxury tented camp is situated where the jungle meets a pristine beach, overlooking the blue waters of the Indian Ocean.",
       "long_note_en": "Experience world-class service at Wild Coast Tented Lodge - Relais and Chateaux - All Inclusive\nWild Coast Tented Lodge - Relais and Chateaux - All Inclusive is adjacent to the famous Yala National Park, renowned for its dense leopard population. This luxury tented camp is situated where the jungle meets a pristine beach, overlooking the blue waters of the Indian Ocean.\n\nWild Coast Lodge’s design uses arched fabric structures that allows the tents to take on the shape and colour of the rocks and boulders that lay scattered nearby, whilst a clever layout in the shape of a leopard’s paw print alludes to the area’s most famous resident. While the main buildings, made of bamboo, blend in with the distinctive rock formations of Yala, the air-conditioned tents offer state-of-the art amenities.\n\nThe open-air bamboo-clad Ten Tuskers bar and Dining Pavilion wrap around the resort’s free-form swimming pool. Guests can enjoy creative daily-changing menus of authentic Sri Lankan cuisine in the restaurant, as well as sundowner cocktails and picnics al fresco on the sand dunes, watching dusk settle over the Indian Ocean. Guests learn about the wildlife in the park and watch documentaries in the library.\n\nThe property offers vehicles to tour the quietest corners of Yala National Park and  expert naturalist guides talk guests through the incredible diversity. The Sanctuary Spa borders pristine ocean and dense bush and uses native Sri Lankan ingredients, Ceylon Tea and Ceylon Cinnamon.",
+      "images": {
+        "exterior_image": ""
+      },
+      "image_source": "none",
+      "verified": true,
+      "availability_checked": "2026-07-16"
+    },
+    {
+      "name": "Jetwing Yala",
+      "japanese_name": "ジェットウィング ヤーラ",
+      "tier": "Premium",
+      "tier_japanese": "プレミアム",
+      "star_rating": 5,
+      "is_new": false,
+      "room_config": "Superior Double Room - 15% off at Thambapanni restaurant 3 rooms",
+      "price_base": 124445,
+      "price_taxes": 37085,
+      "price_total": 161530,
+      "currency": "JPY",
+      "review_score": 8.7,
+      "cancellation": {
+        "free": true,
+        "deadline": "2026-07-18",
+        "raw": "Free cancellation before 18 July 2026"
+      },
+      "booking_url": "https://www.booking.com/hotel/lk/jetwing-yala.en-gb.html?checkin=2026-08-17&checkout=2026-08-18&group_adults=5&no_rooms=3&group_children=0",
+      "short_description_en": "Spread across 38 acres of land, Jetwing Yala features an outdoor pool, a business centre and luxurious rooms located on the borders of Yala National Park. Operating a 24-hour front desk, it provides free parking and offers complimentary Wi-Fi access throughout the property.",
+      "long_note_en": "Spread across 38 acres of land, Jetwing Yala features an outdoor pool, a business centre and luxurious rooms located on the borders of Yala National Park. Operating a 24-hour front desk, it provides free parking and offers complimentary Wi-Fi access throughout the property.\n\nFitted with parquet flooring and four-poster beds, spacious air-conditioned rooms are furnished with a wardrobe, in-room safe, a flat-screen cable TV and sofa seating area. Iron, minibar and tea/coffee making facilities are also included. The large en suite bathroom comes equipped with a hairdryer and hot/cold shower.\n\nAt Jetwing Yala, guests can indulge in a pampering massage at the spa or approach the tour desk for sightseeing and travel arrangements. Luggage storage and laundry are available for convenience.\n\nThe property houses a restaurant, The Dining Room, serving delectable Sri Lankan and Asian cuisine. The Living Room bar and pool bar offers a variety of cocktails and drinks to choose from. Thambapanni is an Asian fusion fine dining restaurant. Room service option is also available.\n\nJetwing Yala is within 35 km from the new Mattala International Airport. Colombo City is approximately a 4-hour drive away.\n\nThe property houses The Restaurant, serving delectable cuisine. The Beach bar and pool bar offer a variety of cocktails and drinks to choose from. Thambapanni is our Asian fusion fine dining restaurant. Additionally, the in-room service option is also available, to cater to your specialized needs.",
       "images": {
         "exterior_image": ""
       },
