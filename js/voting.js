@@ -54,7 +54,9 @@ const votingUI = {
     freeCancelUntil: (monthDay) => `${monthDay}まで無料キャンセル`,
     nonRefundable: '返金不可',
     newProperty: '新規オープン',
-    fewReviewsNote: '※レビュー数少'
+    fewReviewsNote: '※レビュー数少',
+    voteDeadlineBanner: '投票締切: 8月3日（キャンセル無料期限のため）',
+    deadlineWarningChip: '⚠ 締切前に要決定'
   },
   en: {
     choices: ['1st Choice', '2nd Choice', '3rd Choice'],
@@ -97,9 +99,16 @@ const votingUI = {
     freeCancelUntil: (monthDay) => `Free cancel until ${monthDay}`,
     nonRefundable: 'Non-refundable',
     newProperty: 'New property',
-    fewReviewsNote: '※ few reviews'
+    fewReviewsNote: '※ few reviews',
+    voteDeadlineBanner: 'Voting closes Aug 3 (due to free-cancellation deadlines)',
+    deadlineWarningChip: '⚠ Decide before vote close'
   }
 };
+
+// Hotels whose free-cancellation deadline falls on or before this date get
+// an amber warning chip -- the group needs to decide before the hotel's
+// own refund window closes, not just before the trip.
+const VOTE_DEADLINE = '2026-08-03';
 
 // getCurrentLang() is defined in app.js, which loads after this file
 function votingLang() {
@@ -299,6 +308,7 @@ function openHotelVoting(dayNum) {
   openModal('modal-hotel-selection');
   document.getElementById('modal-title-hotel-dest').innerText = getDestName(currentDestKey);
   document.getElementById('modal-subtitle-hotel').textContent = T.hotelModalSubtitle;
+  document.getElementById('vote-deadline-banner-hotel').textContent = T.voteDeadlineBanner;
   ['Premium', 'Standard', 'Economy'].forEach(t => {
     document.getElementById(`tab-${t}`).textContent = T.tierTabs[t];
   });
@@ -370,7 +380,13 @@ function hotelCardHTML(h, lang, T, destKey) {
       cancelChip = `<span class="inline-flex items-center gap-1 bg-red-50 text-red-700 border border-red-200 rounded-full px-2 py-0.5 text-[10px] font-bold">${T.nonRefundable}</span>`;
     }
   }
-  const badgeChips = [verifiedBadge, cancelChip].filter(Boolean).join('');
+  // Free-cancellation deadline lands on or before the group's vote-close
+  // date -- the hotel needs a decision before the vote itself closes, or
+  // its refund window will already be gone.
+  const deadlineWarningChip = (h.cancellation && h.cancellation.free && h.cancellation.deadline && h.cancellation.deadline <= VOTE_DEADLINE)
+    ? `<span class="inline-flex items-center gap-1 bg-amber-50 text-amber-700 border border-amber-200 rounded-full px-2 py-0.5 text-[10px] font-bold">${T.deadlineWarningChip}</span>`
+    : '';
+  const badgeChips = [verifiedBadge, cancelChip, deadlineWarningChip].filter(Boolean).join('');
 
   // New-listing hotels (Booking.com "new" star rating) get a badge in
   // place of stars, since there is no star rating to show.
@@ -533,7 +549,9 @@ function voteHotel(hotelName, choiceLevel) {
 
 function openGroupVotes() {
   openModal('modal-group-votes');
-  document.getElementById('modal-title-group-votes').textContent = votingT().groupVotesTitle;
+  const T = votingT();
+  document.getElementById('modal-title-group-votes').textContent = T.groupVotesTitle;
+  document.getElementById('vote-deadline-banner-group').textContent = T.voteDeadlineBanner;
   renderGroupVotes();
 }
 

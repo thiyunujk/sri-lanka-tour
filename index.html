@@ -134,7 +134,9 @@
         </div>
         <button onclick="closeAllModals()" class="p-2 bg-slate-100 text-slate-500 rounded-full hover:bg-slate-200 transition-colors focus:outline-none"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg></button>
       </div>
-      
+
+      <div id="vote-deadline-banner-hotel" class="px-4 py-2 bg-amber-50 border-b border-amber-100 text-amber-700 text-[11px] font-bold text-center"></div>
+
       <!-- Tier Tabs -->
       <div class="flex px-4 pt-2 border-b border-slate-200">
         <button onclick="switchHotelTier('Premium')" id="tab-Premium" class="flex-1 py-3 text-sm font-semibold border-b-2 border-transparent text-slate-500 transition-colors">プレミアム</button>
@@ -153,6 +155,7 @@
         <h3 class="text-lg font-bold text-slate-800" id="modal-title-group-votes">グループ投票結果</h3>
         <button onclick="closeAllModals()" class="p-2 bg-slate-100 text-slate-500 rounded-full hover:bg-slate-200 transition-colors focus:outline-none"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg></button>
       </div>
+      <div id="vote-deadline-banner-group" class="px-4 py-2 bg-amber-50 border-b border-amber-100 text-amber-700 text-[11px] font-bold text-center"></div>
       <div class="p-5 overflow-y-auto pb-safe flex-1 bg-slate-50" id="group-votes-container">
         <!-- Votes injected here -->
       </div>
