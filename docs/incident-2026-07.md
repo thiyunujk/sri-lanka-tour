@@ -146,3 +146,58 @@ This document should be reviewed and corrected by whoever ran the original sessi
 incident occurred, filling in Sections 1–2 with the first-hand account (what test/tooling was run,
 what production data existed at the time, how the pre-test snapshot and byte-for-byte check were
 actually done). Until then, treat this as an evidence log, not a closed incident report.
+
+---
+
+# Incident 2 — unredacted guide photos committed to a public repo (2026-07-17)
+
+**Status: remediated, with two residual items tracked below. This is a first-hand account —
+written by the same session that caused and then fixed the exposure.**
+
+## What was exposed
+
+A prior task in this same session added 5 photos to `resources/guide/` for the Documents-hub
+guide section: 4 group photos containing unredacted faces of past tour guests and traditional
+Kandyan dancers, and a photo of the guide's physical National Tourist Guide license card showing
+his full license number, category, issue/expiry dates, and a QR code. These were committed
+(`140b785`) and pushed to this repository's public GitHub remote
+(`github.com/thiyunujk/sri-lanka-tour`), and served live via GitHub Pages.
+
+**Exposure window:** from the `140b785` push until the history rewrite below, roughly within the
+same working session (2026-07-17). The repo has been public throughout.
+
+## Remediation performed
+
+1. Redacted all 5 photos in place (separate task, commit `38bafa5`): every face other than the
+   guide's own was pixelated + blurred; every license text field except his name and the
+   "National Tourist Guide" title was blacked out. Verified unreadable at full size before and
+   after committing.
+2. Discovered that overwriting + committing on top does **not** remove the original unredacted
+   blobs from git history — `140b785` remained fetchable via GitHub's raw-content URLs. Flagged
+   this to the project owner rather than treating the redaction commit as sufficient on its own.
+3. With explicit confirmation, ran a full history rewrite:
+   - Backed up the entire repo first: `git clone --mirror . ../sl-trip-backup-before-filter-repo.git`.
+   - Copied the redacted files out to a temp location outside the repo.
+   - `git filter-repo --invert-paths --path resources/guide/ --force` — purged `resources/guide/`
+     from every commit in history. The follow-up redaction commit (`38bafa5`) had touched nothing
+     else, so it became empty and was auto-pruned.
+   - Restored the redacted files as a new commit (`cc7da2e`, "feat: guide photos (redacted)").
+   - Re-added the `origin` remote (filter-repo removes it) and force-pushed `main`.
+4. Verified: `git log --all -- resources/guide/` now shows only `cc7da2e`; `git cat-file -e` on
+   the old commit SHA fails locally ("not a valid object name"); the live site
+   (`thiyunujk.github.io/sri-lanka-tour`) still renders the guide section correctly and serves the
+   redacted images (SHA-256 verified against the redacted files, not the originals).
+
+## Residual items — not fully closed
+
+- **GitHub raw-content caching.** `raw.githubusercontent.com/.../140b785/...` and
+  `.../38bafa5/...` still return HTTP 200 with the *original* content after the force-push. The
+  blob is unreachable from any ref in the repo (confirmed above), but GitHub's CDN/object storage
+  had not yet garbage-collected it at verification time. This can take anywhere from hours to
+  longer, and for a truly sensitive exposure GitHub also offers a support request to force cache
+  purging of specific URLs — worth filing if this needs to be closed faster than GC alone.
+- **The other machine.** The original session that produced the unredacted photos ran on a
+  different, unspecified machine. If that machine (or anywhere else) still has a clone of this
+  repo made before the force-push, `git pull` there will fail to fast-forward (history diverged)
+  and, if force-pulled or merged carelessly, could reintroduce the old history. Any such clone
+  needs to be **deleted and freshly re-cloned** from `origin/main`, not synced.
