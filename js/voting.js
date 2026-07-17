@@ -65,8 +65,12 @@ const votingUI = {
     closeRace: '接戦！',
     seeAllVotes: '全員の投票を見る ▾',
     howToTitle: '使い方 ❔',
+    // Occupancy-dependent -- prepended to howToBullets at render time via
+    // getOccupancy(currentDestKey), since Colombo (4名・2部屋) differs from
+    // every other destination (5名・3部屋).
+    priceDisclaimer: (occ) => `価格は私たちの実際の日程・${occ.adults}名・${occ.rooms}部屋分の実際の総額です（2026年7月中旬に確認済み）。`,
+    colomboOccupancyNote: (occ) => `※ コロンボはカップル2組のみ宿泊（${occ.adults}名・${occ.rooms}部屋）`,
     howToBullets: [
-      '価格は私たちの実際の日程・5人分の実際の総額です（2026年7月中旬に確認済み）。',
       '「Booking.com」ボタンをタップすると最新の価格を確認できます。',
       'プレミアム／スタンダード／エコノミーは星評価ではなく予算帯の目安です。',
       '第1〜第3希望をタップして順位をつけられます。8月3日まで何度でも変更・取り消しができます。',
@@ -125,8 +129,12 @@ const votingUI = {
     closeRace: 'Close race!',
     seeAllVotes: 'See everyone\'s votes ▾',
     howToTitle: 'How to use ❔',
+    // Occupancy-dependent -- prepended to howToBullets at render time via
+    // getOccupancy(currentDestKey), since Colombo (4 guests, 2 rooms) differs
+    // from every other destination (5 guests, 3 rooms).
+    priceDisclaimer: (occ) => `Prices are real, verified totals for our exact dates and ${occ.adults} guests, ${occ.rooms} rooms (checked mid-July 2026).`,
+    colomboOccupancyNote: (occ) => `※ In Colombo, only the 2 couples stay (${occ.adults} guests, ${occ.rooms} rooms)`,
     howToBullets: [
-      "Prices are real, verified totals for our exact dates and group of 5 (checked mid-July 2026).",
       'Tap "Booking.com" on a card to check the current live price.',
       'Premium / Standard / Economy are budget bands, not star ratings.',
       'Tap 1st–3rd Choice to rank your picks — change or remove them anytime until Aug 3.',
@@ -245,22 +253,41 @@ function buildDestDates() {
 
 const destDates = buildDestDates();
 
+// Real sleeping arrangements per destination: in Colombo (both the arrival
+// and departure legs) only the 2 couples stay at the hotel -- the organizer
+// lives in Colombo and sleeps at home -- so those nights are 4 adults / 2
+// rooms, not the full group of 5 / 3 rooms every other destination books.
+// Mirrored in scripts/ingest_curated.py's DEST_OCCUPANCY -- keep both in
+// sync if this ever changes.
+const destOccupancy = {
+  colombo_arrival:   { adults: 4, rooms: 2 },
+  colombo_departure: { adults: 4, rooms: 2 }
+  // all others default to { adults: 5, rooms: 3 } via getOccupancy below
+};
+const DEFAULT_OCCUPANCY = { adults: 5, rooms: 3 };
+
+function getOccupancy(destKey) {
+  return destOccupancy[destKey] || DEFAULT_OCCUPANCY;
+}
+
 // Appends checkin/checkout/group size to a Booking.com URL for verified
 // hotels only (old, unverified booking_urls are known WAF-blocked anyway
 // -- see scripts/url_audit_report.json -- so there's no point dating them).
 // Curated hotels from ingest_curated.py already have these baked in at
 // ingest time (see canonicalize_booking_url there) -- this is a no-op for
-// those, it only fills in dates for anything that isn't pre-canonicalized.
+// those, it only fills in dates (and occupancy) for anything that isn't
+// pre-canonicalized.
 function withBookingDates(url, destKey) {
   if (!url) return url;
   if (url.includes('checkin=')) return url;
   const dates = destDates[destKey];
   if (!dates) return url;
+  const occ = getOccupancy(destKey);
   const params = new URLSearchParams({
     checkin: dates.checkin,
     checkout: dates.checkout,
-    group_adults: '5',
-    no_rooms: '3'
+    group_adults: String(occ.adults),
+    no_rooms: String(occ.rooms)
   });
   const sep = url.includes('?') ? '&' : '?';
   return url + sep + params.toString();
@@ -414,6 +441,7 @@ function openHotelVoting(dayNum) {
     return;
   }
   const T = votingT();
+  const occ = getOccupancy(currentDestKey);
   openModal('modal-hotel-selection');
   document.getElementById('modal-title-hotel-dest').innerText = getDestName(currentDestKey);
   document.getElementById('modal-subtitle-hotel').textContent = T.hotelModalSubtitle;
@@ -422,13 +450,32 @@ function openHotelVoting(dayNum) {
     document.getElementById(`tab-${t}`).textContent = T.tierTabs[t];
   });
 
+  // Couples-only occupancy note: only the two Colombo destinations have a
+  // real occupancy that differs from the group default.
+  const colomboNoteEl = document.getElementById('modal-colombo-note-hotel');
+  const isColombo = currentDestKey === 'colombo_arrival' || currentDestKey === 'colombo_departure';
+  colomboNoteEl.classList.toggle('hidden', !isColombo);
+  colomboNoteEl.textContent = isColombo ? T.colomboOccupancyNote(occ) : '';
+
   document.getElementById('how-to-toggle-label').textContent = T.howToTitle;
-  document.getElementById('how-to-list').innerHTML = T.howToBullets.map(b => `<li>${escapeHtml(b)}</li>`).join('');
+  const howToItems = [T.priceDisclaimer(occ), ...T.howToBullets];
+  document.getElementById('how-to-list').innerHTML = howToItems.map(b => `<li>${escapeHtml(b)}</li>`).join('');
   document.getElementById('how-to-content').classList.add('hidden');
   document.getElementById('how-to-chevron').classList.remove('rotate-180');
 
   currentUserVotes = {};
+  // Modal always opens fresh at the top of the hotel list, not wherever a
+  // previous session's scroll happened to leave off.
+  resetHotelListScroll();
   refreshMyVotes().then(() => switchHotelTier('Premium'));
+}
+
+// The hotel list itself is the scrollable element inside the modal (it's
+// the only flex-1 overflow-y-auto child; the header/how-to/tabs above it
+// are fixed) -- resetting the modal wrapper's scroll would be a no-op.
+function resetHotelListScroll() {
+  const list = document.getElementById('hotel-list-container');
+  if (list) list.scrollTop = 0;
 }
 
 // Fetches this user's votes for the currently open destination ONCE (not a
@@ -463,6 +510,7 @@ function switchHotelTier(tier) {
     }
   });
   renderHotelList();
+  resetHotelListScroll();
 }
 
 // Compact card + hidden expandable detail section for one hotel

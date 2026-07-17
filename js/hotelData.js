@@ -19,7 +19,7 @@ const hotelData = {
         "deadline": null,
         "raw": "Non-refundable"
       },
-      "booking_url": "https://www.booking.com/hotel/lk/shangri-la-colombo.en-gb.html?checkin=2026-08-10&checkout=2026-08-12&group_adults=5&no_rooms=3&group_children=0",
+      "booking_url": "https://www.booking.com/hotel/lk/shangri-la-colombo.en-gb.html?checkin=2026-08-10&checkout=2026-08-12&group_adults=4&no_rooms=2&group_children=0",
       "short_description_en": "Shangri-La Colombo presents a new level of luxury in the city. Located in the heart of the business and entertainment district, the hotel offers the various collection of guestrooms with stunning views of the Indian Ocean, Beira Lake or cityscape.",
       "long_note_en": "Shangri-La Colombo presents a new level of luxury in the city. Located in the heart of the business and entertainment district, the hotel offers the various collection of guestrooms with stunning views of the Indian Ocean, Beira Lake or cityscape. The property has 3 innovative restaurants and 2 bars, and it is Colombo’s largest and stylish event spaces.\n\nSet to be the city’s dining destination, Shangri-La Colombo's restaurants and bars include Capital Bar & Grill, presenting tasty steaks and seafood grills with a wide selection of whisky. Shangri-La Colombo’s signature Chinese restaurant Shang Palace celebrates cuisine steeped in rich tradition and Central, the hotel's vibrant all-day dining restaurant and café which is the elegant addition to Colombo’s dining scene. Sapphyr Lounge is a place to meet with friends and family over simple indulgences. There is a Pool Bar overlooking the Indian Ocean and it is perfect for light refreshments. The hotel also offers direct access to the most extensive international shopping mall in Sri Lanka, Shangri-La Colombo’s own One Galle Face Mall.\n\nChi, The Spa is a place of personal peace and enchantment offering holistic therapies for the body, mind and soul. The Health Club features state-of-the-art fitness equipment and personal trainers to ensure you stay true to your fitness regime when away from home.\n\nDaily buffet breakfast and dinner are served at Central Restaurant.\n\nCo-nnect, Shangri-La Colombo, Colombo’s stylish, new co-working space offers a versatile environment to meet, work and create. These exclusive spaces include private offices, meeting rooms, work pods and individual work stations, and is an inspired alternative to working in a traditional office setting.",
       "images": {
@@ -48,7 +48,7 @@ const hotelData = {
         "deadline": "2026-08-03",
         "raw": "Free cancellation before 3 August 2026"
       },
-      "booking_url": "https://www.booking.com/hotel/lk/amari-colombo-sri-lanka.en-gb.html?checkin=2026-08-10&checkout=2026-08-12&group_adults=5&no_rooms=3&group_children=0",
+      "booking_url": "https://www.booking.com/hotel/lk/amari-colombo-sri-lanka.en-gb.html?checkin=2026-08-10&checkout=2026-08-12&group_adults=4&no_rooms=2&group_children=0",
       "short_description_en": "Get the celebrity treatment with world-class service at Amari Colombo, Sri Lanka\nElegant Accommodation: Amari Colombo in Colombo offers a 5-star experience with a rooftop swimming pool, fitness centre, sun terrace, restaurant, bar, and free WiFi.",
       "long_note_en": "Get the celebrity treatment with world-class service at Amari Colombo, Sri Lanka\nElegant Accommodation: Amari Colombo in Colombo offers a 5-star experience with a rooftop swimming pool, fitness centre, sun terrace, restaurant, bar, and free WiFi.\n\nComfortable Amenities: Guests enjoy private check-in and check-out, a 24-hour front desk, concierge service, and free on-site parking. Additional facilities include a coffee shop, outdoor seating area, and live music.\n\nDining Options: The family-friendly restaurant serves Italian, Thai, and international cuisines with halal, vegetarian, vegan, gluten-free, and other dietary options. Breakfast includes continental, American, and full English/Irish.\n\nPrime Location: Located a 2-minute walk from Kollupitiya Beach and near attractions such as Gangaramaya Buddhist Temple (1.4 km) and Colombo City Centre Shopping Mall (18-minute walk). Guests can enjoy kayaking or canoeing in the surroundings.",
       "images": {
@@ -77,7 +77,7 @@ const hotelData = {
         "deadline": "2026-08-09",
         "raw": "Free cancellation before 9 August 2026"
       },
-      "booking_url": "https://www.booking.com/hotel/lk/granbell-colombo.en-gb.html?checkin=2026-08-10&checkout=2026-08-12&group_adults=5&no_rooms=3&group_children=0",
+      "booking_url": "https://www.booking.com/hotel/lk/granbell-colombo.en-gb.html?checkin=2026-08-10&checkout=2026-08-12&group_adults=4&no_rooms=2&group_children=0",
       "short_description_en": "Comfortable Accommodations: Granbell Hotel Colombo in Colombo offers air-conditioned rooms with private bathrooms, sea or city views, balconies, and modern amenities. Each room includes a tea and coffee maker, refrigerator, and free toiletries.",
       "long_note_en": "Comfortable Accommodations: Granbell Hotel Colombo in Colombo offers air-conditioned rooms with private bathrooms, sea or city views, balconies, and modern amenities. Each room includes a tea and coffee maker, refrigerator, and free toiletries.\n\nExceptional Facilities: Guests can enjoy a rooftop swimming pool with stunning views, spa facilities, sauna, fitness centre, terrace, restaurant, bar, and free WiFi. Additional amenities include a steam room, hot tub, and bicycle parking.\n\nDining Experience: The modern restaurant serves Japanese and international cuisines for dinner. Breakfast options include continental, American, buffet, full English/Irish, vegetarian, and Asian.\n\nPrime Location: Located a few steps from Kollupitiya Beach and near attractions such as Gangaramaya Buddhist Temple and Colombo City Centre Shopping Mall. Guests can enjoy kayaking or canoeing in the surroundings.",
       "images": {
@@ -106,7 +106,7 @@ const hotelData = {
         "deadline": "2026-08-08",
         "raw": "Free cancellation before 8 August 2026"
       },
-      "booking_url": "https://www.booking.com/hotel/lk/mandarina-colombo.en-gb.html?checkin=2026-08-10&checkout=2026-08-12&group_adults=5&no_rooms=3&group_children=0",
+      "booking_url": "https://www.booking.com/hotel/lk/mandarina-colombo.en-gb.html?checkin=2026-08-10&checkout=2026-08-12&group_adults=4&no_rooms=2&group_children=0",
       "short_description_en": "trategically located in Colombo and only 1.5 km from the U.S Embassy, Mandarina Colombo offers modern and comfortable accommodation with free WiFi access throughout the property. It features a rooftop infinity outdoor pool and provides complimentary parking on site.",
       "long_note_en": "trategically located in Colombo and only 1.5 km from the U.S Embassy, Mandarina Colombo offers modern and comfortable accommodation with free WiFi access throughout the property. It features a rooftop infinity outdoor pool and provides complimentary parking on site.\n\nThe hotel is just a 10-minute walk from Majestic City, Barefoot Gallery, Casino Marina Colombo and 1.5 km from Sri Lanka National Museum. The Colombo Town Hall is about 1.2 km away, while Asiri Surgical and Lanka Hospital is 2.9 km away. The Bandaranaike International Airport is accessible within a 1-hour drive.\n\nFitted with carpet flooring, air-conditioned rooms include a wardrobe, in-room safe, a flat-screen satellite/cable TV and sofa seating area. Electric kettle and minibar are also provided. The en suite bathroom comes with towels, hairdryer, bathrobes, slippers and shower facility accompanied with free toiletries.\n\nOperating a 24-hour front desk, staff at Mandarina Colombo can assist guests with car rental, currency exchange and laundry services.\n\nThe in-house restaurant, On The Eleventh serves a selection of international dishes for guests to enjoy, while Café M serves a selection of quick snacks with tea/coffee.",
       "images": {
@@ -134,7 +134,7 @@ const hotelData = {
         "deadline": null,
         "raw": "Free cancellation anytime"
       },
-      "booking_url": "https://www.booking.com/hotel/lk/tarshish-villas.en-gb.html?checkin=2026-08-10&checkout=2026-08-12&group_adults=5&no_rooms=3&group_children=0",
+      "booking_url": "https://www.booking.com/hotel/lk/tarshish-villas.en-gb.html?checkin=2026-08-10&checkout=2026-08-12&group_adults=4&no_rooms=2&group_children=0",
       "short_description_en": "Comfortable Accommodations: Tarshish Villa - Colombo in Colombo offers air-conditioned rooms with private bathrooms, tea and coffee makers, and free WiFi. Each room includes a work desk, seating area, and modern amenities.",
       "long_note_en": "Comfortable Accommodations: Tarshish Villa - Colombo in Colombo offers air-conditioned rooms with private bathrooms, tea and coffee makers, and free WiFi. Each room includes a work desk, seating area, and modern amenities.\n\nDining Experience: Guests can enjoy a restaurant serving Chinese, seafood, local, Asian, and international cuisines. Breakfast options include continental, à la carte, vegetarian, halal, and Asian. The outdoor seating area provides a pleasant setting.\n\nConvenient Location: Located less than 1 km from Colombo Town Hall and 800 metres from Colombo City Centre Shopping Mall, the property is a 13-minute walk from Kollupitiya Beach. Nearby attractions include Gangaramaya Buddhist Temple and The Independence Square.\n\nGuest Services: The bed and breakfast offers private check-in and check-out, a 24-hour front desk, concierge service, and free off-site parking. Additional services include room service, car hire, and a tour desk.",
       "images": {
@@ -163,7 +163,7 @@ const hotelData = {
         "deadline": "2026-08-09",
         "raw": "Free cancellation before 9 August 2026"
       },
-      "booking_url": "https://www.booking.com/hotel/lk/hatch-house.en-gb.html?checkin=2026-08-10&checkout=2026-08-12&group_adults=5&no_rooms=3&group_children=0",
+      "booking_url": "https://www.booking.com/hotel/lk/hatch-house.en-gb.html?checkin=2026-08-10&checkout=2026-08-12&group_adults=4&no_rooms=2&group_children=0",
       "short_description_en": "Comfortable Accommodation: Orion City Hotel in Colombo offers adults-only rooms with air-conditioning, private bathrooms, and city views. Each room includes a work desk, TV, and free WiFi.",
       "long_note_en": "Comfortable Accommodation: Orion City Hotel in Colombo offers adults-only rooms with air-conditioning, private bathrooms, and city views. Each room includes a work desk, TV, and free WiFi.\n\nDining and Leisure: Guests can enjoy a fitness centre, terrace, restaurant, and bar. The restaurant serves local, Asian, and international cuisines, including pizza and barbecue grill. Additional facilities include a minimarket, outdoor seating area, and free on-site private parking.\n\nPrime Location: Located 15 minutes from R Premadasa Stadium, the hotel is near attractions such as Khan Clock Tower (4.2 km) and Colombo Dutch Museum (4.3 km). Free WiFi is available throughout the property.",
       "images": {
@@ -194,7 +194,7 @@ const hotelData = {
         "deadline": null,
         "raw": "Non-refundable"
       },
-      "booking_url": "https://www.booking.com/hotel/lk/hilton-colombo-residence.en-gb.html?checkin=2026-08-18&checkout=2026-08-20&group_adults=5&no_rooms=3&group_children=0",
+      "booking_url": "https://www.booking.com/hotel/lk/hilton-colombo-residence.en-gb.html?checkin=2026-08-18&checkout=2026-08-20&group_adults=4&no_rooms=2&group_children=0",
       "short_description_en": "Experience world-class service at Hilton Colombo Residence\nLocated in the heart of Colombo city, Hilton Colombo Residence offers rooms and suites with panoramic views of the city, harbour or Indian Ocean. Boasting an outdoor pool, it also has a fitness centre, squash court and tennis court.",
       "long_note_en": "Experience world-class service at Hilton Colombo Residence\nLocated in the heart of Colombo city, Hilton Colombo Residence offers rooms and suites with panoramic views of the city, harbour or Indian Ocean. Boasting an outdoor pool, it also has a fitness centre, squash court and tennis court.\n\nSpacious suites at Hilton Colombo Residence feature comfortable lounge areas with 40-inch LED Televisions and BlueRay. Modern amenities include a washing machine and ironing facilities.\n\nEnjoy the state of the art gymnasium or relax at the sauna and hot tub. Interesting day trips around Colombo are easily arranged at the tour desk. The accommodation also provides spacious meeting and banquet venues.\n\nEnjoy cuisines from around the globe at FLOW, the newly-built multi-cuisine restaurant. Light refreshments are offered at the BASICO Bar & Lounge. It also offers 24-hour in-room dining service.\n\nHilton Colombo Residence is a 30-minute drive from Colombo International Airport making it an ideal destination for business, leisure or family.",
       "images": {
@@ -223,7 +223,7 @@ const hotelData = {
         "deadline": "2026-08-15",
         "raw": "Free cancellation before 15 August 2026"
       },
-      "booking_url": "https://www.booking.com/hotel/lk/ozo-colombo.en-gb.html?checkin=2026-08-18&checkout=2026-08-20&group_adults=5&no_rooms=3&group_children=0",
+      "booking_url": "https://www.booking.com/hotel/lk/ozo-colombo.en-gb.html?checkin=2026-08-18&checkout=2026-08-20&group_adults=4&no_rooms=2&group_children=0",
       "short_description_en": "Embrace world-class service and create memorable moments at Radisson Hotel Colombo",
       "long_note_en": "Embrace world-class service and create memorable moments at Radisson Hotel Colombo\n\nSituated down Marine Drive in Colombo, Radisson Hotel Colombo offers modern and comfortable accommodation with free WiFi access throughout the property. The property sits across Wellawatte Beach offering guests breathtaking vistas of the Indian Ocean from our sea facing rooms, our on-site restaurant, and the rooftop lounge & bar. Guests can unwind at our rooftop by the outdoor rooftop pool which provides panoramic views of the ocean and the cityscapes while enjoying light snacks or a delicious main along with your favorite cocktail or drink from our well stocked bar at the rooftop lounge & bar.",
       "images": {
@@ -252,7 +252,7 @@ const hotelData = {
         "deadline": "2026-08-17",
         "raw": "Free cancellation before 17 August 2026"
       },
-      "booking_url": "https://www.booking.com/hotel/lk/c-1-colombo-fort.en-gb.html?checkin=2026-08-18&checkout=2026-08-20&group_adults=5&no_rooms=3&group_children=0",
+      "booking_url": "https://www.booking.com/hotel/lk/c-1-colombo-fort.en-gb.html?checkin=2026-08-18&checkout=2026-08-20&group_adults=4&no_rooms=2&group_children=0",
       "short_description_en": "Comfortable Accommodations: C 1 Colombo Fort in Colombo offers family rooms with air-conditioning, private bathrooms, and balconies. Each room includes a kitchenette, work desk, and free toiletries.",
       "long_note_en": "Comfortable Accommodations: C 1 Colombo Fort in Colombo offers family rooms with air-conditioning, private bathrooms, and balconies. Each room includes a kitchenette, work desk, and free toiletries.\n\nEssential Facilities: Guests enjoy free WiFi, a lounge, lift, 24-hour front desk, shared kitchen, daily housekeeping, outdoor seating, and full-day security. Additional amenities include a sofa bed, TV, and wardrobe.\n\nPrime Location: Located in the city centre, the hotel is a 9-minute walk from Galle Face Beach and 600 metres from Khan Clock Tower. Nearby attractions include Colombo Dutch Museum and One Galle Face.\n\nGuest Highlights: Guests appreciate the central location, bed comfort, and excellent public transport options.",
       "images": {
@@ -280,7 +280,7 @@ const hotelData = {
         "deadline": "2026-08-17",
         "raw": "Free cancellation before 17 August 2026"
       },
-      "booking_url": "https://www.booking.com/hotel/lk/srilax.en-gb.html?checkin=2026-08-18&checkout=2026-08-20&group_adults=5&no_rooms=3&group_children=0",
+      "booking_url": "https://www.booking.com/hotel/lk/srilax.en-gb.html?checkin=2026-08-18&checkout=2026-08-20&group_adults=4&no_rooms=2&group_children=0",
       "short_description_en": "Comfortable Accommodations: Srilax in Colombo offers family rooms with air-conditioning, private bathrooms, and garden views. Each room includes a balcony, free toiletries, and a work desk.",
       "long_note_en": "Comfortable Accommodations: Srilax in Colombo offers family rooms with air-conditioning, private bathrooms, and garden views. Each room includes a balcony, free toiletries, and a work desk.\n\nDining Experience: The modern, family-friendly restaurant serves brunch with British, American, Australian, local, Asian, and international cuisines. Guests can also enjoy the terrace and outdoor seating area.\n\nLeisure Facilities: The property features a garden, terrace, and patio. Additional amenities include a coffee shop, minibar, and free WiFi.\n\nPrime Location: Located 1.9 km from Bambalapitiya Beach and near attractions such as The Independence Square and Gangaramaya Buddhist Temple. Kayaking and canoeing are available in the surroundings.",
       "images": {
@@ -309,7 +309,7 @@ const hotelData = {
         "deadline": "2026-08-17",
         "raw": "Free cancellation before 17 August 2026"
       },
-      "booking_url": "https://www.booking.com/hotel/lk/marino-beach-colombo.en-gb.html?checkin=2026-08-18&checkout=2026-08-20&group_adults=5&no_rooms=3&group_children=0",
+      "booking_url": "https://www.booking.com/hotel/lk/marino-beach-colombo.en-gb.html?checkin=2026-08-18&checkout=2026-08-20&group_adults=4&no_rooms=2&group_children=0",
       "short_description_en": "Get the celebrity treatment with world-class service at Marino Beach Colombo\nElegant Accommodation: Marino Beach Colombo in Colombo offers a 5-star experience with spa facilities, a swimming pool with a view, fitness centre, sun terrace, and lush gardens. Guests enjoy free WiFi, a restaurant, bar, and a variety of amenities including a hot tub and kids' pool.",
       "long_note_en": "Get the celebrity treatment with world-class service at Marino Beach Colombo\nElegant Accommodation: Marino Beach Colombo in Colombo offers a 5-star experience with spa facilities, a swimming pool with a view, fitness centre, sun terrace, and lush gardens. Guests enjoy free WiFi, a restaurant, bar, and a variety of amenities including a hot tub and kids' pool.\n\nDining Experience: The family-friendly restaurant serves Chinese, seafood, and international cuisines for lunch and dinner in a modern and romantic ambience. Additional dining options include a pool bar and coffee shop, catering to diverse preferences.\n\nPrime Location: Located a few steps from Bambalapitiya Beach and near attractions such as Barefoot Gallery (700 metres) and National Art Gallery (2.7 km), the hotel provides easy access to Colombo City Centre Shopping Mall and other points of interest. Guests can enjoy kayaking or canoeing in the surrounding area.",
       "images": {
@@ -338,7 +338,7 @@ const hotelData = {
         "deadline": "2026-08-18",
         "raw": "Free cancellation before 14:00 on 18 August 2026"
       },
-      "booking_url": "https://www.booking.com/hotel/lk/cinnamon-lakeside.en-gb.html?checkin=2026-08-18&checkout=2026-08-20&group_adults=5&no_rooms=3&group_children=0",
+      "booking_url": "https://www.booking.com/hotel/lk/cinnamon-lakeside.en-gb.html?checkin=2026-08-18&checkout=2026-08-20&group_adults=4&no_rooms=2&group_children=0",
       "short_description_en": "Cinnamon Lakeside is located along the banks of Beira Lake in Colombo, 10 minutes’ drive from Crescat Boulevard shopping mall. It features 9 dining options and a full-service health club.",
       "long_note_en": "Cinnamon Lakeside is located along the banks of Beira Lake in Colombo, 10 minutes’ drive from Crescat Boulevard shopping mall. It features 9 dining options and a full-service health club.\n\nGuests can swim in the outdoor pool. The hotel also has tennis and squash courts and a gym. Exclusive to guests, The Library is a lounge by day and a club by night.\n\nStylish rooms have a flat-screen TV, safety deposit box and tea and coffee-making facilities. All rooms have a marble bathroom. Some rooms include a separate living area, executive privileges and a balcony.\n\nOffering both indoor seating and outdoor lakeside dining and Colom Bar. Other restaurants include Thai and Japanese options.\n\nCinnamon Lakeside Colombo is a 45-minute drive from Bandaranaike International Airport. Odel Department Store is 2 km away.",
       "images": {

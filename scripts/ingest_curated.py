@@ -69,6 +69,20 @@ DEST_DATES = {
     "colombo_departure": {"checkin": "2026-08-18", "checkout": "2026-08-20"},
 }
 
+# Mirrors js/voting.js's destOccupancy exactly: in Colombo (both legs) only
+# the 2 couples stay at the hotel -- the organizer lives in Colombo -- so
+# those nights are 4 adults / 2 rooms, not the full group of 5 / 3 rooms
+# every other destination books. If this ever changes, update both places.
+DEST_OCCUPANCY = {
+    "colombo_arrival":   {"adults": 4, "rooms": 2},
+    "colombo_departure": {"adults": 4, "rooms": 2},
+}
+DEFAULT_OCCUPANCY = {"adults": 5, "rooms": 3}
+
+
+def get_occupancy(destination):
+    return DEST_OCCUPANCY.get(destination, DEFAULT_OCCUPANCY)
+
 MONTHS = {
     "january": 1, "february": 2, "march": 3, "april": 4, "may": 5, "june": 6,
     "july": 7, "august": 8, "september": 9, "october": 10, "november": 11, "december": 12,
@@ -285,7 +299,8 @@ def parse_block(block, block_no, today, destination):
     dest_dates = DEST_DATES.get(destination)
     if not dest_dates:
         raise IngestError(f"no DEST_DATES entry for destination {destination!r}")
-    booking_url = canonicalize_booking_url(raw_url, dest_dates)
+    occupancy = get_occupancy(destination)
+    booking_url = canonicalize_booking_url(raw_url, dest_dates, occupancy)
 
     price = parse_price_field(block, name)
 
@@ -351,7 +366,7 @@ def parse_block(block, block_no, today, destination):
     return hotel
 
 
-def canonicalize_booking_url(raw_url, dest_dates):
+def canonicalize_booking_url(raw_url, dest_dates, occupancy):
     """Strips the entire query string (sid/aid/label/all tracking) and
     appends exactly the params the card needs."""
     parts = urlsplit(raw_url)
@@ -359,8 +374,8 @@ def canonicalize_booking_url(raw_url, dest_dates):
     params = {
         "checkin": dest_dates["checkin"],
         "checkout": dest_dates["checkout"],
-        "group_adults": "5",
-        "no_rooms": "3",
+        "group_adults": str(occupancy["adults"]),
+        "no_rooms": str(occupancy["rooms"]),
         "group_children": "0",
     }
     return clean_base + "?" + urlencode(params)

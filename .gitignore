@@ -3,3 +3,5 @@
 
 # Vote data (voter names, choices) is real user data -- never commit it.
 backups/
+
+__pycache__/
