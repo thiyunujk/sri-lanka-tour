@@ -385,16 +385,62 @@ const packingListData = [
   { id: 'item7', en: 'Mosquito Repellent', ja: '虫除けスプレー' },
 ];
 
+// Guide/van photos as actually present in resources/guide/ and resources/van/
+// (see docs/guide-van-inventory.md for the full inventory this was built from).
+// "photo" is the guide's own card portrait; "gallery" is everything else
+// (license extract, past-guest photos) shown as tappable thumbnails below it.
+// Filenames contain spaces/punctuation exactly as saved on disk -- encodeURI()
+// at render time handles that, don't re-encode here.
+const GUIDE_PHOTO = 'resources/guide/Japanese-speaking guide sanath.jpeg';
+const GUIDE_GALLERY = [
+  { src: 'resources/guide/Japanese-speaking guide’s license,.jpeg', altKey: 'guideLicenseAlt' },
+  { src: 'resources/guide/Japanese-speaking guide sanath 2.jpeg', altKey: 'guidePastGuestAlt' },
+  { src: 'resources/guide/Japanese-speaking guide sanath 3.jpeg', altKey: 'guidePastGuestAlt' },
+  { src: 'resources/guide/Japanese-speaking guide sanath 4.jpeg', altKey: 'guidePastGuestAlt' }
+];
+const VAN_GALLERY = [
+  { src: 'resources/van/van.png', altKey: 'vanAlt' },
+  { src: 'resources/van/van second photo.png', altKey: 'vanAlt' }
+];
+
 const documentsData = {
   en: {
     driver: { title: 'Driver Contact', name: '[Placeholder Name]', phone: '[Placeholder Phone]' },
     emergency: { title: 'Emergency Number', name: 'Tourist Police', phone: '1912' },
-    links: [ { title: 'Sri Lanka E-Visa Portal', url: 'https://eta.gov.lk' } ]
+    links: [ { title: 'Sri Lanka E-Visa Portal', url: 'https://eta.gov.lk' } ],
+    guide: {
+      title: 'Guide',
+      name: 'Sanath',
+      description: 'National Tourist Guide (state qualification), Japanese-speaking. A guiding-specific qualification allowing a higher level of service.',
+      photo: GUIDE_PHOTO,
+      gallery: GUIDE_GALLERY,
+      guideLicenseAlt: "Sanath's National Tourist Guide license",
+      guidePastGuestAlt: 'Sanath with past guests'
+    },
+    van: {
+      title: 'Tour Van',
+      gallery: VAN_GALLERY,
+      vanAlt: 'Tour van'
+    }
   },
   ja: {
     driver: { title: 'ドライバー連絡先', name: '[名前]', phone: '[電話番号]' },
     emergency: { title: '緊急連絡先', name: '観光警察', phone: '1912' },
-    links: [ { title: 'スリランカ電子ビザ（ETA）', url: 'https://eta.gov.lk' } ]
+    links: [ { title: 'スリランカ電子ビザ（ETA）', url: 'https://eta.gov.lk' } ],
+    guide: {
+      title: 'ガイド',
+      name: 'Sanath',
+      description: 'ナショナル・ツーリスト・ガイド（国家資格）。日本語対応。ガイド専門の上位資格で、より質の高い案内を提供します。',
+      photo: GUIDE_PHOTO,
+      gallery: GUIDE_GALLERY,
+      guideLicenseAlt: 'ガイドの国家資格証',
+      guidePastGuestAlt: '過去のお客様とサナットさん'
+    },
+    van: {
+      title: '移動用バン',
+      gallery: VAN_GALLERY,
+      vanAlt: '移動用バン'
+    }
   }
 };
 
@@ -740,6 +786,24 @@ function renderPackingList() {
   });
 }
 
+// Renders a row of tappable thumbnails (full-size in a new tab) for a
+// gallery array of { src, altKey }, resolving alt text against `data`.
+// Lazy-loaded; any photo that fails to load (missing file) removes just
+// its own thumbnail via onerror rather than breaking the row.
+function photoGalleryHTML(gallery, data) {
+  return `
+    <div class="flex gap-2 mt-3 overflow-x-auto pb-1">
+      ${gallery.map(g => {
+        const url = encodeURI(g.src);
+        const alt = escapeHtml(data[g.altKey] || '');
+        return `
+        <a href="${url}" target="_blank" rel="noopener noreferrer" class="shrink-0">
+          <img src="${url}" alt="${alt}" loading="lazy" class="w-20 h-20 object-cover rounded-lg border border-slate-200 hover:opacity-80 transition-opacity" onerror="this.closest('a').remove()">
+        </a>`;
+      }).join('')}
+    </div>`;
+}
+
 function renderDocsHub() {
   const data = documentsData[currentLang];
   domEls.docsContainer.innerHTML = `
@@ -767,6 +831,25 @@ function renderDocsHub() {
       </div>
     </div>
     
+    <!-- Guide -->
+    <div class="bg-emerald-50/50 border border-emerald-100 rounded-xl p-4 mt-3">
+      <div class="flex items-start gap-3">
+        <img src="${encodeURI(data.guide.photo)}" alt="${escapeHtml(data.guide.name)}" loading="lazy" class="w-16 h-16 rounded-full object-cover border-2 border-white shadow-sm shrink-0" onerror="this.style.display='none'">
+        <div class="min-w-0">
+          <p class="text-[10px] font-bold text-emerald-800 uppercase tracking-wider mb-0.5">${data.guide.title}</p>
+          <p class="font-bold text-slate-800 text-[15px]">${data.guide.name}</p>
+          <p class="text-xs text-slate-600 mt-1 leading-relaxed">${data.guide.description}</p>
+        </div>
+      </div>
+      ${photoGalleryHTML(data.guide.gallery, data.guide)}
+    </div>
+
+    <!-- Van -->
+    <div class="bg-slate-50/50 border border-slate-200 rounded-xl p-4 mt-3">
+      <p class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-0.5">${data.van.title}</p>
+      ${photoGalleryHTML(data.van.gallery, data.van)}
+    </div>
+
     <!-- Links -->
     <div class="mt-4 pt-4 border-t border-slate-100">
       ${data.links.map(l => `
