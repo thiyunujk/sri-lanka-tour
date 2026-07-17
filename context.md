@@ -46,3 +46,13 @@ Because GitHub Pages only serves static files, saving votes across 5 different p
 
 ## 🚀 Deployment
 The app is continuously deployed via **GitHub Pages**. Pushing changes to the `main` branch of the repository automatically updates the live URL (https://thiyunujk.github.io/sri-lanka-tour/).
+
+### Testing against Firebase — TEST_MODE is mandatory
+The voting system's real data lives in the Firebase `votes` node (real voter names and choices).
+**All automated or manual testing of the voting flow MUST load the page with `?test=1`**, e.g.
+`https://thiyunujk.github.io/sri-lanka-tour/?test=1`. This sets `TEST_MODE = true` in `js/voting.js`,
+which routes every vote read/write to `votes_test/` instead of `votes/`, and shows a red
+「テストモード」/ "TEST MODE" ribbon above the header so a test session can never be mistaken for a
+real one. Never exercise the voting flow against a normal (no-param) load. Before any testing
+outside of `?test=1` (e.g. inspecting production data), run `scripts/backup_votes.py` first — see
+that script's docstring and `docs/incident-2026-07.md` for why.

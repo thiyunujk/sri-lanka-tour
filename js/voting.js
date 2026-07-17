@@ -284,6 +284,21 @@ function formatDeadline(isoDate, lang) {
   return lang === 'ja' ? `${month}/${day}` : `${EN_MONTH_ABBR[month - 1]} ${day}`;
 }
 
+// TEST_MODE routes every vote read/write to votes_test/ instead of the real
+// votes/ node, and unhides the red ribbon in index.html so a test session
+// can never be mistaken for a real one. Default false -- only ever active
+// when the page is loaded with ?test=1. ALL automated/manual testing of the
+// voting flow MUST use ?test=1; never exercise voting against production
+// votes/. See docs/incident-2026-07.md and context.md's deployment section.
+const TEST_MODE = new URLSearchParams(window.location.search).get('test') === '1';
+
+// Single source of truth for which Firebase node votes read/write against --
+// every db.ref() call that touches vote data must go through this, never a
+// literal 'votes' string.
+function votesRootPath() {
+  return TEST_MODE ? 'votes_test' : 'votes';
+}
+
 const firebaseConfig = {
   apiKey: "AIzaSyAt9qkyMnpz5G9lJ6Sv0rZrZwrZMXP5zaw",
   authDomain: "srilanka-tour-hotels.firebaseapp.com",
@@ -328,7 +343,7 @@ function refreshAllMyVotes() {
     myVotesByDest = {};
     return Promise.resolve();
   }
-  return db.ref('votes').once('value')
+  return db.ref(votesRootPath()).once('value')
     .then(snapshot => {
       const data = snapshot.val() || {};
       const next = {};
@@ -423,7 +438,7 @@ function refreshMyVotes() {
     currentUserVotes = {};
     return Promise.resolve();
   }
-  return db.ref(`votes/${currentDestKey}/${currentVoter}`).once('value')
+  return db.ref(`${votesRootPath()}/${currentDestKey}/${currentVoter}`).once('value')
     .then(snapshot => { currentUserVotes = snapshot.val() || {}; })
     .catch(() => { currentUserVotes = {}; });
 }
@@ -693,7 +708,7 @@ function voteHotel(hotelName, choiceLevel) {
     ? [1, 2, 3].find(n => n !== choiceLevel && currentUserVotes[`choice${n}`] === hotelName)
     : null;
 
-  const voteRef = db.ref(`votes/${currentDestKey}/${currentVoter}`);
+  const voteRef = db.ref(`${votesRootPath()}/${currentDestKey}/${currentVoter}`);
   const updates = {};
   if (isUnvote) {
     updates[key] = null;
@@ -733,6 +748,13 @@ function openGroupVotes() {
 
 // Add event listener to open Group Votes
 document.addEventListener('DOMContentLoaded', () => {
+  // Reveal the red TEST MODE ribbon whenever TEST_MODE is active. Left
+  // hidden (index.html default) for every normal load.
+  if (TEST_MODE) {
+    const ribbon = document.getElementById('test-mode-ribbon');
+    if (ribbon) ribbon.classList.remove('hidden');
+  }
+
   // We need to wait for DOM to be fully loaded
   const btnGroupVotes = document.getElementById('btn-group-votes');
   if (btnGroupVotes) {
@@ -851,7 +873,7 @@ function renderGroupVotes() {
   const orderedDestKeys = [...new Set(Object.keys(dayToDest).map(d => dayToDest[d]))]
     .filter(dest => Array.isArray(hotelData[dest]));
 
-  db.ref('votes').once('value').then(snapshot => {
+  db.ref(votesRootPath()).once('value').then(snapshot => {
     const data = snapshot.val() || {};
     const totalVoters = VOTER_NAMES.length;
 
