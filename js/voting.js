@@ -59,6 +59,11 @@ const votingUI = {
     fewReviewsNote: '※レビュー数少',
     voteDeadlineBanner: '投票締切: 8月3日（キャンセル無料期限のため）',
     deadlineWarningChip: '⚠ 締切前に要決定',
+    bookedBanner: (name) => `✓ 予約済み：${name}`,
+    bookedMapsLink: 'Googleマップで見る',
+    votingLockedNote: 'この宿泊地は予約確定済みです',
+    votingClosedBanner: '投票は締め切りました',
+    bookedMarkerChip: '✓ 予約済み',
     switchUser: 'ユーザー切替',
     votesCount: (n, total) => `${n}/${total}人が投票済み`,
     pointsLabel: (n) => `${n}点`,
@@ -123,6 +128,11 @@ const votingUI = {
     fewReviewsNote: '※ few reviews',
     voteDeadlineBanner: 'Voting closes Aug 3 (due to free-cancellation deadlines)',
     deadlineWarningChip: '⚠ Decide before vote close',
+    bookedBanner: (name) => `✓ Booked: ${name}`,
+    bookedMapsLink: 'View on Google Maps',
+    votingLockedNote: 'This stay is already booked',
+    votingClosedBanner: 'Voting has closed',
+    bookedMarkerChip: '✓ Booked',
     switchUser: 'Switch user',
     votesCount: (n, total) => `${n} of ${total} voted`,
     pointsLabel: (n) => `${n} pt${n === 1 ? '' : 's'}`,
@@ -147,6 +157,21 @@ const votingUI = {
 // an amber warning chip -- the group needs to decide before the hotel's
 // own refund window closes, not just before the trip.
 const VOTE_DEADLINE = '2026-08-03';
+
+// Global freeze: once today's date passes VOTE_DEADLINE, voting locks for
+// EVERY destination regardless of booked state (see isDestLocked below).
+function isPastDeadline() {
+  return new Date().toISOString().slice(0, 10) > VOTE_DEADLINE;
+}
+
+// A destination is read-only once either the group deadline has passed, or
+// that specific destination has a hotel booked (bookedByDest, populated by
+// refreshBookedState). Deadline takes precedence in the banner text (see
+// lockBannerInfo) since it applies to every destination at once.
+function isDestLocked(destKey) {
+  if (isPastDeadline()) return true;
+  return !!(bookedByDest[destKey] && bookedByDest[destKey].hotel);
+}
 
 // getCurrentLang() is defined in app.js, which loads after this file
 function votingLang() {
@@ -326,6 +351,14 @@ function votesRootPath() {
   return TEST_MODE ? 'votes_test' : 'votes';
 }
 
+// Mirrors votesRootPath() for the booked/{destKey} node -- same TEST_MODE
+// isolation rules apply: ?test=1 must never read or write the live booked/
+// node, only booked_test/. scripts/set_booked.py's --test flag targets the
+// same booked_test/ node.
+function bookedRootPath() {
+  return TEST_MODE ? 'booked_test' : 'booked';
+}
+
 const firebaseConfig = {
   apiKey: "AIzaSyAt9qkyMnpz5G9lJ6Sv0rZrZwrZMXP5zaw",
   authDomain: "srilanka-tour-hotels.firebaseapp.com",
@@ -346,6 +379,11 @@ const VOTER_NAMES = ["チユヌ", "イガラシ", "チコ", "ナカマ", "ルミ
 let currentVoter = localStorage.getItem('voterName');
 let currentDestKey = null;
 let currentTier = 'Premium';
+// Whether the currently-open hotel-selection modal (currentDestKey) is
+// read-only -- recomputed by isDestLocked() each time the modal opens, and
+// consulted by renderHotelList/hotelCardHTML to decide whether to render
+// vote buttons at all.
+let currentDestLocked = false;
 // { choice1: hotelName|null, choice2: ..., choice3: ... } for currentVoter at
 // currentDestKey. Fetched once per modal open (see refreshMyVotes), then
 // kept in sync locally via optimistic updates after each successful vote
@@ -361,6 +399,25 @@ let myVotesByDest = {};
 function hasAnyVoteForDest(destKey) {
   const v = myVotesByDest[destKey];
   return !!(v && (v.choice1 || v.choice2 || v.choice3));
+}
+
+// { destKey: { hotel: '<English name>', bookedDate: 'YYYY-MM-DD' } } for
+// every destination that has a confirmed booking. Written only by
+// scripts/set_booked.py -- there is no in-app admin UI. Loaded once at
+// startup (see refreshBookedState call below), independent of currentVoter
+// since the booked banner/lock must show even before identity is chosen.
+let bookedByDest = {};
+
+// Fetches the whole booked/ (or booked_test/, under TEST_MODE) node in one
+// read, alongside the vote-state cache (refreshAllMyVotes below).
+function refreshBookedState() {
+  if (!db) {
+    bookedByDest = {};
+    return Promise.resolve();
+  }
+  return db.ref(bookedRootPath()).once('value')
+    .then(snapshot => { bookedByDest = snapshot.val() || {}; })
+    .catch(() => { bookedByDest = {}; });
 }
 
 // Fetches currentVoter's votes for every destination in one read of the
@@ -430,8 +487,136 @@ function switchUser() {
 // the first-visit case). Buttons refresh once this resolves -- app.js may
 // not have defined updateAllHotelButtons yet at this exact line, but by the
 // time this async read comes back it certainly has (see refreshHotelButtonsIfReady).
+refreshBookedState().then(refreshHotelButtonsIfReady);
 if (currentVoter) {
   refreshAllMyVotes().then(refreshHotelButtonsIfReady);
+}
+
+// { text, locked } for whichever banner (hotel-selection or group-votes
+// modal) is currently shown for destKey. The global deadline note always
+// wins over the per-destination booked note, since once VOTE_DEADLINE has
+// passed every destination is locked regardless of booking status.
+function lockBannerInfo(destKey) {
+  const T = votingT();
+  if (isPastDeadline()) return { text: T.votingClosedBanner, locked: true };
+  if (bookedByDest[destKey] && bookedByDest[destKey].hotel) return { text: T.votingLockedNote, locked: true };
+  return { text: T.voteDeadlineBanner, locked: false };
+}
+
+// Swaps a deadline-banner element between its normal amber "reminder" look
+// and a neutral slate "locked" look, driven by lockBannerInfo's `locked` flag.
+function applyLockBannerStyle(el, info) {
+  if (!el) return;
+  el.textContent = info.text;
+  el.classList.toggle('bg-amber-50', !info.locked);
+  el.classList.toggle('border-amber-100', !info.locked);
+  el.classList.toggle('text-amber-700', !info.locked);
+  el.classList.toggle('bg-slate-100', info.locked);
+  el.classList.toggle('border-slate-200', info.locked);
+  el.classList.toggle('text-slate-600', info.locked);
+}
+
+// Google Maps link for the booked banner's practical line: prefers an
+// explicit google_maps_url on the hotel record, else falls back to a maps
+// search built from its address or name -- so the link is always present
+// even before hotelData.js grows dedicated address/maps fields.
+function bookedGoogleMapsUrl(hotel) {
+  if (hotel && hotel.google_maps_url) return hotel.google_maps_url;
+  const query = hotel && (hotel.address || hotel.name);
+  return query ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}` : '';
+}
+
+// The green "✓ Booked" confirmation banner shown on a day card in place of
+// the Choose/Voted button once bookedByDest[destKey] is set. Returns '' if
+// the destination is not booked.
+function bookedBannerHTML(destKey) {
+  const bookedInfo = bookedByDest[destKey];
+  if (!bookedInfo || !bookedInfo.hotel) return '';
+  const T = votingT();
+  const lang = votingLang();
+  const hotels = hotelData[destKey];
+  const hotel = Array.isArray(hotels) ? hotels.find(h => h.name === bookedInfo.hotel) : null;
+  const jaName = (hotel && hotel.japanese_name) || bookedInfo.hotel;
+  const enName = (hotel && hotel.name) || bookedInfo.hotel;
+  const displayName = lang === 'ja' ? jaName : enName;
+  const bannerLabel = T.bookedBanner(displayName);
+
+  const mapsUrl = bookedGoogleMapsUrl(hotel);
+  const addressLine = hotel && hotel.address
+    ? `<p class="text-[11px] text-slate-600">${escapeHtml(hotel.address)}</p>` : '';
+  const mapsLine = mapsUrl
+    ? `<a href="${escapeHtml(mapsUrl)}" target="_blank" rel="noopener noreferrer" class="text-[11px] font-semibold text-sky-600 hover:text-sky-700 underline">${T.bookedMapsLink}</a>` : '';
+  const timeParts = [];
+  if (hotel && hotel.check_in_time) timeParts.push(`${T.checkIn} ${hotel.check_in_time}`);
+  if (hotel && hotel.check_out_time) timeParts.push(`${T.checkOut} ${hotel.check_out_time}`);
+  const timesLine = timeParts.length
+    ? `<p class="text-[11px] text-slate-600">${escapeHtml(timeParts.join(' · '))}</p>` : '';
+  const practicalLines = [addressLine, timesLine, mapsLine].filter(Boolean).join('');
+
+  return `
+    <button type="button" onclick="openHotelDetailFromBooking('${destKey}')" class="w-full py-2.5 px-3 bg-emerald-50 hover:bg-emerald-100 active:bg-emerald-200 border-2 border-emerald-500 text-emerald-700 text-xs font-bold rounded-xl transition-colors text-center">
+      ${escapeHtml(bannerLabel)}
+    </button>
+    ${practicalLines ? `<div class="mt-2 space-y-0.5 px-1">${practicalLines}</div>` : ''}`;
+}
+
+// Scrolls the currently-rendered hotel list to the given hotel's card and
+// auto-expands its detail section -- used when opening the modal from a
+// booked-banner tap so the confirmed hotel is immediately visible.
+function scrollToHotelCard(hotelName) {
+  const container = document.getElementById('hotel-list-container');
+  if (!container) return;
+  const card = Array.from(container.querySelectorAll('[data-hotel-card]'))
+    .find(el => el.dataset.hotelName === hotelName);
+  if (!card) return;
+  card.scrollIntoView({ block: 'start' });
+  const details = card.querySelector('[data-details]');
+  const toggleBtn = card.querySelector('[data-toggle-details]');
+  if (details && details.classList.contains('hidden')) {
+    details.classList.remove('hidden');
+    if (toggleBtn) toggleBtn.textContent = votingT().hideDetails;
+  }
+  card.classList.add('ring-2', 'ring-emerald-400');
+}
+
+// Opens the (read-only, since a booked destination is always locked) hotel
+// modal from a day card's booked banner, scrolled to and expanded on the
+// booked hotel specifically. Reuses the same modal/render path as
+// openHotelVoting rather than a separate view.
+function openHotelDetailFromBooking(destKey) {
+  const bookedInfo = bookedByDest[destKey];
+  if (!bookedInfo || !bookedInfo.hotel || !hotelData[destKey]) return;
+  currentDestKey = destKey;
+  const T = votingT();
+  const occ = getOccupancy(destKey);
+  openModal('modal-hotel-selection');
+  document.getElementById('modal-title-hotel-dest').innerText = getDestName(destKey);
+  document.getElementById('modal-subtitle-hotel').textContent = T.hotelModalSubtitle;
+  applyLockBannerStyle(document.getElementById('vote-deadline-banner-hotel'), lockBannerInfo(destKey));
+  currentDestLocked = isDestLocked(destKey);
+  ['Premium', 'Standard', 'Economy'].forEach(t => {
+    document.getElementById(`tab-${t}`).textContent = T.tierTabs[t];
+  });
+
+  const colomboNoteEl = document.getElementById('modal-colombo-note-hotel');
+  const isColombo = destKey === 'colombo_arrival' || destKey === 'colombo_departure';
+  colomboNoteEl.classList.toggle('hidden', !isColombo);
+  colomboNoteEl.textContent = isColombo ? T.colomboOccupancyNote(occ) : '';
+
+  document.getElementById('how-to-toggle-label').textContent = T.howToTitle;
+  const howToItems = [T.priceDisclaimer(occ), ...T.howToBullets];
+  document.getElementById('how-to-list').innerHTML = howToItems.map(b => `<li>${escapeHtml(b)}</li>`).join('');
+  document.getElementById('how-to-content').classList.add('hidden');
+  document.getElementById('how-to-chevron').classList.remove('rotate-180');
+
+  currentUserVotes = {};
+  const hotel = hotelData[destKey].find(h => h.name === bookedInfo.hotel);
+  currentTier = (hotel && hotel.tier) || 'Premium';
+  resetHotelListScroll();
+  refreshMyVotes().then(() => {
+    switchHotelTier(currentTier);
+    requestAnimationFrame(() => scrollToHotelCard(bookedInfo.hotel));
+  });
 }
 
 function openHotelVoting(dayNum) {
@@ -445,7 +630,8 @@ function openHotelVoting(dayNum) {
   openModal('modal-hotel-selection');
   document.getElementById('modal-title-hotel-dest').innerText = getDestName(currentDestKey);
   document.getElementById('modal-subtitle-hotel').textContent = T.hotelModalSubtitle;
-  document.getElementById('vote-deadline-banner-hotel').textContent = T.voteDeadlineBanner;
+  applyLockBannerStyle(document.getElementById('vote-deadline-banner-hotel'), lockBannerInfo(currentDestKey));
+  currentDestLocked = isDestLocked(currentDestKey);
   ['Premium', 'Standard', 'Economy'].forEach(t => {
     document.getElementById(`tab-${t}`).textContent = T.tierTabs[t];
   });
@@ -514,7 +700,7 @@ function switchHotelTier(tier) {
 }
 
 // Compact card + hidden expandable detail section for one hotel
-function hotelCardHTML(h, lang, T, destKey) {
+function hotelCardHTML(h, lang, T, destKey, locked) {
   const jaName = h.japanese_name || '';
   const enName = h.name || '';
   const primaryName = lang === 'ja' ? (jaName || enName) : (enName || jaName);
@@ -662,6 +848,12 @@ function hotelCardHTML(h, lang, T, destKey) {
     return `<button data-hotel="${escapeHtml(h.name)}" data-choice="${n}" class="flex-1 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider border transition-colors ${style}">${label}</button>`;
   }).join('');
   const selectedCardClass = myChoiceLevel ? 'border-2 border-emerald-300' : 'border border-slate-100';
+  // Locked (booked destination, or past VOTE_DEADLINE): no vote buttons at
+  // all -- the modal-level banner (see lockBannerInfo) already explains why.
+  const voteRowHTML = locked ? '' : `
+        <div class="pt-2 border-t border-slate-100 flex gap-2">
+          ${choiceButtons}
+        </div>`;
 
   const morePhotosHTML = typeof h.booking_url === 'string' && h.booking_url.trim() !== ''
     ? `<a href="${escapeHtml(bookingHref)}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-sky-600 hover:text-sky-700 inline-flex items-center gap-1">${T.morePhotos} <span aria-hidden="true">→</span> Booking.com</a>`
@@ -679,7 +871,7 @@ function hotelCardHTML(h, lang, T, destKey) {
   ].filter(Boolean).join('');
 
   return `
-    <div data-hotel-card class="bg-white rounded-[16px] mb-4 shadow-sm ${selectedCardClass} overflow-hidden">
+    <div data-hotel-card data-hotel-name="${escapeHtml(h.name)}" class="bg-white rounded-[16px] mb-4 shadow-sm ${selectedCardClass} overflow-hidden">
       ${thumb}
       <div class="p-4 flex flex-col gap-2">
         <div class="flex justify-between items-start gap-2">
@@ -702,10 +894,7 @@ function hotelCardHTML(h, lang, T, destKey) {
         </div>` : ''}
 
         ${ratings.length ? `<div class="flex gap-3">${ratings.join('')}</div>` : ''}
-
-        <div class="pt-2 border-t border-slate-100 flex gap-2">
-          ${choiceButtons}
-        </div>
+        ${voteRowHTML}
 
         <button data-toggle-details class="w-full py-1.5 text-[11px] font-bold text-slate-500 hover:text-emerald-600 transition-colors">${T.showDetails}</button>
         <div data-details class="hidden space-y-3 pt-2 border-t border-slate-100">${detailSections}</div>
@@ -730,7 +919,7 @@ function renderHotelList() {
     return;
   }
 
-  container.innerHTML = hotels.map(h => hotelCardHTML(h, lang, T, currentDestKey)).join('');
+  container.innerHTML = hotels.map(h => hotelCardHTML(h, lang, T, currentDestKey, currentDestLocked)).join('');
 }
 
 function voteHotel(hotelName, choiceLevel) {
@@ -743,6 +932,9 @@ function voteHotel(hotelName, choiceLevel) {
     alert(T.dbConnectError);
     return;
   }
+  // Defensive: the vote buttons are never rendered when locked (see
+  // hotelCardHTML), so this only guards against a stray/stale call.
+  if (isDestLocked(currentDestKey)) return;
 
   const key = `choice${choiceLevel}`;
   // Tapping the already-✓-highlighted button for this hotel/slot means
@@ -788,7 +980,12 @@ function openGroupVotes() {
   openModal('modal-group-votes');
   const T = votingT();
   document.getElementById('modal-title-group-votes').textContent = T.groupVotesTitle;
-  document.getElementById('vote-deadline-banner-group').textContent = T.voteDeadlineBanner;
+  // Only the global deadline (not individual bookings) changes this banner --
+  // per-destination booked status is shown inline via the ✓ marker instead.
+  applyLockBannerStyle(
+    document.getElementById('vote-deadline-banner-group'),
+    isPastDeadline() ? { text: T.votingClosedBanner, locked: true } : { text: T.voteDeadlineBanner, locked: false }
+  );
   const switchUserBtn = document.getElementById('btn-switch-user');
   if (switchUserBtn) switchUserBtn.textContent = T.switchUser;
   renderGroupVotes();
@@ -938,10 +1135,28 @@ function renderGroupVotes() {
           <span class="text-[10px] font-bold text-slate-500 bg-slate-100 rounded-full px-2 py-0.5 shrink-0">${T.votesCount(participationCount, totalVoters)}</span>
         </div>`;
 
+      // The booked hotel may not be rank 1 (or may have zero votes at all) --
+      // chosen can differ from what the group voted for, so this marks
+      // whatever booked/{dest} actually says, never assumes rank 1.
+      const bookedInfo = bookedByDest[dest];
+      const bookedHotelName = bookedInfo && bookedInfo.hotel;
+
       if (participationCount === 0) {
+        const standaloneBookedHTML = bookedHotelName ? (() => {
+          const { primary, secondary } = resolveHotelNames(dest, bookedHotelName);
+          return `
+          <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-3 mb-2 flex items-center gap-2">
+            <span class="inline-flex items-center gap-1 bg-emerald-500 text-white rounded-full px-2 py-0.5 text-[9px] font-bold shrink-0">${T.bookedMarkerChip}</span>
+            <div class="min-w-0">
+              <p class="font-bold text-slate-800 text-sm truncate">${escapeHtml(primary)}</p>
+              ${secondary ? `<p class="text-[10px] text-slate-400 truncate">${escapeHtml(secondary)}</p>` : ''}
+            </div>
+          </div>`;
+        })() : '';
         return `
         <div class="mb-6">
           ${header}
+          ${standaloneBookedHTML}
           <p class="text-center text-slate-400 text-xs py-6 bg-white rounded-xl border border-dashed border-slate-200">${T.noVotes}</p>
         </div>`;
       }
@@ -952,6 +1167,21 @@ function renderGroupVotes() {
         .sort((a, b) => b.points - a.points);
 
       const closeRace = ranked.length >= 2 && (ranked[0].points - ranked[1].points) <= 1;
+      // If the booked hotel got zero votes, it won't appear in `ranked` at
+      // all -- surface it separately above the ranked list rather than
+      // silently dropping the booking from the dashboard.
+      const bookedOutsideRanked = bookedHotelName && !ranked.some(r => r.hotelName === bookedHotelName);
+      const standaloneBookedHTML = bookedOutsideRanked ? (() => {
+        const { primary, secondary } = resolveHotelNames(dest, bookedHotelName);
+        return `
+          <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-3 mb-2 flex items-center gap-2">
+            <span class="inline-flex items-center gap-1 bg-emerald-500 text-white rounded-full px-2 py-0.5 text-[9px] font-bold shrink-0">${T.bookedMarkerChip}</span>
+            <div class="min-w-0">
+              <p class="font-bold text-slate-800 text-sm truncate">${escapeHtml(primary)}</p>
+              ${secondary ? `<p class="text-[10px] text-slate-400 truncate">${escapeHtml(secondary)}</p>` : ''}
+            </div>
+          </div>`;
+      })() : '';
 
       const rows = ranked.map((entry, idx) => {
         const rank = idx + 1;
@@ -964,13 +1194,18 @@ function renderGroupVotes() {
           return `<span title="${escapeHtml(v.name)} · ${escapeHtml(T.choices[v.rank - 1])}" class="inline-flex items-center justify-center w-6 h-6 rounded-full text-[10px] font-bold border ${style}">${escapeHtml(initial)}</span>`;
         }).join('');
 
+        const isBooked = bookedHotelName === entry.hotelName;
+
         return `
-          <div class="bg-white rounded-xl p-3 shadow-sm border ${isTop ? 'border-amber-300 ring-1 ring-amber-200' : 'border-slate-100'} flex items-center gap-3">
+          <div class="bg-white rounded-xl p-3 shadow-sm border ${isBooked ? 'border-emerald-300 ring-1 ring-emerald-200' : (isTop ? 'border-amber-300 ring-1 ring-amber-200' : 'border-slate-100')} flex items-center gap-3">
             <div class="w-7 text-center shrink-0">
               ${medal ? `<span class="text-lg leading-none">${medal}</span>` : `<span class="text-xs font-bold text-slate-400">#${rank}</span>`}
             </div>
             <div class="flex-1 min-w-0">
-              <p class="font-bold text-slate-800 text-sm truncate">${escapeHtml(primary)}</p>
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <p class="font-bold text-slate-800 text-sm truncate">${escapeHtml(primary)}</p>
+                ${isBooked ? `<span class="inline-flex items-center gap-1 bg-emerald-500 text-white rounded-full px-2 py-0.5 text-[9px] font-bold shrink-0">${T.bookedMarkerChip}</span>` : ''}
+              </div>
               ${secondary ? `<p class="text-[10px] text-slate-400 truncate">${escapeHtml(secondary)}</p>` : ''}
               <div class="flex flex-wrap gap-1 mt-1.5">${avatars}</div>
             </div>
@@ -995,6 +1230,7 @@ function renderGroupVotes() {
       return `
         <div class="mb-6">
           ${header}
+          ${standaloneBookedHTML}
           <div>${rows}</div>
           <button data-toggle-group-detail data-target="${detailId}" class="w-full mt-2 py-1.5 text-[11px] font-bold text-slate-500 hover:text-emerald-600 transition-colors">${T.seeAllVotes}</button>
           <div id="${detailId}" class="hidden space-y-2 mt-1">${detailHTML}</div>

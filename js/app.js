@@ -571,12 +571,6 @@ function renderItinerary() {
     let hotelHTML = '';
     if (data.hotel) {
       const destKey = (typeof dayToDest !== 'undefined') ? dayToDest[day.dayNum] : null;
-      const group = (destKey && destDayGroups[destKey]) || [day.dayNum];
-      const isMultiNight = group.length > 1;
-      const spanCaption = isMultiNight ? uiText.sameStayCaption(Math.min(...group), Math.max(...group)) : '';
-      const hasVoted = !!(destKey && typeof hasAnyVoteForDest === 'function' && hasAnyVoteForDest(destKey));
-      const btnClass = hasVoted ? HOTEL_BTN_CLASS_VOTED : HOTEL_BTN_CLASS_DEFAULT;
-      const btnLabel = hasVoted ? uiText.btnChooseHotelVoted : uiText.btnChooseHotel;
 
       hotelHTML = `
         <div class="mb-4 bg-orange-50/40 border border-orange-100 rounded-[14px] p-3.5 flex items-start gap-3.5">
@@ -588,11 +582,7 @@ function renderItinerary() {
           <div class="w-full">
             <p class="text-[10px] font-bold text-orange-800 uppercase tracking-widest mb-1">${uiText.lblHotel}</p>
             <p class="text-[13px] text-slate-800 leading-relaxed font-semibold mb-3">${data.hotel}</p>
-            <button id="hotel-vote-btn-${day.dayNum}" onclick="openHotelVoting(${day.dayNum})" class="${btnClass}">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              <span data-btn-label>${btnLabel}</span>
-            </button>
-            ${isMultiNight ? `<p class="text-[10px] text-slate-400 font-semibold text-center mt-1.5">${escapeHtml(spanCaption)}</p>` : ''}
+            <div id="hotel-action-${day.dayNum}">${renderHotelActionInner(day, destKey, uiText)}</div>
           </div>
         </div>
       `;
@@ -629,18 +619,45 @@ function updateStaticGlobalText() {
   domEls.langText.textContent = currentLang === 'ja' ? 'EN' : 'JA';
 }
 
-// Patches a single day's Choose Hotels button in place (label + color),
-// without rebuilding the itinerary -- rebuilding would reset every
-// accordion back to its default open state.
-function updateHotelButton(dayNum) {
-  const btn = document.getElementById(`hotel-vote-btn-${dayNum}`);
-  if (!btn) return;
-  const destKey = (typeof dayToDest !== 'undefined') ? dayToDest[dayNum] : null;
+// Builds the whole action area below a day card's hotel name: either the
+// Choose/Voted button (default), or -- once bookedByDest[destKey] is set --
+// the green booked confirmation banner in its place (see bookedBannerHTML
+// in voting.js). Shared by renderItinerary's initial render and
+// updateHotelButton's later patch, so both stay in sync.
+function renderHotelActionInner(day, destKey, uiText) {
+  const group = (destKey && destDayGroups[destKey]) || [day.dayNum];
+  const isMultiNight = group.length > 1;
+  const spanCaption = isMultiNight ? uiText.sameStayCaption(Math.min(...group), Math.max(...group)) : '';
+  const spanCaptionHTML = isMultiNight
+    ? `<p class="text-[10px] text-slate-400 font-semibold text-center mt-1.5">${escapeHtml(spanCaption)}</p>` : '';
+
+  const bookedHTML = (destKey && typeof bookedBannerHTML === 'function') ? bookedBannerHTML(destKey) : '';
+  if (bookedHTML) {
+    return bookedHTML + spanCaptionHTML;
+  }
+
   const hasVoted = !!(destKey && typeof hasAnyVoteForDest === 'function' && hasAnyVoteForDest(destKey));
+  const btnClass = hasVoted ? HOTEL_BTN_CLASS_VOTED : HOTEL_BTN_CLASS_DEFAULT;
+  const btnLabel = hasVoted ? uiText.btnChooseHotelVoted : uiText.btnChooseHotel;
+  return `
+    <button id="hotel-vote-btn-${day.dayNum}" onclick="openHotelVoting(${day.dayNum})" class="${btnClass}">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+      <span data-btn-label>${btnLabel}</span>
+    </button>
+    ${spanCaptionHTML}`;
+}
+
+// Patches a single day's hotel action area in place, without rebuilding the
+// itinerary -- rebuilding would reset every accordion back to its default
+// open state.
+function updateHotelButton(dayNum) {
+  const wrapper = document.getElementById(`hotel-action-${dayNum}`);
+  if (!wrapper) return;
+  const day = itineraryData.find(d => d.dayNum === dayNum);
+  if (!day) return;
+  const destKey = (typeof dayToDest !== 'undefined') ? dayToDest[dayNum] : null;
   const uiText = staticTextUI[currentLang];
-  const label = btn.querySelector('[data-btn-label]');
-  if (label) label.textContent = hasVoted ? uiText.btnChooseHotelVoted : uiText.btnChooseHotel;
-  btn.className = hasVoted ? HOTEL_BTN_CLASS_VOTED : HOTEL_BTN_CLASS_DEFAULT;
+  wrapper.innerHTML = renderHotelActionInner(day, destKey, uiText);
 }
 
 function updateAllHotelButtons() {

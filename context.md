@@ -29,6 +29,7 @@ Because GitHub Pages only serves static files, saving votes across 5 different p
 - **Vote deadline**: `VOTE_DEADLINE = '2026-08-03'` in `voting.js` — the group needs to finalize before hotels' own free-cancellation windows start closing. A banner stating this shows at the top of both the hotel selection and group votes modals, and any hotel whose cancellation deadline falls on or before that date gets an amber "decide before vote close" chip.
 - **Data Flow**: When a user clicks "第1希望" (Choice 1) on a hotel, the vote is sent directly to Firebase under the path: `votes/{destination}/{userName}/choice1 = hotelName`.
 - **Group Dashboard**: The bottom navigation includes a "グループ投票結果" (Group Votes) button that queries the Firebase database and renders everyone's choices grouped by destination in real-time.
+- **Booked state**: Once a destination's hotel is actually confirmed, `booked/{destKey} = { hotel, bookedDate }` in Firebase (written only via `scripts/set_booked.py` — there is no in-app admin UI) switches that destination from voting to display-only: day cards show a green "✓ Booked" banner (tappable to the hotel's detail) with address/maps/check-in-out instead of the Choose/Voted button, that destination's voting modal goes read-only, and the group dashboard marks whichever hotel is actually booked (not necessarily the vote winner). Independently, once today's date passes `VOTE_DEADLINE`, voting locks for every destination regardless of booked state. Both states are computed client-side in `js/voting.js` (`isDestLocked`/`bookedByDest`) and are invisible until a `booked/` entry exists.
 
 ---
 
@@ -40,6 +41,7 @@ Because GitHub Pages only serves static files, saving votes across 5 different p
 - `js/voting.js`: Contains all logic related to the voting system, including Firebase initialization, the identity gate, rendering the destination-specific hotel lists, pushing votes to Firebase, rendering the Group Votes dashboard, and the vote-deadline banner/chip.
 - `scripts/curated/<destination>.txt`: Hand-collected Booking.com listing data, one file per destination, in the input format `ingest_curated.py` expects.
 - `scripts/ingest_curated.py`: Parses a `scripts/curated/*.txt` file and replaces that destination's array in `hotelData.js`.
+- `scripts/set_booked.py`: Sets or clears the `booked/{destKey}` marker (see Booked state above); validates the hotel name against `hotelData.js` before writing.
 - `resources/`: Contains local images used in the itinerary cards.
 
 ---
