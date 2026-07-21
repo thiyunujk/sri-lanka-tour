@@ -241,6 +241,15 @@ const destPlaceholderGradient = {
 };
 const DEFAULT_PLACEHOLDER_GRADIENT = 'from-slate-400 to-slate-600';
 
+// Bump this whenever a resources/hotels/<slug>-room.jpg file is replaced
+// in place (same filename, new bytes -- e.g. swapping in a sharper photo).
+// Browsers that already cached the old image under that exact URL would
+// otherwise keep serving it from cache indefinitely, since nothing else
+// about the URL changes. Appended as a query string in hotelCardHTML's
+// roomPhotoHTML; does not affect the main exterior thumbnail (hotelThumbHTML),
+// only the booked-room photo.
+const ROOM_PHOTO_CACHE_BUST = 'v2';
+
 // Day 1 of the trip. destDates below is derived from this + dayToDest, so
 // it stays correct if the itinerary's day-to-destination mapping changes.
 const TRIP_START_DATE = new Date(Date.UTC(2026, 7, 10)); // Aug 10, 2026
@@ -619,11 +628,19 @@ function bookedGoogleMapsUrl(hotel) {
 function hotelContactLinesHTML(hotel, T) {
   const mapsUrl = bookedGoogleMapsUrl(hotel);
   const addressLine = hotel && hotel.address
-    ? `<p class="text-[11px] text-slate-600">${escapeHtml(hotel.address)}</p>` : '';
+    ? `<p class="text-[11px] text-slate-600 py-1">${escapeHtml(hotel.address)}</p>` : '';
+  // phoneLine/mapsLine are the two TAPPABLE items here, so each gets its own
+  // flex row with a 44px-tall hit area (touch-target minimum) -- `flex` makes
+  // an <a> block-level, so plain callers (a bare <div> wrapper, e.g.
+  // bookedBannerHTML/contactHTML below) get these stacked on separate lines
+  // for free, while flex-row callers (the Hotels hub card) lay them out as
+  // side-by-side chips via their own gap. Either way the previous bug --
+  // two bare inline <a> tags rendering flush against each other with zero
+  // gap ("+94778694838View on Google Maps") -- can't recur.
   const phoneLine = hotel && hotel.phone
-    ? `<a href="tel:${escapeHtml(hotel.phone.replace(/\s+/g, ''))}" class="text-[11px] font-semibold text-blue-600 hover:text-blue-700">${escapeHtml(hotel.phone)}</a>` : '';
+    ? `<a href="tel:${escapeHtml(hotel.phone.replace(/\s+/g, ''))}" class="flex items-center min-h-[44px] text-[12px] font-semibold text-blue-600 hover:text-blue-700">${escapeHtml(hotel.phone)}</a>` : '';
   const mapsLine = mapsUrl
-    ? `<a href="${escapeHtml(mapsUrl)}" target="_blank" rel="noopener noreferrer" class="text-[11px] font-semibold text-sky-600 hover:text-sky-700 underline">${T.bookedMapsLink}</a>` : '';
+    ? `<a href="${escapeHtml(mapsUrl)}" target="_blank" rel="noopener noreferrer" class="flex items-center min-h-[44px] text-[12px] font-semibold text-sky-600 hover:text-sky-700 underline">${T.bookedMapsLink}</a>` : '';
   return { addressLine, phoneLine, mapsLine };
 }
 
@@ -908,7 +925,7 @@ function hotelCardHTML(h, lang, T, destKey, locked, opts) {
   // or a placeholder (there's nothing sensible to placeholder a room with).
   const bookedRoomText = h.booked_room && (h.booked_room[lang] || h.booked_room.en);
   const roomPhotoHTML = (bookedRoomText && h.slug)
-    ? `<img src="resources/hotels/${escapeHtml(h.slug)}-room.jpg" alt="${escapeHtml(bookedRoomText)}" loading="lazy" class="w-full h-40 object-cover rounded-lg border border-slate-100 mt-2" onerror="this.remove()">`
+    ? `<img src="resources/hotels/${escapeHtml(h.slug)}-room.jpg?${ROOM_PHOTO_CACHE_BUST}" alt="${escapeHtml(bookedRoomText)}" loading="lazy" class="w-full h-40 object-cover rounded-lg border border-slate-100 mt-2" onerror="this.remove()">`
     : '';
   const bookedRoomHTML = bookedRoomText
     ? `<div><p class="text-[10px] font-bold text-emerald-700 uppercase tracking-wider mb-1">${T.bookedRoomTitle}</p><p class="text-xs text-slate-600 leading-relaxed">${escapeHtml(bookedRoomText)}</p>${roomPhotoHTML}</div>`
@@ -1076,8 +1093,11 @@ function hotelHubCardHTML(destKey, h, tonight, lang, T) {
     ? `<p class="text-[11px] text-slate-500 truncate">${escapeHtml(bookedRoomText)}</p>` : '';
 
   const bookingHref = h.verified === true ? withBookingDates(h.booking_url, destKey) : h.booking_url;
+  // Same flex/min-h-[44px] touch-target treatment as phoneLine/mapsLine
+  // (hotelContactLinesHTML) so all three chips in this row are consistently
+  // tappable, not just the two that had the reported flush-spacing bug.
   const bookingLine = typeof bookingHref === 'string' && bookingHref.trim() !== ''
-    ? `<a href="${escapeHtml(bookingHref)}" target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold text-sky-600 hover:text-sky-700" onclick="event.stopPropagation()">Booking.com</a>` : '';
+    ? `<a href="${escapeHtml(bookingHref)}" target="_blank" rel="noopener noreferrer" class="flex items-center min-h-[44px] text-[12px] font-bold text-sky-600 hover:text-sky-700" onclick="event.stopPropagation()">Booking.com</a>` : '';
 
   const tonightBadgeHTML = tonight
     ? `<span class="absolute top-2 left-2 z-10 inline-flex items-center gap-1 bg-amber-500 text-white rounded-full px-2.5 py-1 text-[10px] font-bold shadow-sm">✦ ${escapeHtml(T.tonightBadge)}</span>` : '';

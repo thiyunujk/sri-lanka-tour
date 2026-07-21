@@ -324,6 +324,18 @@ function computeDestDayGroups() {
 }
 const destDayGroups = computeDestDayGroups();
 
+// True once destKey has a live booked/ entry (bookedByDest, populated
+// asynchronously by voting.js's refreshBookedState). Used to suppress the
+// day card's static itineraryData hotel name once the real, confirmed hotel
+// is known -- otherwise a stale pre-booking placeholder like "Yala Safari
+// Wild Luxury Lodge" sits directly above "✓ Booked: Aqua Hotel Yala",
+// contradicting it. Guarded with typeof since this can be evaluated before
+// voting.js's async Firebase read resolves (see updateHotelButton, which
+// re-applies this once bookedByDest is actually populated).
+function isDestBooked(destKey) {
+  return !!(destKey && typeof bookedByDest !== 'undefined' && bookedByDest[destKey] && bookedByDest[destKey].hotel);
+}
+
 const HOTEL_BTN_CLASS_DEFAULT = 'w-full py-2.5 bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white text-xs font-bold rounded-xl transition-colors shadow-sm flex items-center justify-center gap-2';
 const HOTEL_BTN_CLASS_VOTED = 'w-full py-2.5 bg-white hover:bg-emerald-50 active:bg-emerald-100 text-emerald-600 text-xs font-bold rounded-xl transition-colors shadow-sm border-2 border-emerald-500 flex items-center justify-center gap-2';
 
@@ -571,6 +583,7 @@ function renderItinerary() {
     let hotelHTML = '';
     if (data.hotel) {
       const destKey = (typeof dayToDest !== 'undefined') ? dayToDest[day.dayNum] : null;
+      const staticNameHiddenClass = isDestBooked(destKey) ? 'hidden' : '';
 
       hotelHTML = `
         <div class="mb-4 bg-orange-50/40 border border-orange-100 rounded-[14px] p-3.5 flex items-start gap-3.5">
@@ -581,7 +594,7 @@ function renderItinerary() {
           </div>
           <div class="w-full">
             <p class="text-[10px] font-bold text-orange-800 uppercase tracking-widest mb-1">${uiText.lblHotel}</p>
-            <p class="text-[13px] text-slate-800 leading-relaxed font-semibold mb-3">${data.hotel}</p>
+            <p id="hotel-static-name-${day.dayNum}" class="text-[13px] text-slate-800 leading-relaxed font-semibold mb-3 ${staticNameHiddenClass}">${data.hotel}</p>
             <div id="hotel-action-${day.dayNum}">${renderHotelActionInner(day, destKey, uiText)}</div>
           </div>
         </div>
@@ -658,6 +671,12 @@ function updateHotelButton(dayNum) {
   const destKey = (typeof dayToDest !== 'undefined') ? dayToDest[dayNum] : null;
   const uiText = staticTextUI[currentLang];
   wrapper.innerHTML = renderHotelActionInner(day, destKey, uiText);
+
+  // Re-apply the static-name suppression now that bookedByDest has actually
+  // resolved (see isDestBooked) -- the initial renderItinerary() pass ran
+  // before this Firebase read finished, so it could only guess.
+  const nameEl = document.getElementById(`hotel-static-name-${dayNum}`);
+  if (nameEl) nameEl.classList.toggle('hidden', isDestBooked(destKey));
 }
 
 function updateAllHotelButtons() {
