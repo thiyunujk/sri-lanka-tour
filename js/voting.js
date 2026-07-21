@@ -248,7 +248,7 @@ const DEFAULT_PLACEHOLDER_GRADIENT = 'from-slate-400 to-slate-600';
 // about the URL changes. Appended as a query string in hotelCardHTML's
 // roomPhotoHTML; does not affect the main exterior thumbnail (hotelThumbHTML),
 // only the booked-room photo.
-const ROOM_PHOTO_CACHE_BUST = 'v2';
+const ROOM_PHOTO_CACHE_BUST = 'v3';
 
 // Day 1 of the trip. destDates below is derived from this + dayToDest, so
 // it stays correct if the itinerary's day-to-destination mapping changes.
