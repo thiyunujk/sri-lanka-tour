@@ -68,6 +68,7 @@ const votingUI = {
     hotelsHubTitle: 'ホテル',
     tonightBadge: '今夜の宿',
     archiveLinkLabel: '投票結果・他の候補を見る',
+    bookedRoomTitle: '予約した部屋',
     votesCount: (n, total) => `${n}/${total}人が投票済み`,
     pointsLabel: (n) => `${n}点`,
     closeRace: '接戦！',
@@ -140,6 +141,7 @@ const votingUI = {
     hotelsHubTitle: 'Hotels',
     tonightBadge: 'Tonight',
     archiveLinkLabel: 'Voting results & other candidates',
+    bookedRoomTitle: 'Your rooms',
     votesCount: (n, total) => `${n} of ${total} voted`,
     pointsLabel: (n) => `${n} pt${n === 1 ? '' : 's'}`,
     closeRace: 'Close race!',
@@ -895,6 +897,23 @@ function hotelCardHTML(h, lang, T, destKey, locked, opts) {
     ? `<div><p class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">${T.roomSetup}</p><p class="text-xs text-slate-600 leading-relaxed">${escapeHtml(h.room_config)}</p></div>`
     : '';
 
+  // "予約した部屋" / "Your rooms" -- the actual booked room summary (curated by
+  // hand, includes the derived room count), present only on the 6 booked
+  // hotels. Shown above roomConfigHTML (the raw Booking.com room string) so
+  // the polished, trip-relevant text takes visual priority. The room photo
+  // (resources/hotels/<slug>-room.jpg, same convention as the main exterior
+  // thumbnail) sits directly under it when the file exists -- existence is
+  // checked the same way as every other hotel photo in this codebase: try
+  // loading it, onerror removes the <img> rather than showing a broken icon
+  // or a placeholder (there's nothing sensible to placeholder a room with).
+  const bookedRoomText = h.booked_room && (h.booked_room[lang] || h.booked_room.en);
+  const roomPhotoHTML = (bookedRoomText && h.slug)
+    ? `<img src="resources/hotels/${escapeHtml(h.slug)}-room.jpg" alt="${escapeHtml(bookedRoomText)}" loading="lazy" class="w-full h-40 object-cover rounded-lg border border-slate-100 mt-2" onerror="this.remove()">`
+    : '';
+  const bookedRoomHTML = bookedRoomText
+    ? `<div><p class="text-[10px] font-bold text-emerald-700 uppercase tracking-wider mb-1">${T.bookedRoomTitle}</p><p class="text-xs text-slate-600 leading-relaxed">${escapeHtml(bookedRoomText)}</p>${roomPhotoHTML}</div>`
+    : '';
+
   const timeRows = [
     h.check_in_time ? `<div class="flex justify-between"><span class="text-slate-500">${T.checkIn}</span><span class="font-semibold text-slate-800">${escapeHtml(h.check_in_time)}</span></div>` : '',
     h.check_out_time ? `<div class="flex justify-between"><span class="text-slate-500">${T.checkOut}</span><span class="font-semibold text-slate-800">${escapeHtml(h.check_out_time)}</span></div>` : ''
@@ -973,6 +992,7 @@ function hotelCardHTML(h, lang, T, destKey, locked, opts) {
   const detailSections = [
     (priceRows || timeRows) ? `<div class="space-y-1.5 text-xs">${priceRows}${timeRows}</div>` : '',
     contactHTML,
+    bookedRoomHTML,
     roomConfigHTML,
     facChips ? `<div class="flex flex-wrap gap-1.5">${facChips}</div>` : '',
     highlightsHTML,
@@ -1049,6 +1069,12 @@ function hotelHubCardHTML(destKey, h, tonight, lang, T) {
   if (h.check_out_time) timeParts.push(`${T.checkOut} ${escapeHtml(h.check_out_time)}`);
   const timesLine = timeParts.length ? `<p class="text-[11px] text-slate-600">${timeParts.join(' · ')}</p>` : '';
 
+  // One-line room summary (the full, titled version with its photo lives in
+  // the single-hotel detail view -- see hotelCardHTML's bookedRoomHTML).
+  const bookedRoomText = h.booked_room && (h.booked_room[lang] || h.booked_room.en);
+  const roomLine = bookedRoomText
+    ? `<p class="text-[11px] text-slate-500 truncate">${escapeHtml(bookedRoomText)}</p>` : '';
+
   const bookingHref = h.verified === true ? withBookingDates(h.booking_url, destKey) : h.booking_url;
   const bookingLine = typeof bookingHref === 'string' && bookingHref.trim() !== ''
     ? `<a href="${escapeHtml(bookingHref)}" target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold text-sky-600 hover:text-sky-700" onclick="event.stopPropagation()">Booking.com</a>` : '';
@@ -1071,6 +1097,7 @@ function hotelHubCardHTML(destKey, h, tonight, lang, T) {
           ${secondary ? `<p class="text-[11px] text-slate-400 mt-0.5">${escapeHtml(secondary)}</p>` : ''}
         </div>
         ${staySpan ? `<p class="text-xs font-bold text-emerald-700 mt-1">${escapeHtml(staySpan)}</p>` : ''}
+        ${roomLine}
         ${timesLine}
         ${addressLine}
         <div class="flex flex-wrap gap-3 mt-1.5 items-center" onclick="event.stopPropagation()">

@@ -147,6 +147,11 @@ const hotelData = {
     {
       "name": "Orion City Hotel",
       "slug": "orion-city-hotel",
+      "phone": "+94112667730",
+      "booked_room": {
+        "ja": "スーペリア ヤードビュー（27㎡・シティビュー）| バスタブ付き・ダイニングエリア・エアコン完備・全2部屋",
+        "en": "Superior Yard View (27m² · City View) | Bathtub · Dining Area · AC · 2 rooms"
+      },
       "japanese_name": "オリオン シティ ホテル",
       "tier": "Economy",
       "tier_japanese": "エコノミー",
@@ -293,6 +298,11 @@ const hotelData = {
     {
       "name": "Marino Beach Colombo",
       "slug": "marino-beach-colombo",
+      "phone": "+94112375375",
+      "booked_room": {
+        "ja": "デラックス キングルーム（35㎡）| 特大ベッド1台・バルコニー・バスタブ付き・ミニバー・全2部屋",
+        "en": "Deluxe King Room (35m²) | Extra-Large Bed · Balcony · Bathtub · Minibar · 2 rooms"
+      },
       "japanese_name": "マリーノ ビーチ コロンボ",
       "tier": "Premium",
       "tier_japanese": "プレミアム",
@@ -382,6 +392,11 @@ const hotelData = {
     {
       "name": "Eagle Regency Hotel",
       "slug": "eagle-regency-hotel",
+      "phone": "+94771200180",
+      "booked_room": {
+        "ja": "デラックス ダブルルーム（30㎡・マウンテン＆ガーデンビュー）| ダブル1台＋シングル1台・バルコニー・ミニバー・全3部屋",
+        "en": "Deluxe Double Room (30m² · Mountain & Garden View) | 1 Double + 1 Single Bed · Balcony · Minibar · 3 rooms"
+      },
       "japanese_name": "イーグル リージェンシー ホテル",
       "tier": "Economy",
       "tier_japanese": "エコノミー",
@@ -587,6 +602,11 @@ const hotelData = {
     {
       "name": "Winsanda Boutique Bungalow, Nuwara Eliya l Heated Pool & Buffet Dining",
       "slug": "winsanda-boutique-bungalow-nuwara-eliya-l-heated-pool-buffet-dining",
+      "phone": "+94767602664",
+      "booked_room": {
+        "ja": "デラックス ダブルルーム（35㎡・ガーデンビュー）| バルコニー・暖房完備・ソファエリア・全3部屋",
+        "en": "Deluxe Double Room (35m² · Garden View) | Balcony · Heating · Sofa Seating Area · 3 rooms"
+      },
       "japanese_name": "ウィンサンダ ブティック バンガロー、ヌワラエリヤ",
       "tier": "Standard",
       "tier_japanese": "スタンダード",
@@ -847,6 +867,11 @@ const hotelData = {
     {
       "name": "Tropicara Resort",
       "slug": "tropicara-resort",
+      "phone": "+94762607426",
+      "booked_room": {
+        "ja": "デラックス ダブルルーム（33㎡・ガーデン＆プールビュー）| テラス付き・プールビュー・防音完備・全3部屋",
+        "en": "Deluxe Double Room (33m² · Garden & Pool View) | Terrace · Pool View · Soundproofed · 3 rooms"
+      },
       "japanese_name": "トロピカラ リゾート",
       "tier": "Economy",
       "tier_japanese": "エコノミー",
@@ -877,6 +902,11 @@ const hotelData = {
     {
       "name": "Aqua Hotel Yala",
       "slug": "aqua-hotel-yala",
+      "phone": "+94778694838",
+      "booked_room": {
+        "ja": "デラックス ダブルルーム（25㎡）| ダブル1台・バスタブ付き・エアコン完備・全3部屋",
+        "en": "Deluxe Double Room (25m²) | 1 Double Bed · Bathtub · AC · 3 rooms"
+      },
       "japanese_name": "アクア ホテル ヤラ",
       "tier": "Economy",
       "tier_japanese": "エコノミー",
