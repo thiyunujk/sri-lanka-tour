@@ -338,7 +338,7 @@ const staticTextUI = {
     btnStart: "Start Tour",
     btnChecklist: "Checklist",
     btnDocs: "Documents",
-    btnGroupVotes: "Group Votes",
+    btnHotels: "Hotels",
     btnChooseHotel: "Choose Hotels",
     btnChooseHotelVoted: "✓ Voted — change",
     sameStayCaption: (a, b) => `Same stay, Days ${a}–${b}`,
@@ -360,7 +360,7 @@ const staticTextUI = {
     btnStart: "ツアー開始",
     btnChecklist: "持ち物",
     btnDocs: "書類",
-    btnGroupVotes: "グループ投票",
+    btnHotels: "ホテル",
     btnChooseHotel: "ホテルを選択",
     btnChooseHotelVoted: "✓ 投票済み — 変更する",
     sameStayCaption: (a, b) => `Day ${a}–${b} 共通の宿泊`,
@@ -611,7 +611,7 @@ function updateStaticGlobalText() {
   domEls.btnTop.textContent = texts.btnTop;
   domEls.btnChecklist.textContent = texts.btnChecklist;
   domEls.btnDocs.textContent = texts.btnDocs;
-  if (domEls.btnGroupVotes) domEls.btnGroupVotes.textContent = texts.btnGroupVotes;
+  if (domEls.btnGroupVotes) domEls.btnGroupVotes.textContent = texts.btnHotels;
   domEls.modalTitleChecklist.textContent = texts.modalTitleChecklist;
   domEls.modalTitleDocs.textContent = texts.modalTitleDocs;
   
@@ -757,7 +757,7 @@ function closeAllModals() {
   domEls.modalOverlay.classList.remove('opacity-100', 'pointer-events-auto');
   domEls.modalOverlay.classList.add('opacity-0', 'pointer-events-none');
   
-  const allModals = ['modal-checklist', 'modal-docs', 'modal-hotel-selection', 'modal-group-votes', 'modal-identity'];
+  const allModals = ['modal-checklist', 'modal-docs', 'modal-hotel-selection', 'modal-group-votes', 'modal-identity', 'modal-hotels-hub'];
   
   allModals.forEach(id => {
     const modal = document.getElementById(id);

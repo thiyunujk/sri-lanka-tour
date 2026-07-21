@@ -65,6 +65,9 @@ const votingUI = {
     votingClosedBanner: '投票は締め切りました',
     bookedMarkerChip: '✓ 予約済み',
     switchUser: 'ユーザー切替',
+    hotelsHubTitle: 'ホテル',
+    tonightBadge: '今夜の宿',
+    archiveLinkLabel: '投票結果・他の候補を見る',
     votesCount: (n, total) => `${n}/${total}人が投票済み`,
     pointsLabel: (n) => `${n}点`,
     closeRace: '接戦！',
@@ -134,6 +137,9 @@ const votingUI = {
     votingClosedBanner: 'Voting has closed',
     bookedMarkerChip: '✓ Booked',
     switchUser: 'Switch user',
+    hotelsHubTitle: 'Hotels',
+    tonightBadge: 'Tonight',
+    archiveLinkLabel: 'Voting results & other candidates',
     votesCount: (n, total) => `${n} of ${total} voted`,
     pointsLabel: (n) => `${n} pt${n === 1 ? '' : 's'}`,
     closeRace: 'Close race!',
@@ -277,6 +283,79 @@ function buildDestDates() {
 }
 
 const destDates = buildDestDates();
+
+// 'YYYY-MM-DD' using the DEVICE's local calendar date, not UTC -- used for
+// the Hotels hub's "tonight" highlight (checkin <= today < checkout), which
+// must match what the traveler's phone actually shows as today's date.
+function todayLocalISO() {
+  const now = new Date();
+  const y = now.getFullYear();
+  const m = String(now.getMonth() + 1).padStart(2, '0');
+  const d = String(now.getDate()).padStart(2, '0');
+  return `${y}-${m}-${d}`;
+}
+
+// True while today (device local date) falls inside destKey's booked stay --
+// checkin <= today < checkout. ISO 'YYYY-MM-DD' strings compare correctly
+// lexicographically.
+function isTonightAt(destKey) {
+  const dates = destDates[destKey];
+  if (!dates) return false;
+  const today = todayLocalISO();
+  return today >= dates.checkin && today < dates.checkout;
+}
+
+// { checkin, checkout } -> '8/12–15' (ja) or 'Aug 12–15' (en); spans a month
+// boundary as '7/31–8/2' / 'Jul 31–Aug 2'.
+function formatStayDateRange(checkinISO, checkoutISO, lang) {
+  const parse = iso => {
+    const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso || '');
+    return m ? { mo: Number(m[2]), d: Number(m[3]) } : null;
+  };
+  const ci = parse(checkinISO), co = parse(checkoutISO);
+  if (!ci || !co) return '';
+  if (lang === 'ja') {
+    return ci.mo === co.mo ? `${ci.mo}/${ci.d}–${co.d}` : `${ci.mo}/${ci.d}–${co.mo}/${co.d}`;
+  }
+  return ci.mo === co.mo
+    ? `${EN_MONTH_ABBR[ci.mo - 1]} ${ci.d}–${co.d}`
+    : `${EN_MONTH_ABBR[ci.mo - 1]} ${ci.d}–${EN_MONTH_ABBR[co.mo - 1]} ${co.d}`;
+}
+
+// destDayGroups (js/app.js) -> 'Day 3–5' / 'Day 8'. Guarded with typeof since
+// app.js (which defines it) loads after this file -- fine here because this
+// only ever runs from a later user interaction, well after both scripts and
+// DOMContentLoaded have executed.
+function formatDayRange(destKey) {
+  const group = (typeof destDayGroups !== 'undefined') ? destDayGroups[destKey] : null;
+  if (!group || !group.length) return '';
+  const min = Math.min(...group), max = Math.max(...group);
+  return min === max ? `Day ${min}` : `Day ${min}–${max}`;
+}
+
+// '8/12–15・Day 3–5' (ja) / 'Aug 12–15 · Day 3–5' (en) for a booked stay.
+function formatStaySpanCaption(destKey, lang) {
+  const dates = destDates[destKey];
+  if (!dates) return '';
+  const parts = [formatStayDateRange(dates.checkin, dates.checkout, lang), formatDayRange(destKey)].filter(Boolean);
+  return parts.join(lang === 'ja' ? '・' : ' · ');
+}
+
+// Destination keys with a confirmed booking, in trip (chronological) order --
+// mirrors renderGroupVotes' orderedDestKeys, filtered down to booked ones.
+function orderedBookedDestKeys() {
+  return [...new Set(Object.keys(dayToDest).map(d => dayToDest[d]))]
+    .filter(dest => Array.isArray(hotelData[dest]) && bookedByDest[dest] && bookedByDest[dest].hotel);
+}
+
+// True once every destination hotelData.js knows about has a confirmed
+// booking -- i.e. the decision phase is fully over. Drives whether the
+// identity gate still bothers prompting "who is voting" on load (see the
+// DOMContentLoaded handler below): with nothing left to vote on, asking is
+// an orphaned decision-phase affordance.
+function allKnownDestinationsBooked() {
+  return Object.keys(hotelData).every(dest => bookedByDest[dest] && bookedByDest[dest].hotel);
+}
 
 // Real sleeping arrangements per destination: in Colombo (both the arrival
 // and departure legs) only the 2 couples stay at the hotel -- the organizer
@@ -487,7 +566,10 @@ function switchUser() {
 // the first-visit case). Buttons refresh once this resolves -- app.js may
 // not have defined updateAllHotelButtons yet at this exact line, but by the
 // time this async read comes back it certainly has (see refreshHotelButtonsIfReady).
-refreshBookedState().then(refreshHotelButtonsIfReady);
+// Also tracked as a promise so the DOMContentLoaded identity-gate check below
+// can wait for bookedByDest to actually be populated before deciding whether
+// there's anything left to vote on.
+const bookedStateReady = refreshBookedState().then(refreshHotelButtonsIfReady);
 if (currentVoter) {
   refreshAllMyVotes().then(refreshHotelButtonsIfReady);
 }
@@ -516,14 +598,31 @@ function applyLockBannerStyle(el, info) {
   el.classList.toggle('text-slate-600', info.locked);
 }
 
-// Google Maps link for the booked banner's practical line: prefers an
-// explicit google_maps_url on the hotel record, else falls back to a maps
-// search built from its address or name -- so the link is always present
-// even before hotelData.js grows dedicated address/maps fields.
+// Google Maps link for a hotel: prefers an explicit google_maps_url on the
+// hotel record, else falls back to a maps search built from its address or
+// name -- so the link is always present even before hotelData.js grows
+// dedicated address/maps fields.
 function bookedGoogleMapsUrl(hotel) {
   if (hotel && hotel.google_maps_url) return hotel.google_maps_url;
   const query = hotel && (hotel.address || hotel.name);
   return query ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}` : '';
+}
+
+// Shared address / tap-to-call phone / Maps-link markup for one hotel --
+// used by the day-card booked banner, the single-hotel detail view, and the
+// Hotels hub cards, so the three views can never drift out of sync on what
+// "practical info" means. Any field the hotel record doesn't have (address,
+// phone) is simply omitted rather than fabricated -- matches this codebase's
+// existing no-invented-data convention (see the placeholder-photo policy).
+function hotelContactLinesHTML(hotel, T) {
+  const mapsUrl = bookedGoogleMapsUrl(hotel);
+  const addressLine = hotel && hotel.address
+    ? `<p class="text-[11px] text-slate-600">${escapeHtml(hotel.address)}</p>` : '';
+  const phoneLine = hotel && hotel.phone
+    ? `<a href="tel:${escapeHtml(hotel.phone.replace(/\s+/g, ''))}" class="text-[11px] font-semibold text-blue-600 hover:text-blue-700">${escapeHtml(hotel.phone)}</a>` : '';
+  const mapsLine = mapsUrl
+    ? `<a href="${escapeHtml(mapsUrl)}" target="_blank" rel="noopener noreferrer" class="text-[11px] font-semibold text-sky-600 hover:text-sky-700 underline">${T.bookedMapsLink}</a>` : '';
+  return { addressLine, phoneLine, mapsLine };
 }
 
 // The green "✓ Booked" confirmation banner shown on a day card in place of
@@ -541,86 +640,72 @@ function bookedBannerHTML(destKey) {
   const displayName = lang === 'ja' ? jaName : enName;
   const bannerLabel = T.bookedBanner(displayName);
 
-  const mapsUrl = bookedGoogleMapsUrl(hotel);
-  const addressLine = hotel && hotel.address
-    ? `<p class="text-[11px] text-slate-600">${escapeHtml(hotel.address)}</p>` : '';
-  const mapsLine = mapsUrl
-    ? `<a href="${escapeHtml(mapsUrl)}" target="_blank" rel="noopener noreferrer" class="text-[11px] font-semibold text-sky-600 hover:text-sky-700 underline">${T.bookedMapsLink}</a>` : '';
+  const { addressLine, phoneLine, mapsLine } = hotelContactLinesHTML(hotel, T);
   const timeParts = [];
   if (hotel && hotel.check_in_time) timeParts.push(`${T.checkIn} ${hotel.check_in_time}`);
   if (hotel && hotel.check_out_time) timeParts.push(`${T.checkOut} ${hotel.check_out_time}`);
   const timesLine = timeParts.length
     ? `<p class="text-[11px] text-slate-600">${escapeHtml(timeParts.join(' · '))}</p>` : '';
-  const practicalLines = [addressLine, timesLine, mapsLine].filter(Boolean).join('');
+  const practicalLines = [addressLine, phoneLine, timesLine, mapsLine].filter(Boolean).join('');
 
   return `
-    <button type="button" onclick="openHotelDetailFromBooking('${destKey}')" class="w-full py-2.5 px-3 bg-emerald-50 hover:bg-emerald-100 active:bg-emerald-200 border-2 border-emerald-500 text-emerald-700 text-xs font-bold rounded-xl transition-colors text-center">
+    <button type="button" onclick="openBookedHotelDetail('${destKey}')" class="w-full py-2.5 px-3 bg-emerald-50 hover:bg-emerald-100 active:bg-emerald-200 border-2 border-emerald-500 text-emerald-700 text-xs font-bold rounded-xl transition-colors text-center">
       ${escapeHtml(bannerLabel)}
     </button>
     ${practicalLines ? `<div class="mt-2 space-y-0.5 px-1">${practicalLines}</div>` : ''}`;
 }
 
-// Scrolls the currently-rendered hotel list to the given hotel's card and
-// auto-expands its detail section -- used when opening the modal from a
-// booked-banner tap so the confirmed hotel is immediately visible.
-function scrollToHotelCard(hotelName) {
-  const container = document.getElementById('hotel-list-container');
-  if (!container) return;
-  const card = Array.from(container.querySelectorAll('[data-hotel-card]'))
-    .find(el => el.dataset.hotelName === hotelName);
-  if (!card) return;
-  card.scrollIntoView({ block: 'start' });
-  const details = card.querySelector('[data-details]');
-  const toggleBtn = card.querySelector('[data-toggle-details]');
-  if (details && details.classList.contains('hidden')) {
-    details.classList.remove('hidden');
-    if (toggleBtn) toggleBtn.textContent = votingT().hideDetails;
-  }
-  card.classList.add('ring-2', 'ring-emerald-400');
+// Shows/hides the decision-phase chrome (tier tabs, how-to box, deadline
+// banner) around the hotel-list-container. Visible for the archive/candidate
+// -list path (openHotelCandidateList) where it's still meaningful; hidden for
+// the trip-mode single-hotel path (openBookedHotelDetail), where there is
+// nothing left to decide and "Pick your 1st/2nd/3rd choice" or a vote-close
+// countdown would just be confusing leftover copy.
+function setHotelModalChromeVisible(visible) {
+  document.getElementById('hotel-tier-tabs').classList.toggle('hidden', !visible);
+  document.getElementById('how-to-toggle').closest('.border-b').classList.toggle('hidden', !visible);
+  document.getElementById('vote-deadline-banner-hotel').classList.toggle('hidden', !visible);
 }
 
-// Opens the (read-only, since a booked destination is always locked) hotel
-// modal from a day card's booked banner, scrolled to and expanded on the
-// booked hotel specifically. Reuses the same modal/render path as
-// openHotelVoting rather than a separate view.
-function openHotelDetailFromBooking(destKey) {
+// Trip-mode single-hotel detail view: opened from a day card's booked banner
+// or a Hotels hub card. Shows ONLY the confirmed hotel -- no tier tabs, no
+// other candidates, no vote buttons (hotelCardHTML's locked=true already
+// suppresses those) -- by reusing hotelCardHTML for the card itself and then
+// force-expanding its detail section in place of the collapsed toggle.
+function openBookedHotelDetail(destKey) {
   const bookedInfo = bookedByDest[destKey];
   if (!bookedInfo || !bookedInfo.hotel || !hotelData[destKey]) return;
+  const hotel = hotelData[destKey].find(h => h.name === bookedInfo.hotel);
+  if (!hotel) return;
+
   currentDestKey = destKey;
   const T = votingT();
-  const occ = getOccupancy(destKey);
+  const lang = votingLang();
   openModal('modal-hotel-selection');
   document.getElementById('modal-title-hotel-dest').innerText = getDestName(destKey);
-  document.getElementById('modal-subtitle-hotel').textContent = T.hotelModalSubtitle;
-  applyLockBannerStyle(document.getElementById('vote-deadline-banner-hotel'), lockBannerInfo(destKey));
-  currentDestLocked = isDestLocked(destKey);
-  ['Premium', 'Standard', 'Economy'].forEach(t => {
-    document.getElementById(`tab-${t}`).textContent = T.tierTabs[t];
-  });
+  document.getElementById('modal-subtitle-hotel').textContent = '';
+  document.getElementById('modal-colombo-note-hotel').classList.add('hidden');
+  setHotelModalChromeVisible(false);
 
-  const colomboNoteEl = document.getElementById('modal-colombo-note-hotel');
-  const isColombo = destKey === 'colombo_arrival' || destKey === 'colombo_departure';
-  colomboNoteEl.classList.toggle('hidden', !isColombo);
-  colomboNoteEl.textContent = isColombo ? T.colomboOccupancyNote(occ) : '';
-
-  document.getElementById('how-to-toggle-label').textContent = T.howToTitle;
-  const howToItems = [T.priceDisclaimer(occ), ...T.howToBullets];
-  document.getElementById('how-to-list').innerHTML = howToItems.map(b => `<li>${escapeHtml(b)}</li>`).join('');
-  document.getElementById('how-to-content').classList.add('hidden');
-  document.getElementById('how-to-chevron').classList.remove('rotate-180');
-
-  currentUserVotes = {};
-  const hotel = hotelData[destKey].find(h => h.name === bookedInfo.hotel);
-  currentTier = (hotel && hotel.tier) || 'Premium';
   resetHotelListScroll();
-  refreshMyVotes().then(() => {
-    switchHotelTier(currentTier);
-    requestAnimationFrame(() => scrollToHotelCard(bookedInfo.hotel));
-  });
+  const container = document.getElementById('hotel-list-container');
+  container.innerHTML = hotelCardHTML(hotel, lang, T, destKey, true, { hideDeadlineChip: true });
+  const card = container.querySelector('[data-hotel-card]');
+  if (card) {
+    const details = card.querySelector('[data-details]');
+    const toggleBtn = card.querySelector('[data-toggle-details]');
+    if (details) details.classList.remove('hidden');
+    if (toggleBtn) toggleBtn.remove();
+  }
 }
 
-function openHotelVoting(dayNum) {
-  currentDestKey = dayToDest[dayNum];
+// Opens the full, tier-tabbed candidate list for one destination -- the
+// archive view. Reachable today from the Hotels hub's "voting results & other
+// candidates" link into the group-votes dashboard (see the destination
+// header's onclick in renderGroupVotes). Always read-only here since a
+// destination only ever gets this far once it's booked (isDestLocked).
+function openHotelCandidateList(destKey) {
+  currentDestKey = destKey;
   if (!currentDestKey || !hotelData[currentDestKey]) {
     alert(votingT().unknownDest);
     return;
@@ -630,14 +715,13 @@ function openHotelVoting(dayNum) {
   openModal('modal-hotel-selection');
   document.getElementById('modal-title-hotel-dest').innerText = getDestName(currentDestKey);
   document.getElementById('modal-subtitle-hotel').textContent = T.hotelModalSubtitle;
+  setHotelModalChromeVisible(true);
   applyLockBannerStyle(document.getElementById('vote-deadline-banner-hotel'), lockBannerInfo(currentDestKey));
   currentDestLocked = isDestLocked(currentDestKey);
   ['Premium', 'Standard', 'Economy'].forEach(t => {
     document.getElementById(`tab-${t}`).textContent = T.tierTabs[t];
   });
 
-  // Couples-only occupancy note: only the two Colombo destinations have a
-  // real occupancy that differs from the group default.
   const colomboNoteEl = document.getElementById('modal-colombo-note-hotel');
   const isColombo = currentDestKey === 'colombo_arrival' || currentDestKey === 'colombo_departure';
   colomboNoteEl.classList.toggle('hidden', !isColombo);
@@ -654,6 +738,13 @@ function openHotelVoting(dayNum) {
   // previous session's scroll happened to leave off.
   resetHotelListScroll();
   refreshMyVotes().then(() => switchHotelTier('Premium'));
+}
+
+// Day-card entry point: resolves the day to its destination and defers to
+// openHotelCandidateList. Kept separate since day cards only know dayNum,
+// not destKey directly.
+function openHotelVoting(dayNum) {
+  openHotelCandidateList(dayToDest[dayNum]);
 }
 
 // The hotel list itself is the scrollable element inside the modal (it's
@@ -699,8 +790,36 @@ function switchHotelTier(tier) {
   resetHotelListScroll();
 }
 
-// Compact card + hidden expandable detail section for one hotel
-function hotelCardHTML(h, lang, T, destKey, locked) {
+// Thumbnail block shared by hotelCardHTML and the Hotels hub cards: a real
+// photo if we have one, else a clean destination-colored placeholder (never
+// a broken <img> icon). Local photos live at resources/hotels/<slug>.jpg and
+// are dropped in incrementally -- existence is checked via the <img> onerror
+// handler (swap to the placeholder sibling) rather than a fetch, since a
+// fetch would mean a network round-trip per card just to check existence.
+function hotelThumbHTML(h, destKey, primaryName) {
+  const imgs = h.images || {};
+  const placeholderInner = `
+        <span class="text-3xl leading-none" aria-hidden="true">🏨</span>
+        <span class="text-[11px] font-bold text-center leading-tight line-clamp-2">${escapeHtml(primaryName)}</span>`;
+  const photoSrc = imgs.exterior_image || (h.slug ? `resources/hotels/${h.slug}.jpg` : '');
+  return photoSrc ? `
+      <div class="h-32 bg-slate-100 overflow-hidden">
+        <img src="${escapeHtml(photoSrc)}" alt="${escapeHtml(primaryName)}" loading="lazy" class="w-full h-32 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div style="display:none" class="h-32 bg-gradient-to-br ${destPlaceholderGradient[destKey] || DEFAULT_PLACEHOLDER_GRADIENT} flex-col items-center justify-center gap-1 px-3 text-white">${placeholderInner}
+        </div>
+      </div>` : `
+      <div class="h-32 bg-gradient-to-br ${destPlaceholderGradient[destKey] || DEFAULT_PLACEHOLDER_GRADIENT} flex flex-col items-center justify-center gap-1 px-3 text-white">${placeholderInner}
+      </div>`;
+}
+
+// Compact card + hidden expandable detail section for one hotel. `locked`
+// suppresses the vote row (booked destination or past VOTE_DEADLINE).
+// `opts.hideDeadlineChip` additionally suppresses the per-hotel "decide
+// before vote close" chip -- used only by the single-hotel trip-mode detail
+// view (openBookedHotelDetail), where the hotel is already booked and that
+// chip's call-to-action is stale/nonsensical.
+function hotelCardHTML(h, lang, T, destKey, locked, opts) {
+  opts = opts || {};
   const jaName = h.japanese_name || '';
   const enName = h.name || '';
   const primaryName = lang === 'ja' ? (jaName || enName) : (enName || jaName);
@@ -718,27 +837,8 @@ function hotelCardHTML(h, lang, T, destKey, locked) {
   const twinPrice = formatPrice(h.twin_room_price, h.currency);
   const singlePrice = formatPrice(h.single_room_price, h.currency);
   const desc = lang === 'ja' ? (h.short_description_ja || '') : (h.short_description_en || '');
-  const imgs = h.images || {};
 
-  // --- compact section ---
-  // Every hotel gets a thumbnail block: a real photo if we have one, else a
-  // clean destination-colored placeholder (never a broken <img> icon).
-  // Local photos live at resources/hotels/<slug>.jpg and are dropped in
-  // incrementally -- existence is checked via the <img> onerror handler
-  // (swap to the placeholder sibling) rather than a fetch, since a fetch
-  // would mean a network round-trip per card just to check existence.
-  const placeholderInner = `
-        <span class="text-3xl leading-none" aria-hidden="true">🏨</span>
-        <span class="text-[11px] font-bold text-center leading-tight line-clamp-2">${escapeHtml(primaryName)}</span>`;
-  const photoSrc = imgs.exterior_image || (h.slug ? `resources/hotels/${h.slug}.jpg` : '');
-  const thumb = photoSrc ? `
-      <div class="h-32 bg-slate-100 overflow-hidden">
-        <img src="${escapeHtml(photoSrc)}" alt="${escapeHtml(primaryName)}" loading="lazy" class="w-full h-32 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div style="display:none" class="h-32 bg-gradient-to-br ${destPlaceholderGradient[destKey] || DEFAULT_PLACEHOLDER_GRADIENT} flex-col items-center justify-center gap-1 px-3 text-white">${placeholderInner}
-        </div>
-      </div>` : `
-      <div class="h-32 bg-gradient-to-br ${destPlaceholderGradient[destKey] || DEFAULT_PLACEHOLDER_GRADIENT} flex flex-col items-center justify-center gap-1 px-3 text-white">${placeholderInner}
-      </div>`;
+  const thumb = hotelThumbHTML(h, destKey, primaryName);
 
   const verifiedBadge = h.verified === true && h.availability_checked
     ? `<span class="inline-flex items-center gap-1 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-full px-2 py-0.5 text-[10px] font-bold">${T.verifiedBadge(formatMonthDay(h.availability_checked))}</span>`
@@ -760,7 +860,7 @@ function hotelCardHTML(h, lang, T, destKey, locked) {
   // Free-cancellation deadline lands on or before the group's vote-close
   // date -- the hotel needs a decision before the vote itself closes, or
   // its refund window will already be gone.
-  const deadlineWarningChip = (h.cancellation && h.cancellation.free && h.cancellation.deadline && h.cancellation.deadline <= VOTE_DEADLINE)
+  const deadlineWarningChip = (!opts.hideDeadlineChip && h.cancellation && h.cancellation.free && h.cancellation.deadline && h.cancellation.deadline <= VOTE_DEADLINE)
     ? `<span class="inline-flex items-center gap-1 bg-amber-50 text-amber-700 border border-amber-200 rounded-full px-2 py-0.5 text-[10px] font-bold">${T.deadlineWarningChip}</span>`
     : '';
   const badgeChips = [verifiedBadge, cancelChip, deadlineWarningChip].filter(Boolean).join('');
@@ -800,6 +900,14 @@ function hotelCardHTML(h, lang, T, destKey, locked) {
     h.check_out_time ? `<div class="flex justify-between"><span class="text-slate-500">${T.checkOut}</span><span class="font-semibold text-slate-800">${escapeHtml(h.check_out_time)}</span></div>` : ''
   ].join('');
 
+  // Address + tap-to-call phone, when the hotel record has them (currently
+  // absent from every curated hotel -- see hotelContactLinesHTML). Rendered
+  // as its own small block above the facility chips rather than folded into
+  // timeRows, since these are contact info, not stay logistics.
+  const { addressLine, phoneLine } = hotelContactLinesHTML(h, T);
+  const contactHTML = (addressLine || phoneLine)
+    ? `<div class="space-y-0.5">${addressLine}${phoneLine}</div>` : '';
+
   const facChips = Object.entries(h.facilities || {})
     .filter(([key, on]) => on && T.facilities[key])
     .map(([key]) => `<span class="inline-block bg-emerald-50 text-emerald-700 border border-emerald-100 rounded-full px-2 py-0.5 text-[10px] font-semibold">${T.facilities[key]}</span>`)
@@ -823,11 +931,14 @@ function hotelCardHTML(h, lang, T, destKey, locked) {
   // booking_urls are known WAF-blocked regardless (see url_audit_report.json).
   const bookingHref = h.verified === true ? withBookingDates(h.booking_url, destKey) : h.booking_url;
 
+  // Maps always falls back to a name-based search (bookedGoogleMapsUrl) when
+  // there's no explicit google_maps_url, so the link is never silently
+  // missing just because hotelData.js hasn't grown that field yet.
   const links = [
     [h.official_website, T.officialSite],
     [bookingHref, 'Booking.com'],
     [h.agoda_url, 'Agoda'],
-    [h.google_maps_url, 'Google Maps']
+    [bookedGoogleMapsUrl(h), 'Google Maps']
   ].filter(([url]) => typeof url === 'string' && url.trim() !== '')
    .map(([url, label]) => `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" class="flex-1 min-w-[45%] text-center py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-bold rounded-lg transition-colors">${label}</a>`)
    .join('');
@@ -861,6 +972,7 @@ function hotelCardHTML(h, lang, T, destKey, locked) {
 
   const detailSections = [
     (priceRows || timeRows) ? `<div class="space-y-1.5 text-xs">${priceRows}${timeRows}</div>` : '',
+    contactHTML,
     roomConfigHTML,
     facChips ? `<div class="flex flex-wrap gap-1.5">${facChips}</div>` : '',
     highlightsHTML,
@@ -920,6 +1032,113 @@ function renderHotelList() {
   }
 
   container.innerHTML = hotels.map(h => hotelCardHTML(h, lang, T, currentDestKey, currentDestLocked)).join('');
+}
+
+// One card in the Hotels hub: photo, bilingual name, stay dates with day
+// numbers, check-in/out times, address + Maps link, tap-to-call phone,
+// Booking link. Tapping anywhere on the card opens the same single-hotel
+// detail view as a day card's booked banner.
+function hotelHubCardHTML(destKey, h, tonight, lang, T) {
+  const { primary, secondary } = resolveHotelNames(destKey, h.name);
+  const thumb = hotelThumbHTML(h, destKey, primary);
+  const staySpan = formatStaySpanCaption(destKey, lang);
+  const { addressLine, phoneLine, mapsLine } = hotelContactLinesHTML(h, T);
+
+  const timeParts = [];
+  if (h.check_in_time) timeParts.push(`${T.checkIn} ${escapeHtml(h.check_in_time)}`);
+  if (h.check_out_time) timeParts.push(`${T.checkOut} ${escapeHtml(h.check_out_time)}`);
+  const timesLine = timeParts.length ? `<p class="text-[11px] text-slate-600">${timeParts.join(' · ')}</p>` : '';
+
+  const bookingHref = h.verified === true ? withBookingDates(h.booking_url, destKey) : h.booking_url;
+  const bookingLine = typeof bookingHref === 'string' && bookingHref.trim() !== ''
+    ? `<a href="${escapeHtml(bookingHref)}" target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold text-sky-600 hover:text-sky-700" onclick="event.stopPropagation()">Booking.com</a>` : '';
+
+  const tonightBadgeHTML = tonight
+    ? `<span class="absolute top-2 left-2 z-10 inline-flex items-center gap-1 bg-amber-500 text-white rounded-full px-2.5 py-1 text-[10px] font-bold shadow-sm">✦ ${escapeHtml(T.tonightBadge)}</span>` : '';
+
+  // A <div> wrapper, not a <button> -- the card also contains real <a> tap
+  // targets (phone/maps/booking), and nesting interactive elements inside a
+  // <button> is invalid HTML and unreliable on mobile (the outer button can
+  // swallow taps meant for the inner links). Those links stop propagation so
+  // tapping them doesn't also trigger the card's own onclick.
+  return `
+    <div role="button" tabindex="0" onclick="openBookedHotelDetailFromHub('${destKey}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openBookedHotelDetailFromHub('${destKey}');}" data-hub-card data-dest-key="${destKey}" class="relative w-full text-left bg-white rounded-[16px] mb-4 shadow-sm border ${tonight ? 'border-2 border-amber-400 ring-2 ring-amber-100' : 'border-slate-100'} overflow-hidden cursor-pointer">
+      ${tonightBadgeHTML}
+      ${thumb}
+      <div class="p-4 flex flex-col gap-1">
+        <div>
+          <h4 class="font-bold text-slate-800 text-[15px] leading-tight">${escapeHtml(primary)}</h4>
+          ${secondary ? `<p class="text-[11px] text-slate-400 mt-0.5">${escapeHtml(secondary)}</p>` : ''}
+        </div>
+        ${staySpan ? `<p class="text-xs font-bold text-emerald-700 mt-1">${escapeHtml(staySpan)}</p>` : ''}
+        ${timesLine}
+        ${addressLine}
+        <div class="flex flex-wrap gap-3 mt-1.5 items-center" onclick="event.stopPropagation()">
+          ${phoneLine}
+          ${mapsLine}
+          ${bookingLine}
+        </div>
+      </div>
+    </div>`;
+}
+
+// Renders the Hotels hub: the 6 booked hotels in trip order, with whichever
+// one is being slept in tonight (device local date) pinned to the top and
+// visually badged. Array.prototype.sort has been stable (insertion order
+// preserved among equal keys) since ES2019 in every browser this app targets,
+// so the non-tonight cards simply keep their original trip order.
+function renderHotelsHub() {
+  const container = document.getElementById('hotels-hub-container');
+  const lang = votingLang();
+  const T = votingT();
+
+  const cards = orderedBookedDestKeys().map(destKey => {
+    const bookedInfo = bookedByDest[destKey];
+    const hotel = hotelData[destKey].find(h => h.name === bookedInfo.hotel);
+    return hotel ? { destKey, hotel, tonight: isTonightAt(destKey) } : null;
+  }).filter(Boolean);
+
+  cards.sort((a, b) => (b.tonight === a.tonight ? 0 : (b.tonight ? 1 : -1)));
+
+  container.innerHTML = cards.length
+    ? cards.map(c => hotelHubCardHTML(c.destKey, c.hotel, c.tonight, lang, T)).join('')
+    : `<p class="text-center text-slate-500 py-10">${T.unknownDest}</p>`;
+}
+
+// Opens the Hotels hub modal (the bottom-nav "ホテル"/"Hotels" button).
+function openHotelsHub() {
+  openModal('modal-hotels-hub');
+  const T = votingT();
+  document.getElementById('modal-title-hotels-hub').textContent = T.hotelsHubTitle;
+  const archiveLink = document.getElementById('btn-hotels-archive-link');
+  if (archiveLink) archiveLink.textContent = T.archiveLinkLabel;
+  renderHotelsHub();
+}
+
+// Entry point for a Hotels hub card: closes the hub first, same stacking
+// reason as openArchiveFromHub -- modal-hotels-hub and modal-hotel-selection
+// are both bottom sheets in the same slot.
+function openBookedHotelDetailFromHub(destKey) {
+  closeAllModals();
+  setTimeout(() => openBookedHotelDetail(destKey), 300);
+}
+
+// Quiet link at the bottom of the Hotels hub into the (unchanged) group-votes
+// dashboard. Closes the hub first since both modals occupy the same bottom-
+// sheet slot -- opening one on top of the other would visually stack them.
+function openArchiveFromHub() {
+  closeAllModals();
+  setTimeout(() => openGroupVotes(), 300);
+}
+
+// Entry point for the group-votes dashboard's per-destination header (see
+// renderGroupVotes): closes the dashboard first, same stacking reason as
+// openArchiveFromHub above -- modal-hotel-selection and modal-group-votes
+// are both bottom sheets in the same slot, so opening one while the other is
+// still up would leave the dashboard painted on top.
+function openHotelCandidateListFromDashboard(destKey) {
+  closeAllModals();
+  setTimeout(() => openHotelCandidateList(destKey), 300);
 }
 
 function voteHotel(hotelName, choiceLevel) {
@@ -1000,10 +1219,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (ribbon) ribbon.classList.remove('hidden');
   }
 
-  // We need to wait for DOM to be fully loaded
+  // We need to wait for DOM to be fully loaded. The bottom-nav button
+  // (id kept as btn-group-votes for historical reasons, label now "ホテル"/
+  // "Hotels") now opens the Hotels hub instead of the dashboard directly --
+  // the dashboard is reachable from the hub's archive link.
   const btnGroupVotes = document.getElementById('btn-group-votes');
   if (btnGroupVotes) {
-    btnGroupVotes.parentElement.onclick = openGroupVotes;
+    btnGroupVotes.parentElement.onclick = openHotelsHub;
   }
 
   // Delegated listener for vote buttons and detail toggles rendered by renderHotelList
@@ -1045,9 +1267,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Check identity slightly after load
+  // Check identity slightly after load -- but only if there's still a
+  // destination left to vote on. Once every destination is booked, asking
+  // "who is voting" is a leftover decision-phase prompt with nothing behind
+  // it (see allKnownDestinationsBooked), so it's skipped entirely.
   setTimeout(() => {
-    checkIdentity();
+    bookedStateReady.then(() => {
+      if (!allKnownDestinationsBooked()) checkIdentity();
+    });
   }, 500);
 });
 
@@ -1129,9 +1356,14 @@ function renderGroupVotes() {
         choices && (choices.choice1 || choices.choice2 || choices.choice3));
       const participationCount = participantEntries.length;
 
+      // The destination name itself opens the full, tier-tabbed candidate
+      // list for this destination (openHotelCandidateList) -- the only
+      // remaining path to it now that day cards show the single-hotel view
+      // instead (see openBookedHotelDetail). Everything else about this
+      // dashboard (ranking, chips, seeAllVotes toggle) is unchanged.
       const header = `
         <div class="flex items-center justify-between mb-2">
-          <h4 class="font-bold text-slate-800 text-[15px]">${escapeHtml(destName)}</h4>
+          <h4 onclick="openHotelCandidateListFromDashboard('${dest}')" class="font-bold text-slate-800 text-[15px] cursor-pointer hover:text-emerald-600 transition-colors">${escapeHtml(destName)}</h4>
           <span class="text-[10px] font-bold text-slate-500 bg-slate-100 rounded-full px-2 py-0.5 shrink-0">${T.votesCount(participationCount, totalVoters)}</span>
         </div>`;
 
